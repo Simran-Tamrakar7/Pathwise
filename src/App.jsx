@@ -7,7 +7,7 @@ import Manual from './pages/Manual'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Pathwise">
       <Nav />
       <main className="main">
         <Routes>
