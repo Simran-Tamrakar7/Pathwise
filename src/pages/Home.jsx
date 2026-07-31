@@ -49,6 +49,7 @@ function HeroVisual() {
 export default function Home() {
   const featured = manuals.slice(0, 6)
   const genreCount = genres.filter((g) => g.id !== 'all').length
+  const chapterCount = manuals.reduce((n, m) => n + m.chapters.length, 0)
 
   return (
     <>
@@ -62,15 +63,15 @@ export default function Home() {
           </p>
           <h1>Your have-it-all learning library.</h1>
           <p className="lede">
-            {manuals.length} crafts · {genreCount} genres · clickable roadmaps · book-style chapters · resources &
-            citations from zero to pro.
+            {manuals.length} crafts · {genreCount} genres · {chapterCount}+ chapters · clickable roadmaps · Break Room
+            when your brain needs air.
           </p>
           <div className="hero-actions">
             <Link to="/manuals" className="btn btn-primary">
               Browse the library
             </Link>
-            <Link to="/manuals/graphic-design" className="btn btn-ghost">
-              See a design roadmap
+            <Link to="/manuals/playwright" className="btn btn-ghost">
+              See a live roadmap
             </Link>
           </div>
         </div>
@@ -80,21 +81,44 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2>How Pathwise works</h2>
-            <p>Pick a craft → follow the roadmap → learn chapter by chapter → download the path.</p>
+            <p>Pick a craft → follow the roadmap → learn chapter by chapter → rest on purpose.</p>
           </div>
           <div className="steps">
             <article className="step">
               <h3>Pick a genre</h3>
-              <p>Automation, design, AI, foundations, or soft skills — start where curiosity points.</p>
+              <p>Automation, design, AI, foundations, quality craft, career, or soft skills.</p>
             </article>
             <article className="step">
               <h3>Follow the roadmap</h3>
-              <p>Clickable nodes, downloadable SVG graphics like graphic-design-roadmap.svg.</p>
+              <p>Phase-grouped paths, checkpoints, downloadable SVG roadmaps.</p>
             </article>
             <article className="step">
-              <h3>Learn like a book</h3>
-              <p>Each chapter: overview, steps, do-this tasks, checklists, practice, links & citations.</p>
+              <h3>Study + recover</h3>
+              <p>Book chapters with do-this tasks — then Break Room timers, films, and games.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section pathway-promo">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>Roadmaps that feel like a journey</h2>
+            <p>
+              Phase bands, numbered nodes, checkpoints, and a path you can download — inspired by roadmap.sh,
+              tuned for Pathwise.
+            </p>
+          </div>
+          <div className="promo-actions">
+            <Link to="/manuals/playwright" className="btn btn-primary">
+              Open Playwright pathway
+            </Link>
+            <Link to="/manuals/accessibility" className="btn btn-ghost">
+              Accessibility path
+            </Link>
+            <Link to="/break" className="btn btn-ghost">
+              Break Room
+            </Link>
           </div>
         </div>
       </section>
@@ -103,7 +127,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2>Featured paths</h2>
-            <p>Covers, roadmaps, and full manuals — open any door.</p>
+            <p>Deep curricula — open any door.</p>
           </div>
           <div className="manual-grid cover-grid">
             {featured.map((m) => (
@@ -126,9 +150,15 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <p style={{ marginTop: '1.5rem' }}>
+          <p style={{ marginTop: '1.5rem', display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
             <Link to="/manuals" className="btn btn-primary">
               See all {manuals.length} manuals
+            </Link>
+            <Link to="/manuals/playwright" className="btn btn-ghost">
+              Playwright + Python
+            </Link>
+            <Link to="/break" className="btn btn-ghost">
+              Take a break
             </Link>
           </p>
         </div>

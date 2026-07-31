@@ -17,6 +17,8 @@ export default function Chapter() {
   }
 
   const { manual, chapter, index, prev, next } = data
+  const kindLabel =
+    chapter.kind === 'checkpoint' ? 'Checkpoint' : chapter.kind === 'guide' ? 'Guide' : 'Chapter'
 
   return (
     <article className="wrap chapter-page">
@@ -25,15 +27,20 @@ export default function Chapter() {
         {' / '}
         <Link to={`/manuals/${manual.id}`}>{manual.title}</Link>
         {' / '}
-        Chapter {index + 1}
+        {kindLabel} {index + 1}
       </p>
 
       <header className="chapter-hero">
         <p className="level-label">
-          {chapter.level} · ~{chapter.minutes} min read · Chapter {index + 1} of {manual.chapters.length}
+          {chapter.phase ? `${chapter.phase} · ` : ''}
+          {chapter.level}
+          {chapter.durationLabel ? ` · ${chapter.durationLabel}` : ` · ~${chapter.minutes} min`}
+          {' · '}
+          {kindLabel} {index + 1} of {manual.chapters.length}
         </p>
         <h1>{chapter.title}</h1>
         <p className="tagline">{chapter.overview}</p>
+        {chapter.note && <p className="chapter-note">{chapter.note}</p>}
       </header>
 
       {chapter.learn.length > 0 && (
@@ -48,14 +55,22 @@ export default function Chapter() {
       )}
 
       <section className="chapter-block">
-        <h2>Walkthrough</h2>
+        <h2>{chapter.kind === 'checkpoint' ? 'Pass criteria & steps' : 'Walkthrough'}</h2>
         <ol className="walk-steps">
           {chapter.steps.map((step, i) => (
-            <li key={step.title} className="walk-step">
+            <li key={`${step.title}-${i}`} className="walk-step">
               <span className="lesson-num">{String(i + 1).padStart(2, '0')}</span>
               <div>
                 <h3>{step.title}</h3>
-                <p>{step.body}</p>
+                {step.body && <p>{step.body}</p>}
+                {step.items?.length > 0 && (
+                  <ul className="learn-list" style={{ marginTop: '0.65rem' }}>
+                    {step.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {step.code && <pre className="code-block"><code>{step.code}</code></pre>}
                 {step.doThis && (
                   <div className="do-this">
                     <p className="label">Do this</p>
@@ -96,13 +111,45 @@ export default function Chapter() {
         </section>
       )}
 
+      {chapter.resources?.length > 0 && (
+        <section className="chapter-block">
+          <h2>Resources for this chapter</h2>
+          <div className="resource-table-wrap">
+            <table className="resource-table">
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Resource</th>
+                  <th>Lang</th>
+                  <th>Free?</th>
+                </tr>
+              </thead>
+              <tbody>
+                {chapter.resources.map((row) => (
+                  <tr key={`${row.name}-${row.url}`}>
+                    <td>{row.type}</td>
+                    <td>
+                      <a href={row.url} target="_blank" rel="noreferrer">
+                        {row.name}
+                      </a>
+                    </td>
+                    <td>{row.lang}</td>
+                    <td>{row.free ? 'Yes' : 'Paid / mixed'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
       {(chapter.links.length > 0 || chapter.citations.length > 0) && (
         <section className="chapter-block">
-          <h2>Links & citations</h2>
+          <h2>More links & citations</h2>
           <div className="resource-grid">
             {chapter.links.length > 0 && (
               <div className="resource-block">
-                <h3>Resources</h3>
+                <h3>Links</h3>
                 <ul>
                   {chapter.links.map((l) => (
                     <li key={l.url}>

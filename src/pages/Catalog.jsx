@@ -36,8 +36,8 @@ export default function Catalog() {
       <header className="page-hero">
         <h1>Skill library</h1>
         <p>
-          {manuals.length} manuals across automation, design, AI, foundations, and soft skills — each with
-          a clickable roadmap, book-style chapters, and a full resource shelf.
+          {manuals.length} manuals across automation, design, AI, foundations, quality, career, and soft skills —
+          each with a phase pathway, book-style chapters, and a full resource shelf.
         </p>
       </header>
 

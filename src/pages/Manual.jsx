@@ -52,6 +52,19 @@ export default function Manual() {
               <dd>{manual.levelSpan}</dd>
             </div>
           </dl>
+          {manual.pace && (
+            <div className="pace-box">
+              <p className="label">Study pace</p>
+              <p>
+                <strong>{manual.pace.hoursPerDay}</strong>
+              </p>
+              <ul>
+                <li>Recommended: {manual.pace.recommended}</li>
+                <li>Accelerated: {manual.pace.accelerated}</li>
+                <li>Slow & steady: {manual.pace.slow}</li>
+              </ul>
+            </div>
+          )}
           {first && (
             <div className="hero-actions" style={{ marginTop: '1.25rem' }}>
               <Link to={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-primary">
@@ -68,6 +81,10 @@ export default function Manual() {
         </div>
       </header>
 
+      <div id="roadmap" className="roadmap-star">
+        <Roadmap manual={manual} />
+      </div>
+
       <section className="outcomes">
         <h2>You’ll walk away able to</h2>
         <ul>
@@ -76,10 +93,6 @@ export default function Manual() {
           ))}
         </ul>
       </section>
-
-      <div id="roadmap">
-        <Roadmap manual={manual} />
-      </div>
 
       <section className="chapter-index">
         <h2>Book chapters</h2>
@@ -90,7 +103,9 @@ export default function Manual() {
               <span className="chapter-card-num">{String(i + 1).padStart(2, '0')}</span>
               <div>
                 <p className="chapter-card-level">
-                  {c.level} · ~{c.minutes} min
+                  {c.phase ? `${c.phase} · ` : ''}
+                  {c.kind === 'checkpoint' ? 'checkpoint' : c.level}
+                  {c.durationLabel ? ` · ${c.durationLabel}` : ` · ~${c.minutes} min`}
                 </p>
                 <h3>{c.title}</h3>
                 <p>{c.overview.slice(0, 120)}…</p>
