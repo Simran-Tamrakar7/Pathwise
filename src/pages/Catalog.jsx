@@ -1,17 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { categories, manuals } from '../data/manuals'
-
-const upcoming = [
-  'Selenium',
-  'Python for QA',
-  'SQL Basics',
-  'UI/UX Research',
-  'Accessibility',
-  'CI/CD Pipelines',
-  'TypeScript',
-  'Mobile Testing',
-]
+import { genres, manuals } from '../data/manuals'
 
 export default function Catalog() {
   const [cat, setCat] = useState('all')
@@ -31,26 +20,38 @@ export default function Catalog() {
     })
   }, [cat, q])
 
+  const grouped =
+    cat === 'all'
+      ? genres
+          .filter((g) => g.id !== 'all')
+          .map((g) => ({
+            ...g,
+            items: list.filter((m) => m.category === g.id),
+          }))
+          .filter((g) => g.items.length > 0)
+      : [{ ...genres.find((g) => g.id === cat), items: list }]
+
   return (
     <div className="wrap">
       <header className="page-hero">
-        <h1>All manuals</h1>
+        <h1>Skill library</h1>
         <p>
-          From absolute beginner to pro craft. Filter by topic or search — then follow the path.
+          {manuals.length} manuals across automation, design, AI, foundations, and soft skills — each with
+          a clickable roadmap, book-style chapters, and a full resource shelf.
         </p>
       </header>
 
       <input
         className="search"
         type="search"
-        placeholder="Search Cypress, design, prompts…"
+        placeholder="Search Cypress, design, interviews, SQL…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
         aria-label="Search manuals"
       />
 
-      <div className="filters" role="tablist" aria-label="Categories">
-        {categories.map((c) => (
+      <div className="filters" role="tablist" aria-label="Genres">
+        {genres.map((c) => (
           <button
             key={c.id}
             type="button"
@@ -65,43 +66,38 @@ export default function Catalog() {
       </div>
 
       {list.length === 0 ? (
-        <p style={{ color: 'var(--ink-soft)', marginBottom: '3rem' }}>
-          Nothing matches. Try another word — or ask for a new manual to be added.
-        </p>
+        <p style={{ color: 'var(--ink-soft)', marginBottom: '3rem' }}>Nothing matches — try another word.</p>
       ) : (
-        <div className="manual-grid" style={{ marginBottom: '2rem' }}>
-          {list.map((m) => (
-            <Link
-              key={m.id}
-              to={`/manuals/${m.id}`}
-              className="manual-link"
-              style={{ '--accent': m.accent }}
-            >
-              <div className="meta">
-                <span>{categories.find((c) => c.id === m.category)?.label}</span>
-                <span>{m.duration}</span>
-              </div>
-              <h3>{m.title}</h3>
-              <p>{m.tagline}</p>
-              <span className="go">Open manual →</span>
-            </Link>
-          ))}
-        </div>
+        grouped.map((g) => (
+          <section key={g.id} className="genre-section">
+            <div className="section-head">
+              <h2>{g.label}</h2>
+              <p>{g.blurb}</p>
+            </div>
+            <div className="manual-grid cover-grid">
+              {g.items.map((m) => (
+                <Link
+                  key={m.id}
+                  to={`/manuals/${m.id}`}
+                  className="manual-link cover-link"
+                  style={{ '--accent': m.accent }}
+                >
+                  <div className="cover-thumb">
+                    <img src={m.coverUrl} alt="" loading="lazy" />
+                  </div>
+                  <div className="meta">
+                    <span>{m.chapters.length} chapters</span>
+                    <span>{m.duration}</span>
+                  </div>
+                  <h3>{m.title}</h3>
+                  <p>{m.tagline}</p>
+                  <span className="go">Open manual + roadmap →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))
       )}
-
-      <div className="add-strip">
-        <h2>Want more paths?</h2>
-        <p>
-          This library grows with you. Next up on the board — say the word and we’ll write the manual.
-        </p>
-        <div className="chip-row">
-          {upcoming.map((t) => (
-            <span key={t} className="chip">
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }

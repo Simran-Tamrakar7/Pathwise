@@ -1,6 +1,10 @@
 # Pathwise
 
-Learning manuals from absolute beginner to pro — automation, design, prompt engineering, and foundations.
+Have-it-all learning manuals: covers, clickable/downloadable roadmaps, book-style chapters, resources & citations — beginner → pro.
+
+## Genres
+
+Automation · Design · AI & Prompts · Foundations · Soft Skills
 
 ## Run
 
@@ -9,8 +13,12 @@ npm install
 npm run dev
 ```
 
-Open the local URL Vite prints (usually `http://localhost:5173`).
+Live: https://simran-tamrakar7.github.io/Pathwise/
 
 ## Add a manual
 
-Edit `src/data/manuals.js`. Copy an existing entry, fill lessons / practice / resources, and it shows up in the catalog automatically.
+1. Add a cover to `public/covers/`
+2. Add an entry under `src/data/manuals/` (use `ch()` helper)
+3. Export it from `src/data/manuals.js`
+
+Roadmaps auto-build from chapters. Download filename: `{id}-roadmap.svg`.

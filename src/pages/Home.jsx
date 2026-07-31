@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { manuals } from '../data/manuals'
+import { manuals, genres } from '../data/manuals'
 
 function HeroVisual() {
   return (
@@ -40,14 +40,6 @@ function HeroVisual() {
               </text>
             </g>
           ))}
-          <rect x="48" y="48" width="150" height="72" rx="10" fill="rgba(242,239,230,0.08)" stroke="rgba(242,239,230,0.2)" />
-          <rect x="64" y="68" width="90" height="8" rx="4" fill="rgba(124,219,176,0.7)" />
-          <rect x="64" y="86" width="118" height="6" rx="3" fill="rgba(242,239,230,0.35)" />
-          <rect x="64" y="100" width="70" height="6" rx="3" fill="rgba(242,239,230,0.25)" />
-          <rect x="200" y="300" width="160" height="100" rx="10" fill="rgba(242,239,230,0.07)" stroke="rgba(242,239,230,0.18)" />
-          <rect x="218" y="324" width="70" height="8" rx="4" fill="rgba(196,92,38,0.65)" />
-          <rect x="218" y="344" width="124" height="6" rx="3" fill="rgba(242,239,230,0.3)" />
-          <rect x="218" y="360" width="98" height="6" rx="3" fill="rgba(242,239,230,0.22)" />
         </svg>
       </div>
     </div>
@@ -56,6 +48,7 @@ function HeroVisual() {
 
 export default function Home() {
   const featured = manuals.slice(0, 6)
+  const genreCount = genres.filter((g) => g.id !== 'all').length
 
   return (
     <>
@@ -67,16 +60,17 @@ export default function Home() {
             Pathwise
             <span>Manuals</span>
           </p>
-          <h1>Learn anything from nothing to pro.</h1>
+          <h1>Your have-it-all learning library.</h1>
           <p className="lede">
-            Clear paths for automation, design, prompts, and foundations — lessons, practice, and resources in one place.
+            {manuals.length} crafts · {genreCount} genres · clickable roadmaps · book-style chapters · resources &
+            citations from zero to pro.
           </p>
           <div className="hero-actions">
             <Link to="/manuals" className="btn btn-primary">
-              Browse manuals
+              Browse the library
             </Link>
-            <Link to="/manuals/playwright" className="btn btn-ghost">
-              Peek at Playwright
+            <Link to="/manuals/graphic-design" className="btn btn-ghost">
+              See a design roadmap
             </Link>
           </div>
         </div>
@@ -86,20 +80,20 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2>How Pathwise works</h2>
-            <p>One skill, three levels, everything you need beside the path.</p>
+            <p>Pick a craft → follow the roadmap → learn chapter by chapter → download the path.</p>
           </div>
           <div className="steps">
             <article className="step">
-              <h3>Pick a craft</h3>
-              <p>Automation, Cypress, design, prompt engineering — start where curiosity points.</p>
+              <h3>Pick a genre</h3>
+              <p>Automation, design, AI, foundations, or soft skills — start where curiosity points.</p>
             </article>
             <article className="step">
-              <h3>Climb beginner → pro</h3>
-              <p>Each manual walks Foundations, Craft, then Pro — with a practice task at every stage.</p>
+              <h3>Follow the roadmap</h3>
+              <p>Clickable nodes, downloadable SVG graphics like graphic-design-roadmap.svg.</p>
             </article>
             <article className="step">
-              <h3>Use the toolkit</h3>
-              <p>Docs, tools, books, and sandboxes so you never wonder “what next?”</p>
+              <h3>Learn like a book</h3>
+              <p>Each chapter: overview, steps, do-this tasks, checklists, practice, links & citations.</p>
             </article>
           </div>
         </div>
@@ -108,19 +102,22 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
-            <h2>Start here</h2>
-            <p>Popular paths. More get added as you grow the library.</p>
+            <h2>Featured paths</h2>
+            <p>Covers, roadmaps, and full manuals — open any door.</p>
           </div>
-          <div className="manual-grid">
+          <div className="manual-grid cover-grid">
             {featured.map((m) => (
               <Link
                 key={m.id}
                 to={`/manuals/${m.id}`}
-                className="manual-link"
+                className="manual-link cover-link"
                 style={{ '--accent': m.accent }}
               >
+                <div className="cover-thumb">
+                  <img src={m.coverUrl} alt="" loading="lazy" />
+                </div>
                 <div className="meta">
-                  <span>{m.levelSpan}</span>
+                  <span>{m.chapters.length} chapters</span>
                   <span>{m.duration}</span>
                 </div>
                 <h3>{m.title}</h3>
@@ -129,6 +126,11 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <p style={{ marginTop: '1.5rem' }}>
+            <Link to="/manuals" className="btn btn-primary">
+              See all {manuals.length} manuals
+            </Link>
+          </p>
         </div>
       </section>
     </>
