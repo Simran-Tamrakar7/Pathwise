@@ -5,12 +5,14 @@ export const asset = (path) =>
 export const genres = [
   { id: 'all', label: 'All', blurb: 'Every path in the library.' },
   { id: 'automation', label: 'Automation', blurb: 'QA, E2E, APIs, pipelines.' },
+  { id: 'quality', label: 'Quality Craft', blurb: 'Testing craft, a11y, perf, security.' },
+  { id: 'delivery', label: 'Delivery', blurb: 'Agile, PM, product, work tracking.' },
   { id: 'design', label: 'Design', blurb: 'Visual craft, Figma, product UI.' },
   { id: 'ai', label: 'AI & Prompts', blurb: 'Talk to models like a pro.' },
   { id: 'foundations', label: 'Foundations', blurb: 'Languages, Git, data.' },
-  { id: 'quality', label: 'Quality Craft', blurb: 'A11y, security, mobile, Docker.' },
+  { id: 'ops', label: 'Ops & Systems', blurb: 'CLI, cloud, observability, docs.' },
   { id: 'career', label: 'Career', blurb: 'Resume, portfolio, job hunt.' },
-  { id: 'soft-skills', label: 'Soft Skills', blurb: 'Communicate, focus, interview.' },
+  { id: 'soft-skills', label: 'Soft Skills', blurb: 'Communicate, lead, collaborate.' },
 ]
 
 /** Build a book-style chapter from a compact definition. */

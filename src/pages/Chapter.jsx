@@ -1,9 +1,22 @@
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getChapter } from '../data/manuals'
+import {
+  isChapterDone,
+  isChecklistChecked,
+  setChapterDone,
+  toggleChecklistItem,
+} from '../lib/progress'
 
 export default function Chapter() {
   const { id, chapterId } = useParams()
   const data = getChapter(id, chapterId)
+  const [done, setDone] = useState(false)
+  const [, setTick] = useState(0)
+
+  useEffect(() => {
+    setDone(isChapterDone(id, chapterId))
+  }, [id, chapterId])
 
   if (!data) {
     return (
@@ -19,6 +32,16 @@ export default function Chapter() {
   const { manual, chapter, index, prev, next } = data
   const kindLabel =
     chapter.kind === 'checkpoint' ? 'Checkpoint' : chapter.kind === 'guide' ? 'Guide' : 'Chapter'
+
+  function markDone() {
+    setChapterDone(manual.id, chapter.id, true)
+    setDone(true)
+  }
+
+  function markUndone() {
+    setChapterDone(manual.id, chapter.id, false)
+    setDone(false)
+  }
 
   return (
     <article className="wrap chapter-page">
@@ -37,15 +60,25 @@ export default function Chapter() {
           {chapter.durationLabel ? ` · ${chapter.durationLabel}` : ` · ~${chapter.minutes} min`}
           {' · '}
           {kindLabel} {index + 1} of {manual.chapters.length}
+          {done ? ' · ✓ done' : ''}
         </p>
         <h1>{chapter.title}</h1>
         <p className="tagline">{chapter.overview}</p>
         {chapter.note && <p className="chapter-note">{chapter.note}</p>}
+        <div className="chapter-mission-bar">
+          <span>Mission {index + 1}</span>
+          <div className="progress-bar thin">
+            <div
+              className="progress-bar-fill"
+              style={{ width: `${Math.round(((index + 1) / manual.chapters.length) * 100)}%` }}
+            />
+          </div>
+        </div>
       </header>
 
       {chapter.learn.length > 0 && (
         <section className="chapter-block">
-          <h2>What you’ll learn</h2>
+          <h2>What you’ll unlock</h2>
           <ul className="learn-list">
             {chapter.learn.map((item) => (
               <li key={item}>{item}</li>
@@ -70,16 +103,20 @@ export default function Chapter() {
                     ))}
                   </ul>
                 )}
-                {step.code && <pre className="code-block"><code>{step.code}</code></pre>}
+                {step.code && (
+                  <pre className="code-block">
+                    <code>{step.code}</code>
+                  </pre>
+                )}
                 {step.doThis && (
                   <div className="do-this">
-                    <p className="label">Do this</p>
+                    <p className="label">Do this now</p>
                     <p>{step.doThis}</p>
                   </div>
                 )}
                 {step.tip && (
                   <p className="tip">
-                    <strong>Tip:</strong> {step.tip}
+                    <strong>Pro tip:</strong> {step.tip}
                   </p>
                 )}
               </div>
@@ -90,12 +127,20 @@ export default function Chapter() {
 
       {chapter.checklist.length > 0 && (
         <section className="chapter-block checklist-block">
-          <h2>Checklist before you move on</h2>
+          <h2>Clear these before you leave</h2>
           <ul>
             {chapter.checklist.map((item) => (
               <li key={item}>
                 <label>
-                  <input type="checkbox" /> {item}
+                  <input
+                    type="checkbox"
+                    checked={isChecklistChecked(manual.id, chapter.id, item)}
+                    onChange={() => {
+                      toggleChecklistItem(manual.id, chapter.id, item)
+                      setTick((t) => t + 1)
+                    }}
+                  />{' '}
+                  {item}
                 </label>
               </li>
             ))}
@@ -105,7 +150,7 @@ export default function Chapter() {
 
       {chapter.practice && (
         <section className="practice-box chapter-practice">
-          <p className="label">Practice</p>
+          <p className="label">Side quest</p>
           <h3>{chapter.practice.title}</h3>
           <p>{chapter.practice.brief}</p>
         </section>
@@ -113,7 +158,7 @@ export default function Chapter() {
 
       {chapter.resources?.length > 0 && (
         <section className="chapter-block">
-          <h2>Resources for this chapter</h2>
+          <h2>Loot — resources for this chapter</h2>
           <div className="resource-table-wrap">
             <table className="resource-table">
               <thead>
@@ -184,6 +229,21 @@ export default function Chapter() {
         </section>
       )}
 
+      <section className="chapter-complete">
+        {!done ? (
+          <button type="button" className="btn btn-primary" onClick={markDone}>
+            Mark chapter complete ✓
+          </button>
+        ) : (
+          <div className="complete-banner">
+            <p>Chapter locked in. Nice.</p>
+            <button type="button" className="btn btn-ghost" onClick={markUndone}>
+              Undo
+            </button>
+          </div>
+        )}
+      </section>
+
       <nav className="chapter-nav" aria-label="Chapter">
         {prev ? (
           <Link to={`/manuals/${manual.id}/chapters/${prev.id}`} className="btn btn-ghost">
@@ -196,7 +256,13 @@ export default function Chapter() {
           Manual home
         </Link>
         {next ? (
-          <Link to={`/manuals/${manual.id}/chapters/${next.id}`} className="btn btn-primary">
+          <Link
+            to={`/manuals/${manual.id}/chapters/${next.id}`}
+            className="btn btn-primary"
+            onClick={() => {
+              if (!done) markDone()
+            }}
+          >
             {next.title} →
           </Link>
         ) : (

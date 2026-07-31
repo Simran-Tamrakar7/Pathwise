@@ -3,10 +3,15 @@ import { automationManuals } from './manuals/automation-a'
 import { automationManualsB } from './manuals/automation-b'
 import { playwrightPythonManual } from './manuals/playwright-python'
 import { designManuals } from './manuals/design'
+import { designExtraManuals } from './manuals/design-extra'
 import { foundationManuals } from './manuals/foundations'
 import { aiManuals, softSkillManuals } from './manuals/ai-soft'
+import { softExtraManuals } from './manuals/soft-extra'
 import { qualityManuals } from './manuals/quality'
+import { qaExtraManuals } from './manuals/qa-extra'
 import { careerManuals } from './manuals/career'
+import { deliveryManuals } from './manuals/delivery'
+import { opsExtraManuals } from './manuals/ops-extra'
 
 /** @deprecated use genres — kept for older imports */
 export const categories = genres
@@ -25,12 +30,17 @@ export const manuals = [
   ...automationManuals,
   playwrightPythonManual,
   ...automationManualsB,
+  ...qualityManuals,
+  ...qaExtraManuals,
+  ...deliveryManuals,
   ...designManuals,
+  ...designExtraManuals,
   ...aiManuals,
   ...foundationManuals,
-  ...qualityManuals,
+  ...opsExtraManuals,
   ...careerManuals,
   ...softSkillManuals,
+  ...softExtraManuals,
 ].map(finalize)
 
 export function getManual(id) {
