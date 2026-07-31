@@ -1,17 +1,10 @@
-import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { categories, getManual } from '../data/manuals'
-
-const LEVELS = [
-  { id: 'beginner', label: 'Beginner' },
-  { id: 'intermediate', label: 'Intermediate' },
-  { id: 'advanced', label: 'Pro' },
-]
+import { getManual, genres } from '../data/manuals'
+import Roadmap from '../components/Roadmap'
 
 export default function Manual() {
   const { id } = useParams()
   const manual = getManual(id)
-  const [level, setLevel] = useState('beginner')
 
   if (!manual) {
     return (
@@ -25,39 +18,54 @@ export default function Manual() {
     )
   }
 
-  const panel = manual.levels[level]
-  const catLabel = categories.find((c) => c.id === manual.category)?.label
+  const catLabel = genres.find((c) => c.id === manual.category)?.label
   const { resources } = manual
+  const first = manual.chapters[0]
 
   return (
     <div className="wrap">
-      <header className="manual-hero">
-        <p className="crumb">
-          <Link to="/manuals">Manuals</Link>
-          {' / '}
-          {manual.title}
-        </p>
-        <div className="badge-row">
-          <span className="badge">{catLabel}</span>
-          <span className="badge">{manual.levelSpan}</span>
-          <span className="badge">{manual.duration}</span>
+      <header className="manual-hero manual-hero-rich">
+        <div className="manual-hero-text">
+          <p className="crumb">
+            <Link to="/manuals">Manuals</Link>
+            {' / '}
+            {manual.title}
+          </p>
+          <div className="badge-row">
+            <span className="badge">{catLabel}</span>
+            <span className="badge">{manual.levelSpan}</span>
+            <span className="badge">{manual.duration}</span>
+          </div>
+          <h1>{manual.title}</h1>
+          <p className="tagline">{manual.tagline}</p>
+          <dl className="manual-meta">
+            <div>
+              <dt>Who it’s for</dt>
+              <dd>{manual.who}</dd>
+            </div>
+            <div>
+              <dt>Chapters</dt>
+              <dd>{manual.chapters.length} lessons</dd>
+            </div>
+            <div>
+              <dt>Span</dt>
+              <dd>{manual.levelSpan}</dd>
+            </div>
+          </dl>
+          {first && (
+            <div className="hero-actions" style={{ marginTop: '1.25rem' }}>
+              <Link to={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-primary">
+                Start chapter 1
+              </Link>
+              <a href="#roadmap" className="btn btn-ghost">
+                View roadmap
+              </a>
+            </div>
+          )}
         </div>
-        <h1>{manual.title}</h1>
-        <p className="tagline">{manual.tagline}</p>
-        <dl className="manual-meta">
-          <div>
-            <dt>Who it’s for</dt>
-            <dd>{manual.who}</dd>
-          </div>
-          <div>
-            <dt>Timebox</dt>
-            <dd>{manual.duration}</dd>
-          </div>
-          <div>
-            <dt>Span</dt>
-            <dd>{manual.levelSpan}</dd>
-          </div>
-        </dl>
+        <div className="manual-cover">
+          <img src={manual.coverUrl} alt="" width={420} height={420} />
+        </div>
       </header>
 
       <section className="outcomes">
@@ -69,47 +77,32 @@ export default function Manual() {
         </ul>
       </section>
 
-      <div className="level-nav" role="tablist" aria-label="Skill level">
-        {LEVELS.map((l) => (
-          <button
-            key={l.id}
-            type="button"
-            role="tab"
-            aria-selected={level === l.id}
-            className={`level-tab${level === l.id ? ' active' : ''}`}
-            onClick={() => setLevel(l.id)}
-          >
-            {l.label}
-          </button>
-        ))}
+      <div id="roadmap">
+        <Roadmap manual={manual} />
       </div>
 
-      <section className="level-panel" key={level}>
-        <p className="level-label">{LEVELS.find((l) => l.id === level)?.label} path</p>
-        <h2>{panel.title}</h2>
-        <p className="summary">{panel.summary}</p>
-
-        <ol className="lesson-list">
-          {panel.lessons.map((lesson, i) => (
-            <li key={lesson.title} className="lesson">
-              <span className="lesson-num">{String(i + 1).padStart(2, '0')}</span>
+      <section className="chapter-index">
+        <h2>Book chapters</h2>
+        <p className="lede">Each chapter is a full lesson: what to learn, what to do, practice, and citations.</p>
+        <div className="chapter-cards">
+          {manual.chapters.map((c, i) => (
+            <Link key={c.id} to={`/manuals/${manual.id}/chapters/${c.id}`} className="chapter-card">
+              <span className="chapter-card-num">{String(i + 1).padStart(2, '0')}</span>
               <div>
-                <h3>{lesson.title}</h3>
-                <p>{lesson.detail}</p>
+                <p className="chapter-card-level">
+                  {c.level} · ~{c.minutes} min
+                </p>
+                <h3>{c.title}</h3>
+                <p>{c.overview.slice(0, 120)}…</p>
               </div>
-            </li>
+            </Link>
           ))}
-        </ol>
-
-        <div className="practice-box">
-          <p className="label">Practice</p>
-          <p>{panel.practice}</p>
         </div>
       </section>
 
       <section className="resources">
-        <h2>Resources</h2>
-        <p className="lede">Docs, tools, books, and places to practice — everything beside the path.</p>
+        <h2>Resource library</h2>
+        <p className="lede">Docs, tools, books, labs, and videos — the “have it all” shelf for this craft.</p>
         <div className="resource-grid">
           <div className="resource-block">
             <h3>Docs & guides</h3>
@@ -155,6 +148,20 @@ export default function Manual() {
               )}
             </ul>
           </div>
+          {resources.videos?.length > 0 && (
+            <div className="resource-block">
+              <h3>Videos</h3>
+              <ul>
+                {resources.videos.map((v) => (
+                  <li key={v.url}>
+                    <a href={v.url} target="_blank" rel="noreferrer">
+                      {v.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
     </div>
