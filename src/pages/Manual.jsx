@@ -1,10 +1,18 @@
+import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getManual, genres } from '../data/manuals'
 import Roadmap from '../components/Roadmap'
+import { countDone, getContinueChapter, isChapterDone } from '../lib/progress'
 
 export default function Manual() {
   const { id } = useParams()
   const manual = getManual(id)
+  const [rev, setRev] = useState(0)
+
+  const progress = useMemo(() => {
+    if (!manual) return null
+    return countDone(manual.id, manual.chapters.length)
+  }, [manual, rev])
 
   if (!manual) {
     return (
@@ -20,10 +28,11 @@ export default function Manual() {
 
   const catLabel = genres.find((c) => c.id === manual.category)?.label
   const { resources } = manual
+  const continueCh = getContinueChapter(manual)
   const first = manual.chapters[0]
 
   return (
-    <div className="wrap">
+    <div className="wrap" onFocus={() => setRev((n) => n + 1)}>
       <header className="manual-hero manual-hero-rich">
         <div className="manual-hero-text">
           <p className="crumb">
@@ -35,9 +44,19 @@ export default function Manual() {
             <span className="badge">{catLabel}</span>
             <span className="badge">{manual.levelSpan}</span>
             <span className="badge">{manual.duration}</span>
+            {progress && progress.done > 0 && (
+              <span className="badge badge-progress">{progress.pct}% complete</span>
+            )}
           </div>
           <h1>{manual.title}</h1>
           <p className="tagline">{manual.tagline}</p>
+
+          {progress && (
+            <div className="progress-bar" aria-label={`${progress.pct} percent complete`}>
+              <div className="progress-bar-fill" style={{ width: `${progress.pct}%` }} />
+            </div>
+          )}
+
           <dl className="manual-meta">
             <div>
               <dt>Who it’s for</dt>
@@ -45,7 +64,9 @@ export default function Manual() {
             </div>
             <div>
               <dt>Chapters</dt>
-              <dd>{manual.chapters.length} lessons</dd>
+              <dd>
+                {manual.chapters.length} · {progress?.done || 0} done
+              </dd>
             </div>
             <div>
               <dt>Span</dt>
@@ -65,16 +86,19 @@ export default function Manual() {
               </ul>
             </div>
           )}
-          {first && (
-            <div className="hero-actions" style={{ marginTop: '1.25rem' }}>
-              <Link to={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-primary">
-                Start chapter 1
+          <div className="hero-actions" style={{ marginTop: '1.25rem' }}>
+            <Link to={`/manuals/${manual.id}/chapters/${continueCh.id}`} className="btn btn-primary">
+              {progress?.done ? 'Continue where you left off' : 'Start chapter 1'}
+            </Link>
+            <a href="#roadmap" className="btn btn-ghost">
+              View roadmap
+            </a>
+            {first && continueCh.id !== first.id && (
+              <Link to={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-ghost">
+                Restart from ch.1
               </Link>
-              <a href="#roadmap" className="btn btn-ghost">
-                View roadmap
-              </a>
-            </div>
-          )}
+            )}
+          </div>
         </div>
         <div className="manual-cover">
           <img src={manual.coverUrl} alt="" width={420} height={420} />
@@ -95,34 +119,43 @@ export default function Manual() {
       </section>
 
       <section className="chapter-index">
-        <h2>Book chapters</h2>
-        <p className="lede">Each chapter is a full lesson: what to learn, what to do, practice, and citations.</p>
+        <h2>All chapters</h2>
+        <p className="lede">Click in. Mark done when you finish. Your browser keeps the streak.</p>
         <div className="chapter-cards">
-          {manual.chapters.map((c, i) => (
-            <Link key={c.id} to={`/manuals/${manual.id}/chapters/${c.id}`} className="chapter-card">
-              <span className="chapter-card-num">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <p className="chapter-card-level">
-                  {c.phase ? `${c.phase} · ` : ''}
-                  {c.kind === 'checkpoint' ? 'checkpoint' : c.level}
-                  {c.durationLabel ? ` · ${c.durationLabel}` : ` · ~${c.minutes} min`}
-                </p>
-                <h3>{c.title}</h3>
-                <p>{c.overview.slice(0, 120)}…</p>
-              </div>
-            </Link>
-          ))}
+          {manual.chapters.map((c, i) => {
+            const chapterDone = isChapterDone(manual.id, c.id)
+            return (
+              <Link
+                key={c.id}
+                to={`/manuals/${manual.id}/chapters/${c.id}`}
+                className={`chapter-card${chapterDone ? ' is-done' : ''}`}
+              >
+                <span className="chapter-card-num">
+                  {chapterDone ? '✓' : String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <p className="chapter-card-level">
+                    {c.phase ? `${c.phase} · ` : ''}
+                    {c.kind === 'checkpoint' ? 'checkpoint' : c.level}
+                    {c.durationLabel ? ` · ${c.durationLabel}` : ` · ~${c.minutes} min`}
+                  </p>
+                  <h3>{c.title}</h3>
+                  <p>{c.overview.slice(0, 110)}…</p>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </section>
 
       <section className="resources">
         <h2>Resource library</h2>
-        <p className="lede">Docs, tools, books, labs, and videos — the “have it all” shelf for this craft.</p>
+        <p className="lede">Shelf for this craft — docs, tools, books, labs, videos.</p>
         <div className="resource-grid">
           <div className="resource-block">
             <h3>Docs & guides</h3>
             <ul>
-              {resources.docs.map((d) => (
+              {(resources?.docs || []).map((d) => (
                 <li key={d.url}>
                   <a href={d.url} target="_blank" rel="noreferrer">
                     {d.name}
@@ -134,7 +167,7 @@ export default function Manual() {
           <div className="resource-block">
             <h3>Tools</h3>
             <ul>
-              {resources.tools.map((t) => (
+              {(resources?.tools || []).map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
@@ -142,7 +175,7 @@ export default function Manual() {
           <div className="resource-block">
             <h3>Books & deep reads</h3>
             <ul>
-              {resources.books.map((b) => (
+              {(resources?.books || []).map((b) => (
                 <li key={b}>{b}</li>
               ))}
             </ul>
@@ -150,7 +183,7 @@ export default function Manual() {
           <div className="resource-block">
             <h3>Practice sandboxes</h3>
             <ul>
-              {resources.practice.map((p) =>
+              {(resources?.practice || []).map((p) =>
                 typeof p === 'string' && p.startsWith('http') ? (
                   <li key={p}>
                     <a href={p} target="_blank" rel="noreferrer">
@@ -163,7 +196,7 @@ export default function Manual() {
               )}
             </ul>
           </div>
-          {resources.videos?.length > 0 && (
+          {resources?.videos?.length > 0 && (
             <div className="resource-block">
               <h3>Videos</h3>
               <ul>
