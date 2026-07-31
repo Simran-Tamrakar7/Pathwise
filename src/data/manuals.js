@@ -1,9 +1,12 @@
 import { genres, buildRoadmap, asset } from './helpers'
 import { automationManuals } from './manuals/automation-a'
 import { automationManualsB } from './manuals/automation-b'
+import { playwrightPythonManual } from './manuals/playwright-python'
 import { designManuals } from './manuals/design'
 import { foundationManuals } from './manuals/foundations'
 import { aiManuals, softSkillManuals } from './manuals/ai-soft'
+import { qualityManuals } from './manuals/quality'
+import { careerManuals } from './manuals/career'
 
 /** @deprecated use genres — kept for older imports */
 export const categories = genres
@@ -20,10 +23,13 @@ function finalize(manual) {
 
 export const manuals = [
   ...automationManuals,
+  playwrightPythonManual,
   ...automationManualsB,
   ...designManuals,
   ...aiManuals,
   ...foundationManuals,
+  ...qualityManuals,
+  ...careerManuals,
   ...softSkillManuals,
 ].map(finalize)
 

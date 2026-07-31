@@ -16,8 +16,11 @@ export default function Nav() {
           <NavLink to="/manuals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Manuals
           </NavLink>
-          <NavLink to="/manuals" className="nav-cta">
-            Start learning
+          <NavLink to="/break" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Break Room
+          </NavLink>
+          <NavLink to="/break" className="nav-cta">
+            Take a break
           </NavLink>
         </nav>
       </div>

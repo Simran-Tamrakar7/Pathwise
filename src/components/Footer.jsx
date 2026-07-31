@@ -7,7 +7,12 @@ export default function Footer() {
         <Link to="/" className="brand">
           Pathwise
         </Link>
-        <p>From zero to craft — manuals you can keep adding forever.</p>
+        <p>
+          From zero to craft —{' '}
+          <Link to="/manuals">manuals</Link>
+          {' · '}
+          <Link to="/break">Break Room</Link>.
+        </p>
       </div>
     </footer>
   )
