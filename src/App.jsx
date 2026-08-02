@@ -8,6 +8,7 @@ import Chapter from './pages/Chapter'
 import BreakRoom from './pages/BreakRoom'
 import Cookbook from './pages/Cookbook'
 import Sparks from './pages/Sparks'
+import Today from './pages/Today'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/today" element={<Today />} />
           <Route path="/manuals" element={<Catalog />} />
           <Route path="/manuals/:id" element={<Manual />} />
           <Route path="/manuals/:id/chapters/:chapterId" element={<Chapter />} />

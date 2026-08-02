@@ -722,9 +722,324 @@ export const breakTeaRituals = [
   },
 ]
 
+/** Creative sandboxes & digital toys — open these first. */
+export const breakToys = [
+  {
+    title: 'Neal.fun',
+    why: 'Tiny addictive toys, progress bars, and weird simulators. Pick one.',
+    url: 'https://neal.fun/',
+    image: img('1550745165-9bc0b252726f'),
+  },
+  {
+    title: 'Weavesilk',
+    why: 'Draw glowing silk with your mouse. Symmetry on, brain off.',
+    url: 'http://weavesilk.com/',
+    image: img('1541701494587-cb58502866ab'),
+  },
+  {
+    title: 'This Is Sand',
+    why: 'Pour colorful digital sand into little landscapes.',
+    url: 'https://thisissand.com/',
+    image: img('1507525428034-b723cf961d3e'),
+  },
+  {
+    title: 'WebGL Fluid Simulation',
+    why: 'Click-drag neon fluids. Hypnotic in the best way.',
+    url: 'https://paveldogreat.github.io/WebGL-Fluid-Simulation/',
+    image: img('1550684848-fac1c5b4c8c0'),
+  },
+  {
+    title: 'Blob Opera',
+    why: 'Drag cute blobs to sing opera. Unhinged and delightful.',
+    url: 'https://artsandculture.google.com/experiment/blob-opera/AAHWrq360NcGbw',
+    image: img('1511379938547-c1f69419868d'),
+  },
+  {
+    title: 'Pixel Thoughts',
+    why: '60-second meditation: shrink a worry into a tiny star.',
+    url: 'http://www.pixelthoughts.co/',
+    image: img('1419242902214-272b976ebd38'),
+  },
+  {
+    title: 'Line Rider',
+    why: 'Draw a track. Watch the sledder suffer (lovingly).',
+    url: 'https://www.linerider.com/',
+    image: img('1551632811-561732d1e306'),
+  },
+  {
+    title: 'Sandspiel',
+    why: 'Falling-sand physics: fire, water, plants, chaos.',
+    url: 'https://sandspiel.club/',
+    image: img('1505142468610-359e7d316be0'),
+  },
+  {
+    title: 'Patatap',
+    why: 'Keyboard → music + flashy shapes. Mash keys, feel cool.',
+    url: 'https://www.patatap.com/',
+    image: img('1470225620780-dba8ba36b745'),
+  },
+  {
+    title: 'Bouncy Balls',
+    why: 'Mic or mouse makes colorful balls bounce forever.',
+    url: 'https://bouncyballs.org/',
+    image: img('1511512578047-dfb367046420'),
+  },
+  {
+    title: 'Koalas to the Max',
+    why: 'Hover circles until a koala appears. Peak internet.',
+    url: 'http://www.koalastothemax.com/',
+    image: img('1452860606245-08befc0ff44b'),
+  },
+]
+
+/** Exploration, Earth & live trackers. */
+export const breakExplore = [
+  {
+    title: 'The Scale of the Universe',
+    why: 'Slide from quantum foam to the whole observable cosmos.',
+    url: 'https://scaleofuniverse.com/',
+    image: img('1462331940025-496dfbfc7564'),
+  },
+  {
+    title: 'Radio Garden',
+    why: 'Spin Earth. Land on a city. Hear live local radio.',
+    url: 'https://radio.garden/',
+    image: img('1478737270239-2f464b485d4b'),
+  },
+  {
+    title: 'Drive & Listen',
+    why: 'Cruise cities with local radio + street noise.',
+    url: 'https://driveandlisten.herokuapp.com/',
+    image: img('1449824913935-59a10b8d2000'),
+  },
+  {
+    title: 'Ancient Earth Globe',
+    why: 'See continents when dinosaurs were the landlords.',
+    url: 'https://dinosaurpictures.org/ancient-earth#240',
+    image: img('1446776811953-b23d57bd21aa'),
+  },
+  {
+    title: 'WindowSwap',
+    why: 'Look out someone else’s window for a minute.',
+    url: 'https://www.window-swap.com/',
+    image: img('1493809842364-78817add7ffb'),
+  },
+  {
+    title: 'Astronomy Picture of the Day',
+    why: 'NASA’s daily cosmic banger + a short caption.',
+    url: 'https://apod.nasa.gov/apod/astropix.html',
+    image: img('1446776653964-20c1d3a81b06'),
+  },
+  {
+    title: 'City Guesser',
+    why: 'Watch walking footage. Name the city. No Street View cheating.',
+    url: 'https://cityguesser.xyz/',
+    image: img('1480714378408-67cf0d13bc1b'),
+  },
+  {
+    title: 'Stellarium Web',
+    why: 'Interactive night sky for wherever you are.',
+    url: 'https://stellarium-web.org/',
+    image: img('1419242902214-272b976ebd38'),
+  },
+  {
+    title: 'Flightradar24',
+    why: 'Live planes crawling across the planet. Oddly calming.',
+    url: 'https://www.flightradar24.com/',
+    image: img('1436491865332-7a61a1093540'),
+  },
+  {
+    title: 'Earth Nullschool',
+    why: 'Live wind, weather, and ocean currents as moving art.',
+    url: 'https://earth.nullschool.net/',
+    image: img('1451188502541-13730237987f'),
+  },
+]
+
+/** Quick games & brain teasers. */
+export const breakTeasers = [
+  {
+    title: 'GeoGuessr',
+    why: 'Dropped on Street View. Guess the map pin.',
+    url: 'https://www.geoguessr.com/',
+    image: img('1524661135-423995f22d0b'),
+  },
+  {
+    title: 'Quick, Draw!',
+    why: 'Doodle in 20 seconds. Google AI tries to name it.',
+    url: 'https://quickdraw.withgoogle.com/',
+    image: img('1513364776144-60967b0f800f'),
+  },
+  {
+    title: 'The Wiki Game',
+    why: 'Race Wikipedia page → page using only links.',
+    url: 'https://www.thewikigame.com/',
+    image: img('1457369804613-52c61a468e7d'),
+  },
+  {
+    title: 'The Password Game',
+    why: 'Make a password. Rules get unhinged. (neal.fun)',
+    url: 'https://neal.fun/password-game/',
+    image: img('1555949963-aa79dcee981c'),
+  },
+  {
+    title: 'Little Alchemy 2',
+    why: 'Mix earth/air/fire/water into hundreds of things.',
+    url: 'https://littlealchemy2.com/',
+    image: img('1513364776144-60967b0f800f'),
+  },
+  {
+    title: 'Wordle',
+    why: 'Five letters. Six tries. Daily dopamine.',
+    url: 'https://www.nytimes.com/games/wordle/index.html',
+    image: img('1582735689369-4fe89db7114c'),
+  },
+  {
+    title: '2048',
+    why: 'Slide tiles. Combine numbers. Chase 2048.',
+    url: 'https://play2048.co/',
+    image: img('1606166180133-ee35d74cba8f'),
+  },
+  {
+    title: 'Gridland',
+    why: 'Match tiles by day; survive monsters by night.',
+    url: 'https://gridland.doublespeakgames.com/',
+    image: img('1552820728-8b83bb6b773f'),
+  },
+  {
+    title: 'Slow Roads',
+    why: 'Endless chill driving. No score. Just road.',
+    url: 'https://slowroads.io/',
+    image: img('1469854523086-cc02fe74f2a1'),
+  },
+  {
+    title: 'Bruno Simon Portfolio',
+    why: 'Drive a toy car through a 3D playground portfolio.',
+    url: 'https://bruno-simon.com/',
+    image: img('1492144534655-ae79c964c9d7'),
+  },
+  {
+    title: 'Akinator',
+    why: 'Think of a character. The genie tries to guess it.',
+    url: 'https://en.akinator.com/',
+    image: img('1542751371-adc38448a05e'),
+  },
+  {
+    title: 'Find the Invisible Cow',
+    why: 'Blank screen + mooing volume. Click the cow.',
+    url: 'https://findtheinvisiblecow.com/',
+    image: img('1501854140801-50d01698950b'),
+  },
+  {
+    title: 'Human Benchmark',
+    why: 'Reaction time, memory, typing — quick brain checkups.',
+    url: 'https://humanbenchmark.com/',
+    image: img('1571019613454-1cb2f99b2d8b'),
+  },
+  {
+    title: 'User Inyerface',
+    why: 'Fill out the worst form UI ever invented. Rage-laugh.',
+    url: 'https://userinyerface.com/',
+    image: img('1555949963-ff9fe0c870eb'),
+  },
+]
+
+/** Humorous, relaxing & bizarre. */
+export const breakBizarre = [
+  {
+    title: 'A Soft Murmur',
+    why: 'Mix rain, waves, wind, thunder — your custom hush.',
+    url: 'https://asoftmurmur.com/',
+    image: img('1515693413570-aaa07c629618'),
+  },
+  {
+    title: 'Calm',
+    why: 'Soft nature scenes + gentle audio when you need quiet.',
+    url: 'https://www.calm.com/',
+    image: img('1506126613408-eca07ce68773'),
+  },
+  {
+    title: 'Virtual Calming Room',
+    why: 'Soft murmur + quiet tabs when your brain is loud.',
+    url: 'https://asoftmurmur.com/',
+    image: img('1470071459604-3b5ec3a7fe05'),
+  },
+  {
+    title: 'Pointer Pointer',
+    why: 'Photos of people pointing at wherever your cursor is.',
+    url: 'https://pointerpointer.com/',
+    image: img('1529156069898-49953e39b3ac'),
+  },
+  {
+    title: 'Hacker Typer',
+    why: 'Mash keys → fake movie hacking code. Instant cool.',
+    url: 'https://hackertyper.net/',
+    image: img('1526374960030-ec162a3d5f1c'),
+  },
+  {
+    title: 'Windows 93',
+    why: 'A chaotic parody OS from a timeline that shouldn’t exist.',
+    url: 'https://www.windows93.net/',
+    image: img('1517694712202-14dd9538aa97'),
+  },
+  {
+    title: 'The Useless Web',
+    why: 'One button → random single-purpose nonsense sites.',
+    url: 'https://theuselessweb.com/',
+    image: img('1516321318423-f06f85e504b3'),
+  },
+  {
+    title: 'Cat Bounce',
+    why: 'Toss cartoon cats. Physics. Joy.',
+    url: 'https://cat-bounce.com/',
+    image: img('1514888286974-6c03e2ca1dba'),
+  },
+  {
+    title: "Don't Even Reply",
+    why: 'Archive of chaotic classified-ad email pranks.',
+    url: 'https://www.dontevenreply.com/',
+    image: img('1486312338219-ce68d2c6f44d'),
+  },
+  {
+    title: 'Staggering Beauty',
+    why: 'Move a worm. Shake harder. Things escalate.',
+    url: 'http://www.staggeringbeauty.com/',
+    image: img('1550684848-fac1c5b4c8c0'),
+  },
+  {
+    title: 'Zoom Quilt',
+    why: 'Infinite zoom into a looping fantasy painting.',
+    url: 'https://zoomquilt.org/',
+    image: img('1460661419201-fd4cecdf8a8b'),
+  },
+  {
+    title: 'Scream Into The Void',
+    why: 'Type frustrations. Watch them shrink into nothing.',
+    url: 'https://screamintothevoid.com/',
+    image: img('1462331940025-496dfbfc7564'),
+  },
+]
+
+/** Retro nostalgia & archives. */
+export const breakRetro = [
+  {
+    title: 'Wayback Machine',
+    why: 'Time-travel old websites from the 90s and 2000s.',
+    url: 'https://web.archive.org/',
+    image: img('1457369804613-52c61a468e7d'),
+  },
+  {
+    title: 'Classic Reload',
+    why: 'Browser MS-DOS / abandonware hits. Nostalgia cartridge.',
+    url: 'https://classicreload.com/',
+    image: img('1552820728-8b83bb6b773f'),
+  },
+]
+
 export const breakMoods = [
-  { id: 'chill', label: 'Chill', cats: ['chill', 'tea', 'breath', 'music', 'doodle'] },
+  { id: 'play', label: 'Play', cats: ['toys', 'teasers', 'games', 'bizarre'] },
+  { id: 'explore', label: 'Explore', cats: ['explore', 'retro', 'links'] },
+  { id: 'chill', label: 'Chill', cats: ['chill', 'tea', 'breath', 'music', 'bizarre'] },
   { id: 'move', label: 'Move', cats: ['stretch', 'moves', 'walk', 'outside', 'eyes'] },
-  { id: 'play', label: 'Play', cats: ['games', 'laugh', 'create'] },
-  { id: 'learn-lite', label: 'Learn-lite', cats: ['books', 'podcasts', 'movies', 'links'] },
+  { id: 'learn-lite', label: 'Learn-lite', cats: ['books', 'podcasts', 'movies', 'teasers'] },
 ]

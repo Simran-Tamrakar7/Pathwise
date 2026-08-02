@@ -2,18 +2,20 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer footer-v2">
       <div className="footer-inner">
         <Link to="/" className="brand">
           Pathwise
         </Link>
         <p>
-          From zero to craft —{' '}
+          Show up today —{' '}
+          <Link to="/today">Today</Link>
+          {' · '}
           <Link to="/manuals">manuals</Link>
           {' · '}
           <Link to="/sparks">Sparks</Link>
           {' · '}
-          <Link to="/break">Break Room</Link>
+          <Link to="/break">Break</Link>
           {' · '}
           <Link to="/cookbook">Cookbook</Link>.
         </p>

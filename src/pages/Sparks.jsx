@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { sparkOfTheDay, sparkTracks, sparks } from '../data/sparks'
 import { asset } from '../data/helpers'
 
@@ -14,9 +14,13 @@ function loadDone() {
 }
 
 export default function Sparks() {
+  const location = useLocation()
+  const openFromNav = location.state?.open
   const [track, setTrack] = useState('all')
   const [done, setDone] = useState(loadDone)
-  const [activeId, setActiveId] = useState(null)
+  const [activeId, setActiveId] = useState(() =>
+    openFromNav && sparks.some((s) => s.id === openFromNav) ? openFromNav : null,
+  )
   const daily = useMemo(() => sparkOfTheDay(), [])
 
   const list = useMemo(
@@ -51,11 +55,11 @@ export default function Sparks() {
             <button type="button" className="btn btn-primary" onClick={() => setActiveId(daily.id)}>
               Today’s spark
             </button>
+            <Link to="/today" className="btn btn-ghost">
+              Today
+            </Link>
             <Link to="/manuals" className="btn btn-ghost">
               Browse manuals
-            </Link>
-            <Link to="/break" className="btn btn-ghost">
-              Break Room
             </Link>
           </div>
         </div>
