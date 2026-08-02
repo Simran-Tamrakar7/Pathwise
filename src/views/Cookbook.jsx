@@ -1,5 +1,8 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import {
   recipeCuisines,
   recipes,
@@ -180,7 +183,7 @@ export default function Cookbook() {
             <button type="button" className="btn btn-ghost" onClick={() => setOpenId(daily.id)}>
               Recipe of the day
             </button>
-            <Link to="/today" className="btn btn-ghost">
+            <Link href="/today" className="btn btn-ghost">
               Today
             </Link>
             <button

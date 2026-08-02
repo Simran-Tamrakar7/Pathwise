@@ -1,5 +1,8 @@
+'use client'
+
 import { useMemo, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { manuals, genres } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
 import { getStreak } from '../lib/streak'
@@ -18,7 +21,7 @@ import { randomManual } from '../data/breakPersonality'
 export default function Home() {
   const [onboardOpen, setOnboardOpen] = useState(() => !isOnboardingDone())
   const [, setTick] = useState(0)
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const featured = useMemo(() => recommendManuals(manuals, 6), [onboardOpen])
 
@@ -67,19 +70,19 @@ export default function Home() {
             {badges.length > 0 ? ` · ${badges.length} path badge${badges.length === 1 ? '' : 's'}` : ''}.
           </p>
           <div className="hero-actions">
-            <Link to="/today" className="btn btn-primary">
+            <Link href="/today" className="btn btn-primary">
               Open Today →
             </Link>
             {continueCh && pw ? (
-              <Link to={`/manuals/playwright/chapters/${continueCh.id}`} className="btn btn-ghost">
+              <Link href={`/manuals/playwright/chapters/${continueCh.id}`} className="btn btn-ghost">
                 Continue Playwright
               </Link>
             ) : (
-              <Link to="/manuals/playwright" className="btn btn-ghost">
+              <Link href="/manuals/playwright" className="btn btn-ghost">
                 Start Playwright
               </Link>
             )}
-            <Link to="/tags" className="btn btn-ghost">
+            <Link href="/tags" className="btn btn-ghost">
               Browse tags
             </Link>
             <button
@@ -87,12 +90,12 @@ export default function Home() {
               className="btn btn-ghost"
               onClick={() => {
                 const m = randomManual(manuals)
-                if (m) navigate(`/manuals/${m.id}`)
+                if (m) router.push(`/manuals/${m.id}`)
               }}
             >
               Random path
             </button>
-            <Link to="/kits" className="btn btn-ghost">
+            <Link href="/kits" className="btn btn-ghost">
               Tool kits
             </Link>
           </div>
@@ -116,30 +119,30 @@ export default function Home() {
             <p>Study, drill, rest, eat — pick a door. Today gathers what matters right now.</p>
           </div>
           <div className="room-mosaic">
-            <Link to="/today" className="room-tile room-today">
+            <Link href="/today" className="room-tile room-today">
               <span className="room-tag">Hub</span>
               <h3>Today</h3>
               <p>Streak, continue, spark, cook, break — one screen.</p>
             </Link>
-            <Link to="/manuals" className="room-tile" style={{ '--room': '#0F766E' }}>
+            <Link href="/manuals" className="room-tile" style={{ '--room': '#0F766E' }}>
               <h3>Manuals</h3>
               <p>{manuals.length} craft paths with lesson cards.</p>
             </Link>
-            <Link to="/sparks" className="room-tile" style={{ '--room': '#B45309' }}>
+            <Link href="/sparks" className="room-tile" style={{ '--room': '#B45309' }}>
               <h3>Sparks</h3>
               <p>5–15 min drills when you don’t have a full block.</p>
             </Link>
-            <Link to="/break" className="room-tile" style={{ '--room': '#0369A1' }}>
+            <Link href="/break" className="room-tile" style={{ '--room': '#0369A1' }}>
               <h3>Break Room</h3>
               <p>Toys, trackers, teasers, weird sites — then stop.</p>
             </Link>
-            <Link to="/cookbook" className="room-tile" style={{ '--room': '#C2410C' }}>
+            <Link href="/cookbook" className="room-tile" style={{ '--room': '#C2410C' }}>
               <h3>Cookbook</h3>
               <p>Ways + Nutrition Facts. Food Hero kitchen too.</p>
             </Link>
           </div>
           <p style={{ marginTop: '1rem' }}>
-            <Link to="/kits" className="btn btn-ghost">
+            <Link href="/kits" className="btn btn-ghost">
               Tool cookbooks (prompts, Zaps, design, snippets) →
             </Link>
           </p>
@@ -156,7 +159,7 @@ export default function Home() {
             {genreChips.map((g) => (
               <Link
                 key={g.id}
-                to="/manuals"
+                href="/manuals"
                 className="genre-chip"
                 style={{ '--gcolor': g.color }}
                 onClick={() => sessionStorage.setItem('pathwise-genre', g.id)}
@@ -169,7 +172,7 @@ export default function Home() {
               </Link>
             ))}
             {skillTags.slice(0, 3).map((t) => (
-              <Link key={t.id} to={`/tags/${t.id}`} className="genre-chip" style={{ '--gcolor': t.color }}>
+              <Link key={t.id} href={`/tags/${t.id}`} className="genre-chip" style={{ '--gcolor': t.color }}>
                 <span className="genre-dot" />
                 <span>
                   <strong>{t.label}</strong>
@@ -177,7 +180,7 @@ export default function Home() {
                 </span>
               </Link>
             ))}
-            <Link to="/tags" className="genre-chip genre-chip-all">
+            <Link href="/tags" className="genre-chip genre-chip-all">
               <span>
                 <strong>All tags</strong>
                 <small>Skill filters</small>
@@ -214,7 +217,7 @@ export default function Home() {
               return (
                 <Link
                   key={m.id}
-                  to={`/manuals/${m.id}`}
+                  href={`/manuals/${m.id}`}
                   className="manual-link cover-link vivid-card"
                   style={{ '--accent': m.accent || g?.color || '#0B3D2E' }}
                 >
@@ -234,7 +237,7 @@ export default function Home() {
             })}
           </div>
           <p style={{ marginTop: '1.5rem' }}>
-            <Link to="/manuals" className="btn btn-primary">
+            <Link href="/manuals" className="btn btn-primary">
               See all {manuals.length} manuals
             </Link>
           </p>
@@ -250,7 +253,7 @@ export default function Home() {
             </div>
             <div className="badge-row">
               {badges.map((b) => (
-                <Link key={b.manualId} to={`/manuals/${b.manualId}`} className="badge-card">
+                <Link key={b.manualId} href={`/manuals/${b.manualId}`} className="badge-card">
                   <strong>{b.title}</strong>
                   <small>Completed</small>
                 </Link>

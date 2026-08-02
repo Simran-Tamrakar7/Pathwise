@@ -1,6 +1,8 @@
-/** Path helpers for GitHub Pages base. */
-export const asset = (path) =>
-  `${import.meta.env.BASE_URL}${String(path).replace(/^\//, '')}`
+/** Path helpers for GitHub Pages / Next basePath. */
+export const asset = (path) => {
+  const base = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '')
+  return `${base}/${String(path).replace(/^\//, '')}`
+}
 
 export const genres = [
   { id: 'all', label: 'All', blurb: 'Every path in the library.', color: '#0B3D2E' },

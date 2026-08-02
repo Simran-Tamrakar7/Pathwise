@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { asset } from '../data/helpers'
 
 const LEVEL_COLOR = {
@@ -222,7 +224,7 @@ export default function Roadmap({ manual }) {
                       <li key={node.id} className={`path-node-wrap ${side}`}>
                         <span className="path-connector" aria-hidden="true" />
                         <Link
-                          to={`/manuals/${manual.id}/chapters/${node.id}`}
+                          href={`/manuals/${manual.id}/chapters/${node.id}`}
                           className={`path-node kind-${kind}`}
                           data-level={node.level}
                           title={node.title}
@@ -256,7 +258,7 @@ export default function Roadmap({ manual }) {
         <ol className="roadmap-list">
           {nodes.map((node) => (
             <li key={node.id}>
-              <Link to={`/manuals/${manual.id}/chapters/${node.id}`}>
+              <Link href={`/manuals/${manual.id}/chapters/${node.id}`}>
                 <span className="rn">{String(node.n).padStart(2, '0')}</span>
                 <span className="rt">{node.title}</span>
                 <span className="rl">{node.phase || node.level}</span>

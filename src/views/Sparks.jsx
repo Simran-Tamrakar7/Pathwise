@@ -1,5 +1,8 @@
+'use client'
+
 import { useMemo, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { sparkOfTheDay, sparkTracks, sparks } from '../data/sparks'
 import { asset } from '../data/helpers'
 
@@ -14,8 +17,8 @@ function loadDone() {
 }
 
 export default function Sparks() {
-  const location = useLocation()
-  const openFromNav = location.state?.open
+  const [params] = useSearchParams()
+  const openFromNav = params.get('open')
   const [track, setTrack] = useState('all')
   const [done, setDone] = useState(loadDone)
   const [activeId, setActiveId] = useState(() =>
@@ -55,10 +58,10 @@ export default function Sparks() {
             <button type="button" className="btn btn-primary" onClick={() => setActiveId(daily.id)}>
               Today’s spark
             </button>
-            <Link to="/today" className="btn btn-ghost">
+            <Link href="/today" className="btn btn-ghost">
               Today
             </Link>
-            <Link to="/manuals" className="btn btn-ghost">
+            <Link href="/manuals" className="btn btn-ghost">
               Browse manuals
             </Link>
           </div>
@@ -134,7 +137,7 @@ export default function Sparks() {
               {done.has(active.id) ? 'Completed ✓' : 'Mark done'}
             </button>
             {active.manualId && (
-              <Link to={`/manuals/${active.manualId}`} className="btn btn-ghost">
+              <Link href={`/manuals/${active.manualId}`} className="btn btn-ghost">
                 Open related manual
               </Link>
             )}

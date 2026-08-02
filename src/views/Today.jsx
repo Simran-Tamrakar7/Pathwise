@@ -1,5 +1,7 @@
+'use client'
+
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { manuals, getManual } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
 import { checkInToday, getStreak, sparkDoneCount } from '../lib/streak'
@@ -100,7 +102,7 @@ export default function Today() {
 
       <div className="today-grid">
         <Link
-          to={
+          href={
             continueCh && continueManual
               ? `/manuals/${continueManual.id}/chapters/${continueCh.id}`
               : '/manuals/playwright'
@@ -117,14 +119,14 @@ export default function Today() {
           <span className="go">Open chapter →</span>
         </Link>
 
-        <Link to="/sparks" className="today-tile" state={{ open: spark.id }}>
+        <Link href={`/sparks?open=${spark.id}`} className="today-tile" >
           <p className="break-kicker">Spark · {spark.minutes} min</p>
           <h2>{spark.title}</h2>
           <p>{spark.prompt}</p>
           <span className="go">Do this spark →</span>
         </Link>
 
-        <Link to={`/cookbook?open=${recipe.id}`} className="today-tile today-tile-cook">
+        <Link href={`/cookbook?open=${recipe.id}`} className="today-tile today-tile-cook">
           <img src={recipe.image} alt="" className="today-tile-img" />
           <div>
             <p className="break-kicker">Fuel · {recipe.cuisineLabel}</p>
@@ -136,7 +138,7 @@ export default function Today() {
           </div>
         </Link>
 
-        <Link to="/break" className="today-tile">
+        <Link href="/break" className="today-tile">
           <img src={asset('covers/break-hero.png')} alt="" className="today-tile-img" />
           <div>
             <p className="break-kicker">Rest</p>
@@ -152,7 +154,7 @@ export default function Today() {
           <h2>Badges</h2>
           <div className="badge-row">
             {badges.slice(0, 6).map((b) => (
-              <Link key={b.manualId} to={`/manuals/${b.manualId}`} className="badge-card">
+              <Link key={b.manualId} href={`/manuals/${b.manualId}`} className="badge-card">
                 <strong>{b.title}</strong>
                 <small>Completed</small>
               </Link>
@@ -164,12 +166,12 @@ export default function Today() {
       <section className="today-mix">
         <h2>Room doors</h2>
         <div className="today-doors">
-          <Link to="/manuals">Manuals</Link>
-          <Link to="/tags">Tags</Link>
-          <Link to="/sparks">Sparks</Link>
-          <Link to="/break">Break</Link>
-          <Link to="/cookbook">Cookbook</Link>
-          <Link to="/insights">Insights</Link>
+          <Link href="/manuals">Manuals</Link>
+          <Link href="/tags">Tags</Link>
+          <Link href={`/sparks?open=${spark.id}`}>Sparks</Link>
+          <Link href="/break">Break</Link>
+          <Link href="/cookbook">Cookbook</Link>
+          <Link href="/insights">Insights</Link>
         </div>
       </section>
 

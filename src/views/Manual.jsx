@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import Link from 'next/link'
 import { getManual, genres, manuals } from '../data/manuals'
 import Roadmap from '../components/Roadmap'
 import VideoCard from '../components/VideoCard'
@@ -47,8 +49,7 @@ function Accordion({ title, children, defaultOpen = false }) {
   )
 }
 
-export default function Manual() {
-  const { id } = useParams()
+export default function Manual({ id }) {
   const manual = getManual(id)
   const [rev, setRev] = useState(0)
   const [tab, setTab] = useState('path')
@@ -80,7 +81,7 @@ export default function Manual() {
       <div className="wrap not-found">
         <h1>Manual not found</h1>
         <p>That path isn’t in the library yet.</p>
-        <Link to="/manuals" className="btn btn-primary">
+        <Link href="/manuals" className="btn btn-primary">
           Browse manuals
         </Link>
       </div>
@@ -111,7 +112,7 @@ export default function Manual() {
       <DocumentHead title={manual.title} description={manual.tagline} />
 
       <p className="crumb">
-        <Link to="/manuals">Manuals</Link>
+        <Link href="/manuals">Manuals</Link>
         {' / '}
         {manual.title}
       </p>
@@ -127,7 +128,7 @@ export default function Manual() {
             {tags.map((tid) => {
               const t = getTag(tid)
               return t ? (
-                <Link key={tid} to={`/tags/${tid}`} className="manual-tag" style={{ '--tag': t.color }}>
+                <Link key={tid} href={`/tags/${tid}`} className="manual-tag" style={{ '--tag': t.color }}>
                   {t.label}
                 </Link>
               ) : null
@@ -193,11 +194,11 @@ export default function Manual() {
       </div>
 
       <div className="studio-actions">
-        <Link to={`/manuals/${manual.id}/chapters/${continueCh.id}`} className="btn btn-primary">
+        <Link href={`/manuals/${manual.id}/chapters/${continueCh.id}`} className="btn btn-primary">
           {progress?.done ? 'Continue where you left off' : 'Start chapter 1'}
         </Link>
         {first && continueCh.id !== first.id && (
-          <Link to={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-ghost">
+          <Link href={`/manuals/${manual.id}/chapters/${first.id}`} className="btn btn-ghost">
             Restart from ch.1
           </Link>
         )}
@@ -327,7 +328,7 @@ export default function Manual() {
                   return (
                     <Link
                       key={c.id}
-                      to={`/manuals/${manual.id}/chapters/${c.id}`}
+                      href={`/manuals/${manual.id}/chapters/${c.id}`}
                       className={`studio-chapter-link${done ? ' is-done' : ''}`}
                     >
                       <span>{done ? '✓' : String(c.n).padStart(2, '0')}</span>
@@ -407,7 +408,7 @@ export default function Manual() {
               return (
                 <Link
                   key={c.id}
-                  to={`/manuals/${manual.id}/chapters/${c.id}`}
+                  href={`/manuals/${manual.id}/chapters/${c.id}`}
                   className={`chapter-card${chapterDone ? ' is-done' : ''}`}
                 >
                   <span className="chapter-card-num">

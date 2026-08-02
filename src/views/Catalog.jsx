@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { genres, manuals } from '../data/manuals'
 import { countDone } from '../lib/progress'
 import DocumentHead from '../components/DocumentHead'
@@ -53,7 +55,7 @@ export default function Catalog() {
         <h1>Manuals you can finish</h1>
         <p>
           {manuals.length} paths — genre filters, covers, lesson cards. Or browse by{' '}
-          <Link to="/tags">skill tags</Link>.
+          <Link href="/tags">skill tags</Link>.
         </p>
       </header>
 
@@ -98,7 +100,7 @@ export default function Catalog() {
                 return (
                   <Link
                     key={m.id}
-                    to={`/manuals/${m.id}`}
+                    href={`/manuals/${m.id}`}
                     className="manual-link cover-link vivid-card"
                     style={{ '--accent': m.accent || g.color }}
                   >
