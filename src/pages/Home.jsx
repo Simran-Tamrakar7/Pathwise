@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { manuals, genres } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
+import { getStreak } from '../lib/streak'
 import { featuredVideos } from '../data/learnMedia'
 import VideoCard from '../components/VideoCard'
 import { asset } from '../data/helpers'
@@ -13,67 +14,96 @@ export default function Home() {
     .filter(Boolean)
     .slice(0, 6)
 
-  const genreCount = genres.filter((g) => g.id !== 'all').length
   const chapterCount = manuals.reduce((n, m) => n + m.chapters.length, 0)
   const pw = manuals.find((m) => m.id === 'playwright')
   const continueCh = pw ? getContinueChapter(pw) : null
   const pwProg = pw ? countDone(pw.id, pw.chapters.length) : null
-  const genreChips = genres.filter((g) => g.id !== 'all')
+  const streak = getStreak()
+  const genreChips = genres.filter((g) => g.id !== 'all').slice(0, 6)
 
   return (
     <>
-      <section className="hero hero-vivid hero-colorful">
-        <div className="hero-bg" />
-        <div className="hero-orb hero-orb-a" aria-hidden="true" />
-        <div className="hero-orb hero-orb-b" aria-hidden="true" />
-        <div className="hero-orb hero-orb-c" aria-hidden="true" />
-        <div className="hero-content">
-          <p className="hero-kicker">Colorful paths. Real skills. Less boredom.</p>
-          <p className="hero-brand">
-            Pathwise
-            <span>Manuals</span>
-          </p>
-          <h1>Learn with pictures, videos, and paths you can finish.</h1>
+      <section className="hero hero-v2">
+        <div
+          className="hero-v2-wash"
+          aria-hidden="true"
+          style={{ backgroundImage: `linear-gradient(120deg, rgba(11, 61, 46, 0.92) 0%, rgba(15, 92, 76, 0.78) 42%, rgba(3, 105, 161, 0.45) 100%), url(${asset('covers/learn-banner.png')})` }}
+        />
+        <div className="hero-v2-grid" aria-hidden="true" />
+        <div className="wrap hero-v2-inner">
+          <p className="hero-kicker">Forest paths · real skills · room to rest</p>
+          <p className="hero-brand hero-brand-v2">Pathwise</p>
+          <h1>Learn in chapters. Reset in rooms. Come back tomorrow.</h1>
           <p className="lede">
-            {manuals.length} crafts · {chapterCount}+ missions · Sparks for micro-drills · Break Room for rest ·
-            Cookbook for fuel.
+            {manuals.length} manuals · {chapterCount}+ chapters · Sparks · Break Room · Cookbook — tied together by{' '}
+            <strong>Today</strong>
+            {streak.count > 0 ? ` · ${streak.count}-day streak` : ''}.
           </p>
           <div className="hero-actions">
+            <Link to="/today" className="btn btn-primary">
+              Open Today →
+            </Link>
             {continueCh && pw ? (
-              <Link to={`/manuals/playwright/chapters/${continueCh.id}`} className="btn btn-primary">
-                Continue Playwright →
+              <Link to={`/manuals/playwright/chapters/${continueCh.id}`} className="btn btn-ghost">
+                Continue Playwright
               </Link>
             ) : (
-              <Link to="/manuals/playwright" className="btn btn-primary">
-                Start Playwright path
+              <Link to="/manuals/playwright" className="btn btn-ghost">
+                Start Playwright
               </Link>
             )}
             <Link to="/manuals" className="btn btn-ghost">
-              Browse {genreCount} genres
-            </Link>
-            <a href="#watch" className="btn btn-ghost">
-              Watch & learn
-            </a>
-            <Link to="/sparks" className="btn btn-ghost">
-              Skill Sparks
-            </Link>
-            <Link to="/cookbook" className="btn btn-ghost">
-              Cookbook
+              Browse manuals
             </Link>
           </div>
           {pwProg && pwProg.done > 0 && (
-            <p className="hero-progress">
-              Playwright progress: <strong>{pwProg.pct}%</strong> ({pwProg.done}/{pwProg.total} chapters)
-            </p>
+            <div className="hero-progress-bar" aria-label={`${pwProg.pct}% Playwright progress`}>
+              <span>Playwright {pwProg.pct}%</span>
+              <div className="progress-bar thin">
+                <div className="progress-bar-fill" style={{ width: `${pwProg.pct}%` }} />
+              </div>
+            </div>
           )}
+        </div>
+      </section>
+
+      <section className="section rooms-section">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>Four rooms + Today</h2>
+            <p>Study, drill, rest, eat — pick a door. Today gathers what matters right now.</p>
+          </div>
+          <div className="room-mosaic">
+            <Link to="/today" className="room-tile room-today">
+              <span className="room-tag">New</span>
+              <h3>Today</h3>
+              <p>Streak, continue, spark, cook, break — one screen.</p>
+            </Link>
+            <Link to="/manuals" className="room-tile" style={{ '--room': '#0F766E' }}>
+              <h3>Manuals</h3>
+              <p>{manuals.length} craft paths with lesson cards.</p>
+            </Link>
+            <Link to="/sparks" className="room-tile" style={{ '--room': '#B45309' }}>
+              <h3>Sparks</h3>
+              <p>5–15 min drills when you don’t have a full block.</p>
+            </Link>
+            <Link to="/break" className="room-tile" style={{ '--room': '#0369A1' }}>
+              <h3>Break Room</h3>
+              <p>Toys, trackers, teasers, weird sites — then stop.</p>
+            </Link>
+            <Link to="/cookbook" className="room-tile" style={{ '--room': '#C2410C' }}>
+              <h3>Cookbook</h3>
+              <p>Ways + Nutrition Facts. Food Hero kitchen too.</p>
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="section genre-ribbon-section">
         <div className="wrap">
           <div className="section-head">
-            <h2>Pick a colorful lane</h2>
-            <p>Every genre has its own energy. Tap one and go.</p>
+            <h2>Jump a genre</h2>
+            <p>Filter the library by energy.</p>
           </div>
           <div className="genre-ribbon">
             {genreChips.map((g) => (
@@ -91,6 +121,12 @@ export default function Home() {
                 </span>
               </Link>
             ))}
+            <Link to="/manuals" className="genre-chip genre-chip-all">
+              <span>
+                <strong>All genres</strong>
+                <small>Full catalog</small>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -100,88 +136,14 @@ export default function Home() {
           <div className="section-head watch-head">
             <div>
               <h2>Watch desk</h2>
-              <p>Short, high-signal videos — play inline or open on YouTube. Pair with a Pathwise chapter after.</p>
+              <p>Short videos — then open a chapter. Eyes first, hands second.</p>
             </div>
             <img className="watch-banner" src={asset('covers/learn-banner.png')} alt="" />
           </div>
           <div className="video-grid">
-            {featuredVideos.map((v) => (
+            {featuredVideos.slice(0, 3).map((v) => (
               <VideoCard key={v.id} {...v} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section challenge-strip">
-        <div className="wrap challenge-inner">
-          <div>
-            <p className="challenge-label">Today’s dare</p>
-            <h2>Watch 10 minutes. Open one chapter. Check three boxes.</h2>
-            <p>Eyes + hands + commit. Pathwise remembers what you mark done here.</p>
-          </div>
-          <Link to="/manuals/playwright" className="btn btn-primary">
-            Enter Playwright saga
-          </Link>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>Side doors</h2>
-            <p>Learn in manuals. Spark a drill. Rest and fuel in their own rooms.</p>
-          </div>
-          <div className="portal-grid portal-grid-3">
-            <Link to="/sparks" className="portal-card">
-              <img src={asset('covers/focus-cover.png')} alt="" loading="lazy" />
-              <div>
-                <p className="break-kicker">Practice</p>
-                <h3>Skill Sparks</h3>
-                <p>5–15 minute drills across QA, code, design, soft skills, and career.</p>
-                <span className="go">Open Sparks →</span>
-              </div>
-            </Link>
-            <Link to="/break" className="portal-card">
-              <img src={asset('covers/break-hero.png')} alt="" loading="lazy" />
-              <div>
-                <p className="break-kicker">Rest</p>
-                <h3>Break Room</h3>
-                <p>Chill zone, tea rituals, games, breath — mood presets and matched photos.</p>
-                <span className="go">Enter Break Room →</span>
-              </div>
-            </Link>
-            <Link to="/cookbook" className="portal-card">
-              <img src={asset('covers/cookbook-hero.png')} alt="" loading="lazy" />
-              <div>
-                <p className="break-kicker">Fuel</p>
-                <h3>Cookbook</h3>
-                <p>Dishes with 3–4 cooking ways (healthy / oil / classic), YouTube, accurate photos.</p>
-                <span className="go">Open Cookbook →</span>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <h2>Why it feels friendlier</h2>
-            <p>Built for humans who get bored by walls of gray text.</p>
-          </div>
-          <div className="steps zest-steps color-steps">
-            <article className="step" style={{ '--step': '#0F766E' }}>
-              <h3>Visual paths</h3>
-              <p>Covers, phase colors, roadmap nodes — see the mountain before you climb.</p>
-            </article>
-            <article className="step" style={{ '--step': '#C2410C' }}>
-              <h3>Videos in the loop</h3>
-              <p>Watch desk on home + video loot on manuals. Learn with eyes, then do.</p>
-            </article>
-            <article className="step" style={{ '--step': '#0369A1' }}>
-              <h3>Missions & progress</h3>
-              <p>Checklists, mark complete, continue where you left off. Tiny dopamine, real skill.</p>
-            </article>
           </div>
         </div>
       </section>
@@ -189,8 +151,8 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="section-head">
-            <h2>Featured missions</h2>
-            <p>Bright covers. Clear next steps. Start anywhere — Playwright is the flagship.</p>
+            <h2>Featured paths</h2>
+            <p>Playwright leads. Everything else is a lane you can finish.</p>
           </div>
           <div className="manual-grid cover-grid">
             {featured.map((m) => {

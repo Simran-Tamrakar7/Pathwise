@@ -251,8 +251,8 @@ export default function BreakRoom() {
           <h1>Break Room</h1>
           <p>
             Sandboxes, Earth trackers, brain teasers, weird sites, and retro archives — open up top so you don’t scroll
-            forever. Timer still here if you need it. Then back to <Link to="/manuals">manuals</Link> or{' '}
-            <Link to="/sparks">Sparks</Link>.
+            forever. Timer still here if you need it. Then back to <Link to="/today">Today</Link>,{' '}
+            <Link to="/manuals">manuals</Link>, or <Link to="/sparks">Sparks</Link>.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={expandAll}>

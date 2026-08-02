@@ -42,10 +42,11 @@ export default function Catalog() {
 
   return (
     <div className="wrap catalog-page">
-      <header className="page-hero colorful-page-hero">
-        <h1>Skill library</h1>
+      <header className="page-hero colorful-page-hero catalog-hero-v2">
+        <p className="hero-kicker">Skill library</p>
+        <h1>Manuals you can finish</h1>
         <p>
-          {manuals.length} colorful manuals — filters by genre, covers you can feel, paths you can finish.
+          {manuals.length} paths — genre filters, covers, lesson cards. Start anywhere; Today keeps you honest.
         </p>
       </header>
 
