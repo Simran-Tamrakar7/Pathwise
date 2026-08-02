@@ -132,91 +132,115 @@ export const breakGames = [
     title: 'Human Resource Machine',
     why: 'Puzzle “assembly” that scratches coding itch playfully.',
     url: 'https://tomorrowcorporation.com/humanresourcemachine',
+    imageHint: 'puzzle',
   },
   {
     title: 'Baba Is You',
     why: 'Rewrite the rules. Peak lateral thinking.',
     url: 'https://hempuli.com/baba/',
+    imageHint: 'puzzle',
   },
   {
     title: 'Mini Metro',
     why: 'Calm systems design. Perfect 10-minute reset.',
     url: 'https://dinopoloclub.com/games/mini-metro/',
+    imageHint: 'transit',
   },
   {
     title: 'The Witness',
     why: 'Quiet island of puzzles. Walk away clearer.',
     url: 'https://the-witness.net/',
+    imageHint: 'island',
   },
   {
     title: 'learngitbranching.js.org',
     why: 'Still learning — but it feels like a game.',
     url: 'https://learngitbranching.js.org/',
+    imageHint: 'code',
   },
   {
     title: 'CSS Battle',
     why: 'Tiny visual challenges. 5 minutes, then stop.',
     url: 'https://cssbattle.dev/',
+    imageHint: 'code',
+  },
+  {
+    title: 'GeoGuessr free modes',
+    why: 'Travel without leaving the chair. One round max.',
+    url: 'https://www.geoguessr.com/',
+    imageHint: 'map',
+  },
+  {
+    title: 'Orisinal calm games',
+    why: 'Tiny browser games with soft vibes.',
+    url: 'https://www.ferryhalim.com/orisinal/',
+    imageHint: 'cozy',
+  },
+  {
+    title: 'Windowswap',
+    why: 'Look out someone else’s window for 30 seconds.',
+    url: 'https://www.window-swap.com/',
+    imageHint: 'window',
+  },
+  {
+    title: 'Quick, Draw!',
+    why: 'Doodle vs AI. Laugh, then stop.',
+    url: 'https://quickdraw.withgoogle.com/',
+    imageHint: 'draw',
   },
   {
     title: 'Flexbox Froggy',
     why: 'Layout practice that doesn’t feel like homework.',
     url: 'https://flexboxfroggy.com/',
+    imageHint: 'code',
   },
   {
     title: 'Patrick’s Parabox',
     why: 'Recursive puzzles. Weirdly calming.',
     url: 'https://store.steampowered.com/app/1260520/Patricks_Parabox/',
+    imageHint: 'puzzle',
   },
   {
     title: 'Grid Garden',
     why: 'CSS Grid with vegetables that aren’t dinner plans — just puzzles.',
     url: 'https://cssgridgarden.com/',
-  },
-  {
-    title: 'Screeps World (peek)',
-    why: 'If you want code-as-game — cap the time hard.',
-    url: 'https://screeps.com/',
+    imageHint: 'code',
   },
   {
     title: '2048',
     why: 'Classic number slide. One round, then close the tab.',
     url: 'https://play2048.co/',
+    imageHint: 'puzzle',
   },
   {
     title: 'Little Alchemy 2',
     why: 'Combine ideas. Soft creativity without a deadline.',
     url: 'https://littlealchemy2.com/',
+    imageHint: 'cozy',
   },
   {
     title: 'Neal.fun',
     why: 'A shelf of tiny delightful toys. Pick one, not twelve.',
     url: 'https://neal.fun/',
-  },
-  {
-    title: 'GeoGuessr (free modes)',
-    why: 'Travel with your eyes. Great for a stuck brain.',
-    url: 'https://www.geoguessr.com/',
+    imageHint: 'cozy',
   },
   {
     title: 'Chess.com puzzles',
     why: 'One puzzle = enough. Don’t start a ranked spiral.',
     url: 'https://www.chess.com/puzzles',
+    imageHint: 'puzzle',
   },
   {
     title: 'Sudoku.com',
     why: 'Quiet logic. Paper optional.',
     url: 'https://sudoku.com/',
-  },
-  {
-    title: 'Orisinal — Winterbells',
-    why: 'Old-school browser calm. Jump a rabbit, smile, leave.',
-    url: 'https://www.ferryhalim.com/orisinal/',
+    imageHint: 'puzzle',
   },
   {
     title: 'A Dark Room',
     why: 'Minimal story game. Atmospheric and short sessions.',
     url: 'https://adarkroom.doublespeakgames.com/',
+    imageHint: 'night',
   },
 ]
 
@@ -518,4 +542,76 @@ export const breakRituals = [
   'Shuffle a doodle prompt and actually draw it.',
   '20-20-20: look far away, blink, come back.',
   'Step outside for sunlight — even 90 seconds.',
+  'Make tea. Sit until the cup is warm in both hands. Then resume.',
+  'One song, eyes closed, no multitasking. Then timer.',
+]
+
+/** Soft landings — ambience, cozy resets, no homework vibe. */
+export const breakChill = [
+  {
+    title: 'Rain ambience',
+    why: 'Soft rain in the background while you stretch or doodle.',
+    url: 'https://rain.mp3yoyo.com/',
+    imageHint: 'rain',
+  },
+  {
+    title: 'Coffee shop murmur',
+    why: 'Café noise without leaving your chair.',
+    url: 'https://coffitivity.com/',
+    imageHint: 'cafe',
+  },
+  {
+    title: 'Lo-fi beats',
+    why: 'Study-adjacent chill — volume low, lyrics optional.',
+    url: 'https://www.youtube.com/results?search_query=lofi+hip+hop+radio',
+    imageHint: 'lofi',
+  },
+  {
+    title: 'Fireplace crackle',
+    why: 'Cozy audio when the room feels sterile.',
+    url: 'https://www.youtube.com/results?search_query=fireplace+sounds+1+hour',
+    imageHint: 'fire',
+  },
+  {
+    title: 'Ocean waves',
+    why: 'Slow breathing syncs with the tide sound.',
+    url: 'https://www.youtube.com/results?search_query=ocean+waves+relaxing',
+    imageHint: 'ocean',
+  },
+  {
+    title: 'Night window',
+    why: 'Dim lights, one lamp, phone face-down for five minutes.',
+    url: 'https://www.youtube.com/results?search_query=cozy+night+ambience',
+    imageHint: 'night',
+  },
+]
+
+export const breakTeaRituals = [
+  {
+    title: 'Slow tea steep',
+    why: 'Boil, pour, wait the full steep. No phone until the timer dings.',
+    imageHint: 'tea',
+  },
+  {
+    title: 'Warm mug hold',
+    why: 'Both hands on the cup for 60 seconds. Notice temperature.',
+    imageHint: 'mug',
+  },
+  {
+    title: 'Water first',
+    why: 'Full glass before caffeine. Hydration is a free buff.',
+    imageHint: 'water',
+  },
+  {
+    title: 'Herbal wind-down',
+    why: 'Chamomile / mint when caffeine would ruin the next nap.',
+    imageHint: 'herbal',
+  },
+]
+
+export const breakMoods = [
+  { id: 'chill', label: 'Chill', cats: ['chill', 'tea', 'breath', 'music', 'doodle'] },
+  { id: 'move', label: 'Move', cats: ['stretch', 'moves', 'walk', 'outside', 'eyes'] },
+  { id: 'play', label: 'Play', cats: ['games', 'laugh', 'create'] },
+  { id: 'learn-lite', label: 'Learn-lite', cats: ['books', 'podcasts', 'movies', 'links'] },
 ]

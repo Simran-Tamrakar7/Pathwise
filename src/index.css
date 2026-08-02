@@ -3754,3 +3754,139 @@ p {
   font-weight: 700;
   color: var(--forest);
 }
+
+/* —— Cookbook ways + Sparks —— */
+.way-picker {
+  margin: 1rem 0 1.25rem;
+}
+
+.way-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.way-chip {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.way-chip strong {
+  color: var(--forest);
+  font-size: 0.95rem;
+}
+
+.way-chip span {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.way-chip.active {
+  border-color: var(--accent, var(--forest));
+  background: color-mix(in srgb, var(--accent, var(--forest)) 12%, white);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent, var(--forest)) 35%, transparent);
+}
+
+.recipe-youtube {
+  margin-bottom: 1rem;
+}
+
+.mood-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.mood-chip.dark.active {
+  background: var(--mint, #7cdbb0);
+  color: var(--forest);
+}
+
+.portal-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .portal-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sparks-page .sparks-hero {
+  margin-bottom: 1.25rem;
+}
+
+.sparks-daily {
+  margin-bottom: 1.25rem;
+}
+
+.spark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.spark-card {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 1.05rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  border-top: 3px solid var(--forest);
+}
+
+.spark-card h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.spark-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.spark-card.is-open {
+  border-color: var(--leaf);
+  background: color-mix(in srgb, var(--leaf) 10%, white);
+}
+
+.spark-card.is-done {
+  opacity: 0.72;
+}
+
+.spark-detail {
+  padding: 1.25rem 1.35rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.spark-detail h2 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.spark-prompt {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40rem;
+}

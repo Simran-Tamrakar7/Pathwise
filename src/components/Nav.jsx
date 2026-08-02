@@ -16,14 +16,17 @@ export default function Nav() {
           <NavLink to="/manuals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Manuals
           </NavLink>
+          <NavLink to="/sparks" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Sparks
+          </NavLink>
           <NavLink to="/break" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Break Room
           </NavLink>
           <NavLink to="/cookbook" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Cookbook
           </NavLink>
-          <NavLink to="/break" className="nav-cta">
-            Take a break
+          <NavLink to="/sparks" className="nav-cta">
+            Quick spark
           </NavLink>
         </nav>
       </div>

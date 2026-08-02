@@ -1,5 +1,4 @@
-/** Pathwise Cookbook — 210 recipes with dish-matched photos. */
-
+/** Pathwise Cookbook — curated dishes with cooking ways + YouTube. */
 export { imageForRecipe, cookResources, cookTips } from './foodImages.js'
 
 export const recipeCuisines = [
@@ -67,1714 +66,1072 @@ export const recipeCuisines = [
 
 export const recipes = [
   {
-    "id": "italian-margherita-pizza",
+    "id": "nepali-dal-bhat",
+    "name": "Dal Bhat Tarkari",
+    "cuisine": "nepali",
+    "cuisineLabel": "Nepali",
+    "color": "#0D9488",
+    "meal": "lunch",
+    "servings": 2,
+    "tags": [
+      "dal",
+      "rice",
+      "nepali",
+      "comfort",
+      "vegetarian"
+    ],
+    "why": "Nepal’s everyday plate: lentil soup, steamed rice, and a simple vegetable tarkari. Pick a cooking way below — same soul, different oil and pace.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Dal bhat walkthrough",
+        "url": "https://www.youtube.com/results?search_query=dal%20bhat%20tarkari%20nepali%20recipe"
+      },
+      {
+        "label": "Light tadka ideas",
+        "url": "https://www.youtube.com/results?search_query=healthy%20low%20oil%20dal%20tadka"
+      },
+      {
+        "label": "Tarkari sides",
+        "url": "https://www.youtube.com/results?search_query=nepali%20tarkari%20vegetable%20curry"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Classic ghee tadka",
+        "blurb": "Home-style comfort with a fragrant ghee-cumin finish.",
+        "minutes": 45,
+        "difficulty": "easy",
+        "ingredients": [
+          "1 cup masoor or mixed dal, rinsed",
+          "3 cups water + salt",
+          "1 cup rice",
+          "1 onion, 1 tomato, 2 garlic cloves",
+          "1 tsp cumin, ½ tsp turmeric, chili to taste",
+          "1–2 tbsp ghee for tadka",
+          "Seasonal veg for tarkari (potato, cauliflower, or greens)"
+        ],
+        "steps": [
+          "Pressure-cook or simmer dal with turmeric and salt until soft; whisk lightly.",
+          "Cook rice separately until fluffy.",
+          "Sauté onion-garlic-tomato with spices for tarkari; add veg + splash of water; cover until tender.",
+          "For tadka: heat ghee, crackle cumin (+ dried chili), pour over dal.",
+          "Plate rice, ladle dal, add tarkari + pickle/achar if you have it."
+        ],
+        "tip": "Dal thickens as it sits — keep a kettle of hot water to loosen."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · low oil",
+        "blurb": "Same plate, lighter: steam-heavy veg, measured oil, skip deep fry.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "1 cup dal + plenty of water",
+          "1 cup brown or white rice",
+          "Steamed greens or mixed veg",
+          "1 tsp oil (not tbsp) for tadka",
+          "Garlic, cumin, turmeric, lemon",
+          "Fresh cilantro"
+        ],
+        "steps": [
+          "Boil dal with turmeric; skim foam; salt late.",
+          "Steam or water-sauté tarkari instead of frying — finish with lemon.",
+          "Tiny tadka: 1 tsp oil, cumin, garlic — pour over dal.",
+          "Serve with extra salad/cucumber for volume without oil."
+        ],
+        "tip": "Flavor comes from spice bloom + acid (lemon), not extra fat."
+      },
+      {
+        "id": "rich",
+        "label": "Restaurant · oil tadka",
+        "blurb": "Glossier dal with a hotter oil temper — weekend treat.",
+        "minutes": 50,
+        "difficulty": "medium",
+        "ingredients": [
+          "1 cup dal",
+          "Rice",
+          "2–3 tbsp mustard or veg oil",
+          "Cumin, hing (asafoetida), dried red chili, garlic",
+          "Butter optional finish",
+          "Fried dried chili garnish"
+        ],
+        "steps": [
+          "Cook dal soft and slightly thick.",
+          "Heat oil until shimmering; add cumin, hing, chili, garlic — don’t burn.",
+          "Pour sizzling tadka over dal; cover 1 minute to trap aroma.",
+          "Serve with richer tarkari (potato + more oil) and rice."
+        ],
+        "tip": "Oil must be hot enough to crackle spices, not smoke-bitter."
+      },
+      {
+        "id": "one-pot",
+        "label": "Busy-day one pot",
+        "blurb": "When time is short: rice cooker / Instant Pot friendly.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "½ cup dal + ½ cup rice (rinsed)",
+          "2½ cups water",
+          "Turmeric, salt, cumin",
+          "Frozen mixed veg",
+          "1 tsp ghee or oil"
+        ],
+        "steps": [
+          "Combine dal, rice, water, turmeric, salt in pot or cooker.",
+          "Cook until soft; stir in frozen veg to warm through.",
+          "Quick tadka in a spoon of fat; pour on top.",
+          "Eat as a thick khichdi-style bowl — still counts as dal-bhat energy."
+        ],
+        "tip": "Ratio ~1 grain:2.5 water; adjust for your cooker."
+      }
+    ],
+    "minutes": 45,
+    "difficulty": "easy"
+  },
+  {
+    "id": "nepali-momo",
+    "name": "Momo (steamed dumplings)",
+    "cuisine": "nepali",
+    "cuisineLabel": "Nepali",
+    "color": "#0D9488",
+    "meal": "dinner",
+    "servings": 3,
+    "tags": [
+      "momo",
+      "dumpling",
+      "nepali"
+    ],
+    "why": "Filled dumplings with achar. Choose chicken, veg, or a lighter pan-steam approach.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Steamed momo",
+        "url": "https://www.youtube.com/results?search_query=nepali%20momo%20recipe%20steamed"
+      },
+      {
+        "label": "Achar",
+        "url": "https://www.youtube.com/results?search_query=momo%20achar%20tomato"
+      }
+    ],
+    "ways": [
+      {
+        "id": "chicken",
+        "label": "Chicken filling",
+        "blurb": "Classic street-style chicken momo.",
+        "minutes": 70,
+        "difficulty": "medium",
+        "ingredients": [
+          "Wrapper dough or store wrappers",
+          "250g minced chicken",
+          "Onion, garlic, ginger, cilantro",
+          "Cumin, salt, pepper",
+          "Tomato-sesame achar for dipping"
+        ],
+        "steps": [
+          "Mix filling; keep cold.",
+          "Wrap into half-moons; seal edges tight.",
+          "Steam 12–15 min until wrappers turn translucent.",
+          "Serve hot with spicy achar."
+        ],
+        "tip": "Don’t overfill — leaks ruin the steam batch."
+      },
+      {
+        "id": "veg",
+        "label": "Veg cabbage-carrot",
+        "blurb": "Crisp veg filling, less grease.",
+        "minutes": 65,
+        "difficulty": "medium",
+        "ingredients": [
+          "Wrappers",
+          "Shredded cabbage + carrot",
+          "Onion, ginger, garlic",
+          "Soy + salt",
+          "Oil 1 tsp"
+        ],
+        "steps": [
+          "Salt cabbage 5 min; squeeze water out.",
+          "Mix aromatics + soy; wrap and steam.",
+          "Serve with sesame-tomato achar."
+        ],
+        "tip": "Dry filling = no soggy bottoms."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less oil achar",
+        "blurb": "Steamed only; roasted tomato dip instead of fried achar.",
+        "minutes": 60,
+        "difficulty": "medium",
+        "ingredients": [
+          "Lean filling",
+          "Wrappers",
+          "Roasted tomato + garlic + chili + lemon"
+        ],
+        "steps": [
+          "Steam momo as usual.",
+          "Blend roasted tomato dip — skip frying spices in oil.",
+          "Plate with cucumber salad."
+        ],
+        "tip": "Batch-freeze uncooked momo on a tray, then bag."
+      }
+    ],
+    "minutes": 70,
+    "difficulty": "medium"
+  },
+  {
+    "id": "nepali-sel-roti",
+    "name": "Sel Roti",
+    "cuisine": "nepali",
+    "cuisineLabel": "Nepali",
+    "color": "#0D9488",
+    "meal": "snack",
+    "servings": 6,
+    "tags": [
+      "sel roti",
+      "rice",
+      "festival"
+    ],
+    "why": "Ring-shaped rice bread — festival classic. Try classic fry, lighter rings, or oven-assist ideas.",
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Sel roti video",
+        "url": "https://www.youtube.com/results?search_query=sel%20roti%20nepali%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Classic deep-fried",
+        "blurb": "Crisp outside, soft chew — celebration mode.",
+        "minutes": 90,
+        "difficulty": "hard",
+        "ingredients": [
+          "Rice flour batter (soaked rice blend)",
+          "Sugar",
+          "Ghee/oil for frying",
+          "Cardamom"
+        ],
+        "steps": [
+          "Ferment/rest batter",
+          "Pipe rings into hot oil",
+          "Flip once golden",
+          "Drain on rack"
+        ],
+        "tip": "Oil temp steady — too hot burns sugar."
+      },
+      {
+        "id": "lighter",
+        "label": "Smaller · less oil soak",
+        "blurb": "Thinner rings, drain well, smaller batch.",
+        "minutes": 75,
+        "difficulty": "hard",
+        "ingredients": [
+          "Same batter",
+          "Neutral oil",
+          "Paper towels"
+        ],
+        "steps": [
+          "Pipe thinner rings",
+          "Fry quickly",
+          "Double-drain"
+        ],
+        "tip": "Share the batch — sel roti is rich by design."
+      },
+      {
+        "id": "airfry",
+        "label": "Idea · air-fryer finish",
+        "blurb": "Not traditional — briefly air-fry steamed rings for crisp without a vat of oil.",
+        "minutes": 80,
+        "difficulty": "hard",
+        "ingredients": [
+          "Batter",
+          "Oil spray"
+        ],
+        "steps": [
+          "Shape and lightly steam or pan-set",
+          "Air-fry with mist of oil until edged",
+          "Accept it’s a remix"
+        ],
+        "tip": "Call it “sel-inspired” so grandma doesn’t riot."
+      }
+    ],
+    "minutes": 90,
+    "difficulty": "hard"
+  },
+  {
+    "id": "indian-dal-tadka",
+    "name": "Dal Tadka",
+    "cuisine": "indian",
+    "cuisineLabel": "Indian",
+    "color": "#B45309",
+    "meal": "dinner",
+    "servings": 3,
+    "tags": [
+      "dal",
+      "vegetarian",
+      "indian"
+    ],
+    "why": "Yellow dal with a sizzling temper. Healthy, classic, or buttery dhaba vibes.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Restaurant dal",
+        "url": "https://www.youtube.com/results?search_query=dal%20tadka%20restaurant%20style"
+      },
+      {
+        "label": "Low oil",
+        "url": "https://www.youtube.com/results?search_query=healthy%20dal%20tadka%20less%20oil"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Classic tadka",
+        "blurb": "Cumin-garlic-chili in ghee over soft toor/masoor.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "1 cup dal",
+          "Turmeric, salt",
+          "Ghee",
+          "Cumin, garlic, chili",
+          "Cilantro"
+        ],
+        "steps": [
+          "Cook dal soft",
+          "Temper spices in ghee",
+          "Pour over",
+          "Rest 2 minutes"
+        ],
+        "tip": "Whisk dal for creamy body without cream."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · 1 tsp oil",
+        "blurb": "Water-forward simmer; micro tadka.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Dal",
+          "Garlic",
+          "1 tsp oil",
+          "Lemon",
+          "Spinach handful"
+        ],
+        "steps": [
+          "Boil dal",
+          "Stir in spinach",
+          "Micro tadka",
+          "Lemon finish"
+        ],
+        "tip": "Add hing for “fried” aroma with less fat."
+      },
+      {
+        "id": "butter",
+        "label": "With butter finish",
+        "blurb": "Restaurant gloss — butter + kasuri methi.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "Dal",
+          "Butter",
+          "Kasuri methi",
+          "Cream optional"
+        ],
+        "steps": [
+          "Cook dal thick",
+          "Butter tadka",
+          "Crush methi on top"
+        ],
+        "tip": "Serve with jeera rice or roti — not both if watching portions."
+      }
+    ],
+    "minutes": 35,
+    "difficulty": "easy"
+  },
+  {
+    "id": "indian-chana-masala",
+    "name": "Chana Masala",
+    "cuisine": "indian",
+    "cuisineLabel": "Indian",
+    "color": "#B45309",
+    "meal": "lunch",
+    "servings": 3,
+    "tags": [
+      "chickpea",
+      "vegan",
+      "curry"
+    ],
+    "why": "Chickpea curry — protein bowl that reheats beautifully.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Chana masala",
+        "url": "https://www.youtube.com/results?search_query=chana%20masala%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Onion-tomato gravy",
+        "blurb": "Standard punjabi-leaning home curry.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "2 cups cooked chickpeas",
+          "Onion tomato",
+          "Garam masala",
+          "Oil 2 tbsp",
+          "Ginger garlic"
+        ],
+        "steps": [
+          "Bhuno onion-tomato",
+          "Add spices + chana",
+          "Simmer",
+          "Cilantro"
+        ],
+        "tip": "Mash a few chickpeas to thicken naturally."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy dry-ish",
+        "blurb": "Less oil, more lemon and fresh onion.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Chickpeas",
+          "1 tsp oil",
+          "Amchur or lemon",
+          "Cumin",
+          "Chili"
+        ],
+        "steps": [
+          "Toast spices lightly",
+          "Toss chana",
+          "Lemon + onion garnish"
+        ],
+        "tip": "Great wrap filling with salad."
+      },
+      {
+        "id": "rich",
+        "label": "With oil + tea bag trick",
+        "blurb": "Darker color via black tea; richer oil tadka.",
+        "minutes": 45,
+        "difficulty": "medium",
+        "ingredients": [
+          "Chickpeas",
+          "Tea bag",
+          "Oil",
+          "Anardana optional"
+        ],
+        "steps": [
+          "Simmer with tea bag",
+          "Remove bag",
+          "Finish with hot oil tadka"
+        ],
+        "tip": "Don’t leave tea too long — bitterness creeps in."
+      }
+    ],
+    "minutes": 40,
+    "difficulty": "easy"
+  },
+  {
+    "id": "indian-khichdi",
+    "name": "Khichdi",
+    "cuisine": "indian",
+    "cuisineLabel": "Indian",
+    "color": "#B45309",
+    "meal": "dinner",
+    "servings": 2,
+    "tags": [
+      "khichdi",
+      "comfort",
+      "sick-day"
+    ],
+    "why": "Rice + dal porridge — gentle fuel after long study sessions.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Khichdi",
+        "url": "https://www.youtube.com/results?search_query=moong%20dal%20khichdi%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Ghee khichdi",
+        "blurb": "Soft, spoonable, cumin ghee on top.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice + moong",
+          "Turmeric",
+          "Ghee",
+          "Cumin"
+        ],
+        "steps": [
+          "Cook soft with extra water",
+          "Tadka ghee-cumin",
+          "Serve with yogurt"
+        ],
+        "tip": "Loosen with hot water at the table."
+      },
+      {
+        "id": "healthy",
+        "label": "Veg-loaded · low ghee",
+        "blurb": "Peas, carrot, spinach; teaspoon ghee.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice + dal",
+          "Mixed veg",
+          "1 tsp ghee"
+        ],
+        "steps": [
+          "Cook grains",
+          "Fold veg",
+          "Tiny tadka"
+        ],
+        "tip": "Use frozen veg — still counts."
+      },
+      {
+        "id": "rich",
+        "label": "With fried toppings",
+        "blurb": "Papad + more ghee — comfort max.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Khichdi base",
+          "Extra ghee",
+          "Roasted papad"
+        ],
+        "steps": [
+          "Make classic",
+          "Extra ghee swirl",
+          "Crush papad on top"
+        ],
+        "tip": "Pair with mango pickle carefully — salty."
+      }
+    ],
+    "minutes": 30,
+    "difficulty": "easy"
+  },
+  {
+    "id": "italian-margherita",
     "name": "Margherita pizza",
     "cuisine": "italian",
     "cuisineLabel": "Italian",
     "color": "#C2410C",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
+    "meal": "dinner",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "easy",
-      "italian",
-      "chicken"
+      "pizza",
+      "italian"
     ],
-    "why": "A italian breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Tomato, mozzarella, basil. Skillet, oven, or lighter tortilla hack.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Margherita",
+        "url": "https://www.youtube.com/results?search_query=homemade%20margherita%20pizza%20recipe"
+      },
+      {
+        "label": "Light hack",
+        "url": "https://www.youtube.com/results?search_query=healthy%20tortilla%20pizza"
+      }
     ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out olive oil.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Margherita pizza. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Oven classic",
+        "blurb": "Hot stone/steel energy if you have it.",
+        "minutes": 25,
+        "difficulty": "medium",
+        "ingredients": [
+          "Dough",
+          "Crushed tomato",
+          "Mozzarella",
+          "Basil",
+          "Olive oil"
+        ],
+        "steps": [
+          "Stretch dough",
+          "Sauce lightly",
+          "Cheese",
+          "Bake very hot",
+          "Basil after"
+        ],
+        "tip": "Less sauce = crispier crust."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · thin + lots of veg",
+        "blurb": "Whole-wheat or tortilla base, light cheese, pile vegetables.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Tortilla or thin dough",
+          "Tomato",
+          "Light mozzarella",
+          "Peppers, arugula"
+        ],
+        "steps": [
+          "Bake base briefly",
+          "Top",
+          "Finish with arugula"
+        ],
+        "tip": "Pat mozzarella dry to avoid sogginess."
+      },
+      {
+        "id": "skillet",
+        "label": "Cast-iron skillet",
+        "blurb": "Crisp bottom without a pizza oven.",
+        "minutes": 30,
+        "difficulty": "medium",
+        "ingredients": [
+          "Dough",
+          "Oil",
+          "Sauce",
+          "Cheese"
+        ],
+        "steps": [
+          "Oil skillet",
+          "Press dough",
+          "Stovetop then broil top"
+        ],
+        "tip": "Preheat skillet for blistered bottom."
+      }
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-cacio-e-pepe",
-    "name": "Cacio e pepe",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
     "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "italian",
-      "tofu"
-    ],
-    "why": "A italian lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out olive oil.",
-      "Cook the tofu until nearly done using a sauté technique.",
-      "Add tomato and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Cacio e pepe. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sauté step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
+    "difficulty": "medium"
   },
   {
-    "id": "italian-spaghetti-aglio-e-olio",
+    "id": "italian-aglio-olio",
     "name": "Spaghetti aglio e olio",
     "cuisine": "italian",
     "cuisineLabel": "Italian",
     "color": "#C2410C",
-    "minutes": 45,
-    "difficulty": "medium",
     "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "italian",
-      "eggs"
-    ],
-    "why": "A italian dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out olive oil.",
-      "Cook the eggs until nearly done using a bake technique.",
-      "Add spinach and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Spaghetti aglio e olio. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-risotto-milanese",
-    "name": "Risotto milanese",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
     "servings": 2,
     "tags": [
-      "snack",
-      "medium",
-      "italian",
-      "beans"
+      "pasta",
+      "garlic",
+      "fast"
     ],
-    "why": "A italian snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Garlic, oil, chili, pasta water emulsion — weeknight hero.",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Aglio e olio",
+        "url": "https://www.youtube.com/results?search_query=spaghetti%20aglio%20e%20olio%20recipe"
+      }
     ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out olive oil.",
-      "Cook the beans until nearly done using a boil technique.",
-      "Add bell pepper and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Risotto milanese. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With olive oil",
+        "blurb": "Generous EVOO, golden garlic.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Spaghetti",
+          "Garlic",
+          "Chili flakes",
+          "Olive oil",
+          "Parsley"
+        ],
+        "steps": [
+          "Boil pasta",
+          "Gently fry garlic in oil",
+          "Emulsify with pasta water",
+          "Parsley"
+        ],
+        "tip": "Garlic should be blonde, not brown-bitter."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less oil",
+        "blurb": "Measured oil + extra lemon and parsley.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Pasta",
+          "4 garlic",
+          "1 tbsp oil",
+          "Lemon",
+          "Chili"
+        ],
+        "steps": [
+          "Same method with less oil",
+          "More pasta water",
+          "Lemon zest"
+        ],
+        "tip": "Whole-wheat pasta works if you cook it properly."
+      },
+      {
+        "id": "anchovy",
+        "label": "Idea · anchovy umami",
+        "blurb": "Melt 2 anchovies into the oil for depth.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Pasta",
+          "Anchovies",
+          "Garlic",
+          "Oil"
+        ],
+        "steps": [
+          "Melt anchovy in oil",
+          "Garlic",
+          "Toss pasta"
+        ],
+        "tip": "They dissolve — not “fishy chunks.”"
+      }
     ],
-    "tip": "Don't rush the boil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-lasagna-bolognese",
-    "name": "Lasagna bolognese",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "italian",
-      "fish"
-    ],
-    "why": "A italian dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out olive oil.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Lasagna bolognese. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-pesto-genovese-pasta",
-    "name": "Pesto genovese pasta",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "italian",
-      "beef"
-    ],
-    "why": "A italian lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out olive oil.",
-      "Cook the beef until nearly done using a sauté technique.",
-      "Add mushroom and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Pesto genovese pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sauté step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-chicken-piccata",
-    "name": "Chicken piccata",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
     "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "italian",
-      "paneer"
-    ],
-    "why": "A italian breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out olive oil.",
-      "Cook the paneer until nearly done using a bake technique.",
-      "Add zucchini and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Chicken piccata. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
+    "difficulty": "easy"
   },
   {
-    "id": "italian-caprese-salad",
-    "name": "Caprese salad",
+    "id": "italian-tomato-soup-pasta",
+    "name": "Tomato basil pasta",
     "cuisine": "italian",
     "cuisineLabel": "Italian",
     "color": "#C2410C",
-    "minutes": 50,
-    "difficulty": "medium",
     "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "italian",
-      "lentils"
-    ],
-    "why": "A italian lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out olive oil.",
-      "Cook the lentils until nearly done using a boil technique.",
-      "Add cabbage and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Caprese salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the boil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-minestrone",
-    "name": "Minestrone",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "italian",
-      "chicken"
-    ],
-    "why": "A italian dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out olive oil.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Minestrone. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-osso-buco",
-    "name": "Osso buco",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
     "servings": 2,
     "tags": [
-      "snack",
-      "hard",
-      "italian",
-      "tofu"
+      "pasta",
+      "tomato"
     ],
-    "why": "A italian snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Pantry tomato sauce done three ways.",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Tomato pasta",
+        "url": "https://www.youtube.com/results?search_query=simple%20tomato%20basil%20pasta"
+      }
     ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out olive oil.",
-      "Cook the tofu until nearly done using a sauté technique.",
-      "Add tomato and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Osso buco. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Olive oil soffritto",
+        "blurb": "Onion + garlic + tomato + basil.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Pasta",
+          "Canned tomato",
+          "Onion",
+          "Garlic",
+          "Oil",
+          "Basil"
+        ],
+        "steps": [
+          "Sauté aromatics",
+          "Simmer tomato",
+          "Toss pasta"
+        ],
+        "tip": "Pinch of sugar only if tomatoes are sharp."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · no cream",
+        "blurb": "Blend roasted peppers into sauce for body.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Tomato",
+          "Roasted pepper",
+          "1 tsp oil",
+          "Basil"
+        ],
+        "steps": [
+          "Blend sauce",
+          "Warm",
+          "Toss"
+        ],
+        "tip": "Finish with nutritional yeast if you miss cheese."
+      },
+      {
+        "id": "rich",
+        "label": "With butter + parmesan",
+        "blurb": "Glossy finish for date-night carbs.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Tomato sauce",
+          "Butter",
+          "Parmesan"
+        ],
+        "steps": [
+          "Classic sauce",
+          "Mount butter off heat",
+          "Cheese"
+        ],
+        "tip": "Save pasta water — sauce cling depends on it."
+      }
     ],
-    "tip": "Don't rush the sauté step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-gnocchi-sorrentina",
-    "name": "Gnocchi sorrentina",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
     "minutes": 25,
-    "difficulty": "easy",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mexican-bean-tacos",
+    "name": "Bean tacos",
+    "cuisine": "mexican",
+    "cuisineLabel": "Mexican",
+    "color": "#BE123C",
     "meal": "dinner",
     "servings": 3,
     "tags": [
-      "dinner",
-      "easy",
-      "italian",
-      "eggs"
+      "taco",
+      "beans",
+      "vegetarian"
     ],
-    "why": "A italian dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Weeknight tacos — black beans three ways.",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Bean tacos",
+        "url": "https://www.youtube.com/results?search_query=vegetarian%20black%20bean%20tacos"
+      }
     ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out olive oil.",
-      "Cook the eggs until nearly done using a bake technique.",
-      "Add spinach and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Gnocchi sorrentina. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Skillet beans + salsa",
+        "blurb": "Warm tortillas, lime, cilantro.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Tortillas",
+          "Black beans",
+          "Onion",
+          "Salsa",
+          "Lime",
+          "Oil"
+        ],
+        "steps": [
+          "Sauté onion",
+          "Mash beans lightly",
+          "Warm tortillas",
+          "Assemble"
+        ],
+        "tip": "Char tortillas on open flame carefully for flavor."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · lettuce cups option",
+        "blurb": "Same filling in romaine or corn tortillas, light toppings.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Beans",
+          "Cumin",
+          "Tomato",
+          "Avocado ¼",
+          "Lime"
+        ],
+        "steps": [
+          "Spice beans",
+          "Load greens or tortillas",
+          "Lime"
+        ],
+        "tip": "Greek yogurt > sour cream for protein."
+      },
+      {
+        "id": "cheesy",
+        "label": "With oil-crisped cheese",
+        "blurb": "Cheese skirt on the skillet — fun texture.",
+        "minutes": 30,
+        "difficulty": "medium",
+        "ingredients": [
+          "Tortillas",
+          "Cheese",
+          "Beans",
+          "Oil"
+        ],
+        "steps": [
+          "Melt cheese ring",
+          "Set tortilla",
+          "Fill",
+          "Fold"
+        ],
+        "tip": "Medium heat — burned cheese is bitter."
+      }
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-frittata",
-    "name": "Frittata",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "italian",
-      "beans"
-    ],
-    "why": "A italian lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out olive oil.",
-      "Cook the beans until nearly done using a boil technique.",
-      "Add bell pepper and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Frittata. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the boil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-bruschetta-trio",
-    "name": "Bruschetta trio",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "italian",
-      "fish"
-    ],
-    "why": "A italian breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out olive oil.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Bruschetta trio. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-eggplant-parmigiana",
-    "name": "Eggplant parmigiana",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "italian",
-      "beef"
-    ],
-    "why": "A italian lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out olive oil.",
-      "Cook the beef until nearly done using a sauté technique.",
-      "Add mushroom and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Eggplant parmigiana. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sauté step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-seafood-linguine",
-    "name": "Seafood linguine",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "italian",
-      "paneer"
-    ],
-    "why": "A italian dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp olive oil",
-      "1 tsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out olive oil.",
-      "Cook the paneer until nearly done using a bake technique.",
-      "Add zucchini and aromatics (garlic, parmesan); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Seafood linguine. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-dal-tadka",
-    "name": "Dal tadka",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "indian",
-      "chicken"
-    ],
-    "why": "A indian breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a temper technique.",
-      "Add onion and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Dal tadka. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-butter-chicken",
-    "name": "Butter chicken",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
     "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "indian",
-      "tofu"
-    ],
-    "why": "A indian lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Butter chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
+    "difficulty": "easy"
   },
   {
-    "id": "indian-chana-masala",
-    "name": "Chana masala",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "indian",
-      "eggs"
-    ],
-    "why": "A indian dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a tadka technique.",
-      "Add spinach and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chana masala. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-palak-paneer",
-    "name": "Palak paneer",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "indian",
-      "beans"
-    ],
-    "why": "A indian snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a roast technique.",
-      "Add bell pepper and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Palak paneer. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the roast step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-vegetable-biryani",
-    "name": "Vegetable biryani",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "indian",
-      "fish"
-    ],
-    "why": "A indian dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a temper technique.",
-      "Add carrot and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Vegetable biryani. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-aloo-gobi",
-    "name": "Aloo gobi",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "indian",
-      "beef"
-    ],
-    "why": "A indian lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Aloo gobi. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-chicken-tikka",
-    "name": "Chicken tikka",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 20,
-    "difficulty": "easy",
+    "id": "mexican-guacamole-toast",
+    "name": "Guacamole toast",
+    "cuisine": "mexican",
+    "cuisineLabel": "Mexican",
+    "color": "#BE123C",
     "meal": "breakfast",
-    "servings": 2,
+    "servings": 1,
     "tags": [
-      "breakfast",
-      "easy",
-      "indian",
-      "paneer"
+      "avocado",
+      "toast",
+      "breakfast"
     ],
-    "why": "A indian breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Fast fuel between chapters — classic, spicy, or lighter.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Guac",
+        "url": "https://www.youtube.com/results?search_query=guacamole%20recipe%20authentic"
+      }
     ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a tadka technique.",
-      "Add zucchini and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chicken tikka. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Classic lime guac",
+        "blurb": "Avocado, onion, tomato, cilantro, lime.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Avocado",
+          "Lime",
+          "Onion",
+          "Tomato",
+          "Salt",
+          "Toast"
+        ],
+        "steps": [
+          "Mash avocado",
+          "Fold mix-ins",
+          "Pile on toast"
+        ],
+        "tip": "Salt early; lime late to keep green."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · half avocado",
+        "blurb": "Stretch with cucumber and tomato.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "½ avocado",
+          "Cucumber",
+          "Tomato",
+          "Egg white optional"
+        ],
+        "steps": [
+          "Mash light",
+          "Add crunch veg",
+          "Toast"
+        ],
+        "tip": "Everything bagel seasoning is free flavor."
+      },
+      {
+        "id": "rich",
+        "label": "With olive oil drizzle",
+        "blurb": "Finishing oil + flaky salt.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Guac",
+          "EVOO",
+          "Chili flakes"
+        ],
+        "steps": [
+          "Classic guac",
+          "Oil + chili"
+        ],
+        "tip": "Good sourdough changes everything."
+      }
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 10,
+    "difficulty": "easy"
   },
   {
-    "id": "indian-masala-dosa-filling",
-    "name": "Masala dosa filling",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 50,
-    "difficulty": "medium",
+    "id": "japanese-soy-rice-bowl",
+    "name": "Soy butter rice bowl",
+    "cuisine": "japanese",
+    "cuisineLabel": "Japanese",
+    "color": "#0369A1",
     "meal": "lunch",
-    "servings": 3,
+    "servings": 1,
     "tags": [
-      "lunch",
-      "medium",
-      "indian",
-      "lentils"
-    ],
-    "why": "A indian lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out cumin.",
-      "Cook the lentils until nearly done using a roast technique.",
-      "Add cabbage and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Masala dosa filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the roast step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-sambar",
-    "name": "Sambar",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "indian",
-      "chicken"
-    ],
-    "why": "A indian dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a temper technique.",
-      "Add onion and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Sambar. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-rajma",
-    "name": "Rajma",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "indian",
-      "tofu"
-    ],
-    "why": "A indian snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Rajma. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-egg-curry",
-    "name": "Egg curry",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "indian",
-      "eggs"
-    ],
-    "why": "A indian dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a tadka technique.",
-      "Add spinach and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Egg curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-jeera-rice",
-    "name": "Jeera rice",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "indian",
-      "beans"
-    ],
-    "why": "A indian lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a roast technique.",
-      "Add bell pepper and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Jeera rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the roast step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-paneer-tikka",
-    "name": "Paneer tikka",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "indian",
-      "fish"
-    ],
-    "why": "A indian breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a temper technique.",
-      "Add carrot and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Paneer tikka. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-fish-moilee",
-    "name": "Fish moilee",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "indian",
-      "beef"
-    ],
-    "why": "A indian lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Fish moilee. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-mango-lassi-bowl",
-    "name": "Mango lassi bowl",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "indian",
-      "paneer"
-    ],
-    "why": "A indian dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a tadka technique.",
-      "Add zucchini and aromatics (turmeric, garam masala); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Mango lassi bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-chicken-tacos",
-    "name": "Chicken tacos",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "mexican",
-      "chicken"
-    ],
-    "why": "A mexican breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a char technique.",
-      "Add onion and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chicken tacos. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-black-bean-enchiladas",
-    "name": "Black bean enchiladas",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "mexican",
-      "tofu"
-    ],
-    "why": "A mexican lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Black bean enchiladas. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-guacamole",
-    "name": "Guacamole",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "mexican",
-      "eggs"
-    ],
-    "why": "A mexican dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a grill technique.",
-      "Add spinach and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Guacamole. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-street-corn",
-    "name": "Street corn",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "mexican",
-      "beans"
-    ],
-    "why": "A mexican snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a blend technique.",
-      "Add bell pepper and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Street corn. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the blend step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-pork-carnitas",
-    "name": "Pork carnitas",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "mexican",
-      "fish"
-    ],
-    "why": "A mexican dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a char technique.",
-      "Add carrot and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Pork carnitas. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-veggie-burrito-bowl",
-    "name": "Veggie burrito bowl",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "mexican",
-      "beef"
-    ],
-    "why": "A mexican lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Veggie burrito bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-salsa-verde-chicken",
-    "name": "Salsa verde chicken",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "mexican",
-      "paneer"
-    ],
-    "why": "A mexican breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a grill technique.",
-      "Add zucchini and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Salsa verde chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-quesadillas",
-    "name": "Quesadillas",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "mexican",
-      "lentils"
-    ],
-    "why": "A mexican lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out cumin.",
-      "Cook the lentils until nearly done using a blend technique.",
-      "Add cabbage and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Quesadillas. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the blend step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-pozole-rojo",
-    "name": "Pozole rojo",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "mexican",
-      "chicken"
-    ],
-    "why": "A mexican dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a char technique.",
-      "Add onion and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Pozole rojo. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-huevos-rancheros",
-    "name": "Huevos rancheros",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "mexican",
-      "tofu"
-    ],
-    "why": "A mexican snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Huevos rancheros. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-fish-tacos",
-    "name": "Fish tacos",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "mexican",
-      "eggs"
-    ],
-    "why": "A mexican dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a grill technique.",
-      "Add spinach and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Fish tacos. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-refried-beans",
-    "name": "Refried beans",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "mexican",
-      "beans"
-    ],
-    "why": "A mexican lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a blend technique.",
-      "Add bell pepper and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Refried beans. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the blend step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-mexican-rice",
-    "name": "Mexican rice",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "mexican",
-      "fish"
-    ],
-    "why": "A mexican breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a char technique.",
-      "Add carrot and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Mexican rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-chipotle-chili",
-    "name": "Chipotle chili",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "mexican",
-      "beef"
-    ],
-    "why": "A mexican lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chipotle chili. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-tortilla-soup",
-    "name": "Tortilla soup",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "mexican",
-      "paneer"
-    ],
-    "why": "A mexican dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a grill technique.",
-      "Add zucchini and aromatics (chili, lime); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Tortilla soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
+      "rice",
+      "bowl",
+      "fast"
+    ],
+    "why": "Donburi energy without sushi skills — three topping paths.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Rice bowl",
+        "url": "https://www.youtube.com/results?search_query=japanese%20rice%20bowl%20recipe%20easy"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Egg + soy butter",
+        "blurb": "Jammy egg, soy, tiny butter.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice",
+          "Egg",
+          "Soy",
+          "Butter",
+          "Scallion"
+        ],
+        "steps": [
+          "Cook rice",
+          "Fry/soft boil egg",
+          "Soy-butter drizzle"
+        ],
+        "tip": "Furikake if you have it."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · tofu veg",
+        "blurb": "Baked tofu, steamed greens, less butter.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice",
+          "Tofu",
+          "Greens",
+          "Soy",
+          "Sesame"
+        ],
+        "steps": [
+          "Crisp tofu",
+          "Steam greens",
+          "Assemble"
+        ],
+        "tip": "Press tofu 5 minutes for better browning."
+      },
+      {
+        "id": "rich",
+        "label": "With sesame oil finish",
+        "blurb": "Toasted sesame oil + mayo swirl.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice",
+          "Egg",
+          "Sesame oil",
+          "Mayo",
+          "Soy"
+        ],
+        "steps": [
+          "Bowl base",
+          "Sauces",
+          "Egg"
+        ],
+        "tip": "A little sesame oil goes far."
+      }
+    ],
+    "minutes": 15,
+    "difficulty": "easy"
   },
   {
     "id": "japanese-miso-soup",
@@ -1782,1139 +1139,247 @@ export const recipes = [
     "cuisine": "japanese",
     "cuisineLabel": "Japanese",
     "color": "#0369A1",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "japanese",
-      "chicken"
-    ],
-    "why": "A japanese breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out soy sauce.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Miso soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-chicken-teriyaki",
-    "name": "Chicken teriyaki",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "japanese",
-      "tofu"
-    ],
-    "why": "A japanese lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out soy sauce.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Chicken teriyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-salmon-donburi",
-    "name": "Salmon donburi",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "japanese",
-      "eggs"
-    ],
-    "why": "A japanese dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out soy sauce.",
-      "Cook the eggs until nearly done using a steam technique.",
-      "Add spinach and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Salmon donburi. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-okonomiyaki",
-    "name": "Okonomiyaki",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 50,
-    "difficulty": "medium",
     "meal": "snack",
     "servings": 2,
     "tags": [
-      "snack",
-      "medium",
-      "japanese",
-      "beans"
+      "miso",
+      "soup"
     ],
-    "why": "A japanese snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Five-minute reset soup between study blocks.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Miso soup",
+        "url": "https://www.youtube.com/results?search_query=homemade%20miso%20soup%20tofu"
+      }
     ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out soy sauce.",
-      "Cook the beans until nearly done using a broil technique.",
-      "Add bell pepper and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Okonomiyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Tofu + wakame",
+        "blurb": "Dashi or instant dashi + miso.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Miso",
+          "Dashi or stock",
+          "Tofu",
+          "Wakame",
+          "Scallion"
+        ],
+        "steps": [
+          "Warm stock",
+          "Add tofu/wakame",
+          "Dissolve miso off boil"
+        ],
+        "tip": "Never hard-boil miso — kills aroma."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · extra greens",
+        "blurb": "Spinach/cabbage, lighter miso portion.",
+        "minutes": 12,
+        "difficulty": "easy",
+        "ingredients": [
+          "Miso",
+          "Stock",
+          "Greens",
+          "Mushroom"
+        ],
+        "steps": [
+          "Simmer veg",
+          "Miso finish"
+        ],
+        "tip": "White miso is milder for beginners."
+      },
+      {
+        "id": "rich",
+        "label": "With sesame oil drop",
+        "blurb": "One drop sesame oil + chili.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Miso soup",
+          "Sesame oil",
+          "Chili"
+        ],
+        "steps": [
+          "Classic soup",
+          "Finish aromatics"
+        ],
+        "tip": "Pair with rice for a mini meal."
+      }
     ],
-    "tip": "Don't rush the broil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 10,
+    "difficulty": "easy"
   },
   {
-    "id": "japanese-yakisoba",
-    "name": "Yakisoba",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 65,
-    "difficulty": "hard",
+    "id": "thai-garlic-fried-rice",
+    "name": "Thai-style fried rice",
+    "cuisine": "thai",
+    "cuisineLabel": "Thai",
+    "color": "#15803D",
     "meal": "dinner",
-    "servings": 3,
+    "servings": 2,
     "tags": [
-      "dinner",
-      "hard",
-      "japanese",
-      "fish"
+      "fried rice",
+      "thai"
     ],
-    "why": "A japanese dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Day-old rice is the secret. Classic, light, or spicy-oil.",
+    "image": "https://images.unsplash.com/photo-1603133875290-d28b4f8b5b5e?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Thai fried rice",
+        "url": "https://www.youtube.com/results?search_query=thai%20fried%20rice%20recipe%20khao%20pad"
+      }
     ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out soy sauce.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Yakisoba. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With oil + fish sauce",
+        "blurb": "Hot wok, scrambled egg, fish sauce.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Cold rice",
+          "Egg",
+          "Garlic",
+          "Oil",
+          "Fish sauce",
+          "Lime"
+        ],
+        "steps": [
+          "Fry garlic",
+          "Egg",
+          "Rice",
+          "Season",
+          "Lime"
+        ],
+        "tip": "Spread rice — don’t steam-clump."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less oil + veg",
+        "blurb": "Nonstick pan, spray oil, double veg.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice",
+          "Egg white or tofu",
+          "Veg mix",
+          "1 tsp oil",
+          "Soy"
+        ],
+        "steps": [
+          "Veg first",
+          "Rice",
+          "Light sauce"
+        ],
+        "tip": "Cauliflower rice mix stretches volume."
+      },
+      {
+        "id": "spicy",
+        "label": "Chili oil idea",
+        "blurb": "Finish with chili crisp / oil.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Fried rice base",
+          "Chili oil",
+          "Cucumber"
+        ],
+        "steps": [
+          "Cook base",
+          "Chili oil",
+          "Cool cucumber side"
+        ],
+        "tip": "Cucumber resets the heat."
+      }
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-tamago-gohan",
-    "name": "Tamago gohan",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "japanese",
-      "beef"
-    ],
-    "why": "A japanese lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out soy sauce.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Tamago gohan. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-gyoza",
-    "name": "Gyoza",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
     "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
+    "difficulty": "easy"
+  },
+  {
+    "id": "thai-cucumber-salad",
+    "name": "Thai cucumber salad",
+    "cuisine": "thai",
+    "cuisineLabel": "Thai",
+    "color": "#15803D",
+    "meal": "side",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "easy",
-      "japanese",
-      "paneer"
-    ],
-    "why": "A japanese breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out soy sauce.",
-      "Cook the paneer until nearly done using a steam technique.",
-      "Add zucchini and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Gyoza. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-onigiri-trio",
-    "name": "Onigiri trio",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "japanese",
-      "lentils"
-    ],
-    "why": "A japanese lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out soy sauce.",
-      "Cook the lentils until nearly done using a broil technique.",
-      "Add cabbage and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Onigiri trio. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the broil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-katsu-curry",
-    "name": "Katsu curry",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "japanese",
-      "chicken"
-    ],
-    "why": "A japanese dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out soy sauce.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Katsu curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-cold-soba",
-    "name": "Cold soba",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "japanese",
-      "tofu"
-    ],
-    "why": "A japanese snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out soy sauce.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Cold soba. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-niku-udon",
-    "name": "Niku udon",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "japanese",
-      "eggs"
-    ],
-    "why": "A japanese dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out soy sauce.",
-      "Cook the eggs until nearly done using a steam technique.",
-      "Add spinach and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Niku udon. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-vegetable-tempura",
-    "name": "Vegetable tempura",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "japanese",
-      "beans"
-    ],
-    "why": "A japanese lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out soy sauce.",
-      "Cook the beans until nearly done using a broil technique.",
-      "Add bell pepper and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Vegetable tempura. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the broil step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-mapo-inspired-tofu",
-    "name": "Mapo-inspired tofu",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "japanese",
-      "fish"
-    ],
-    "why": "A japanese breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out soy sauce.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Mapo-inspired tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-tamagoyaki",
-    "name": "Tamagoyaki",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "japanese",
-      "beef"
-    ],
-    "why": "A japanese lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out soy sauce.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Tamagoyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-matcha-overnight-oats",
-    "name": "Matcha overnight oats",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "japanese",
-      "paneer"
-    ],
-    "why": "A japanese dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp soy sauce",
-      "1 tsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out soy sauce.",
-      "Cook the paneer until nearly done using a steam technique.",
-      "Add zucchini and aromatics (mirin, dashi); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Matcha overnight oats. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-pad-thai",
-    "name": "Pad thai",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
+      "salad",
       "thai",
-      "chicken"
+      "fresh"
     ],
-    "why": "A thai breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Sweet-sour-spicy side that makes heavy mains feel lighter.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Cucumber salad",
+        "url": "https://www.youtube.com/results?search_query=thai%20cucumber%20salad%20ajad"
+      }
     ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out fish sauce.",
-      "Cook the chicken until nearly done using a stir-fry technique.",
-      "Add onion and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Pad thai. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Ajad-style",
+        "blurb": "Vinegar, sugar, chili, shallot.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Cucumber",
+          "Shallot",
+          "Chili",
+          "Vinegar",
+          "Sugar",
+          "Salt"
+        ],
+        "steps": [
+          "Dissolve dressing",
+          "Toss",
+          "Rest 5 min"
+        ],
+        "tip": "Salt cucumbers briefly if watery."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less sugar",
+        "blurb": "More lime/vinegar, stevia optional.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Cucumber",
+          "Lime",
+          "Chili",
+          "Fish sauce splash"
+        ],
+        "steps": [
+          "Toss bright dressing",
+          "Serve cold"
+        ],
+        "tip": "Herbs (mint/cilantro) add sweetness perception."
+      },
+      {
+        "id": "peanut",
+        "label": "Idea · crushed peanut",
+        "blurb": "Crunch on top — almost satay-adjacent.",
+        "minutes": 12,
+        "difficulty": "easy",
+        "ingredients": [
+          "Salad",
+          "Roasted peanuts",
+          "Sesame"
+        ],
+        "steps": [
+          "Classic salad",
+          "Peanut finish"
+        ],
+        "tip": "Great next to grilled anything."
+      }
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-green-curry",
-    "name": "Green curry",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "thai",
-      "tofu"
-    ],
-    "why": "A thai lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out fish sauce.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Green curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-tom-yum",
-    "name": "Tom yum",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "thai",
-      "eggs"
-    ],
-    "why": "A thai dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out fish sauce.",
-      "Cook the eggs until nearly done using a pound technique.",
-      "Add spinach and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Tom yum. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-basil-chicken",
-    "name": "Basil chicken",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "thai",
-      "beans"
-    ],
-    "why": "A thai snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out fish sauce.",
-      "Cook the beans until nearly done using a grill technique.",
-      "Add bell pepper and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Basil chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-pad-see-ew",
-    "name": "Pad see ew",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "thai",
-      "fish"
-    ],
-    "why": "A thai dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out fish sauce.",
-      "Cook the fish until nearly done using a stir-fry technique.",
-      "Add carrot and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Pad see ew. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-mango-sticky-rice",
-    "name": "Mango sticky rice",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "thai",
-      "beef"
-    ],
-    "why": "A thai lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out fish sauce.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Mango sticky rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-massaman-curry",
-    "name": "Massaman curry",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "thai",
-      "paneer"
-    ],
-    "why": "A thai breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out fish sauce.",
-      "Cook the paneer until nearly done using a pound technique.",
-      "Add zucchini and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Massaman curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-papaya-salad",
-    "name": "Papaya salad",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "thai",
-      "lentils"
-    ],
-    "why": "A thai lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out fish sauce.",
-      "Cook the lentils until nearly done using a grill technique.",
-      "Add cabbage and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Papaya salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-thai-fried-rice",
-    "name": "Thai fried rice",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "thai",
-      "chicken"
-    ],
-    "why": "A thai dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out fish sauce.",
-      "Cook the chicken until nearly done using a stir-fry technique.",
-      "Add onion and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Thai fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-coconut-soup",
-    "name": "Coconut soup",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "thai",
-      "tofu"
-    ],
-    "why": "A thai snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out fish sauce.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Coconut soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-larb-gai",
-    "name": "Larb gai",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "thai",
-      "eggs"
-    ],
-    "why": "A thai dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out fish sauce.",
-      "Cook the eggs until nearly done using a pound technique.",
-      "Add spinach and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Larb gai. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-garlic-prawns",
-    "name": "Garlic prawns",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "thai",
-      "beans"
-    ],
-    "why": "A thai lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out fish sauce.",
-      "Cook the beans until nearly done using a grill technique.",
-      "Add bell pepper and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Garlic prawns. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-thai-omelette-rice",
-    "name": "Thai omelette rice",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "thai",
-      "fish"
-    ],
-    "why": "A thai breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out fish sauce.",
-      "Cook the fish until nearly done using a stir-fry technique.",
-      "Add carrot and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Thai omelette rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-peanut-noodle-salad",
-    "name": "Peanut noodle salad",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "thai",
-      "beef"
-    ],
-    "why": "A thai lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out fish sauce.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Peanut noodle salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-lemongrass-tofu",
-    "name": "Lemongrass tofu",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "thai",
-      "paneer"
-    ],
-    "why": "A thai dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp fish sauce",
-      "1 tsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out fish sauce.",
-      "Cook the paneer until nearly done using a pound technique.",
-      "Add zucchini and aromatics (lime, lemongrass); cook until fragrant.",
-      "Build the sauce or finish with fish sauce and season boldly.",
-      "Plate Lemongrass tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 10,
+    "difficulty": "easy"
   },
   {
     "id": "chinese-egg-fried-rice",
@@ -2922,1709 +1387,503 @@ export const recipes = [
     "cuisine": "chinese",
     "cuisineLabel": "Chinese",
     "color": "#A16207",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
+    "meal": "lunch",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "easy",
-      "chinese",
-      "chicken"
+      "fried rice",
+      "egg"
     ],
-    "why": "A chinese breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "The universal leftover upgrade.",
+    "image": "https://images.unsplash.com/photo-1603133875290-d28b4f8b5b5e?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Egg fried rice",
+        "url": "https://www.youtube.com/results?search_query=egg%20fried%20rice%20recipe%20wok"
+      }
     ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out soy sauce.",
-      "Cook the chicken until nearly done using a stir-fry technique.",
-      "Add onion and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Egg fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Wok oil classic",
+        "blurb": "High heat, soy, scallion.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Cold rice",
+          "Eggs",
+          "Oil",
+          "Soy",
+          "Scallion"
+        ],
+        "steps": [
+          "Scramble egg",
+          "Rice",
+          "Season",
+          "Scallion"
+        ],
+        "tip": "Wet rice = glue. Use day-old."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · spray oil",
+        "blurb": "Nonstick + lots of frozen peas.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Rice",
+          "Egg",
+          "Peas",
+          "Low-sodium soy"
+        ],
+        "steps": [
+          "Peas",
+          "Egg",
+          "Rice",
+          "Soy"
+        ],
+        "tip": "Msg-free mushroom powder adds savor."
+      },
+      {
+        "id": "rich",
+        "label": "With sesame oil",
+        "blurb": "Finish oil + white pepper.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Fried rice",
+          "Sesame oil",
+          "White pepper"
+        ],
+        "steps": [
+          "Classic",
+          "Finish aromatics"
+        ],
+        "tip": "Add off heat so sesame stays fragrant."
+      }
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 15,
+    "difficulty": "easy"
   },
   {
-    "id": "chinese-mapo-tofu",
-    "name": "Mapo tofu",
+    "id": "chinese-garlic-greens",
+    "name": "Garlic stir-fried greens",
     "cuisine": "chinese",
     "cuisineLabel": "Chinese",
     "color": "#A16207",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "chinese",
-      "tofu"
-    ],
-    "why": "A chinese lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out soy sauce.",
-      "Cook the tofu until nearly done using a steam technique.",
-      "Add tomato and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Mapo tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the steam step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-kung-pao-chicken",
-    "name": "Kung pao chicken",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "chinese",
-      "eggs"
-    ],
-    "why": "A chinese dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out soy sauce.",
-      "Cook the eggs until nearly done using a braise technique.",
-      "Add spinach and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Kung pao chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-tomato-egg-stir-fry",
-    "name": "Tomato egg stir-fry",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
+    "meal": "side",
     "servings": 2,
     "tags": [
-      "snack",
-      "medium",
-      "chinese",
-      "beans"
+      "greens",
+      "stir-fry",
+      "garlic"
     ],
-    "why": "A chinese snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Bok choy / gai lan energy — fast green side.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Garlic greens",
+        "url": "https://www.youtube.com/results?search_query=garlic%20bok%20choy%20stir%20fry"
+      }
     ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out soy sauce.",
-      "Cook the beans until nearly done using a blanch technique.",
-      "Add bell pepper and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Tomato egg stir-fry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With oil blanch-fry",
+        "blurb": "Hot oil, garlic, splash soy.",
+        "minutes": 12,
+        "difficulty": "easy",
+        "ingredients": [
+          "Bok choy",
+          "Garlic",
+          "Oil",
+          "Soy"
+        ],
+        "steps": [
+          "Sear garlic",
+          "Greens",
+          "Splash water",
+          "Soy"
+        ],
+        "tip": "Stems first, leaves last."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · water sauté",
+        "blurb": "Minimal oil, lid-steam finish.",
+        "minutes": 12,
+        "difficulty": "easy",
+        "ingredients": [
+          "Greens",
+          "Garlic",
+          "1 tsp oil",
+          "Salt"
+        ],
+        "steps": [
+          "Water + garlic",
+          "Steam-lid",
+          "Salt"
+        ],
+        "tip": "Still delicious with chili crisp on the side."
+      },
+      {
+        "id": "oyster",
+        "label": "Idea · oyster sauce glaze",
+        "blurb": "Glossier cantonese takeout vibe.",
+        "minutes": 12,
+        "difficulty": "easy",
+        "ingredients": [
+          "Greens",
+          "Oyster sauce",
+          "Oil",
+          "Garlic"
+        ],
+        "steps": [
+          "Classic stir",
+          "Oyster sauce glaze"
+        ],
+        "tip": "Vegetarian oyster sauce exists."
+      }
     ],
-    "tip": "Don't rush the blanch step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 12,
+    "difficulty": "easy"
   },
   {
-    "id": "chinese-beef-broccoli",
-    "name": "Beef broccoli",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "chinese",
-      "fish"
-    ],
-    "why": "A chinese dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out soy sauce.",
-      "Cook the fish until nearly done using a stir-fry technique.",
-      "Add carrot and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Beef broccoli. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-wonton-soup",
-    "name": "Wonton soup",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "chinese",
-      "beef"
-    ],
-    "why": "A chinese lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out soy sauce.",
-      "Cook the beef until nearly done using a steam technique.",
-      "Add mushroom and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Wonton soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the steam step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-scallion-pancakes",
-    "name": "Scallion pancakes",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "chinese",
-      "paneer"
-    ],
-    "why": "A chinese breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out soy sauce.",
-      "Cook the paneer until nearly done using a braise technique.",
-      "Add zucchini and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Scallion pancakes. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-sesame-noodles",
-    "name": "Sesame noodles",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "chinese",
-      "lentils"
-    ],
-    "why": "A chinese lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out soy sauce.",
-      "Cook the lentils until nearly done using a blanch technique.",
-      "Add cabbage and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Sesame noodles. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the blanch step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-hot-and-sour-soup",
-    "name": "Hot and sour soup",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "chinese",
-      "chicken"
-    ],
-    "why": "A chinese dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out soy sauce.",
-      "Cook the chicken until nearly done using a stir-fry technique.",
-      "Add onion and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Hot and sour soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-garlic-green-beans",
-    "name": "Garlic green beans",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "chinese",
-      "tofu"
-    ],
-    "why": "A chinese snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out soy sauce.",
-      "Cook the tofu until nearly done using a steam technique.",
-      "Add tomato and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Garlic green beans. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the steam step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-char-siu-style-pork",
-    "name": "Char siu-style pork",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "chinese",
-      "eggs"
-    ],
-    "why": "A chinese dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out soy sauce.",
-      "Cook the eggs until nearly done using a braise technique.",
-      "Add spinach and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Char siu-style pork. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-congee",
-    "name": "Congee",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "chinese",
-      "beans"
-    ],
-    "why": "A chinese lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out soy sauce.",
-      "Cook the beans until nearly done using a blanch technique.",
-      "Add bell pepper and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Congee. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the blanch step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-dumpling-bowl",
-    "name": "Dumpling bowl",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "chinese",
-      "fish"
-    ],
-    "why": "A chinese breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out soy sauce.",
-      "Cook the fish until nearly done using a stir-fry technique.",
-      "Add carrot and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Dumpling bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-sweet-sour-cauliflower",
-    "name": "Sweet sour cauliflower",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "chinese",
-      "beef"
-    ],
-    "why": "A chinese lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out soy sauce.",
-      "Cook the beef until nearly done using a steam technique.",
-      "Add mushroom and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Sweet sour cauliflower. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the steam step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-tea-eggs",
-    "name": "Tea eggs",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "chinese",
-      "paneer"
-    ],
-    "why": "A chinese dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp soy sauce",
-      "1 tsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out soy sauce.",
-      "Cook the paneer until nearly done using a braise technique.",
-      "Add zucchini and aromatics (ginger, garlic); cook until fragrant.",
-      "Build the sauce or finish with soy sauce and season boldly.",
-      "Plate Tea eggs. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-greek-salad",
-    "name": "Greek salad",
+    "id": "med-greek-salad",
+    "name": "Greek salad bowl",
     "cuisine": "mediterranean",
     "cuisineLabel": "Mediterranean",
     "color": "#0F766E",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
+    "meal": "lunch",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "easy",
-      "mediterranean",
-      "chicken"
+      "salad",
+      "mediterranean"
     ],
-    "why": "A mediterranean breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Crunchy, briny, no cooking required (unless you want grilled bits).",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Greek salad",
+        "url": "https://www.youtube.com/results?search_query=greek%20salad%20authentic"
+      }
     ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out olive oil.",
-      "Cook the chicken until nearly done using a roast technique.",
-      "Add onion and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Greek salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With olive oil",
+        "blurb": "Tomato, cucumber, olive, feta, oregano oil.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Tomato",
+          "Cucumber",
+          "Olives",
+          "Feta",
+          "EVOO",
+          "Oregano"
+        ],
+        "steps": [
+          "Chop",
+          "Dress",
+          "Feta last"
+        ],
+        "tip": "No lettuce in classic Greek — optional."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less feta",
+        "blurb": "Extra veg, measured oil, herbs.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Veg",
+          "1 tsp oil",
+          "Lemon",
+          "Herbs",
+          "Small feta"
+        ],
+        "steps": [
+          "Chop",
+          "Lemon-herb",
+          "Crumbled feta"
+        ],
+        "tip": "Chickpeas make it a full meal."
+      },
+      {
+        "id": "grain",
+        "label": "Idea · add quinoa",
+        "blurb": "Same salad over warm grains.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Salad",
+          "Cooked quinoa"
+        ],
+        "steps": [
+          "Cook grain",
+          "Top with salad"
+        ],
+        "tip": "Packs well for campus days."
+      }
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 15,
+    "difficulty": "easy"
   },
   {
-    "id": "mediterranean-hummus-plate",
-    "name": "Hummus plate",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "mediterranean",
-      "tofu"
-    ],
-    "why": "A mediterranean lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out olive oil.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Hummus plate. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-chicken-souvlaki",
-    "name": "Chicken souvlaki",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "mediterranean",
-      "eggs"
-    ],
-    "why": "A mediterranean dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out olive oil.",
-      "Cook the eggs until nearly done using a toss technique.",
-      "Add spinach and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Chicken souvlaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-shakshuka",
+    "id": "med-shakshuka",
     "name": "Shakshuka",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "mediterranean",
-      "beans"
-    ],
-    "why": "A mediterranean snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out olive oil.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Shakshuka. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-falafel",
-    "name": "Falafel",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "mediterranean",
-      "fish"
-    ],
-    "why": "A mediterranean dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out olive oil.",
-      "Cook the fish until nearly done using a roast technique.",
-      "Add carrot and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Falafel. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-lemon-herb-fish",
-    "name": "Lemon herb fish",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "mediterranean",
-      "beef"
-    ],
-    "why": "A mediterranean lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out olive oil.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Lemon herb fish. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-orzo-salad",
-    "name": "Orzo salad",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 20,
-    "difficulty": "easy",
+    "cuisine": "middle-eastern",
+    "cuisineLabel": "Middle Eastern",
+    "color": "#B45309",
     "meal": "breakfast",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "easy",
-      "mediterranean",
-      "paneer"
+      "eggs",
+      "tomato",
+      "shakshuka"
     ],
-    "why": "A mediterranean breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Eggs poached in spiced tomato — one pan, three moods.",
+    "image": "https://images.unsplash.com/photo-1590412200982-f595c5a2e2a1?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Shakshuka",
+        "url": "https://www.youtube.com/results?search_query=shakshuka%20recipe%20easy"
+      }
     ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out olive oil.",
-      "Cook the paneer until nearly done using a toss technique.",
-      "Add zucchini and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Orzo salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With olive oil",
+        "blurb": "Pepper-onion-tomato, cumin, eggs.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Eggs",
+          "Tomato",
+          "Pepper",
+          "Onion",
+          "Cumin",
+          "Oil",
+          "Bread"
+        ],
+        "steps": [
+          "Sauté base",
+          "Simmer sauce",
+          "Nest eggs",
+          "Cover"
+        ],
+        "tip": "Sauce must be thick enough to hold eggs."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · extra veg",
+        "blurb": "Spinach + less oil, serve with salad not bread.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Eggs",
+          "Tomato",
+          "Spinach",
+          "1 tsp oil",
+          "Spices"
+        ],
+        "steps": [
+          "Sauce",
+          "Greens",
+          "Eggs"
+        ],
+        "tip": "Egg whites + one yolk still feels rich."
+      },
+      {
+        "id": "rich",
+        "label": "With feta + oil",
+        "blurb": "Feta crumble and chili oil finish.",
+        "minutes": 30,
+        "difficulty": "easy",
+        "ingredients": [
+          "Shakshuka",
+          "Feta",
+          "Chili oil"
+        ],
+        "steps": [
+          "Classic",
+          "Feta",
+          "Oil"
+        ],
+        "tip": "Labneh on the side is elite."
+      }
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 30,
+    "difficulty": "easy"
   },
   {
-    "id": "mediterranean-stuffed-peppers",
-    "name": "Stuffed peppers",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "mediterranean",
-      "lentils"
-    ],
-    "why": "A mediterranean lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out olive oil.",
-      "Cook the lentils until nearly done using a bake technique.",
-      "Add cabbage and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Stuffed peppers. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-chickpea-stew",
-    "name": "Chickpea stew",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "mediterranean",
-      "chicken"
-    ],
-    "why": "A mediterranean dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out olive oil.",
-      "Cook the chicken until nearly done using a roast technique.",
-      "Add onion and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Chickpea stew. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-tzatziki-bowls",
-    "name": "Tzatziki bowls",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 55,
-    "difficulty": "hard",
+    "id": "me-hummus-plate",
+    "name": "Hummus plate",
+    "cuisine": "middle-eastern",
+    "cuisineLabel": "Middle Eastern",
+    "color": "#B45309",
     "meal": "snack",
     "servings": 2,
     "tags": [
-      "snack",
-      "hard",
-      "mediterranean",
-      "tofu"
+      "hummus",
+      "chickpea"
     ],
-    "why": "A mediterranean snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Blend once, eat all week — swirl oil or keep it light.",
+    "image": "https://images.unsplash.com/photo-1571066811602-716937eda2c1?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Hummus",
+        "url": "https://www.youtube.com/results?search_query=creamy%20hummus%20recipe%20tahini"
+      }
     ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out olive oil.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Tzatziki bowls. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With olive oil swirl",
+        "blurb": "Tahini-forward, ice-cold water trick.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Chickpeas",
+          "Tahini",
+          "Lemon",
+          "Garlic",
+          "EVOO"
+        ],
+        "steps": [
+          "Blend",
+          "Adjust lemon/salt",
+          "Oil swirl + paprika"
+        ],
+        "tip": "Peel chickpeas for ultra-smooth (optional)."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less oil",
+        "blurb": "Skip top oil; rely on tahini + lemon.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Chickpeas",
+          "Tahini",
+          "Lemon",
+          "Cumin"
+        ],
+        "steps": [
+          "Blend",
+          "Serve with veg sticks"
+        ],
+        "tip": "Aquafaba helps creaminess without oil."
+      },
+      {
+        "id": "spiced",
+        "label": "Idea · warm spiced oil",
+        "blurb": "Cumin-chili oil on top.",
+        "minutes": 18,
+        "difficulty": "easy",
+        "ingredients": [
+          "Hummus",
+          "Oil",
+          "Cumin",
+          "Chili"
+        ],
+        "steps": [
+          "Warm spices in oil",
+          "Pour"
+        ],
+        "tip": "Pita chips optional — cucumbers first."
+      }
     ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 15,
+    "difficulty": "easy"
   },
   {
-    "id": "mediterranean-baked-feta-pasta",
-    "name": "Baked feta pasta",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 25,
-    "difficulty": "easy",
+    "id": "korean-bibimbap",
+    "name": "Bibimbap bowl",
+    "cuisine": "korean",
+    "cuisineLabel": "Korean",
+    "color": "#BE123C",
     "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "mediterranean",
-      "eggs"
-    ],
-    "why": "A mediterranean dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out olive oil.",
-      "Cook the eggs until nearly done using a toss technique.",
-      "Add spinach and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Baked feta pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-lamb-kofta",
-    "name": "Lamb kofta",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "mediterranean",
-      "beans"
-    ],
-    "why": "A mediterranean lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out olive oil.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Lamb kofta. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-tabbouleh",
-    "name": "Tabbouleh",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
     "servings": 2,
     "tags": [
-      "breakfast",
-      "medium",
-      "mediterranean",
-      "fish"
+      "bibimbap",
+      "rice",
+      "bowl"
     ],
-    "why": "A mediterranean breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
+    "why": "Colorful rice bowl — gojolban energy without a restaurant.",
+    "image": "https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Bibimbap",
+        "url": "https://www.youtube.com/results?search_query=bibimbap%20recipe%20homemade"
+      }
     ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out olive oil.",
-      "Cook the fish until nearly done using a roast technique.",
-      "Add carrot and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Tabbouleh. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With sesame oil + egg",
+        "blurb": "Veg banchan, gochujang, fried egg.",
+        "minutes": 40,
+        "difficulty": "medium",
+        "ingredients": [
+          "Rice",
+          "Spinach",
+          "Carrot",
+          "Mushroom",
+          "Egg",
+          "Gochujang",
+          "Sesame oil"
+        ],
+        "steps": [
+          "Prep veg separately",
+          "Rice bowl",
+          "Egg",
+          "Sauce",
+          "Mix"
+        ],
+        "tip": "Season each veg lightly — bowl shouldn’t be bland."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · more veg less oil",
+        "blurb": "Steam/sauté with spray oil; turkey or tofu.",
+        "minutes": 35,
+        "difficulty": "medium",
+        "ingredients": [
+          "Rice or cauliflower mix",
+          "Veg",
+          "Tofu",
+          "Gochujang light"
+        ],
+        "steps": [
+          "Veg prep",
+          "Assemble",
+          "Mix"
+        ],
+        "tip": "Brown rice works if cooked ahead."
+      },
+      {
+        "id": "dol",
+        "label": "Idea · crispy bottom",
+        "blurb": "Hot stone / oiled skillet for nurungji crunch.",
+        "minutes": 45,
+        "difficulty": "medium",
+        "ingredients": [
+          "Rice",
+          "Oil",
+          "Toppings"
+        ],
+        "steps": [
+          "Heat oiled skillet",
+          "Press rice",
+          "Toppings",
+          "Crust forms"
+        ],
+        "tip": "Don’t scrape too early."
+      }
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-roasted-veg-mezze",
-    "name": "Roasted veg mezze",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
     "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "mediterranean",
-      "beef"
-    ],
-    "why": "A mediterranean lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out olive oil.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Roasted veg mezze. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-avgolemono-soup",
-    "name": "Avgolemono soup",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "mediterranean",
-      "paneer"
-    ],
-    "why": "A mediterranean dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp olive oil",
-      "1 tsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out olive oil.",
-      "Cook the paneer until nearly done using a toss technique.",
-      "Add zucchini and aromatics (lemon, oregano); cook until fragrant.",
-      "Build the sauce or finish with olive oil and season boldly.",
-      "Plate Avgolemono soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-omelette-aux-fines-herbes",
-    "name": "Omelette aux fines herbes",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "french",
-      "chicken"
-    ],
-    "why": "A french breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out butter.",
-      "Cook the chicken until nearly done using a sauté technique.",
-      "Add onion and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Omelette aux fines herbes. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-chicken-fricass-e",
-    "name": "Chicken fricassée",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "french",
-      "tofu"
-    ],
-    "why": "A french lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out butter.",
-      "Cook the tofu until nearly done using a braise technique.",
-      "Add tomato and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Chicken fricassée. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the braise step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-ratatouille",
-    "name": "Ratatouille",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "french",
-      "eggs"
-    ],
-    "why": "A french dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out butter.",
-      "Cook the eggs until nearly done using a reduce technique.",
-      "Add spinach and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Ratatouille. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-onion-soup",
-    "name": "Onion soup",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "french",
-      "beans"
-    ],
-    "why": "A french snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out butter.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Onion soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-quiche-lorraine",
-    "name": "Quiche lorraine",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "french",
-      "fish"
-    ],
-    "why": "A french dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out butter.",
-      "Cook the fish until nearly done using a sauté technique.",
-      "Add carrot and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Quiche lorraine. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-steak-frites-style",
-    "name": "Steak frites style",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "french",
-      "beef"
-    ],
-    "why": "A french lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out butter.",
-      "Cook the beef until nearly done using a braise technique.",
-      "Add mushroom and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Steak frites style. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the braise step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-ni-oise-salad",
-    "name": "Niçoise salad",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "french",
-      "paneer"
-    ],
-    "why": "A french breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out butter.",
-      "Cook the paneer until nearly done using a reduce technique.",
-      "Add zucchini and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Niçoise salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-potato-gratin",
-    "name": "Potato gratin",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "french",
-      "lentils"
-    ],
-    "why": "A french lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out butter.",
-      "Cook the lentils until nearly done using a bake technique.",
-      "Add cabbage and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Potato gratin. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-mushroom-vol-au-vent-filling",
-    "name": "Mushroom vol-au-vent filling",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "french",
-      "chicken"
-    ],
-    "why": "A french dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out butter.",
-      "Cook the chicken until nearly done using a sauté technique.",
-      "Add onion and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Mushroom vol-au-vent filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-coq-au-vin-quick",
-    "name": "Coq au vin quick",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "french",
-      "tofu"
-    ],
-    "why": "A french snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out butter.",
-      "Cook the tofu until nearly done using a braise technique.",
-      "Add tomato and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Coq au vin quick. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the braise step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-cr-pes",
-    "name": "Crêpes",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "french",
-      "eggs"
-    ],
-    "why": "A french dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out butter.",
-      "Cook the eggs until nearly done using a reduce technique.",
-      "Add spinach and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Crêpes. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-salade-lyonnaise",
-    "name": "Salade Lyonnaise",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "french",
-      "beans"
-    ],
-    "why": "A french lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out butter.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Salade Lyonnaise. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-fish-meuni-re",
-    "name": "Fish meunière",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "french",
-      "fish"
-    ],
-    "why": "A french breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out butter.",
-      "Cook the fish until nearly done using a sauté technique.",
-      "Add carrot and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Fish meunière. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-lentil-salad",
-    "name": "Lentil salad",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "french",
-      "beef"
-    ],
-    "why": "A french lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out butter.",
-      "Cook the beef until nearly done using a braise technique.",
-      "Add mushroom and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Lentil salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the braise step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-clafoutis",
-    "name": "Clafoutis",
-    "cuisine": "french",
-    "cuisineLabel": "French",
-    "color": "#1D4ED8",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "french",
-      "paneer"
-    ],
-    "why": "A french dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp butter",
-      "1 tsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out butter.",
-      "Cook the paneer until nearly done using a reduce technique.",
-      "Add zucchini and aromatics (shallot, thyme); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Clafoutis. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
+    "difficulty": "medium"
   },
   {
     "id": "korean-kimchi-fried-rice",
@@ -4632,3304 +1891,424 @@ export const recipes = [
     "cuisine": "korean",
     "cuisineLabel": "Korean",
     "color": "#BE123C",
+    "meal": "lunch",
+    "servings": 2,
+    "tags": [
+      "kimchi",
+      "fried rice"
+    ],
+    "why": "Spicy leftover magic — butter optional.",
+    "image": "https://images.unsplash.com/photo-1603133875290-d28b4f8b5b5e?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Kimchi fried rice",
+        "url": "https://www.youtube.com/results?search_query=kimchi%20fried%20rice%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With oil + gochujang",
+        "blurb": "Chopped kimchi, rice, egg.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Kimchi",
+          "Rice",
+          "Oil",
+          "Gochujang",
+          "Egg",
+          "Sesame"
+        ],
+        "steps": [
+          "Fry kimchi",
+          "Rice",
+          "Sauce",
+          "Egg"
+        ],
+        "tip": "Older kimchi = better fry."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · less oil",
+        "blurb": "Nonstick, extra cabbage, turkey bacon skip.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Kimchi",
+          "Rice",
+          "1 tsp oil",
+          "Egg white"
+        ],
+        "steps": [
+          "Fry",
+          "Rice",
+          "Egg"
+        ],
+        "tip": "Rinse kimchi lightly if too salty."
+      },
+      {
+        "id": "butter",
+        "label": "With butter finish",
+        "blurb": "Butter + mozzarella optional melt.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Kimchi rice",
+          "Butter",
+          "Cheese optional"
+        ],
+        "steps": [
+          "Classic",
+          "Butter melt",
+          "Cheese broil optional"
+        ],
+        "tip": "Spam is traditional-ish — your call."
+      }
+    ],
     "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "korean",
-      "chicken"
-    ],
-    "why": "A korean breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out gochujang.",
-      "Cook the chicken until nearly done using a marinate technique.",
-      "Add onion and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Kimchi fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
+    "difficulty": "easy"
   },
   {
-    "id": "korean-bulgogi",
-    "name": "Bulgogi",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "korean",
-      "tofu"
-    ],
-    "why": "A korean lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out gochujang.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Bulgogi. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-bibimbap",
-    "name": "Bibimbap",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "korean",
-      "eggs"
-    ],
-    "why": "A korean dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out gochujang.",
-      "Cook the eggs until nearly done using a stir-fry technique.",
-      "Add spinach and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Bibimbap. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-tteokbokki",
-    "name": "Tteokbokki",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "korean",
-      "beans"
-    ],
-    "why": "A korean snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out gochujang.",
-      "Cook the beans until nearly done using a ferment-style technique.",
-      "Add bell pepper and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Tteokbokki. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the ferment-style step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-japchae",
-    "name": "Japchae",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "korean",
-      "fish"
-    ],
-    "why": "A korean dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out gochujang.",
-      "Cook the fish until nearly done using a marinate technique.",
-      "Add carrot and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Japchae. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-soy-garlic-chicken",
-    "name": "Soy garlic chicken",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "korean",
-      "beef"
-    ],
-    "why": "A korean lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out gochujang.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Soy garlic chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-doenjang-jjigae",
-    "name": "Doenjang jjigae",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "korean",
-      "paneer"
-    ],
-    "why": "A korean breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out gochujang.",
-      "Cook the paneer until nearly done using a stir-fry technique.",
-      "Add zucchini and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Doenjang jjigae. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-kimbap",
-    "name": "Kimbap",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "korean",
-      "lentils"
-    ],
-    "why": "A korean lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out gochujang.",
-      "Cook the lentils until nearly done using a ferment-style technique.",
-      "Add cabbage and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Kimbap. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the ferment-style step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-spicy-pork",
-    "name": "Spicy pork",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "korean",
-      "chicken"
-    ],
-    "why": "A korean dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out gochujang.",
-      "Cook the chicken until nearly done using a marinate technique.",
-      "Add onion and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Spicy pork. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-egg-drop-seaweed-soup",
-    "name": "Egg drop seaweed soup",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "korean",
-      "tofu"
-    ],
-    "why": "A korean snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out gochujang.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Egg drop seaweed soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-cucumber-banchan",
-    "name": "Cucumber banchan",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "korean",
-      "eggs"
-    ],
-    "why": "A korean dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out gochujang.",
-      "Cook the eggs until nearly done using a stir-fry technique.",
-      "Add spinach and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Cucumber banchan. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-gochujang-pasta",
-    "name": "Gochujang pasta",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "korean",
-      "beans"
-    ],
-    "why": "A korean lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out gochujang.",
-      "Cook the beans until nearly done using a ferment-style technique.",
-      "Add bell pepper and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Gochujang pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the ferment-style step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-korean-pancake",
-    "name": "Korean pancake",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "korean",
-      "fish"
-    ],
-    "why": "A korean breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out gochujang.",
-      "Cook the fish until nearly done using a marinate technique.",
-      "Add carrot and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Korean pancake. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-soft-tofu-stew",
-    "name": "Soft tofu stew",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "korean",
-      "beef"
-    ],
-    "why": "A korean lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out gochujang.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Soft tofu stew. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-honey-butter-potatoes",
-    "name": "Honey butter potatoes",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "korean",
-      "paneer"
-    ],
-    "why": "A korean dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp gochujang",
-      "1 tsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out gochujang.",
-      "Cook the paneer until nearly done using a stir-fry technique.",
-      "Add zucchini and aromatics (soy sauce, sesame); cook until fragrant.",
-      "Build the sauce or finish with gochujang and season boldly.",
-      "Plate Honey butter potatoes. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-dal-bhat-tarkari",
-    "name": "Dal bhat tarkari",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "nepali",
-      "chicken"
-    ],
-    "why": "A nepali breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Dal bhat tarkari. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-chicken-momo-filling",
-    "name": "Chicken momo filling",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "nepali",
-      "tofu"
-    ],
-    "why": "A nepali lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a temper technique.",
-      "Add tomato and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chicken momo filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the temper step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-aloo-tama",
-    "name": "Aloo tama",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "nepali",
-      "eggs"
-    ],
-    "why": "A nepali dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a steam technique.",
-      "Add spinach and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Aloo tama. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-sekuwa",
-    "name": "Sekuwa",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "nepali",
-      "beans"
-    ],
-    "why": "A nepali snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a grill technique.",
-      "Add bell pepper and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Sekuwa. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-gundruk-soup",
-    "name": "Gundruk soup",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "nepali",
-      "fish"
-    ],
-    "why": "A nepali dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Gundruk soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-chatamari-topping",
-    "name": "Chatamari topping",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "nepali",
-      "beef"
-    ],
-    "why": "A nepali lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a temper technique.",
-      "Add mushroom and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chatamari topping. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the temper step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-kwati",
-    "name": "Kwati",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "nepali",
-      "paneer"
-    ],
-    "why": "A nepali breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a steam technique.",
-      "Add zucchini and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Kwati. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-masu-curry",
-    "name": "Masu curry",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "nepali",
-      "lentils"
-    ],
-    "why": "A nepali lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out cumin.",
-      "Cook the lentils until nearly done using a grill technique.",
-      "Add cabbage and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Masu curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-saag",
-    "name": "Saag",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "nepali",
-      "chicken"
-    ],
-    "why": "A nepali dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a simmer technique.",
-      "Add onion and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Saag. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-aloo-dum",
-    "name": "Aloo dum",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "nepali",
-      "tofu"
-    ],
-    "why": "A nepali snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a temper technique.",
-      "Add tomato and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Aloo dum. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the temper step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-sel-roti-batter-meal",
-    "name": "Sel roti batter meal",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "nepali",
-      "eggs"
-    ],
-    "why": "A nepali dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a steam technique.",
-      "Add spinach and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Sel roti batter meal. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-thukpa",
-    "name": "Thukpa",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "nepali",
-      "beans"
-    ],
-    "why": "A nepali lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a grill technique.",
-      "Add bell pepper and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Thukpa. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-chhoyela",
-    "name": "Chhoyela",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "nepali",
-      "fish"
-    ],
-    "why": "A nepali breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a simmer technique.",
-      "Add carrot and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chhoyela. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-yomari-filling-porridge",
-    "name": "Yomari filling porridge",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "nepali",
-      "beef"
-    ],
-    "why": "A nepali lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a temper technique.",
-      "Add mushroom and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Yomari filling porridge. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the temper step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-chiura-mix",
-    "name": "Chiura mix",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "nepali",
-      "paneer"
-    ],
-    "why": "A nepali dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a steam technique.",
-      "Add zucchini and aromatics (coriander, ginger); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chiura mix. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-chicken-shawarma-bowl",
-    "name": "Chicken shawarma bowl",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "middle-eastern",
-      "chicken"
-    ],
-    "why": "A middle eastern breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a roast technique.",
-      "Add onion and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Chicken shawarma bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-falafel-wraps",
-    "name": "Falafel wraps",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "middle-eastern",
-      "tofu"
-    ],
-    "why": "A middle eastern lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Falafel wraps. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-muhammara",
-    "name": "Muhammara",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "middle-eastern",
-      "eggs"
-    ],
-    "why": "A middle eastern dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a blend technique.",
-      "Add spinach and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Muhammara. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-lamb-mansaf-style-rice",
-    "name": "Lamb mansaf-style rice",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "middle-eastern",
-      "beans"
-    ],
-    "why": "A middle eastern snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Lamb mansaf-style rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-fattoush",
-    "name": "Fattoush",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "middle-eastern",
-      "fish"
-    ],
-    "why": "A middle eastern dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a roast technique.",
-      "Add carrot and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Fattoush. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-baba-ganoush",
-    "name": "Baba ganoush",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "middle-eastern",
-      "beef"
-    ],
-    "why": "A middle eastern lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Baba ganoush. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-koshari",
-    "name": "Koshari",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "middle-eastern",
-      "paneer"
-    ],
-    "why": "A middle eastern breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a blend technique.",
-      "Add zucchini and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Koshari. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-kabsa-chicken",
-    "name": "Kabsa chicken",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "middle-eastern",
-      "lentils"
-    ],
-    "why": "A middle eastern lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out cumin.",
-      "Cook the lentils until nearly done using a bake technique.",
-      "Add cabbage and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Kabsa chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-labneh-toast-plate",
-    "name": "Labneh toast plate",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "middle-eastern",
-      "chicken"
-    ],
-    "why": "A middle eastern dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out cumin.",
-      "Cook the chicken until nearly done using a roast technique.",
-      "Add onion and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Labneh toast plate. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-lentil-soup",
-    "name": "Lentil soup",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "middle-eastern",
-      "tofu"
-    ],
-    "why": "A middle eastern snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out cumin.",
-      "Cook the tofu until nearly done using a grill technique.",
-      "Add tomato and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Lentil soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-stuffed-grape-leaves-quick",
-    "name": "Stuffed grape leaves quick",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "middle-eastern",
-      "eggs"
-    ],
-    "why": "A middle eastern dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out cumin.",
-      "Cook the eggs until nearly done using a blend technique.",
-      "Add spinach and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Stuffed grape leaves quick. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-zaatar-flatbread-pizza",
-    "name": "Zaatar flatbread pizza",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "middle-eastern",
-      "beans"
-    ],
-    "why": "A middle eastern lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out cumin.",
-      "Cook the beans until nearly done using a bake technique.",
-      "Add bell pepper and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Zaatar flatbread pizza. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the bake step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-harira",
-    "name": "Harira",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "middle-eastern",
-      "fish"
-    ],
-    "why": "A middle eastern breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out cumin.",
-      "Cook the fish until nearly done using a roast technique.",
-      "Add carrot and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Harira. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-freekeh-salad",
-    "name": "Freekeh salad",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "middle-eastern",
-      "beef"
-    ],
-    "why": "A middle eastern lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out cumin.",
-      "Cook the beef until nearly done using a grill technique.",
-      "Add mushroom and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Freekeh salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the grill step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-date-oat-bars",
-    "name": "Date oat bars",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "middle-eastern",
-      "paneer"
-    ],
-    "why": "A middle eastern dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp cumin",
-      "1 tsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out cumin.",
-      "Cook the paneer until nearly done using a blend technique.",
-      "Add zucchini and aromatics (sumac, tahini); cook until fragrant.",
-      "Build the sauce or finish with cumin and season boldly.",
-      "Plate Date oat bars. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-mac-and-cheese",
-    "name": "Mac and cheese",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "american",
-      "chicken"
-    ],
-    "why": "A american comfort breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out butter.",
-      "Cook the chicken until nearly done using a bake technique.",
-      "Add onion and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Mac and cheese. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-roast-chicken",
-    "name": "Roast chicken",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "easy",
-      "american",
-      "tofu"
-    ],
-    "why": "A american comfort lunch classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out butter.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Roast chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-chili-con-carne",
-    "name": "Chili con carne",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 45,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "american",
-      "eggs"
-    ],
-    "why": "A american comfort dinner classic — home-cookable in about 45 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out butter.",
-      "Cook the eggs until nearly done using a grill technique.",
-      "Add spinach and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Chili con carne. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-bbq-pulled-jackfruit",
-    "name": "BBQ pulled jackfruit",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "american",
-      "beans"
-    ],
-    "why": "A american comfort snack classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out butter.",
-      "Cook the beans until nearly done using a sear technique.",
-      "Add bell pepper and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate BBQ pulled jackfruit. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sear step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-pancakes",
-    "name": "Pancakes",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 65,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "hard",
-      "american",
-      "fish"
-    ],
-    "why": "A american comfort dinner classic — home-cookable in about 65 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out butter.",
-      "Cook the fish until nearly done using a bake technique.",
-      "Add carrot and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Pancakes. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-burger-night",
-    "name": "Burger night",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "american",
-      "beef"
-    ],
-    "why": "A american comfort lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out butter.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Burger night. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-meatloaf",
-    "name": "Meatloaf",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 20,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "american",
-      "paneer"
-    ],
-    "why": "A american comfort breakfast classic — home-cookable in about 20 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out butter.",
-      "Cook the paneer until nearly done using a grill technique.",
-      "Add zucchini and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Meatloaf. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-cornbread-chili-bowl",
-    "name": "Cornbread chili bowl",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 50,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "american",
-      "lentils"
-    ],
-    "why": "A american comfort lunch classic — home-cookable in about 50 minutes.",
-    "ingredients": [
-      "1–2 servings worth of lentils",
-      "1 cabbage",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop cabbage, measure spices/sauces, and set out butter.",
-      "Cook the lentils until nearly done using a sear technique.",
-      "Add cabbage and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Cornbread chili bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sear step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-caesar-salad",
-    "name": "Caesar salad",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "medium",
-      "american",
-      "chicken"
-    ],
-    "why": "A american comfort dinner classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of chicken",
-      "1 onion",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop onion, measure spices/sauces, and set out butter.",
-      "Cook the chicken until nearly done using a bake technique.",
-      "Add onion and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Caesar salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-baked-potato-bar",
-    "name": "Baked potato bar",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 55,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "american",
-      "tofu"
-    ],
-    "why": "A american comfort snack classic — home-cookable in about 55 minutes.",
-    "ingredients": [
-      "1–2 servings worth of tofu",
-      "1 tomato",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop tomato, measure spices/sauces, and set out butter.",
-      "Cook the tofu until nearly done using a simmer technique.",
-      "Add tomato and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Baked potato bar. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-clam-chowder",
-    "name": "Clam chowder",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 3,
-    "tags": [
-      "dinner",
-      "easy",
-      "american",
-      "eggs"
-    ],
-    "why": "A american comfort dinner classic — home-cookable in about 25 minutes.",
-    "ingredients": [
-      "1–2 servings worth of eggs",
-      "1 spinach",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop spinach, measure spices/sauces, and set out butter.",
-      "Cook the eggs until nearly done using a grill technique.",
-      "Add spinach and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Clam chowder. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-fried-rice-leftover-scramble",
-    "name": "Fried rice leftover scramble",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 4,
-    "tags": [
-      "lunch",
-      "easy",
-      "american",
-      "beans"
-    ],
-    "why": "A american comfort lunch classic — home-cookable in about 30 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beans",
-      "1 bell pepper",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop bell pepper, measure spices/sauces, and set out butter.",
-      "Cook the beans until nearly done using a sear technique.",
-      "Add bell pepper and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Fried rice leftover scramble. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the sear step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-sheet-pan-sausage-veg",
-    "name": "Sheet-pan sausage veg",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "american",
-      "fish"
-    ],
-    "why": "A american comfort breakfast classic — home-cookable in about 35 minutes.",
-    "ingredients": [
-      "1–2 servings worth of fish",
-      "1 carrot",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop carrot, measure spices/sauces, and set out butter.",
-      "Cook the fish until nearly done using a bake technique.",
-      "Add carrot and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Sheet-pan sausage veg. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-banana-bread-french-toast",
-    "name": "Banana bread French toast",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 3,
-    "tags": [
-      "lunch",
-      "medium",
-      "american",
-      "beef"
-    ],
-    "why": "A american comfort lunch classic — home-cookable in about 40 minutes.",
-    "ingredients": [
-      "1–2 servings worth of beef",
-      "1 mushroom",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop mushroom, measure spices/sauces, and set out butter.",
-      "Cook the beef until nearly done using a simmer technique.",
-      "Add mushroom and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Banana bread French toast. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Don't rush the simmer step; browning = flavor.",
-    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-tomato-soup-grilled-cheese",
-    "name": "Tomato soup grilled cheese",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 75,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 4,
-    "tags": [
-      "dinner",
-      "hard",
-      "american",
-      "paneer"
-    ],
-    "why": "A american comfort dinner classic — home-cookable in about 75 minutes.",
-    "ingredients": [
-      "1–2 servings worth of paneer",
-      "1 zucchini",
-      "2 tbsp butter",
-      "1 tsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "Salt and pepper",
-      "Fresh herbs or scallion to finish"
-    ],
-    "steps": [
-      "Prep: chop zucchini, measure spices/sauces, and set out butter.",
-      "Cook the paneer until nearly done using a grill technique.",
-      "Add zucchini and aromatics (onion, stock); cook until fragrant.",
-      "Build the sauce or finish with butter and season boldly.",
-      "Plate Tomato soup grilled cheese. Rest 1 minute. Taste and adjust acid/heat/salt.",
-      "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
-    ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-weeknight-carbonara-x",
-    "name": "Weeknight carbonara",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "italian"
-    ],
-    "why": "Extra Italian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp olive oil",
-      "1–2 tbsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "to taste tomato",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a simmer method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Weeknight carbonara immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-tuna-puttanesca-x",
-    "name": "Tuna puttanesca",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "easy",
-      "italian"
-    ],
-    "why": "Extra Italian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp olive oil",
-      "1–2 tbsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "to taste tomato",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a sauté method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Tuna puttanesca immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-khichdi-x",
-    "name": "Khichdi",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "medium",
-      "indian"
-    ],
-    "why": "Extra Indian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a tadka method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Khichdi immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-vegetable-korma-x",
-    "name": "Vegetable korma",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "indian"
-    ],
-    "why": "Extra Indian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a roast method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Vegetable korma immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-breakfast-burrito-x",
-    "name": "Breakfast burrito",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 45,
-    "difficulty": "hard",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "hard",
-      "mexican"
-    ],
-    "why": "Extra Mexican pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a char method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Breakfast burrito immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-mango-salsa-chicken-x",
-    "name": "Mango salsa chicken",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "easy",
-      "mexican"
-    ],
-    "why": "Extra Mexican pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a simmer method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Mango salsa chicken immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-chirashi-style-bowl-x",
-    "name": "Chirashi-style bowl",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "easy",
-      "japanese"
-    ],
-    "why": "Extra Japanese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "to taste scallion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a steam method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Chirashi-style bowl immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-miso-glazed-eggplant-x",
-    "name": "Miso glazed eggplant",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "medium",
-      "japanese"
-    ],
-    "why": "Extra Japanese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "to taste scallion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a broil method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Miso glazed eggplant immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-cashew-chicken-x",
-    "name": "Cashew chicken",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "medium",
-      "thai"
-    ],
-    "why": "Extra Thai pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp fish sauce",
-      "1–2 tbsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "to taste coconut milk",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a stir-fry method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Cashew chicken immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-coconut-pancakes-x",
-    "name": "Coconut pancakes",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 45,
-    "difficulty": "hard",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "hard",
-      "thai"
-    ],
-    "why": "Extra Thai pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp fish sauce",
-      "1–2 tbsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "to taste coconut milk",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a simmer method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Coconut pancakes immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-dan-dan-inspired-noodles-x",
-    "name": "Dan dan-inspired noodles",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "easy",
-      "chinese"
-    ],
-    "why": "Extra Chinese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "to taste sesame oil",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a braise method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Dan dan-inspired noodles immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-steamed-fish-ginger-x",
-    "name": "Steamed fish ginger",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "easy",
-      "chinese"
-    ],
-    "why": "Extra Chinese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "to taste sesame oil",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a blanch method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Steamed fish ginger immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-halloumi-salad-x",
-    "name": "Halloumi salad",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "mediterranean"
-    ],
-    "why": "Extra Mediterranean pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp olive oil",
-      "1–2 tbsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "to taste feta",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a roast method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Halloumi salad immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mediterranean-spanakopita-scramble-x",
-    "name": "Spanakopita scramble",
-    "cuisine": "mediterranean",
-    "cuisineLabel": "Mediterranean",
-    "color": "#0F766E",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "medium",
-      "mediterranean"
-    ],
-    "why": "Extra Mediterranean pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp olive oil",
-      "1–2 tbsp lemon",
-      "to taste oregano",
-      "to taste garlic",
-      "to taste feta",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Spanakopita scramble immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "french-herb-roast-carrots-x",
-    "name": "Herb roast carrots",
+    "id": "french-omelette",
+    "name": "French omelette",
     "cuisine": "french",
     "cuisineLabel": "French",
     "color": "#1D4ED8",
-    "minutes": 45,
-    "difficulty": "hard",
+    "meal": "breakfast",
+    "servings": 1,
+    "tags": [
+      "eggs",
+      "omelette",
+      "french"
+    ],
+    "why": "Soft rolled eggs — technique practice that feeds you.",
+    "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "French omelette",
+        "url": "https://www.youtube.com/results?search_query=french%20omelette%20technique"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With butter",
+        "blurb": "Pale, creamy, barely colored.",
+        "minutes": 10,
+        "difficulty": "medium",
+        "ingredients": [
+          "3 eggs",
+          "Butter",
+          "Salt",
+          "Chives"
+        ],
+        "steps": [
+          "Beat eggs",
+          "Butter pan",
+          "Stir rapidly",
+          "Roll"
+        ],
+        "tip": "Medium-low heat; patience > browning."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · 1 yolk",
+        "blurb": "Two whites + one yolk; oil spray.",
+        "minutes": 10,
+        "difficulty": "medium",
+        "ingredients": [
+          "Eggs",
+          "Herbs",
+          "Spinach"
+        ],
+        "steps": [
+          "Same technique",
+          "Fold greens"
+        ],
+        "tip": "Nonstick is your friend."
+      },
+      {
+        "id": "cheese",
+        "label": "Idea · cheese filling",
+        "blurb": "Gruyère melt inside the roll.",
+        "minutes": 12,
+        "difficulty": "medium",
+        "ingredients": [
+          "Eggs",
+          "Butter",
+          "Cheese"
+        ],
+        "steps": [
+          "Cook",
+          "Cheese before roll"
+        ],
+        "tip": "Still keep the outside pale."
+      }
+    ],
+    "minutes": 10,
+    "difficulty": "medium"
+  },
+  {
+    "id": "american-sheet-veg",
+    "name": "Sheet-pan veggies + protein",
+    "cuisine": "american",
+    "cuisineLabel": "American comfort",
+    "color": "#A16207",
     "meal": "dinner",
     "servings": 2,
     "tags": [
-      "dinner",
-      "hard",
-      "french"
+      "sheet-pan",
+      "easy",
+      "meal-prep"
     ],
-    "why": "Extra French pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp butter",
-      "1–2 tbsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "to taste cream",
-      "Salt"
+    "why": "Hands-off dinner while you finish a chapter.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Sheet pan",
+        "url": "https://www.youtube.com/results?search_query=sheet%20pan%20dinner%20chicken%20vegetables"
+      }
     ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a reduce method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Herb roast carrots immediately."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "With oil roast",
+        "blurb": "Veg + chicken/tofu, 220°C.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Veg",
+          "Protein",
+          "2 tbsp oil",
+          "Salt",
+          "Spices"
+        ],
+        "steps": [
+          "Toss",
+          "Spread",
+          "Roast",
+          "Rest"
+        ],
+        "tip": "Crowding steams — use two pans if needed."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · parchment + spray",
+        "blurb": "Minimal oil, more brassicas.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Veg",
+          "Lean protein",
+          "Spices",
+          "Lemon"
+        ],
+        "steps": [
+          "Season",
+          "Roast",
+          "Lemon"
+        ],
+        "tip": "Add delicate greens after roasting."
+      },
+      {
+        "id": "bbq",
+        "label": "Idea · BBQ glaze",
+        "blurb": "Brush glaze last 8 minutes.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "Sheet pan",
+          "BBQ sauce"
+        ],
+        "steps": [
+          "Roast almost done",
+          "Glaze",
+          "Finish"
+        ],
+        "tip": "Sugar burns — glaze late."
+      }
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 35,
+    "difficulty": "easy"
   },
   {
-    "id": "french-tuna-ni-oise-toast-x",
-    "name": "Tuna niçoise toast",
+    "id": "american-overnight-oats",
+    "name": "Overnight oats",
+    "cuisine": "american",
+    "cuisineLabel": "American comfort",
+    "color": "#A16207",
+    "meal": "breakfast",
+    "servings": 1,
+    "tags": [
+      "oats",
+      "breakfast",
+      "meal-prep"
+    ],
+    "why": "Set at night, study in the morning.",
+    "youtube": [
+      {
+        "label": "Overnight oats",
+        "url": "https://www.youtube.com/results?search_query=overnight%20oats%20healthy%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Milk + peanut butter",
+        "blurb": "Creamy jar breakfast.",
+        "minutes": 5,
+        "difficulty": "easy",
+        "ingredients": [
+          "Oats",
+          "Milk",
+          "PB",
+          "Banana",
+          "Pinch salt"
+        ],
+        "steps": [
+          "Mix jar",
+          "Fridge overnight",
+          "Stir"
+        ],
+        "tip": "Ratio ~1:1 oats to liquid; adjust."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · chia + berries",
+        "blurb": "Yogurt water mix, no PB.",
+        "minutes": 5,
+        "difficulty": "easy",
+        "ingredients": [
+          "Oats",
+          "Yogurt",
+          "Chia",
+          "Berries"
+        ],
+        "steps": [
+          "Mix",
+          "Fridge",
+          "Berries AM"
+        ],
+        "tip": "Cinnamon tricks sweetness perception."
+      },
+      {
+        "id": "rich",
+        "label": "With coconut oil drizzle",
+        "blurb": "Weekend treat oats.",
+        "minutes": 5,
+        "difficulty": "easy",
+        "ingredients": [
+          "Oats",
+          "Milk",
+          "Coconut",
+          "Chocolate chips"
+        ],
+        "steps": [
+          "Mix",
+          "Top rich"
+        ],
+        "tip": "Still oats — still breakfast."
+      }
+    ],
+    "minutes": 5,
+    "difficulty": "easy"
+  },
+  {
+    "id": "french-tomato-tartine",
+    "name": "Tomato tartine",
     "cuisine": "french",
     "cuisineLabel": "French",
     "color": "#1D4ED8",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "snack",
-    "servings": 2,
+    "meal": "lunch",
+    "servings": 1,
     "tags": [
-      "snack",
-      "easy",
+      "toast",
+      "tomato",
       "french"
     ],
-    "why": "Extra French pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp butter",
-      "1–2 tbsp shallot",
-      "to taste thyme",
-      "to taste wine",
-      "to taste cream",
-      "Salt"
+    "why": "Open-faced tomato toast — café vibes at the desk.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Tartine",
+        "url": "https://www.youtube.com/results?search_query=tomato%20tartine%20recipe"
+      }
     ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a bake method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Tuna niçoise toast immediately."
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Olive oil + salt",
+        "blurb": "Rub garlic on toast, tomato, oil.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Bread",
+          "Tomato",
+          "Garlic",
+          "EVOO",
+          "Salt"
+        ],
+        "steps": [
+          "Toast",
+          "Garlic rub",
+          "Tomato",
+          "Oil"
+        ],
+        "tip": "Flaky salt matters."
+      },
+      {
+        "id": "healthy",
+        "label": "Healthy · ricotta light",
+        "blurb": "Thin ricotta layer, pile tomato.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Bread",
+          "Low-fat ricotta",
+          "Tomato",
+          "Basil"
+        ],
+        "steps": [
+          "Toast",
+          "Spread",
+          "Tomato"
+        ],
+        "tip": "Whole-grain bread keeps you fuller."
+      },
+      {
+        "id": "rich",
+        "label": "With butter + anchovy idea",
+        "blurb": "Butter base, optional anchovy.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "Bread",
+          "Butter",
+          "Tomato",
+          "Anchovy optional"
+        ],
+        "steps": [
+          "Butter toast",
+          "Tomato",
+          "Anchovy"
+        ],
+        "tip": "Cornichons on the side slap."
+      }
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-sesame-spinach-x",
-    "name": "Sesame spinach",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "easy",
-      "korean"
-    ],
-    "why": "Extra Korean pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp gochujang",
-      "1–2 tbsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a marinate method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Sesame spinach immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "korean-fire-chicken-x",
-    "name": "Fire chicken",
-    "cuisine": "korean",
-    "cuisineLabel": "Korean",
-    "color": "#BE123C",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "medium",
-      "korean"
-    ],
-    "why": "Extra Korean pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp gochujang",
-      "1–2 tbsp soy sauce",
-      "to taste sesame",
-      "to taste garlic",
-      "to taste scallion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Fire chicken immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-egg-curry-bhat-x",
-    "name": "Egg curry bhat",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "medium",
-      "nepali"
-    ],
-    "why": "Extra Nepali pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "to taste timur",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a steam method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Egg curry bhat immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "nepali-aloo-achaar-bowl-x",
-    "name": "Aloo achaar bowl",
-    "cuisine": "nepali",
-    "cuisineLabel": "Nepali",
-    "color": "#0D9488",
-    "minutes": 45,
-    "difficulty": "hard",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "hard",
-      "nepali"
-    ],
-    "why": "Extra Nepali pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp coriander",
-      "to taste ginger",
-      "to taste garlic",
-      "to taste timur",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Aloo achaar bowl immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-chickpea-shakshuka-x",
-    "name": "Chickpea shakshuka",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "easy",
-      "middle-eastern"
-    ],
-    "why": "Extra Middle Eastern pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "to taste parsley",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a roast method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Chickpea shakshuka immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "middle-eastern-pita-pizza-zaatar-x",
-    "name": "Pita pizza zaatar",
-    "cuisine": "middle-eastern",
-    "cuisineLabel": "Middle Eastern",
-    "color": "#B45309",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "easy",
-      "middle-eastern"
-    ],
-    "why": "Extra Middle Eastern pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp sumac",
-      "to taste tahini",
-      "to taste lemon",
-      "to taste parsley",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Pita pizza zaatar immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-sheet-pan-nachos-x",
-    "name": "Sheet-pan nachos",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "medium",
-      "american"
-    ],
-    "why": "Extra American comfort pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp butter",
-      "1–2 tbsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "to taste cheese",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Sheet-pan nachos immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "american-overnight-oats-jar-x",
-    "name": "Overnight oats jar",
-    "cuisine": "american",
-    "cuisineLabel": "American comfort",
-    "color": "#A16207",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "medium",
-      "american"
-    ],
-    "why": "Extra American comfort pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp butter",
-      "1–2 tbsp onion",
-      "to taste stock",
-      "to taste pepper",
-      "to taste cheese",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a sear method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Overnight oats jar immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "italian-white-bean-kale-stew-x",
-    "name": "White bean kale stew",
-    "cuisine": "italian",
-    "cuisineLabel": "Italian",
-    "color": "#C2410C",
-    "minutes": 45,
-    "difficulty": "hard",
-    "meal": "breakfast",
-    "servings": 2,
-    "tags": [
-      "breakfast",
-      "hard",
-      "italian"
-    ],
-    "why": "Extra Italian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp olive oil",
-      "1–2 tbsp garlic",
-      "to taste parmesan",
-      "to taste basil",
-      "to taste tomato",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a simmer method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve White bean kale stew immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "indian-upma-x",
-    "name": "Upma",
-    "cuisine": "indian",
-    "cuisineLabel": "Indian",
-    "color": "#B45309",
-    "minutes": 25,
-    "difficulty": "easy",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "easy",
-      "indian"
-    ],
-    "why": "Extra Indian pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp turmeric",
-      "to taste garam masala",
-      "to taste ginger",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a simmer method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Upma immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "mexican-elote-pasta-x",
-    "name": "Elote pasta",
-    "cuisine": "mexican",
-    "cuisineLabel": "Mexican",
-    "color": "#BE123C",
-    "minutes": 30,
-    "difficulty": "easy",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "easy",
-      "mexican"
-    ],
-    "why": "Extra Mexican pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp cumin",
-      "1–2 tbsp chili",
-      "to taste lime",
-      "to taste cilantro",
-      "to taste onion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a grill method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Elote pasta immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "japanese-soy-butter-mushrooms-x",
-    "name": "Soy butter mushrooms",
-    "cuisine": "japanese",
-    "cuisineLabel": "Japanese",
-    "color": "#0369A1",
-    "minutes": 35,
-    "difficulty": "medium",
-    "meal": "snack",
-    "servings": 2,
-    "tags": [
-      "snack",
-      "medium",
-      "japanese"
-    ],
-    "why": "Extra Japanese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp mirin",
-      "to taste dashi",
-      "to taste ginger",
-      "to taste scallion",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a broil method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Soy butter mushrooms immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "thai-basil-tofu-scramble-x",
-    "name": "Basil tofu scramble",
-    "cuisine": "thai",
-    "cuisineLabel": "Thai",
-    "color": "#15803D",
-    "minutes": 40,
-    "difficulty": "medium",
-    "meal": "dinner",
-    "servings": 2,
-    "tags": [
-      "dinner",
-      "medium",
-      "thai"
-    ],
-    "why": "Extra Thai pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp fish sauce",
-      "1–2 tbsp lime",
-      "to taste lemongrass",
-      "to taste chili",
-      "to taste coconut milk",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a stir-fry method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Basil tofu scramble immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
-  },
-  {
-    "id": "chinese-garlic-bok-choy-rice-x",
-    "name": "Garlic bok choy rice",
-    "cuisine": "chinese",
-    "cuisineLabel": "Chinese",
-    "color": "#A16207",
-    "minutes": 45,
-    "difficulty": "hard",
-    "meal": "lunch",
-    "servings": 2,
-    "tags": [
-      "lunch",
-      "hard",
-      "chinese"
-    ],
-    "why": "Extra Chinese pick for variety nights.",
-    "ingredients": [
-      "Main protein or veg of choice",
-      "1–2 tbsp soy sauce",
-      "1–2 tbsp ginger",
-      "to taste garlic",
-      "to taste scallion",
-      "to taste sesame oil",
-      "Salt"
-    ],
-    "steps": [
-      "Gather ingredients and heat your pan or pot.",
-      "Use a steam method with aromatics.",
-      "Season, taste, and finish with acid or herbs.",
-      "Serve Garlic bok choy rice immediately."
-    ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
-    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
+    "minutes": 10,
+    "difficulty": "easy"
   }
 ]
 
 export function recipeOfTheDay(date = new Date()) {
-  const start = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
-  const day = Math.floor(start / 86400000)
-  return recipes[((day % recipes.length) + recipes.length) % recipes.length]
+  const key = date.toISOString().slice(0, 10)
+  let h = 0
+  for (let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) | 0
+  return recipes[Math.abs(h) % recipes.length]
+}
+
+export function getWay(recipe, wayId) {
+  if (!recipe?.ways?.length) return null
+  return recipe.ways.find((w) => w.id === wayId) || recipe.ways[0]
 }
