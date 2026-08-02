@@ -24,6 +24,9 @@ export default function Nav() {
           <NavLink to="/manuals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Manuals
           </NavLink>
+          <NavLink to="/tags" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Tags
+          </NavLink>
           <NavLink to="/sparks" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Sparks
           </NavLink>
@@ -32,6 +35,9 @@ export default function Nav() {
           </NavLink>
           <NavLink to="/cookbook" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Cook
+          </NavLink>
+          <NavLink to="/kits" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Kits
           </NavLink>
           <NavLink to="/today" className="nav-cta">
             Check in

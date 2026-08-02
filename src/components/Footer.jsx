@@ -13,11 +13,17 @@ export default function Footer() {
           {' · '}
           <Link to="/manuals">manuals</Link>
           {' · '}
+          <Link to="/tags">tags</Link>
+          {' · '}
           <Link to="/sparks">Sparks</Link>
           {' · '}
           <Link to="/break">Break</Link>
           {' · '}
-          <Link to="/cookbook">Cookbook</Link>.
+          <Link to="/cookbook">Cookbook</Link>
+          {' · '}
+          <Link to="/kits">Kits</Link>
+          {' · '}
+          <Link to="/insights">Insights</Link>.
         </p>
       </div>
     </footer>

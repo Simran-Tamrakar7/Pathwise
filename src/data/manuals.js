@@ -13,6 +13,7 @@ import { careerManuals } from './manuals/career'
 import { deliveryManuals } from './manuals/delivery'
 import { opsExtraManuals } from './manuals/ops-extra'
 import { extrasPackManuals } from './manuals/extras-pack'
+import { practicalPackManuals } from './manuals/practical-pack'
 
 /** @deprecated use genres — kept for older imports */
 export const categories = genres
@@ -43,6 +44,7 @@ export const manuals = [
   ...softSkillManuals,
   ...softExtraManuals,
   ...extrasPackManuals,
+  ...practicalPackManuals,
 ].map(finalize)
 
 export function getManual(id) {

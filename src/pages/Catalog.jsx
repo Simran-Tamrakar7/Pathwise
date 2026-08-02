@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { genres, manuals } from '../data/manuals'
 import { countDone } from '../lib/progress'
+import DocumentHead from '../components/DocumentHead'
+import { isBookmarked } from '../lib/bookmarks'
 
 export default function Catalog() {
   const [cat, setCat] = useState('all')
@@ -42,11 +44,16 @@ export default function Catalog() {
 
   return (
     <div className="wrap catalog-page">
+      <DocumentHead
+        title="Manuals"
+        description={`${manuals.length} Pathwise craft manuals — filter by genre and finish chapter by chapter.`}
+      />
       <header className="page-hero colorful-page-hero catalog-hero-v2">
         <p className="hero-kicker">Skill library</p>
         <h1>Manuals you can finish</h1>
         <p>
-          {manuals.length} paths — genre filters, covers, lesson cards. Start anywhere; Today keeps you honest.
+          {manuals.length} paths — genre filters, covers, lesson cards. Or browse by{' '}
+          <Link to="/tags">skill tags</Link>.
         </p>
       </header>
 
@@ -87,6 +94,7 @@ export default function Catalog() {
             <div className="manual-grid cover-grid">
               {g.items.map((m) => {
                 const prog = countDone(m.id, m.chapters.length)
+                const saved = isBookmarked(m.id)
                 return (
                   <Link
                     key={m.id}
@@ -97,10 +105,11 @@ export default function Catalog() {
                     <div className="cover-thumb">
                       <img src={m.coverUrl} alt="" loading="lazy" />
                       {prog.done > 0 && <span className="prog-pill">{prog.pct}%</span>}
+                      {saved && <span className="bookmark-pill">★</span>}
                     </div>
                     <div className="meta">
                       <span>{m.chapters.length} chapters</span>
-                      <span>{m.duration}</span>
+                      <span>{prog.done > 0 ? 'In progress' : saved ? 'Bookmarked' : m.duration}</span>
                     </div>
                     <h3>{m.title}</h3>
                     <p>{m.tagline}</p>

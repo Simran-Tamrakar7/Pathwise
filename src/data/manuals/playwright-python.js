@@ -43,7 +43,41 @@ export const playwrightPythonManual = {
           learnMore: "Puppeteer focused on Chromium. Playwright generalized the architecture for multi-browser, auto-waiting, and richer tooling (traces, codegen, network mocking).",
           image: {
             src: "covers/playwright-cover.png",
-            alt: "Diagram placeholder: Playwright lineage from Puppeteer to multi-browser",
+            alt: "Playwright multi-browser path diagram — tap the sticky notes",
+            stickies: [
+              {
+                id: 'hack',
+                x: 4,
+                y: 3,
+                label: 'Pathwise hack',
+                body: 'Tap stickies for tips. Drag them onto the window or path they describe.',
+                color: 'mint',
+              },
+              {
+                id: 'hub',
+                x: 40,
+                y: 36,
+                label: 'The page under test',
+                body: 'Playwright drives a real page — locators match how users see the UI.',
+                color: 'cream',
+              },
+              {
+                id: 'paths',
+                x: 12,
+                y: 55,
+                label: 'The automation path',
+                body: 'Dashed roads = open → act → assert. Short paths flake less.',
+                color: 'sky',
+              },
+              {
+                id: 'browsers',
+                x: 68,
+                y: 12,
+                label: 'Multi-browser',
+                body: 'Chromium, Firefox, WebKit — same script. Puppeteer stayed Chromium-first; Playwright didn’t.',
+                color: 'peach',
+              },
+            ],
           },
           resources: [
             {

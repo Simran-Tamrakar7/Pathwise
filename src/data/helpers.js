@@ -63,7 +63,11 @@ function normalizeStep(s, i) {
     body: s.body ?? '',
     learnMore: s.learnMore ?? null,
     image: s.image
-      ? { src: s.image.src ?? s.image, alt: s.image.alt ?? s.title ?? `Step ${i + 1}` }
+      ? {
+          src: s.image.src ?? s.image,
+          alt: s.image.alt ?? s.title ?? `Step ${i + 1}`,
+          stickies: Array.isArray(s.image.stickies) ? s.image.stickies : null,
+        }
       : null,
     resources: (s.resources ?? []).map((r) =>
       typeof r === 'string'
