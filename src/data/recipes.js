@@ -1,4 +1,4 @@
-/** Pathwise Break Room cookbook — 210 home recipes across 12 cuisines. */
+/** Pathwise Cookbook — 210 recipes with food photos. */
 
 export const recipeCuisines = [
   {
@@ -99,7 +99,8 @@ export const recipes = [
       "Plate Margherita pizza. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-cacio-e-pepe",
@@ -136,7 +137,8 @@ export const recipes = [
       "Plate Cacio e pepe. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sauté step; browning = flavor."
+    "tip": "Don't rush the sauté step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-spaghetti-aglio-e-olio",
@@ -173,7 +175,8 @@ export const recipes = [
       "Plate Spaghetti aglio e olio. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-risotto-milanese",
@@ -210,7 +213,8 @@ export const recipes = [
       "Plate Risotto milanese. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the boil step; browning = flavor."
+    "tip": "Don't rush the boil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-lasagna-bolognese",
@@ -247,7 +251,8 @@ export const recipes = [
       "Plate Lasagna bolognese. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-pesto-genovese-pasta",
@@ -284,7 +289,8 @@ export const recipes = [
       "Plate Pesto genovese pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sauté step; browning = flavor."
+    "tip": "Don't rush the sauté step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-chicken-piccata",
@@ -321,7 +327,8 @@ export const recipes = [
       "Plate Chicken piccata. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-caprese-salad",
@@ -358,7 +365,8 @@ export const recipes = [
       "Plate Caprese salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the boil step; browning = flavor."
+    "tip": "Don't rush the boil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-minestrone",
@@ -395,7 +403,8 @@ export const recipes = [
       "Plate Minestrone. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-osso-buco",
@@ -432,7 +441,8 @@ export const recipes = [
       "Plate Osso buco. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sauté step; browning = flavor."
+    "tip": "Don't rush the sauté step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-gnocchi-sorrentina",
@@ -469,7 +479,8 @@ export const recipes = [
       "Plate Gnocchi sorrentina. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-frittata",
@@ -506,7 +517,8 @@ export const recipes = [
       "Plate Frittata. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the boil step; browning = flavor."
+    "tip": "Don't rush the boil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-bruschetta-trio",
@@ -543,7 +555,8 @@ export const recipes = [
       "Plate Bruschetta trio. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-eggplant-parmigiana",
@@ -580,7 +593,8 @@ export const recipes = [
       "Plate Eggplant parmigiana. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sauté step; browning = flavor."
+    "tip": "Don't rush the sauté step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-seafood-linguine",
@@ -617,7 +631,8 @@ export const recipes = [
       "Plate Seafood linguine. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-dal-tadka",
@@ -654,7 +669,8 @@ export const recipes = [
       "Plate Dal tadka. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-butter-chicken",
@@ -691,7 +707,8 @@ export const recipes = [
       "Plate Butter chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-chana-masala",
@@ -728,7 +745,8 @@ export const recipes = [
       "Plate Chana masala. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-palak-paneer",
@@ -765,7 +783,8 @@ export const recipes = [
       "Plate Palak paneer. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the roast step; browning = flavor."
+    "tip": "Don't rush the roast step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-vegetable-biryani",
@@ -802,7 +821,8 @@ export const recipes = [
       "Plate Vegetable biryani. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-aloo-gobi",
@@ -839,7 +859,8 @@ export const recipes = [
       "Plate Aloo gobi. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-chicken-tikka",
@@ -876,7 +897,8 @@ export const recipes = [
       "Plate Chicken tikka. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-masala-dosa-filling",
@@ -913,7 +935,8 @@ export const recipes = [
       "Plate Masala dosa filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the roast step; browning = flavor."
+    "tip": "Don't rush the roast step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-sambar",
@@ -950,7 +973,8 @@ export const recipes = [
       "Plate Sambar. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-rajma",
@@ -987,7 +1011,8 @@ export const recipes = [
       "Plate Rajma. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-egg-curry",
@@ -1024,7 +1049,8 @@ export const recipes = [
       "Plate Egg curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-jeera-rice",
@@ -1061,7 +1087,8 @@ export const recipes = [
       "Plate Jeera rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the roast step; browning = flavor."
+    "tip": "Don't rush the roast step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-paneer-tikka",
@@ -1098,7 +1125,8 @@ export const recipes = [
       "Plate Paneer tikka. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-fish-moilee",
@@ -1135,7 +1163,8 @@ export const recipes = [
       "Plate Fish moilee. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-mango-lassi-bowl",
@@ -1172,7 +1201,8 @@ export const recipes = [
       "Plate Mango lassi bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-chicken-tacos",
@@ -1209,7 +1239,8 @@ export const recipes = [
       "Plate Chicken tacos. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-black-bean-enchiladas",
@@ -1246,7 +1277,8 @@ export const recipes = [
       "Plate Black bean enchiladas. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-guacamole",
@@ -1283,7 +1315,8 @@ export const recipes = [
       "Plate Guacamole. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-street-corn",
@@ -1320,7 +1353,8 @@ export const recipes = [
       "Plate Street corn. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blend step; browning = flavor."
+    "tip": "Don't rush the blend step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-pork-carnitas",
@@ -1357,7 +1391,8 @@ export const recipes = [
       "Plate Pork carnitas. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-veggie-burrito-bowl",
@@ -1394,7 +1429,8 @@ export const recipes = [
       "Plate Veggie burrito bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-salsa-verde-chicken",
@@ -1431,7 +1467,8 @@ export const recipes = [
       "Plate Salsa verde chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-quesadillas",
@@ -1468,7 +1505,8 @@ export const recipes = [
       "Plate Quesadillas. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blend step; browning = flavor."
+    "tip": "Don't rush the blend step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-pozole-rojo",
@@ -1505,7 +1543,8 @@ export const recipes = [
       "Plate Pozole rojo. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-huevos-rancheros",
@@ -1542,7 +1581,8 @@ export const recipes = [
       "Plate Huevos rancheros. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-fish-tacos",
@@ -1579,7 +1619,8 @@ export const recipes = [
       "Plate Fish tacos. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-refried-beans",
@@ -1616,7 +1657,8 @@ export const recipes = [
       "Plate Refried beans. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blend step; browning = flavor."
+    "tip": "Don't rush the blend step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-mexican-rice",
@@ -1653,7 +1695,8 @@ export const recipes = [
       "Plate Mexican rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-chipotle-chili",
@@ -1690,7 +1733,8 @@ export const recipes = [
       "Plate Chipotle chili. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-tortilla-soup",
@@ -1727,7 +1771,8 @@ export const recipes = [
       "Plate Tortilla soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-miso-soup",
@@ -1764,7 +1809,8 @@ export const recipes = [
       "Plate Miso soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-chicken-teriyaki",
@@ -1801,7 +1847,8 @@ export const recipes = [
       "Plate Chicken teriyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-salmon-donburi",
@@ -1838,7 +1885,8 @@ export const recipes = [
       "Plate Salmon donburi. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-okonomiyaki",
@@ -1875,7 +1923,8 @@ export const recipes = [
       "Plate Okonomiyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the broil step; browning = flavor."
+    "tip": "Don't rush the broil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-yakisoba",
@@ -1912,7 +1961,8 @@ export const recipes = [
       "Plate Yakisoba. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-tamago-gohan",
@@ -1949,7 +1999,8 @@ export const recipes = [
       "Plate Tamago gohan. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-gyoza",
@@ -1986,7 +2037,8 @@ export const recipes = [
       "Plate Gyoza. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-onigiri-trio",
@@ -2023,7 +2075,8 @@ export const recipes = [
       "Plate Onigiri trio. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the broil step; browning = flavor."
+    "tip": "Don't rush the broil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-katsu-curry",
@@ -2060,7 +2113,8 @@ export const recipes = [
       "Plate Katsu curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-cold-soba",
@@ -2097,7 +2151,8 @@ export const recipes = [
       "Plate Cold soba. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-niku-udon",
@@ -2134,7 +2189,8 @@ export const recipes = [
       "Plate Niku udon. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-vegetable-tempura",
@@ -2171,7 +2227,8 @@ export const recipes = [
       "Plate Vegetable tempura. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the broil step; browning = flavor."
+    "tip": "Don't rush the broil step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-mapo-inspired-tofu",
@@ -2208,7 +2265,8 @@ export const recipes = [
       "Plate Mapo-inspired tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-tamagoyaki",
@@ -2245,7 +2303,8 @@ export const recipes = [
       "Plate Tamagoyaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-matcha-overnight-oats",
@@ -2282,7 +2341,8 @@ export const recipes = [
       "Plate Matcha overnight oats. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-pad-thai",
@@ -2319,7 +2379,8 @@ export const recipes = [
       "Plate Pad thai. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-green-curry",
@@ -2356,7 +2417,8 @@ export const recipes = [
       "Plate Green curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-tom-yum",
@@ -2393,7 +2455,8 @@ export const recipes = [
       "Plate Tom yum. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-basil-chicken",
@@ -2430,7 +2493,8 @@ export const recipes = [
       "Plate Basil chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-pad-see-ew",
@@ -2467,7 +2531,8 @@ export const recipes = [
       "Plate Pad see ew. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-mango-sticky-rice",
@@ -2504,7 +2569,8 @@ export const recipes = [
       "Plate Mango sticky rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-massaman-curry",
@@ -2541,7 +2607,8 @@ export const recipes = [
       "Plate Massaman curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-papaya-salad",
@@ -2578,7 +2645,8 @@ export const recipes = [
       "Plate Papaya salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-thai-fried-rice",
@@ -2615,7 +2683,8 @@ export const recipes = [
       "Plate Thai fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-coconut-soup",
@@ -2652,7 +2721,8 @@ export const recipes = [
       "Plate Coconut soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-larb-gai",
@@ -2689,7 +2759,8 @@ export const recipes = [
       "Plate Larb gai. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-garlic-prawns",
@@ -2726,7 +2797,8 @@ export const recipes = [
       "Plate Garlic prawns. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-thai-omelette-rice",
@@ -2763,7 +2835,8 @@ export const recipes = [
       "Plate Thai omelette rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-peanut-noodle-salad",
@@ -2800,7 +2873,8 @@ export const recipes = [
       "Plate Peanut noodle salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-lemongrass-tofu",
@@ -2837,7 +2911,8 @@ export const recipes = [
       "Plate Lemongrass tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep fish sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-egg-fried-rice",
@@ -2874,7 +2949,8 @@ export const recipes = [
       "Plate Egg fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-mapo-tofu",
@@ -2911,7 +2987,8 @@ export const recipes = [
       "Plate Mapo tofu. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the steam step; browning = flavor."
+    "tip": "Don't rush the steam step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-kung-pao-chicken",
@@ -2948,7 +3025,8 @@ export const recipes = [
       "Plate Kung pao chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-tomato-egg-stir-fry",
@@ -2985,7 +3063,8 @@ export const recipes = [
       "Plate Tomato egg stir-fry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blanch step; browning = flavor."
+    "tip": "Don't rush the blanch step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-beef-broccoli",
@@ -3022,7 +3101,8 @@ export const recipes = [
       "Plate Beef broccoli. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-wonton-soup",
@@ -3059,7 +3139,8 @@ export const recipes = [
       "Plate Wonton soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the steam step; browning = flavor."
+    "tip": "Don't rush the steam step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-scallion-pancakes",
@@ -3096,7 +3177,8 @@ export const recipes = [
       "Plate Scallion pancakes. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-sesame-noodles",
@@ -3133,7 +3215,8 @@ export const recipes = [
       "Plate Sesame noodles. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blanch step; browning = flavor."
+    "tip": "Don't rush the blanch step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-hot-and-sour-soup",
@@ -3170,7 +3253,8 @@ export const recipes = [
       "Plate Hot and sour soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-garlic-green-beans",
@@ -3207,7 +3291,8 @@ export const recipes = [
       "Plate Garlic green beans. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the steam step; browning = flavor."
+    "tip": "Don't rush the steam step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-char-siu-style-pork",
@@ -3244,7 +3329,8 @@ export const recipes = [
       "Plate Char siu-style pork. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-congee",
@@ -3281,7 +3367,8 @@ export const recipes = [
       "Plate Congee. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the blanch step; browning = flavor."
+    "tip": "Don't rush the blanch step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-dumpling-bowl",
@@ -3318,7 +3405,8 @@ export const recipes = [
       "Plate Dumpling bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-sweet-sour-cauliflower",
@@ -3355,7 +3443,8 @@ export const recipes = [
       "Plate Sweet sour cauliflower. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the steam step; browning = flavor."
+    "tip": "Don't rush the steam step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-tea-eggs",
@@ -3392,7 +3481,8 @@ export const recipes = [
       "Plate Tea eggs. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep soy sauce nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-greek-salad",
@@ -3429,7 +3519,8 @@ export const recipes = [
       "Plate Greek salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-hummus-plate",
@@ -3466,7 +3557,8 @@ export const recipes = [
       "Plate Hummus plate. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-chicken-souvlaki",
@@ -3503,7 +3595,8 @@ export const recipes = [
       "Plate Chicken souvlaki. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-shakshuka",
@@ -3540,7 +3633,8 @@ export const recipes = [
       "Plate Shakshuka. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-falafel",
@@ -3577,7 +3671,8 @@ export const recipes = [
       "Plate Falafel. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-lemon-herb-fish",
@@ -3614,7 +3709,8 @@ export const recipes = [
       "Plate Lemon herb fish. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-orzo-salad",
@@ -3651,7 +3747,8 @@ export const recipes = [
       "Plate Orzo salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-stuffed-peppers",
@@ -3688,7 +3785,8 @@ export const recipes = [
       "Plate Stuffed peppers. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-chickpea-stew",
@@ -3725,7 +3823,8 @@ export const recipes = [
       "Plate Chickpea stew. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-tzatziki-bowls",
@@ -3762,7 +3861,8 @@ export const recipes = [
       "Plate Tzatziki bowls. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-baked-feta-pasta",
@@ -3799,7 +3899,8 @@ export const recipes = [
       "Plate Baked feta pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-lamb-kofta",
@@ -3836,7 +3937,8 @@ export const recipes = [
       "Plate Lamb kofta. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-tabbouleh",
@@ -3873,7 +3975,8 @@ export const recipes = [
       "Plate Tabbouleh. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-roasted-veg-mezze",
@@ -3910,7 +4013,8 @@ export const recipes = [
       "Plate Roasted veg mezze. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-avgolemono-soup",
@@ -3947,7 +4051,8 @@ export const recipes = [
       "Plate Avgolemono soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep olive oil nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-omelette-aux-fines-herbes",
@@ -3984,7 +4089,8 @@ export const recipes = [
       "Plate Omelette aux fines herbes. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-chicken-fricass-e",
@@ -4021,7 +4127,8 @@ export const recipes = [
       "Plate Chicken fricassée. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the braise step; browning = flavor."
+    "tip": "Don't rush the braise step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-ratatouille",
@@ -4058,7 +4165,8 @@ export const recipes = [
       "Plate Ratatouille. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-onion-soup",
@@ -4095,7 +4203,8 @@ export const recipes = [
       "Plate Onion soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-quiche-lorraine",
@@ -4132,7 +4241,8 @@ export const recipes = [
       "Plate Quiche lorraine. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-steak-frites-style",
@@ -4169,7 +4279,8 @@ export const recipes = [
       "Plate Steak frites style. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the braise step; browning = flavor."
+    "tip": "Don't rush the braise step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-ni-oise-salad",
@@ -4206,7 +4317,8 @@ export const recipes = [
       "Plate Niçoise salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-potato-gratin",
@@ -4243,7 +4355,8 @@ export const recipes = [
       "Plate Potato gratin. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-mushroom-vol-au-vent-filling",
@@ -4280,7 +4393,8 @@ export const recipes = [
       "Plate Mushroom vol-au-vent filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-coq-au-vin-quick",
@@ -4317,7 +4431,8 @@ export const recipes = [
       "Plate Coq au vin quick. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the braise step; browning = flavor."
+    "tip": "Don't rush the braise step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-cr-pes",
@@ -4354,7 +4469,8 @@ export const recipes = [
       "Plate Crêpes. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-salade-lyonnaise",
@@ -4391,7 +4507,8 @@ export const recipes = [
       "Plate Salade Lyonnaise. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-fish-meuni-re",
@@ -4428,7 +4545,8 @@ export const recipes = [
       "Plate Fish meunière. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-lentil-salad",
@@ -4465,7 +4583,8 @@ export const recipes = [
       "Plate Lentil salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the braise step; browning = flavor."
+    "tip": "Don't rush the braise step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-clafoutis",
@@ -4502,7 +4621,8 @@ export const recipes = [
       "Plate Clafoutis. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-kimchi-fried-rice",
@@ -4539,7 +4659,8 @@ export const recipes = [
       "Plate Kimchi fried rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-bulgogi",
@@ -4576,7 +4697,8 @@ export const recipes = [
       "Plate Bulgogi. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-bibimbap",
@@ -4613,7 +4735,8 @@ export const recipes = [
       "Plate Bibimbap. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-tteokbokki",
@@ -4650,7 +4773,8 @@ export const recipes = [
       "Plate Tteokbokki. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the ferment-style step; browning = flavor."
+    "tip": "Don't rush the ferment-style step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-japchae",
@@ -4687,7 +4811,8 @@ export const recipes = [
       "Plate Japchae. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-soy-garlic-chicken",
@@ -4724,7 +4849,8 @@ export const recipes = [
       "Plate Soy garlic chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-doenjang-jjigae",
@@ -4761,7 +4887,8 @@ export const recipes = [
       "Plate Doenjang jjigae. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-kimbap",
@@ -4798,7 +4925,8 @@ export const recipes = [
       "Plate Kimbap. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the ferment-style step; browning = flavor."
+    "tip": "Don't rush the ferment-style step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-spicy-pork",
@@ -4835,7 +4963,8 @@ export const recipes = [
       "Plate Spicy pork. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-egg-drop-seaweed-soup",
@@ -4872,7 +5001,8 @@ export const recipes = [
       "Plate Egg drop seaweed soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-cucumber-banchan",
@@ -4909,7 +5039,8 @@ export const recipes = [
       "Plate Cucumber banchan. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-gochujang-pasta",
@@ -4946,7 +5077,8 @@ export const recipes = [
       "Plate Gochujang pasta. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the ferment-style step; browning = flavor."
+    "tip": "Don't rush the ferment-style step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-korean-pancake",
@@ -4983,7 +5115,8 @@ export const recipes = [
       "Plate Korean pancake. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-soft-tofu-stew",
@@ -5020,7 +5153,8 @@ export const recipes = [
       "Plate Soft tofu stew. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-honey-butter-potatoes",
@@ -5057,7 +5191,8 @@ export const recipes = [
       "Plate Honey butter potatoes. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep gochujang nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-dal-bhat-tarkari",
@@ -5094,7 +5229,8 @@ export const recipes = [
       "Plate Dal bhat tarkari. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-chicken-momo-filling",
@@ -5131,7 +5267,8 @@ export const recipes = [
       "Plate Chicken momo filling. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the temper step; browning = flavor."
+    "tip": "Don't rush the temper step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-aloo-tama",
@@ -5168,7 +5305,8 @@ export const recipes = [
       "Plate Aloo tama. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-sekuwa",
@@ -5205,7 +5343,8 @@ export const recipes = [
       "Plate Sekuwa. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-gundruk-soup",
@@ -5242,7 +5381,8 @@ export const recipes = [
       "Plate Gundruk soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-chatamari-topping",
@@ -5279,7 +5419,8 @@ export const recipes = [
       "Plate Chatamari topping. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the temper step; browning = flavor."
+    "tip": "Don't rush the temper step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-kwati",
@@ -5316,7 +5457,8 @@ export const recipes = [
       "Plate Kwati. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-masu-curry",
@@ -5353,7 +5495,8 @@ export const recipes = [
       "Plate Masu curry. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-saag",
@@ -5390,7 +5533,8 @@ export const recipes = [
       "Plate Saag. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-aloo-dum",
@@ -5427,7 +5571,8 @@ export const recipes = [
       "Plate Aloo dum. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the temper step; browning = flavor."
+    "tip": "Don't rush the temper step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-sel-roti-batter-meal",
@@ -5464,7 +5609,8 @@ export const recipes = [
       "Plate Sel roti batter meal. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-thukpa",
@@ -5501,7 +5647,8 @@ export const recipes = [
       "Plate Thukpa. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-chhoyela",
@@ -5538,7 +5685,8 @@ export const recipes = [
       "Plate Chhoyela. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-yomari-filling-porridge",
@@ -5575,7 +5723,8 @@ export const recipes = [
       "Plate Yomari filling porridge. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the temper step; browning = flavor."
+    "tip": "Don't rush the temper step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-chiura-mix",
@@ -5612,7 +5761,8 @@ export const recipes = [
       "Plate Chiura mix. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-chicken-shawarma-bowl",
@@ -5649,7 +5799,8 @@ export const recipes = [
       "Plate Chicken shawarma bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-falafel-wraps",
@@ -5686,7 +5837,8 @@ export const recipes = [
       "Plate Falafel wraps. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-muhammara",
@@ -5723,7 +5875,8 @@ export const recipes = [
       "Plate Muhammara. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-lamb-mansaf-style-rice",
@@ -5760,7 +5913,8 @@ export const recipes = [
       "Plate Lamb mansaf-style rice. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-fattoush",
@@ -5797,7 +5951,8 @@ export const recipes = [
       "Plate Fattoush. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-baba-ganoush",
@@ -5834,7 +5989,8 @@ export const recipes = [
       "Plate Baba ganoush. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-koshari",
@@ -5871,7 +6027,8 @@ export const recipes = [
       "Plate Koshari. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-kabsa-chicken",
@@ -5908,7 +6065,8 @@ export const recipes = [
       "Plate Kabsa chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-labneh-toast-plate",
@@ -5945,7 +6103,8 @@ export const recipes = [
       "Plate Labneh toast plate. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-lentil-soup",
@@ -5982,7 +6141,8 @@ export const recipes = [
       "Plate Lentil soup. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-stuffed-grape-leaves-quick",
@@ -6019,7 +6179,8 @@ export const recipes = [
       "Plate Stuffed grape leaves quick. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-zaatar-flatbread-pizza",
@@ -6056,7 +6217,8 @@ export const recipes = [
       "Plate Zaatar flatbread pizza. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the bake step; browning = flavor."
+    "tip": "Don't rush the bake step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-harira",
@@ -6093,7 +6255,8 @@ export const recipes = [
       "Plate Harira. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-freekeh-salad",
@@ -6130,7 +6293,8 @@ export const recipes = [
       "Plate Freekeh salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the grill step; browning = flavor."
+    "tip": "Don't rush the grill step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-date-oat-bars",
@@ -6167,7 +6331,8 @@ export const recipes = [
       "Plate Date oat bars. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep cumin nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-mac-and-cheese",
@@ -6204,7 +6369,8 @@ export const recipes = [
       "Plate Mac and cheese. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-roast-chicken",
@@ -6241,7 +6407,8 @@ export const recipes = [
       "Plate Roast chicken. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-chili-con-carne",
@@ -6278,7 +6445,8 @@ export const recipes = [
       "Plate Chili con carne. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-bbq-pulled-jackfruit",
@@ -6315,7 +6483,8 @@ export const recipes = [
       "Plate BBQ pulled jackfruit. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sear step; browning = flavor."
+    "tip": "Don't rush the sear step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-pancakes",
@@ -6352,7 +6521,8 @@ export const recipes = [
       "Plate Pancakes. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-burger-night",
@@ -6389,7 +6559,8 @@ export const recipes = [
       "Plate Burger night. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-meatloaf",
@@ -6426,7 +6597,8 @@ export const recipes = [
       "Plate Meatloaf. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-cornbread-chili-bowl",
@@ -6463,7 +6635,8 @@ export const recipes = [
       "Plate Cornbread chili bowl. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sear step; browning = flavor."
+    "tip": "Don't rush the sear step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-caesar-salad",
@@ -6500,7 +6673,8 @@ export const recipes = [
       "Plate Caesar salad. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-baked-potato-bar",
@@ -6537,7 +6711,8 @@ export const recipes = [
       "Plate Baked potato bar. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-clam-chowder",
@@ -6574,7 +6749,8 @@ export const recipes = [
       "Plate Clam chowder. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-fried-rice-leftover-scramble",
@@ -6611,7 +6787,8 @@ export const recipes = [
       "Plate Fried rice leftover scramble. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the sear step; browning = flavor."
+    "tip": "Don't rush the sear step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-sheet-pan-sausage-veg",
@@ -6648,7 +6825,8 @@ export const recipes = [
       "Plate Sheet-pan sausage veg. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-banana-bread-french-toast",
@@ -6685,7 +6863,8 @@ export const recipes = [
       "Plate Banana bread French toast. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Don't rush the simmer step; browning = flavor."
+    "tip": "Don't rush the simmer step; browning = flavor.",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-tomato-soup-grilled-cheese",
@@ -6722,7 +6901,8 @@ export const recipes = [
       "Plate Tomato soup grilled cheese. Rest 1 minute. Taste and adjust acid/heat/salt.",
       "Serve hot. Optional: leftover plan — pack tomorrow's lunch now."
     ],
-    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop."
+    "tip": "Keep butter nearby — finishing fat/acid makes flavors pop.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-weeknight-carbonara-x",
@@ -6755,7 +6935,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Weeknight carbonara immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-tuna-puttanesca-x",
@@ -6788,7 +6969,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Tuna puttanesca immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-khichdi-x",
@@ -6821,7 +7003,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Khichdi immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-vegetable-korma-x",
@@ -6854,7 +7037,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Vegetable korma immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-breakfast-burrito-x",
@@ -6887,7 +7071,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Breakfast burrito immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-mango-salsa-chicken-x",
@@ -6920,7 +7105,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Mango salsa chicken immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-chirashi-style-bowl-x",
@@ -6953,7 +7139,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Chirashi-style bowl immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-miso-glazed-eggplant-x",
@@ -6986,7 +7173,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Miso glazed eggplant immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-cashew-chicken-x",
@@ -7019,7 +7207,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Cashew chicken immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-coconut-pancakes-x",
@@ -7052,7 +7241,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Coconut pancakes immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-dan-dan-inspired-noodles-x",
@@ -7085,7 +7275,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Dan dan-inspired noodles immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-steamed-fish-ginger-x",
@@ -7118,7 +7309,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Steamed fish ginger immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-halloumi-salad-x",
@@ -7151,7 +7343,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Halloumi salad immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mediterranean-spanakopita-scramble-x",
@@ -7184,7 +7377,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Spanakopita scramble immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-herb-roast-carrots-x",
@@ -7217,7 +7411,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Herb roast carrots immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "french-tuna-ni-oise-toast-x",
@@ -7250,7 +7445,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Tuna niçoise toast immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-sesame-spinach-x",
@@ -7283,7 +7479,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Sesame spinach immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "korean-fire-chicken-x",
@@ -7316,7 +7513,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Fire chicken immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-egg-curry-bhat-x",
@@ -7349,7 +7547,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Egg curry bhat immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "nepali-aloo-achaar-bowl-x",
@@ -7382,7 +7581,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Aloo achaar bowl immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-chickpea-shakshuka-x",
@@ -7415,7 +7615,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Chickpea shakshuka immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "middle-eastern-pita-pizza-zaatar-x",
@@ -7448,7 +7649,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Pita pizza zaatar immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-sheet-pan-nachos-x",
@@ -7481,7 +7683,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Sheet-pan nachos immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "american-overnight-oats-jar-x",
@@ -7514,7 +7717,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Overnight oats jar immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "italian-white-bean-kale-stew-x",
@@ -7547,7 +7751,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve White bean kale stew immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "indian-upma-x",
@@ -7580,7 +7785,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Upma immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "mexican-elote-pasta-x",
@@ -7613,7 +7819,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Elote pasta immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "japanese-soy-butter-mushrooms-x",
@@ -7646,7 +7853,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Soy butter mushrooms immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "thai-basil-tofu-scramble-x",
@@ -7679,7 +7887,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Basil tofu scramble immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70"
   },
   {
     "id": "chinese-garlic-bok-choy-rice-x",
@@ -7712,7 +7921,8 @@ export const recipes = [
       "Season, taste, and finish with acid or herbs.",
       "Serve Garlic bok choy rice immediately."
     ],
-    "tip": "Batch spice mixes on Sunday to make weeknights faster."
+    "tip": "Batch spice mixes on Sunday to make weeknights faster.",
+    "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70"
   }
 ]
 

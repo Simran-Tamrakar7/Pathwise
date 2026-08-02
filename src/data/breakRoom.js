@@ -7,7 +7,6 @@ export const breakModes = [
   { id: 'break15', label: 'Break 15', seconds: 15 * 60, kind: 'break' },
   { id: 'walk20', label: 'Walk 20', seconds: 20 * 60, kind: 'break' },
   { id: 'stretch7', label: 'Stretch 7', seconds: 7 * 60, kind: 'break' },
-  { id: 'cook30', label: 'Cook 30', seconds: 30 * 60, kind: 'break' },
 ]
 
 export const breakBooks = [
@@ -94,7 +93,7 @@ export const breakMovies = [
   },
   {
     title: 'Chef',
-    why: 'Cooking as reset. Pair with Pathwise Cookbook after.',
+    why: 'Cooking as reset. Comfort food for a tired brain.',
     url: 'https://www.imdb.com/title/tt2883512/',
   },
   {
@@ -213,7 +212,7 @@ export const breakPodcasts = [
   },
   {
     title: 'Syntax / similar tech shows',
-    why: 'Passive learning while you cook from the Cookbook.',
+    why: 'Passive learning while you stretch or walk.',
     url: 'https://syntax.fm/',
   },
 ]
@@ -270,7 +269,7 @@ export const breakSnacks = [
   { title: 'Yogurt + honey', why: 'Protein + calm. Eat away from the keyboard.' },
   { title: 'Toast + egg', why: 'Real food > doom-scrolling delivery apps.' },
   { title: 'Tea, then water', why: 'Hydration first; caffeine second.' },
-  { title: 'Cookbook roulette', why: 'Pick tonight’s recipe before you open social.' },
+  { title: 'Walk to the kitchen', why: 'Stand up, fill a glass, look out a window before you sit.' },
 ]
 
 export const breakRituals = [
@@ -280,6 +279,6 @@ export const breakRituals = [
   'Do 10 squats. Laugh at yourself. Resume.',
   'Text a friend one win from today — even tiny.',
   'Put the phone in another room for the next focus block.',
-  'Open the Cookbook. Pick dinner. Set a 30-min cook timer.',
-  'One stretch from the Break Room list. Then breathe once.',
+  'One stretch from the deck. Then breathe once.',
+  'Shuffle a doodle prompt and actually draw it.',
 ]

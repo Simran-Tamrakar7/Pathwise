@@ -1,6 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import { recipeCuisines, recipes, recipeOfTheDay } from '../data/recipes'
+import { asset } from '../data/helpers'
+
+const FAV_KEY = 'pathwise-recipe-favs'
+
+function loadFavs() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'))
+  } catch {
+    return new Set()
+  }
+}
 
 export default function Cookbook() {
   const [params] = useSearchParams()
@@ -9,6 +20,9 @@ export default function Cookbook() {
   const [difficulty, setDifficulty] = useState('all')
   const [q, setQ] = useState('')
   const [openId, setOpenId] = useState(null)
+  const [favsOnly, setFavsOnly] = useState(false)
+  const [favs, setFavs] = useState(loadFavs)
+  const [shuffle, setShuffle] = useState(0)
   const daily = useMemo(() => recipeOfTheDay(), [])
 
   useEffect(() => {
@@ -21,9 +35,14 @@ export default function Cookbook() {
     document.getElementById('recipe-detail')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [openId])
 
+  useEffect(() => {
+    localStorage.setItem(FAV_KEY, JSON.stringify([...favs]))
+  }, [favs])
+
   const list = useMemo(() => {
     const needle = q.trim().toLowerCase()
-    return recipes.filter((r) => {
+    let rows = recipes.filter((r) => {
+      if (favsOnly && !favs.has(r.id)) return false
       if (cuisine !== 'all' && r.cuisine !== cuisine) return false
       if (meal !== 'all' && r.meal !== meal) return false
       if (difficulty !== 'all' && r.difficulty !== difficulty) return false
@@ -35,36 +54,110 @@ export default function Cookbook() {
         r.ingredients.some((i) => i.toLowerCase().includes(needle))
       )
     })
-  }, [cuisine, meal, difficulty, q])
+    if (shuffle) {
+      rows = [...rows].sort((a, b) => {
+        const ha = (a.id.charCodeAt(0) + shuffle) % 97
+        const hb = (b.id.charCodeAt(0) + shuffle) % 97
+        return ha - hb
+      })
+    }
+    return rows
+  }, [cuisine, meal, difficulty, q, favsOnly, favs, shuffle])
 
   const open = recipes.find((r) => r.id === openId) || null
 
+  function toggleFav(id, e) {
+    e?.stopPropagation()
+    setFavs((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  function surprise() {
+    const pool = list.length ? list : recipes
+    const pick = pool[Math.floor(Math.random() * pool.length)]
+    setOpenId(pick.id)
+    setCuisine(pick.cuisine)
+  }
+
   return (
-    <div className="wrap cookbook-page">
-      <header className="page-hero colorful-page-hero">
-        <p className="crumb">
-          <Link to="/break">Break Room</Link>
-          {' / '}
-          Cookbook
-        </p>
-        <h1>Pathwise Cookbook</h1>
-        <p>
-          {recipes.length} home recipes · {recipeCuisines.length} cuisines · filters, search, and a recipe of the
-          day. Learn hard, eat well, come back sharper.
-        </p>
+    <div className="wrap cookbook-page cookbook-page-vivid">
+      <header className="break-hero-banner cook-hero-banner">
+        <img src={asset('covers/cookbook-hero.png')} alt="" className="break-hero-img" />
+        <div className="break-hero-copy">
+          <p className="hero-kicker">Cook · eat · learn again</p>
+          <h1>Pathwise Cookbook</h1>
+          <p>
+            {recipes.length} dishes · {recipeCuisines.length} cuisines · photos, favorites, and a daily
+            pick. Its own kitchen — not tucked inside Break Room.
+          </p>
+          <div className="hero-actions">
+            <button type="button" className="btn btn-primary" onClick={surprise}>
+              Surprise me
+            </button>
+            <button type="button" className="btn btn-ghost" onClick={() => setOpenId(daily.id)}>
+              Recipe of the day
+            </button>
+            <button
+              type="button"
+              className={`btn btn-ghost${favsOnly ? ' is-on' : ''}`}
+              onClick={() => setFavsOnly((v) => !v)}
+            >
+              Favorites ({favs.size})
+            </button>
+          </div>
+        </div>
       </header>
 
-      <section className="daily-recipe" style={{ '--accent': daily.color }}>
-        <p className="break-kicker">Recipe of the day</p>
-        <h2>{daily.name}</h2>
-        <p className="break-meta">
-          {daily.cuisineLabel} · {daily.minutes} min · {daily.difficulty} · serves {daily.servings}
-        </p>
-        <p>{daily.why}</p>
-        <button type="button" className="btn btn-primary" onClick={() => setOpenId(daily.id)}>
-          Open recipe
-        </button>
+      <section className="daily-recipe daily-recipe-media" style={{ '--accent': daily.color }}>
+        <div className="daily-recipe-img">
+          <img src={daily.image} alt="" loading="lazy" />
+        </div>
+        <div>
+          <p className="break-kicker">Recipe of the day</p>
+          <h2>{daily.name}</h2>
+          <p className="break-meta">
+            {daily.cuisineLabel} · {daily.minutes} min · {daily.difficulty} · serves {daily.servings}
+          </p>
+          <p>{daily.why}</p>
+          <div className="hero-actions">
+            <button type="button" className="btn btn-primary" onClick={() => setOpenId(daily.id)}>
+              Cook this
+            </button>
+            <button type="button" className="btn btn-ghost" onClick={(e) => toggleFav(daily.id, e)}>
+              {favs.has(daily.id) ? 'Saved' : 'Save'}
+            </button>
+          </div>
+        </div>
       </section>
+
+      <div className="cuisine-mosaic" aria-label="Jump to cuisine">
+        {recipeCuisines.map((c) => {
+          const sample = recipes.find((r) => r.cuisine === c.id)
+          return (
+            <button
+              key={c.id}
+              type="button"
+              className={`cuisine-tile${cuisine === c.id ? ' active' : ''}`}
+              style={{ '--accent': c.color }}
+              onClick={() => setCuisine(c.id)}
+            >
+              <img src={sample?.image} alt="" loading="lazy" />
+              <span>{c.label}</span>
+            </button>
+          )
+        })}
+        <button
+          type="button"
+          className={`cuisine-tile all-tile${cuisine === 'all' ? ' active' : ''}`}
+          onClick={() => setCuisine('all')}
+        >
+          <span>All</span>
+        </button>
+      </div>
 
       <input
         className="search"
@@ -74,28 +167,6 @@ export default function Cookbook() {
         onChange={(e) => setQ(e.target.value)}
         aria-label="Search recipes"
       />
-
-      <div className="filters color-filters" role="tablist" aria-label="Cuisines">
-        <button
-          type="button"
-          className={`filter-btn${cuisine === 'all' ? ' active' : ''}`}
-          style={{ '--gcolor': '#0B3D2E' }}
-          onClick={() => setCuisine('all')}
-        >
-          All cuisines
-        </button>
-        {recipeCuisines.map((c) => (
-          <button
-            key={c.id}
-            type="button"
-            className={`filter-btn${cuisine === c.id ? ' active' : ''}`}
-            style={{ '--gcolor': c.color }}
-            onClick={() => setCuisine(c.id)}
-          >
-            {c.label}
-          </button>
-        ))}
-      </div>
 
       <div className="filters cookbook-subfilters">
         {['all', 'breakfast', 'lunch', 'dinner', 'snack'].map((m) => (
@@ -118,21 +189,36 @@ export default function Cookbook() {
             {d === 'all' ? 'Any level' : d}
           </button>
         ))}
+        <button type="button" className="filter-btn" onClick={() => setShuffle((n) => n + 1)}>
+          Shuffle view
+        </button>
       </div>
 
       <p className="cookbook-count">
         Showing <strong>{list.length}</strong> recipes
+        {cuisine !== 'all' ? ` · ${recipeCuisines.find((c) => c.id === cuisine)?.label}` : ''}
       </p>
 
-      <div className="recipe-grid">
+      <div className="recipe-grid recipe-grid-photos">
         {list.map((r) => (
           <button
             key={r.id}
             type="button"
-            className={`recipe-card${openId === r.id ? ' is-open' : ''}`}
+            className={`recipe-card photo-card${openId === r.id ? ' is-open' : ''}`}
             style={{ '--accent': r.color }}
             onClick={() => setOpenId(openId === r.id ? null : r.id)}
           >
+            <div className="recipe-photo">
+              <img src={r.image} alt="" loading="lazy" />
+              <button
+                type="button"
+                className={`fav-btn${favs.has(r.id) ? ' on' : ''}`}
+                aria-label={favs.has(r.id) ? 'Remove favorite' : 'Save favorite'}
+                onClick={(e) => toggleFav(r.id, e)}
+              >
+                {favs.has(r.id) ? 'Saved' : 'Save'}
+              </button>
+            </div>
             <span className="recipe-cuisine">{r.cuisineLabel}</span>
             <h3>{r.name}</h3>
             <p>
@@ -143,7 +229,10 @@ export default function Cookbook() {
       </div>
 
       {open && (
-        <section className="recipe-detail" style={{ '--accent': open.color }} id="recipe-detail">
+        <section className="recipe-detail recipe-detail-media" style={{ '--accent': open.color }} id="recipe-detail">
+          <div className="recipe-detail-hero">
+            <img src={open.image} alt="" />
+          </div>
           <div className="recipe-detail-head">
             <div>
               <p className="break-kicker">{open.cuisineLabel}</p>
@@ -153,16 +242,25 @@ export default function Cookbook() {
               </p>
               <p>{open.why}</p>
             </div>
-            <button type="button" className="btn btn-ghost" onClick={() => setOpenId(null)}>
-              Close
-            </button>
+            <div className="hero-actions">
+              <button type="button" className="btn btn-ghost" onClick={(e) => toggleFav(open.id, e)}>
+                {favs.has(open.id) ? 'Saved' : 'Save'}
+              </button>
+              <button type="button" className="btn btn-ghost" onClick={() => setOpenId(null)}>
+                Close
+              </button>
+            </div>
           </div>
           <div className="recipe-columns">
             <div>
               <h3>Ingredients</h3>
-              <ul className="learn-list">
+              <ul className="learn-list checkable-ing">
                 {open.ingredients.map((i) => (
-                  <li key={i}>{i}</li>
+                  <li key={i}>
+                    <label>
+                      <input type="checkbox" /> {i}
+                    </label>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -185,12 +283,6 @@ export default function Cookbook() {
           </div>
         </section>
       )}
-
-      <p style={{ margin: '2rem 0 4rem' }}>
-        <Link to="/break" className="btn btn-ghost">
-          ← Back to Break Room
-        </Link>
-      </p>
     </div>
   )
 }

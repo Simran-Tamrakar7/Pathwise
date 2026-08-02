@@ -36,7 +36,7 @@ export default function Home() {
           <h1>Learn with pictures, videos, and paths you can finish.</h1>
           <p className="lede">
             {manuals.length} crafts · {chapterCount}+ missions · clickable roadmaps · embedded watchlists · Break Room
-            when your brain needs air.
+            for rest · Cookbook for fuel.
           </p>
           <div className="hero-actions">
             {continueCh && pw ? (
@@ -54,6 +54,9 @@ export default function Home() {
             <a href="#watch" className="btn btn-ghost">
               Watch & learn
             </a>
+            <Link to="/cookbook" className="btn btn-ghost">
+              Cookbook
+            </Link>
           </div>
           {pwProg && pwProg.done > 0 && (
             <p className="hero-progress">
@@ -116,6 +119,35 @@ export default function Home() {
           <Link to="/manuals/playwright" className="btn btn-primary">
             Enter Playwright saga
           </Link>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>Two side doors</h2>
+            <p>Learn in manuals. Rest and fuel elsewhere — separate rooms on purpose.</p>
+          </div>
+          <div className="portal-grid">
+            <Link to="/break" className="portal-card">
+              <img src={asset('covers/break-hero.png')} alt="" loading="lazy" />
+              <div>
+                <p className="break-kicker">Rest</p>
+                <h3>Break Room</h3>
+                <p>Timer ring, breath, stretches, books, films, games — mood filters reshape the room.</p>
+                <span className="go">Enter Break Room →</span>
+              </div>
+            </Link>
+            <Link to="/cookbook" className="portal-card">
+              <img src={asset('covers/cookbook-hero.png')} alt="" loading="lazy" />
+              <div>
+                <p className="break-kicker">Fuel</p>
+                <h3>Cookbook</h3>
+                <p>210 recipes across 12 cuisines with photos, favorites, and surprise picks.</p>
+                <span className="go">Open Cookbook →</span>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
