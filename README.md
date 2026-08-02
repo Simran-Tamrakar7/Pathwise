@@ -21,7 +21,9 @@ Build for GitHub Pages (`/Pathwise` basePath → `out/`):
 npm run build
 ```
 
-Live: https://simran-tamrakar7.github.io/Pathwise/
+Live:
+- GitHub Pages: https://simran-tamrakar7.github.io/Pathwise/
+- Vercel: deploy with empty `NEXT_PUBLIC_BASE_PATH` (site at `/`)
 
 ## Add a manual
 

@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const isStaticExport = Boolean(basePath) || process.env.VERCEL !== '1'
 
 const nextConfig = {
-  // Static export works on Vercel + GitHub Pages.
-  output: 'export',
-  // Empty on Vercel (root). Set NEXT_PUBLIC_BASE_PATH=/Pathwise for GitHub Pages.
+  // Static export for local/`out` and GitHub Pages. On Vercel, use the Next runtime.
+  ...(isStaticExport ? { output: 'export' } : {}),
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
   trailingSlash: true,
