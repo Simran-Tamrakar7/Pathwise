@@ -6,6 +6,8 @@ export const breakModes = [
   { id: 'break5', label: 'Break 5', seconds: 5 * 60, kind: 'break' },
   { id: 'break15', label: 'Break 15', seconds: 15 * 60, kind: 'break' },
   { id: 'walk20', label: 'Walk 20', seconds: 20 * 60, kind: 'break' },
+  { id: 'stretch7', label: 'Stretch 7', seconds: 7 * 60, kind: 'break' },
+  { id: 'cook30', label: 'Cook 30', seconds: 30 * 60, kind: 'break' },
 ]
 
 export const breakBooks = [
@@ -45,6 +47,18 @@ export const breakBooks = [
     why: 'Short assignments beat perfect drafts. Applies to code too.',
     url: 'https://www.penguinrandomhouse.com/books/97362/bird-by-bird-by-anne-lamott/',
   },
+  {
+    title: 'Make Time',
+    author: 'Knapp & Zeratsky',
+    why: 'Highlight / laser / energize — practical anti-busywork.',
+    url: 'https://maketime.blog/',
+  },
+  {
+    title: 'Feeling Good',
+    author: 'David Burns',
+    why: 'CBT tools when your brain catastrophizes a failing test.',
+    url: 'https://feelinggood.com/books/',
+  },
 ]
 
 export const breakMovies = [
@@ -77,6 +91,21 @@ export const breakMovies = [
     title: 'The Social Dilemma (doc)',
     why: 'If notifications own you — watch, then delete one app.',
     url: 'https://www.imdb.com/title/tt11464826/',
+  },
+  {
+    title: 'Chef',
+    why: 'Cooking as reset. Pair with Pathwise Cookbook after.',
+    url: 'https://www.imdb.com/title/tt2883512/',
+  },
+  {
+    title: 'Julie & Julia',
+    why: 'Recipes, persistence, and learning in public.',
+    url: 'https://www.imdb.com/title/tt1135503/',
+  },
+  {
+    title: 'Soul',
+    why: 'Purpose without hustle cosplay. Soft landing film.',
+    url: 'https://www.imdb.com/title/tt2948372/',
   },
 ]
 
@@ -111,6 +140,16 @@ export const breakGames = [
     why: 'Tiny visual challenges. 5 minutes, then stop.',
     url: 'https://cssbattle.dev/',
   },
+  {
+    title: 'Flexbox Froggy',
+    why: 'Layout practice that doesn’t feel like homework.',
+    url: 'https://flexboxfroggy.com/',
+  },
+  {
+    title: 'Patrick’s Parabox',
+    why: 'Recursive puzzles. Weirdly calming.',
+    url: 'https://store.steampowered.com/app/1260520/Patricks_Parabox/',
+  },
 ]
 
 export const breakLinks = [
@@ -144,6 +183,94 @@ export const breakLinks = [
     why: 'Neck + wrists. Your future self says thanks.',
     url: 'https://www.youtube.com/results?search_query=desk+stretch+5+minutes',
   },
+  {
+    title: 'Noise — rain cafe',
+    why: 'Background that isn’t a podcast yelling at you.',
+    url: 'https://www.youtube.com/results?search_query=rainy+cafe+ambience',
+  },
+  {
+    title: 'Tiny Habits prompt',
+    why: 'Write one 2-minute habit. Then do it.',
+    url: 'https://tinyhabits.com/',
+  },
+]
+
+export const breakPodcasts = [
+  {
+    title: 'Soft Skills Engineering',
+    why: 'Career friction without corporate fluff.',
+    url: 'https://softskills.audio/',
+  },
+  {
+    title: 'Design Details',
+    why: 'Product/design chats when your eyes need a break from screens… ironically.',
+    url: 'https://designdetails.fm/',
+  },
+  {
+    title: 'The Happiness Lab',
+    why: 'Evidence-based rest and mood — not hustle sermons.',
+    url: 'https://www.happinesslab.fm/',
+  },
+  {
+    title: 'Syntax / similar tech shows',
+    why: 'Passive learning while you cook from the Cookbook.',
+    url: 'https://syntax.fm/',
+  },
+]
+
+export const breakStretches = [
+  { name: 'Neck arcs', reps: '5 each side', how: 'Slow chin-to-chest, ear-to-shoulder. No forcing.' },
+  { name: 'Wrist openers', reps: '20 sec each', how: 'Palm up / palm down against desk edge gently.' },
+  { name: 'Chest doorway', reps: '30 sec', how: 'Forearm on doorframe, step through, breathe.' },
+  { name: 'Hip flexor lunge', reps: '30 sec/side', how: 'Kneeling lunge, tuck pelvis, tall spine.' },
+  { name: 'Figure-4 sit', reps: '30 sec/side', how: 'Ankle on opposite knee, hinge forward lightly.' },
+  { name: 'Stand & shake', reps: '20 sec', how: 'Shake arms and legs like a ridiculous wet dog.' },
+]
+
+export const breakBreaths = [
+  { name: 'Box 4-4-4-4', steps: ['Inhale 4', 'Hold 4', 'Exhale 4', 'Hold 4'], rounds: 4 },
+  { name: 'Physiological sigh', steps: ['Inhale', 'Short top-up inhale', 'Long exhale'], rounds: 3 },
+  { name: 'Long exhale', steps: ['Inhale 4', 'Exhale 6–8'], rounds: 6 },
+]
+
+export const breakMusic = [
+  {
+    title: 'lofi hip hop radio',
+    why: 'Study wallpaper audio. Volume low.',
+    url: 'https://www.youtube.com/results?search_query=lofi+hip+hop+radio',
+  },
+  {
+    title: 'Classical focus playlist',
+    why: 'No lyrics = fewer rabbit holes.',
+    url: 'https://www.youtube.com/results?search_query=classical+music+for+studying',
+  },
+  {
+    title: 'Jazz cafe ambience',
+    why: 'Cooking + soft saxophone energy.',
+    url: 'https://www.youtube.com/results?search_query=jazz+cafe+ambience',
+  },
+  {
+    title: 'Nepali / South Asian chill',
+    why: 'Homey reset while you simmer dal.',
+    url: 'https://www.youtube.com/results?search_query=nepali+lofi+chill',
+  },
+]
+
+export const breakDoodles = [
+  'Draw your bug as a comic villain. Name it.',
+  'Sketch the UI you’re stuck on with only 3 boxes.',
+  'Write a haiku about your failing test.',
+  'Map tomorrow’s one mission as a treasure map.',
+  'Doodle a plate of food you’ll cook tonight.',
+  'Draw five icons for “focus” without using a brain.',
+]
+
+export const breakSnacks = [
+  { title: 'Fruit + nuts', why: 'Fast glucose without a crash if you stop at a handful.' },
+  { title: 'Yogurt + honey', why: 'Protein + calm. Eat away from the keyboard.' },
+  { title: 'Toast + egg', why: 'Real food > doom-scrolling delivery apps.' },
+  { title: 'Tea, then water', why: 'Hydration first; caffeine second.' },
+  { title: 'Cookbook roulette', why: 'Pick tonight’s recipe before you open social.' },
 ]
 
 export const breakRituals = [
@@ -153,4 +280,6 @@ export const breakRituals = [
   'Do 10 squats. Laugh at yourself. Resume.',
   'Text a friend one win from today — even tiny.',
   'Put the phone in another room for the next focus block.',
+  'Open the Cookbook. Pick dinner. Set a 30-min cook timer.',
+  'One stretch from the Break Room list. Then breathe once.',
 ]

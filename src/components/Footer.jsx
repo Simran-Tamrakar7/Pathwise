@@ -11,7 +11,9 @@ export default function Footer() {
           From zero to craft —{' '}
           <Link to="/manuals">manuals</Link>
           {' · '}
-          <Link to="/break">Break Room</Link>.
+          <Link to="/break">Break Room</Link>
+          {' · '}
+          <Link to="/cookbook">Cookbook</Link>.
         </p>
       </div>
     </footer>

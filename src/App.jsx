@@ -6,6 +6,7 @@ import Catalog from './pages/Catalog'
 import Manual from './pages/Manual'
 import Chapter from './pages/Chapter'
 import BreakRoom from './pages/BreakRoom'
+import Cookbook from './pages/Cookbook'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/manuals/:id" element={<Manual />} />
           <Route path="/manuals/:id/chapters/:chapterId" element={<Chapter />} />
           <Route path="/break" element={<BreakRoom />} />
+          <Route path="/cookbook" element={<Cookbook />} />
         </Routes>
       </main>
       <Footer />
