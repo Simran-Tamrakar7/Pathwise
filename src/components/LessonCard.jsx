@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { asset } from '../data/helpers'
 import StickyScene, { defaultStickies, playwrightCoverStickies } from './StickyScene'
 
 /**
@@ -33,8 +32,6 @@ export default function LessonCard({
   }, [stepIndex, step?.title])
 
   const imgPath = step.image?.src || fallbackImage
-  const imgSrc = imgPath.startsWith('http') ? imgPath : asset(imgPath)
-  const imgAlt = step.image?.alt || step.title
 
   const stickies = useMemo(() => {
     if (step.image?.stickies?.length) return step.image.stickies
@@ -91,7 +88,11 @@ export default function LessonCard({
       )}
 
       <div className="lesson-visual lesson-visual-sticky">
-        <StickyScene src={imgSrc} alt={imgAlt} stickies={stickies} sceneKey={sceneKey || `${imgPath}:${stepIndex}`} />
+        <StickyScene
+          stickies={stickies}
+          sceneKey={sceneKey || `${imgPath}:${stepIndex}`}
+          title={step.title}
+        />
       </div>
 
       {step.resources?.length > 0 && (
