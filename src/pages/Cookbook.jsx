@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { recipeCuisines, recipes, recipeOfTheDay } from '../data/recipes'
+import { recipeCuisines, recipes, recipeOfTheDay, cookResources, cookTips } from '../data/recipes'
 import { asset } from '../data/helpers'
 
 const FAV_KEY = 'pathwise-recipe-favs'
@@ -23,6 +23,9 @@ export default function Cookbook() {
   const [favsOnly, setFavsOnly] = useState(false)
   const [favs, setFavs] = useState(loadFavs)
   const [shuffle, setShuffle] = useState(0)
+  const [tip] = useState(() => cookTips[Math.floor(Math.random() * cookTips.length)])
+  const [cookSec, setCookSec] = useState(0)
+  const [cookOn, setCookOn] = useState(false)
   const daily = useMemo(() => recipeOfTheDay(), [])
 
   useEffect(() => {
@@ -38,6 +41,12 @@ export default function Cookbook() {
   useEffect(() => {
     localStorage.setItem(FAV_KEY, JSON.stringify([...favs]))
   }, [favs])
+
+  useEffect(() => {
+    if (!cookOn) return undefined
+    const id = setInterval(() => setCookSec((s) => s + 1), 1000)
+    return () => clearInterval(id)
+  }, [cookOn])
 
   const list = useMemo(() => {
     const needle = q.trim().toLowerCase()
@@ -65,6 +74,7 @@ export default function Cookbook() {
   }, [cuisine, meal, difficulty, q, favsOnly, favs, shuffle])
 
   const open = recipes.find((r) => r.id === openId) || null
+  const cookClock = `${String(Math.floor(cookSec / 60)).padStart(2, '0')}:${String(cookSec % 60).padStart(2, '0')}`
 
   function toggleFav(id, e) {
     e?.stopPropagation()
@@ -91,8 +101,8 @@ export default function Cookbook() {
           <p className="hero-kicker">Cook · eat · learn again</p>
           <h1>Pathwise Cookbook</h1>
           <p>
-            {recipes.length} dishes · {recipeCuisines.length} cuisines · photos, favorites, and a daily
-            pick. Its own kitchen — not tucked inside Break Room.
+            {recipes.length} dishes · {recipeCuisines.length} cuisines · photos matched to the dish (dal looks like
+            dal) · resources, tips, and a cook-along clock.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={surprise}>
@@ -108,9 +118,14 @@ export default function Cookbook() {
             >
               Favorites ({favs.size})
             </button>
+            <a href="#cook-resources" className="btn btn-ghost">
+              Resources
+            </a>
           </div>
         </div>
       </header>
+
+      <p className="cook-tip-banner">{tip}</p>
 
       <section className="daily-recipe daily-recipe-media" style={{ '--accent': daily.color }}>
         <div className="daily-recipe-img">
@@ -251,6 +266,27 @@ export default function Cookbook() {
               </button>
             </div>
           </div>
+
+          <div className="cook-along">
+            <p className="break-kicker">Cook-along clock</p>
+            <p className="cook-along-time">{cookClock}</p>
+            <div className="hero-actions">
+              <button type="button" className="btn btn-primary" onClick={() => setCookOn((v) => !v)}>
+                {cookOn ? 'Pause' : 'Start cooking'}
+              </button>
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => {
+                  setCookOn(false)
+                  setCookSec(0)
+                }}
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
           <div className="recipe-columns">
             <div>
               <h3>Ingredients</h3>
@@ -283,6 +319,24 @@ export default function Cookbook() {
           </div>
         </section>
       )}
+
+      <section className="cook-resources" id="cook-resources">
+        <div className="section-head">
+          <h2>Kitchen resources</h2>
+          <p>Sites, channels, and skills that make Pathwise recipes land better — watch one, then cook.</p>
+        </div>
+        <div className="media-grid">
+          {cookResources.map((r) => (
+            <a key={r.title} className="media-card" href={r.url} target="_blank" rel="noreferrer">
+              <div className="media-body" style={{ paddingTop: '1rem' }}>
+                <p className="break-kicker">{r.kind}</p>
+                <h3>{r.title}</h3>
+                <p>{r.why}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }
