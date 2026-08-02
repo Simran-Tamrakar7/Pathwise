@@ -10,7 +10,7 @@ import { getRecent } from '../lib/recent'
 import { getBookmarks } from '../lib/bookmarks'
 import { getManual } from '../data/manuals'
 
-/** Local-only owner insights (+ optional Plausible via VITE_PLAUSIBLE_DOMAIN). */
+/** Local-only owner insights (+ optional Plausible via NEXT_PUBLIC_PLAUSIBLE_DOMAIN). */
 export default function Insights() {
   const rollup = analyticsRollup()
   const fb = feedbackSummary()
@@ -29,7 +29,7 @@ export default function Insights() {
         <p className="hero-kicker">Just for you</p>
         <h1>Insights</h1>
         <p>
-          Events stay in this browser. For real traffic, set <code>VITE_PLAUSIBLE_DOMAIN</code> and rebuild.
+          Events stay in this browser. For real traffic, set <code>NEXT_PUBLIC_PLAUSIBLE_DOMAIN</code> and rebuild.
         </p>
       </header>
 

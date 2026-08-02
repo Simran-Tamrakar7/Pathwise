@@ -3,9 +3,9 @@ import { readJson, writeJson } from './storage'
 const KEY = 'pathwise-analytics-v1'
 const MAX = 200
 
-/** Optional Plausible: set VITE_PLAUSIBLE_DOMAIN in env (e.g. simran-tamrakar7.github.io). */
+/** Optional Plausible: set NEXT_PUBLIC_PLAUSIBLE_DOMAIN (no protocol). */
 export function initAnalytics() {
-  const domain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
+  const domain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN
   if (!domain || typeof document === 'undefined') return
   if (document.querySelector('script[data-pathwise-plausible]')) return
   const s = document.createElement('script')

@@ -17,6 +17,7 @@ import { asset } from '../data/helpers'
 const FAV_KEY = 'pathwise-recipe-favs'
 
 function loadFavs() {
+  if (typeof window === 'undefined') return new Set()
   try {
     return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'))
   } catch {
@@ -77,7 +78,8 @@ function NutritionLabel({ n, dishName }) {
 }
 
 export default function Cookbook() {
-  const [params] = useSearchParams()
+  // ponytail: useSearchParams returns URLSearchParams, not a tuple — [params] crashed .get on live /cookbook
+  const params = useSearchParams()
   const [cuisine, setCuisine] = useState('all')
   const [meal, setMeal] = useState('all')
   const [difficulty, setDifficulty] = useState('all')
@@ -85,12 +87,16 @@ export default function Cookbook() {
   const [openId, setOpenId] = useState(null)
   const [wayId, setWayId] = useState(null)
   const [favsOnly, setFavsOnly] = useState(false)
-  const [favs, setFavs] = useState(loadFavs)
+  const [favs, setFavs] = useState(() => new Set())
   const [shuffle, setShuffle] = useState(0)
   const [tip] = useState(() => cookTips[Math.floor(Math.random() * cookTips.length)])
   const [cookSec, setCookSec] = useState(0)
   const [cookOn, setCookOn] = useState(false)
   const daily = useMemo(() => recipeOfTheDay(), [])
+
+  useEffect(() => {
+    setFavs(loadFavs())
+  }, [])
 
   useEffect(() => {
     const open = params.get('open')

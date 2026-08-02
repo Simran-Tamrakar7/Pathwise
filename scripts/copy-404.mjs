@@ -2,11 +2,11 @@ import { copyFileSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-// ponytail: only needed for static export (GH Pages); Vercel uses Next runtime without out/
+// ponytail: GH Pages needs a root 404.html; Vercel static export also lands in out/
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const indexHtml = join(root, 'out', 'index.html')
 if (!existsSync(indexHtml)) {
-  console.log('Skip 404 copy (no out/ — not a static export build)')
+  console.log('Skip 404 copy (no out/ — build did not export)')
   process.exit(0)
 }
 copyFileSync(indexHtml, join(root, 'out', '404.html'))

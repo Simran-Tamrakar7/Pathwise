@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { manuals, getManual } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
@@ -13,28 +13,39 @@ import { listBadges } from '../lib/badges'
 import { getRecent } from '../lib/recent'
 import { getBookmarks } from '../lib/bookmarks'
 
+const emptyStreak = { count: 0, lastDate: null, checkedToday: false }
+
 export default function Today() {
-  const [streak, setStreak] = useState(() => getStreak())
+  const [streak, setStreak] = useState(emptyStreak)
+  const [badges, setBadges] = useState([])
+  const [bookmarks, setBookmarks] = useState(0)
+  const [continueCh, setContinueCh] = useState(null)
+  const [continueManual, setContinueManual] = useState(null)
+  const [pwProg, setPwProg] = useState(null)
+  const [sparksDone, setSparksDone] = useState(0)
+  const [started, setStarted] = useState(0)
   const spark = useMemo(() => sparkOfTheDay(), [])
   const recipe = useMemo(() => recipeOfTheDay(), [])
-  const badges = listBadges()
-  const bookmarks = [...getBookmarks()].length
 
-  const recent = getRecent()[0]
-  const recentManual = recent ? getManual(recent.manualId) : null
-  const continueFromRecent =
-    recentManual && recent?.chapterId
-      ? recentManual.chapters.find((c) => c.id === recent.chapterId)
-      : recentManual
-        ? getContinueChapter(recentManual)
-        : null
-
-  const pw = manuals.find((m) => m.id === 'playwright')
-  const continueCh = continueFromRecent || (pw ? getContinueChapter(pw) : null)
-  const continueManual = recentManual || pw
-  const pwProg = pw ? countDone(pw.id, pw.chapters.length) : null
-  const sparksDone = sparkDoneCount()
-  const started = manuals.filter((m) => countDone(m.id, m.chapters.length).done > 0).length
+  useEffect(() => {
+    setStreak(getStreak())
+    setBadges(listBadges())
+    setBookmarks([...getBookmarks()].length)
+    setSparksDone(sparkDoneCount())
+    setStarted(manuals.filter((m) => countDone(m.id, m.chapters.length).done > 0).length)
+    const recent = getRecent()[0]
+    const recentManual = recent ? getManual(recent.manualId) : null
+    const continueFromRecent =
+      recentManual && recent?.chapterId
+        ? recentManual.chapters.find((c) => c.id === recent.chapterId)
+        : recentManual
+          ? getContinueChapter(recentManual)
+          : null
+    const pw = manuals.find((m) => m.id === 'playwright')
+    setContinueCh(continueFromRecent || (pw ? getContinueChapter(pw) : null))
+    setContinueManual(recentManual || pw)
+    setPwProg(pw ? countDone(pw.id, pw.chapters.length) : null)
+  }, [])
 
   function onCheckIn() {
     setStreak(checkInToday())

@@ -1,5 +1,7 @@
 /** Daily check-in streak for Pathwise Today hub. */
 
+import { readJson, writeJson } from './storage'
+
 const KEY = 'pathwise-streak-v1'
 
 function todayKey(date = new Date()) {
@@ -13,15 +15,11 @@ function yesterdayKey(date = new Date()) {
 }
 
 function read() {
-  try {
-    return JSON.parse(localStorage.getItem(KEY) || '{}')
-  } catch {
-    return {}
-  }
+  return readJson(KEY, {})
 }
 
 function write(data) {
-  localStorage.setItem(KEY, JSON.stringify(data))
+  writeJson(KEY, data)
 }
 
 /** @returns {{ count: number, lastDate: string | null, checkedToday: boolean }} */
@@ -48,9 +46,5 @@ export function checkInToday() {
 }
 
 export function sparkDoneCount() {
-  try {
-    return JSON.parse(localStorage.getItem('pathwise-sparks-done') || '[]').length
-  } catch {
-    return 0
-  }
+  return readJson('pathwise-sparks-done', []).length
 }

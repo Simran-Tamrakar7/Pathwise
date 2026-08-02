@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { getManual } from '../data/manuals'
 import { getRecent } from '../lib/recent'
@@ -7,23 +8,27 @@ import { getContinueChapter, countDone } from '../lib/progress'
 import { getBookmarks } from '../lib/bookmarks'
 
 export default function JumpBackRow() {
-  const recent = getRecent()
-    .map((r) => {
-      const manual = getManual(r.manualId)
-      if (!manual) return null
-      const chapter = r.chapterId
-        ? manual.chapters.find((c) => c.id === r.chapterId)
-        : getContinueChapter(manual)
-      const href = chapter
-        ? `/manuals/${manual.id}/chapters/${chapter.id}`
-        : `/manuals/${manual.id}`
-      return { manual, chapter, href, at: r.at }
-    })
-    .filter(Boolean)
+  const [recent, setRecent] = useState([])
+  const [bookmarks, setBookmarks] = useState([])
 
-  const bookmarks = [...getBookmarks()]
-    .map((id) => getManual(id))
-    .filter(Boolean)
+  useEffect(() => {
+    setRecent(
+      getRecent()
+        .map((r) => {
+          const manual = getManual(r.manualId)
+          if (!manual) return null
+          const chapter = r.chapterId
+            ? manual.chapters.find((c) => c.id === r.chapterId)
+            : getContinueChapter(manual)
+          const href = chapter
+            ? `/manuals/${manual.id}/chapters/${chapter.id}`
+            : `/manuals/${manual.id}`
+          return { manual, chapter, href, at: r.at }
+        })
+        .filter(Boolean),
+    )
+    setBookmarks([...getBookmarks()].map((id) => getManual(id)).filter(Boolean))
+  }, [])
 
   if (!recent.length && !bookmarks.length) return null
 
@@ -58,17 +63,17 @@ export default function JumpBackRow() {
 
         {bookmarks.length > 0 && (
           <>
-            <div className="section-head" style={{ marginTop: recent.length ? '2rem' : 0 }}>
+            <div className="section-head" style={{ marginTop: recent.length ? '2rem' : undefined }}>
               <h2>Bookmarked</h2>
-              <p>Saved on purpose — separate from in-progress.</p>
+              <p>Pinned paths.</p>
             </div>
             <div className="jump-row">
-              {bookmarks.map((m) => (
-                <Link key={m.id} href={`/manuals/${m.id}`} className="jump-chip bookmark-chip">
-                  <img src={m.coverUrl} alt="" />
+              {bookmarks.slice(0, 6).map((manual) => (
+                <Link key={manual.id} href={`/manuals/${manual.id}`} className="jump-chip">
+                  <img src={manual.coverUrl} alt="" />
                   <span>
-                    <strong>{m.title}</strong>
-                    <small>Bookmarked</small>
+                    <strong>{manual.title}</strong>
+                    <small>{manual.tagline}</small>
                   </span>
                 </Link>
               ))}
