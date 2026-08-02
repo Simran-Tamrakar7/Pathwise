@@ -3,16 +3,16 @@ export const asset = (path) =>
   `${import.meta.env.BASE_URL}${String(path).replace(/^\//, '')}`
 
 export const genres = [
-  { id: 'all', label: 'All', blurb: 'Every path in the library.' },
-  { id: 'automation', label: 'Automation', blurb: 'QA, E2E, APIs, pipelines.' },
-  { id: 'quality', label: 'Quality Craft', blurb: 'Testing craft, a11y, perf, security.' },
-  { id: 'delivery', label: 'Delivery', blurb: 'Agile, PM, product, work tracking.' },
-  { id: 'design', label: 'Design', blurb: 'Visual craft, Figma, product UI.' },
-  { id: 'ai', label: 'AI & Prompts', blurb: 'Talk to models like a pro.' },
-  { id: 'foundations', label: 'Foundations', blurb: 'Languages, Git, data.' },
-  { id: 'ops', label: 'Ops & Systems', blurb: 'CLI, cloud, observability, docs.' },
-  { id: 'career', label: 'Career', blurb: 'Resume, portfolio, job hunt.' },
-  { id: 'soft-skills', label: 'Soft Skills', blurb: 'Communicate, lead, collaborate.' },
+  { id: 'all', label: 'All', blurb: 'Every path in the library.', color: '#0B3D2E' },
+  { id: 'automation', label: 'Automation', blurb: 'QA, E2E, APIs, pipelines.', color: '#0F766E' },
+  { id: 'quality', label: 'Quality Craft', blurb: 'Testing craft, a11y, perf, security.', color: '#0369A1' },
+  { id: 'delivery', label: 'Delivery', blurb: 'Agile, PM, product, work tracking.', color: '#C2410C' },
+  { id: 'design', label: 'Design', blurb: 'Visual craft, Figma, product UI.', color: '#B45309' },
+  { id: 'ai', label: 'AI & Prompts', blurb: 'Talk to models like a pro.', color: '#0D9488' },
+  { id: 'foundations', label: 'Foundations', blurb: 'Languages, Git, data.', color: '#A16207' },
+  { id: 'ops', label: 'Ops & Systems', blurb: 'CLI, cloud, observability, docs.', color: '#1D4ED8' },
+  { id: 'career', label: 'Career', blurb: 'Resume, portfolio, job hunt.', color: '#BE123C' },
+  { id: 'soft-skills', label: 'Soft Skills', blurb: 'Communicate, lead, collaborate.', color: '#15803D' },
 ]
 
 /** Build a book-style chapter from a compact definition. */

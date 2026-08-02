@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import { manuals, genres } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
+import { featuredVideos } from '../data/learnMedia'
+import VideoCard from '../components/VideoCard'
+import { asset } from '../data/helpers'
 
 export default function Home() {
   const featured = [
@@ -15,23 +18,25 @@ export default function Home() {
   const pw = manuals.find((m) => m.id === 'playwright')
   const continueCh = pw ? getContinueChapter(pw) : null
   const pwProg = pw ? countDone(pw.id, pw.chapters.length) : null
+  const genreChips = genres.filter((g) => g.id !== 'all')
 
   return (
     <>
-      <section className="hero hero-vivid">
+      <section className="hero hero-vivid hero-colorful">
         <div className="hero-bg" />
         <div className="hero-orb hero-orb-a" aria-hidden="true" />
         <div className="hero-orb hero-orb-b" aria-hidden="true" />
+        <div className="hero-orb hero-orb-c" aria-hidden="true" />
         <div className="hero-content">
-          <p className="hero-kicker">Learn like a game. Ship like an engineer.</p>
+          <p className="hero-kicker">Colorful paths. Real skills. Less boredom.</p>
           <p className="hero-brand">
             Pathwise
             <span>Manuals</span>
           </p>
-          <h1>Stop scrolling tutorials. Finish a path.</h1>
+          <h1>Learn with pictures, videos, and paths you can finish.</h1>
           <p className="lede">
-            {manuals.length} crafts · {chapterCount}+ missions · roadmaps you click · a Break Room when your brain
-            fries. Flagship: Playwright with Python — zero to Automation Engineer.
+            {manuals.length} crafts · {chapterCount}+ missions · clickable roadmaps · embedded watchlists · Break Room
+            when your brain needs air.
           </p>
           <div className="hero-actions">
             {continueCh && pw ? (
@@ -44,11 +49,11 @@ export default function Home() {
               </Link>
             )}
             <Link to="/manuals" className="btn btn-ghost">
-              Browse all {genreCount} genres
+              Browse {genreCount} genres
             </Link>
-            <Link to="/break" className="btn btn-ghost">
-              Break Room
-            </Link>
+            <a href="#watch" className="btn btn-ghost">
+              Watch & learn
+            </a>
           </div>
           {pwProg && pwProg.done > 0 && (
             <p className="hero-progress">
@@ -58,15 +63,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section genre-ribbon-section">
+        <div className="wrap">
+          <div className="section-head">
+            <h2>Pick a colorful lane</h2>
+            <p>Every genre has its own energy. Tap one and go.</p>
+          </div>
+          <div className="genre-ribbon">
+            {genreChips.map((g) => (
+              <Link
+                key={g.id}
+                to="/manuals"
+                className="genre-chip"
+                style={{ '--gcolor': g.color }}
+                onClick={() => sessionStorage.setItem('pathwise-genre', g.id)}
+              >
+                <span className="genre-dot" />
+                <span>
+                  <strong>{g.label}</strong>
+                  <small>{g.blurb}</small>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="watch">
+        <div className="wrap">
+          <div className="section-head watch-head">
+            <div>
+              <h2>Watch desk</h2>
+              <p>Short, high-signal videos — play inline or open on YouTube. Pair with a Pathwise chapter after.</p>
+            </div>
+            <img className="watch-banner" src={asset('covers/learn-banner.png')} alt="" />
+          </div>
+          <div className="video-grid">
+            {featuredVideos.map((v) => (
+              <VideoCard key={v.id} {...v} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section challenge-strip">
         <div className="wrap challenge-inner">
           <div>
             <p className="challenge-label">Today’s dare</p>
-            <h2>Open one chapter. Check three boxes. Commit something.</h2>
-            <p>Progress beats perfect. Pathwise remembers what you mark done in this browser.</p>
+            <h2>Watch 10 minutes. Open one chapter. Check three boxes.</h2>
+            <p>Eyes + hands + commit. Pathwise remembers what you mark done here.</p>
           </div>
           <Link to="/manuals/playwright" className="btn btn-primary">
-            Enter the Playwright saga
+            Enter Playwright saga
           </Link>
         </div>
       </section>
@@ -74,21 +122,21 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <h2>Why this doesn’t suck</h2>
-            <p>Built for people who abandon 40-hour Udemy carts.</p>
+            <h2>Why it feels friendlier</h2>
+            <p>Built for humans who get bored by walls of gray text.</p>
           </div>
-          <div className="steps zest-steps">
-            <article className="step">
-              <h3>Roadmap energy</h3>
-              <p>roadmap.sh vibes — phase bands, clickable nodes, downloadable SVG. See the whole mountain.</p>
+          <div className="steps zest-steps color-steps">
+            <article className="step" style={{ '--step': '#0F766E' }}>
+              <h3>Visual paths</h3>
+              <p>Covers, phase colors, roadmap nodes — see the mountain before you climb.</p>
             </article>
-            <article className="step">
-              <h3>Book chapters, not fluff</h3>
-              <p>Do-this boxes, code, checklists, resource tables. Checkpoints gate you like a real course.</p>
+            <article className="step" style={{ '--step': '#C2410C' }}>
+              <h3>Videos in the loop</h3>
+              <p>Watch desk on home + video loot on manuals. Learn with eyes, then do.</p>
             </article>
-            <article className="step">
-              <h3>Rest is part of the build</h3>
-              <p>Break Room timer + books, films, games. Burnout is a bug — treat it.</p>
+            <article className="step" style={{ '--step': '#0369A1' }}>
+              <h3>Missions & progress</h3>
+              <p>Checklists, mark complete, continue where you left off. Tiny dopamine, real skill.</p>
             </article>
           </div>
         </div>
@@ -98,25 +146,26 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <h2>Featured missions</h2>
-            <p>Start with Playwright if you want the full Automation Engineer arc.</p>
+            <p>Bright covers. Clear next steps. Start anywhere — Playwright is the flagship.</p>
           </div>
           <div className="manual-grid cover-grid">
             {featured.map((m) => {
               const prog = countDone(m.id, m.chapters.length)
+              const g = genres.find((x) => x.id === m.category)
               return (
                 <Link
                   key={m.id}
                   to={`/manuals/${m.id}`}
-                  className="manual-link cover-link"
-                  style={{ '--accent': m.accent }}
+                  className="manual-link cover-link vivid-card"
+                  style={{ '--accent': m.accent || g?.color || '#0B3D2E' }}
                 >
                   <div className="cover-thumb">
                     <img src={m.coverUrl} alt="" loading="lazy" />
                     {prog.done > 0 && <span className="prog-pill">{prog.pct}%</span>}
                   </div>
                   <div className="meta">
+                    <span style={{ color: g?.color }}>{g?.label}</span>
                     <span>{m.chapters.length} chapters</span>
-                    <span>{m.duration}</span>
                   </div>
                   <h3>{m.title}</h3>
                   <p>{m.tagline}</p>

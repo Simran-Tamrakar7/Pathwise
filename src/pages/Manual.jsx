@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getManual, genres } from '../data/manuals'
 import Roadmap from '../components/Roadmap'
+import VideoCard from '../components/VideoCard'
+import { videosForManual } from '../data/learnMedia'
 import { countDone, getContinueChapter, isChapterDone } from '../lib/progress'
 
 export default function Manual() {
@@ -13,6 +15,8 @@ export default function Manual() {
     if (!manual) return null
     return countDone(manual.id, manual.chapters.length)
   }, [manual, rev])
+
+  const watchlist = useMemo(() => (manual ? videosForManual(manual) : []), [manual])
 
   if (!manual) {
     return (
@@ -26,13 +30,15 @@ export default function Manual() {
     )
   }
 
-  const catLabel = genres.find((c) => c.id === manual.category)?.label
+  const genre = genres.find((c) => c.id === manual.category)
+  const catLabel = genre?.label
+  const accent = manual.accent || genre?.color || '#0B3D2E'
   const { resources } = manual
   const continueCh = getContinueChapter(manual)
   const first = manual.chapters[0]
 
   return (
-    <div className="wrap" onFocus={() => setRev((n) => n + 1)}>
+    <div className="wrap manual-page-vivid" style={{ '--accent': accent }} onFocus={() => setRev((n) => n + 1)}>
       <header className="manual-hero manual-hero-rich">
         <div className="manual-hero-text">
           <p className="crumb">
@@ -41,7 +47,9 @@ export default function Manual() {
             {manual.title}
           </p>
           <div className="badge-row">
-            <span className="badge">{catLabel}</span>
+            <span className="badge" style={{ background: `${accent}22`, color: accent }}>
+              {catLabel}
+            </span>
             <span className="badge">{manual.levelSpan}</span>
             <span className="badge">{manual.duration}</span>
             {progress && progress.done > 0 && (
@@ -108,6 +116,18 @@ export default function Manual() {
       <div id="roadmap" className="roadmap-star">
         <Roadmap manual={manual} />
       </div>
+
+      {watchlist.length > 0 && (
+        <section className="manual-watch">
+          <h2>Watch before you grind</h2>
+          <p className="lede">Eyes first — then open a chapter and check boxes. Learning sticks when both fire.</p>
+          <div className="video-grid compact-grid">
+            {watchlist.map((v) => (
+              <VideoCard key={v.youtubeId} {...v} compact />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="outcomes">
         <h2>You’ll walk away able to</h2>
