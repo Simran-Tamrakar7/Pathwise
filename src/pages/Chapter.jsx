@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getChapter, genres } from '../data/manuals'
+import LessonCard from '../components/LessonCard'
 import VideoCard from '../components/VideoCard'
 import { videosForChapter } from '../data/learnMedia'
 import {
@@ -14,10 +15,12 @@ export default function Chapter() {
   const { id, chapterId } = useParams()
   const data = getChapter(id, chapterId)
   const [done, setDone] = useState(false)
+  const [stepIndex, setStepIndex] = useState(0)
   const [, setTick] = useState(0)
 
   useEffect(() => {
     setDone(isChapterDone(id, chapterId))
+    setStepIndex(0)
   }, [id, chapterId])
 
   const chapterVideos = useMemo(() => {
@@ -41,6 +44,11 @@ export default function Chapter() {
   const { manual, chapter, index, prev, next } = data
   const kindLabel =
     chapter.kind === 'checkpoint' ? 'Checkpoint' : chapter.kind === 'guide' ? 'Guide' : 'Chapter'
+  const accent = manual.accent || genres.find((g) => g.id === manual.category)?.color || '#0F766E'
+  const steps = chapter.steps?.length ? chapter.steps : [{ title: chapter.title, body: chapter.overview }]
+  const safeIndex = Math.min(stepIndex, steps.length - 1)
+  const step = steps[safeIndex]
+  const pathPct = Math.round(((index + (safeIndex + 1) / steps.length) / manual.chapters.length) * 100)
 
   function markDone() {
     setChapterDone(manual.id, chapter.id, true)
@@ -52,8 +60,13 @@ export default function Chapter() {
     setDone(false)
   }
 
+  function goNextStep() {
+    if (safeIndex < steps.length - 1) setStepIndex(safeIndex + 1)
+    else if (!done) markDone()
+  }
+
   return (
-    <article className="wrap chapter-page">
+    <article className="wrap chapter-page chapter-card-mode">
       <p className="crumb">
         <Link to="/manuals">Manuals</Link>
         {' / '}
@@ -62,7 +75,7 @@ export default function Chapter() {
         {kindLabel} {index + 1}
       </p>
 
-      <header className="chapter-hero">
+      <header className="chapter-hero chapter-hero-compact">
         <p className="level-label">
           {chapter.phase ? `${chapter.phase} · ` : ''}
           {chapter.level}
@@ -73,82 +86,51 @@ export default function Chapter() {
         </p>
         <h1>{chapter.title}</h1>
         <p className="tagline">{chapter.overview}</p>
-        {chapter.note && <p className="chapter-note">{chapter.note}</p>}
-        <div className="chapter-mission-bar">
-          <span>Mission {index + 1}</span>
-          <div className="progress-bar thin">
-            <div
-              className="progress-bar-fill"
-              style={{ width: `${Math.round(((index + 1) / manual.chapters.length) * 100)}%` }}
-            />
-          </div>
-        </div>
       </header>
 
-      {chapter.learn.length > 0 && (
-        <section className="chapter-block">
-          <h2>What you’ll unlock</h2>
+      <div className="path-progress-wrap">
+        <span>Path progress</span>
+        <div className="progress-bar">
+          <div className="progress-bar-fill" style={{ width: `${pathPct}%` }} />
+        </div>
+        <span>{pathPct}%</span>
+      </div>
+
+      <LessonCard
+        step={step}
+        stepIndex={safeIndex}
+        stepTotal={steps.length}
+        pathPct={pathPct}
+        accent={accent}
+        fallbackImage={manual.cover || 'covers/playwright-cover.png'}
+        onPrev={() => setStepIndex((i) => Math.max(0, i - 1))}
+        onNext={goNextStep}
+        onJump={setStepIndex}
+      />
+
+      {chapter.learn?.length > 0 && (
+        <details className="chapter-side-details">
+          <summary>Chapter learning outcomes</summary>
           <ul className="learn-list">
             {chapter.learn.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </section>
+        </details>
       )}
 
       {chapterVideos.length > 0 && (
-        <section className="chapter-block chapter-watch">
-          <h2>Watch this first</h2>
-          <p className="lede" style={{ marginTop: 0 }}>
-            Short visual warm-up — then do the walkthrough with your hands.
-          </p>
+        <details className="chapter-side-details">
+          <summary>Chapter videos</summary>
           <div className="video-grid compact-grid">
             {chapterVideos.map((v) => (
               <VideoCard key={v.youtubeId} {...v} compact />
             ))}
           </div>
-        </section>
+        </details>
       )}
 
-      <section className="chapter-block">
-        <h2>{chapter.kind === 'checkpoint' ? 'Pass criteria & steps' : 'Walkthrough'}</h2>
-        <ol className="walk-steps">
-          {chapter.steps.map((step, i) => (
-            <li key={`${step.title}-${i}`} className="walk-step">
-              <span className="lesson-num">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{step.title}</h3>
-                {step.body && <p>{step.body}</p>}
-                {step.items?.length > 0 && (
-                  <ul className="learn-list" style={{ marginTop: '0.65rem' }}>
-                    {step.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-                {step.code && (
-                  <pre className="code-block">
-                    <code>{step.code}</code>
-                  </pre>
-                )}
-                {step.doThis && (
-                  <div className="do-this">
-                    <p className="label">Do this now</p>
-                    <p>{step.doThis}</p>
-                  </div>
-                )}
-                {step.tip && (
-                  <p className="tip">
-                    <strong>Pro tip:</strong> {step.tip}
-                  </p>
-                )}
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {chapter.checklist.length > 0 && (
+      {chapter.checklist?.length > 0 && (
         <section className="chapter-block checklist-block">
           <h2>Clear these before you leave</h2>
           <ul>
@@ -176,79 +158,6 @@ export default function Chapter() {
           <p className="label">Side quest</p>
           <h3>{chapter.practice.title}</h3>
           <p>{chapter.practice.brief}</p>
-        </section>
-      )}
-
-      {chapter.resources?.length > 0 && (
-        <section className="chapter-block">
-          <h2>Loot — resources for this chapter</h2>
-          <div className="resource-table-wrap">
-            <table className="resource-table">
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Resource</th>
-                  <th>Lang</th>
-                  <th>Free?</th>
-                </tr>
-              </thead>
-              <tbody>
-                {chapter.resources.map((row) => (
-                  <tr key={`${row.name}-${row.url}`}>
-                    <td>{row.type}</td>
-                    <td>
-                      <a href={row.url} target="_blank" rel="noreferrer">
-                        {row.name}
-                      </a>
-                    </td>
-                    <td>{row.lang}</td>
-                    <td>{row.free ? 'Yes' : 'Paid / mixed'}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
-
-      {(chapter.links.length > 0 || chapter.citations.length > 0) && (
-        <section className="chapter-block">
-          <h2>More links & citations</h2>
-          <div className="resource-grid">
-            {chapter.links.length > 0 && (
-              <div className="resource-block">
-                <h3>Links</h3>
-                <ul>
-                  {chapter.links.map((l) => (
-                    <li key={l.url}>
-                      <a href={l.url} target="_blank" rel="noreferrer">
-                        {l.name}
-                      </a>
-                      {l.kind ? ` · ${l.kind}` : ''}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {chapter.citations.length > 0 && (
-              <div className="resource-block">
-                <h3>Citations</h3>
-                <ul>
-                  {chapter.citations.map((c) => (
-                    <li key={c.url || c.name}>
-                      {c.url ? (
-                        <a href={c.url} target="_blank" rel="noreferrer">
-                          {c.name}
-                        </a>
-                      ) : (
-                        c.name
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
         </section>
       )}
 

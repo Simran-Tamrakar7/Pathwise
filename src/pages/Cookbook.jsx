@@ -1,6 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { recipeCuisines, recipes, recipeOfTheDay, cookResources, cookTips } from '../data/recipes'
+import {
+  recipeCuisines,
+  recipes,
+  recipeOfTheDay,
+  cookResources,
+  cookTips,
+  getWay,
+  imageForRecipe,
+} from '../data/recipes'
 import { asset } from '../data/helpers'
 
 const FAV_KEY = 'pathwise-recipe-favs'
@@ -13,6 +21,58 @@ function loadFavs() {
   }
 }
 
+function dishImage(recipe, way) {
+  return way?.image || recipe.image || imageForRecipe(recipe)
+}
+
+function NutritionLabel({ n, dishName }) {
+  if (!n) return null
+  const row = (label, value, bold) => (
+    <div className={`nf-row${bold ? ' nf-bold' : ''}`}>
+      <span>{label}</span>
+      <span>{value}</span>
+    </div>
+  )
+  return (
+    <aside className="nutrition-label" aria-label={`Nutrition facts for ${dishName}`}>
+      <p className="nf-title">Nutrition Facts</p>
+      <p className="nf-servings">{n.servingsPerContainer} servings per container</p>
+      <div className="nf-serving-size">
+        <strong>Serving size</strong>
+        <strong>{n.servingSize}</strong>
+      </div>
+      <div className="nf-calories">
+        <span>Amount per serving</span>
+        <div className="nf-cal-line">
+          <strong>Calories</strong>
+          <strong className="nf-cal-num">{n.calories}</strong>
+        </div>
+      </div>
+      <p className="nf-dv">% Daily Value*</p>
+      {row('Total Fat', `${n.totalFat}g`, true)}
+      {row('  Saturated Fat', `${n.saturatedFat}g`)}
+      {row('  Trans Fat', `${n.transFat}g`)}
+      {row('Cholesterol', `${n.cholesterol}mg`, true)}
+      {row('Sodium', `${n.sodium}mg`, true)}
+      {row('Total Carbohydrate', `${n.totalCarbohydrate}g`, true)}
+      {row('  Dietary Fiber', `${n.dietaryFiber}g`)}
+      {row('  Total Sugars', `${n.totalSugars}g`)}
+      {row('    Includes Added Sugars', `${n.addedSugars}g`)}
+      {row('Protein', `${n.protein}g`, true)}
+      {(n.calcium != null || n.iron != null || n.potassium != null || n.vitaminC != null) && (
+        <div className="nf-micros">
+          {n.calcium != null && <span>Calcium {n.calcium}mg</span>}
+          {n.iron != null && <span>Iron {n.iron}mg</span>}
+          {n.potassium != null && <span>Potassium {n.potassium}mg</span>}
+          {n.vitaminC != null && <span>Vitamin C {n.vitaminC}mg</span>}
+        </div>
+      )}
+      <p className="nf-note">{n.note}</p>
+      <p className="nf-footnote">*2,000 calories a day is used for general nutrition advice.</p>
+    </aside>
+  )
+}
+
 export default function Cookbook() {
   const [params] = useSearchParams()
   const [cuisine, setCuisine] = useState('all')
@@ -20,6 +80,7 @@ export default function Cookbook() {
   const [difficulty, setDifficulty] = useState('all')
   const [q, setQ] = useState('')
   const [openId, setOpenId] = useState(null)
+  const [wayId, setWayId] = useState(null)
   const [favsOnly, setFavsOnly] = useState(false)
   const [favs, setFavs] = useState(loadFavs)
   const [shuffle, setShuffle] = useState(0)
@@ -35,6 +96,10 @@ export default function Cookbook() {
 
   useEffect(() => {
     if (!openId) return
+    const recipe = recipes.find((r) => r.id === openId)
+    setWayId(recipe?.ways?.[0]?.id || null)
+    setCookOn(false)
+    setCookSec(0)
     document.getElementById('recipe-detail')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [openId])
 
@@ -56,11 +121,12 @@ export default function Cookbook() {
       if (meal !== 'all' && r.meal !== meal) return false
       if (difficulty !== 'all' && r.difficulty !== difficulty) return false
       if (!needle) return true
+      const wayText = (r.ways || []).flatMap((w) => [w.label, w.blurb, ...(w.ingredients || [])]).join(' ')
       return (
         r.name.toLowerCase().includes(needle) ||
         r.cuisineLabel.toLowerCase().includes(needle) ||
         r.tags.some((t) => t.includes(needle)) ||
-        r.ingredients.some((i) => i.toLowerCase().includes(needle))
+        wayText.toLowerCase().includes(needle)
       )
     })
     if (shuffle) {
@@ -74,7 +140,10 @@ export default function Cookbook() {
   }, [cuisine, meal, difficulty, q, favsOnly, favs, shuffle])
 
   const open = recipes.find((r) => r.id === openId) || null
+  const way = open ? getWay(open, wayId) : null
+  const activeImage = open ? dishImage(open, way) : null
   const cookClock = `${String(Math.floor(cookSec / 60)).padStart(2, '0')}:${String(cookSec % 60).padStart(2, '0')}`
+  const wayCount = recipes.reduce((n, r) => n + (r.ways?.length || 1), 0)
 
   function toggleFav(id, e) {
     e?.stopPropagation()
@@ -101,8 +170,8 @@ export default function Cookbook() {
           <p className="hero-kicker">Cook · eat · learn again</p>
           <h1>Pathwise Cookbook</h1>
           <p>
-            {recipes.length} dishes · {recipeCuisines.length} cuisines · photos matched to the dish (dal looks like
-            dal) · resources, tips, and a cook-along clock.
+            {recipes.length} dishes · {wayCount} cooking ways · Nutrition Facts on every way · YouTube ideas. Same
+            plate, different moods (healthy / oil / classic). Food Hero kitchen shelf included.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={surprise}>
@@ -129,13 +198,13 @@ export default function Cookbook() {
 
       <section className="daily-recipe daily-recipe-media" style={{ '--accent': daily.color }}>
         <div className="daily-recipe-img">
-          <img src={daily.image} alt="" loading="lazy" />
+          <img src={dishImage(daily, daily.ways?.[0])} alt={daily.name} loading="lazy" />
         </div>
         <div>
           <p className="break-kicker">Recipe of the day</p>
           <h2>{daily.name}</h2>
           <p className="break-meta">
-            {daily.cuisineLabel} · {daily.minutes} min · {daily.difficulty} · serves {daily.servings}
+            {daily.cuisineLabel} · {daily.ways?.length || 1} ways · from {daily.minutes} min
           </p>
           <p>{daily.why}</p>
           <div className="hero-actions">
@@ -160,7 +229,7 @@ export default function Cookbook() {
               style={{ '--accent': c.color }}
               onClick={() => setCuisine(c.id)}
             >
-              <img src={sample?.image} alt="" loading="lazy" />
+              <img src={sample ? dishImage(sample, sample.ways?.[0]) : ''} alt="" loading="lazy" />
               <span>{c.label}</span>
             </button>
           )
@@ -177,14 +246,14 @@ export default function Cookbook() {
       <input
         className="search"
         type="search"
-        placeholder="Search pasta, dal, tacos, miso…"
+        placeholder="Search dal bhat, momo, healthy, oil tadka…"
         value={q}
         onChange={(e) => setQ(e.target.value)}
         aria-label="Search recipes"
       />
 
       <div className="filters cookbook-subfilters">
-        {['all', 'breakfast', 'lunch', 'dinner', 'snack'].map((m) => (
+        {['all', 'breakfast', 'lunch', 'dinner', 'snack', 'side'].map((m) => (
           <button
             key={m}
             type="button"
@@ -210,7 +279,7 @@ export default function Cookbook() {
       </div>
 
       <p className="cookbook-count">
-        Showing <strong>{list.length}</strong> recipes
+        Showing <strong>{list.length}</strong> dishes
         {cuisine !== 'all' ? ` · ${recipeCuisines.find((c) => c.id === cuisine)?.label}` : ''}
       </p>
 
@@ -224,7 +293,7 @@ export default function Cookbook() {
             onClick={() => setOpenId(openId === r.id ? null : r.id)}
           >
             <div className="recipe-photo">
-              <img src={r.image} alt="" loading="lazy" />
+              <img src={dishImage(r, r.ways?.[0])} alt={r.name} loading="lazy" />
               <button
                 type="button"
                 className={`fav-btn${favs.has(r.id) ? ' on' : ''}`}
@@ -237,25 +306,26 @@ export default function Cookbook() {
             <span className="recipe-cuisine">{r.cuisineLabel}</span>
             <h3>{r.name}</h3>
             <p>
-              {r.minutes} min · {r.difficulty} · {r.meal}
+              {r.ways?.length || 1} ways · from {r.minutes} min · {r.meal}
             </p>
           </button>
         ))}
       </div>
 
-      {open && (
+      {open && way && (
         <section className="recipe-detail recipe-detail-media" style={{ '--accent': open.color }} id="recipe-detail">
           <div className="recipe-detail-hero">
-            <img src={open.image} alt="" />
+            <img src={activeImage} alt={`${open.name} — ${way.label}`} />
           </div>
           <div className="recipe-detail-head">
             <div>
               <p className="break-kicker">{open.cuisineLabel}</p>
               <h2>{open.name}</h2>
               <p className="break-meta">
-                {open.minutes} min · {open.difficulty} · serves {open.servings} · {open.meal}
+                {way.minutes} min · {way.difficulty} · serves {open.servings} · {open.meal}
               </p>
               <p>{open.why}</p>
+              {open.credit && <p className="recipe-credit">{open.credit}</p>}
             </div>
             <div className="hero-actions">
               <button type="button" className="btn btn-ghost" onClick={(e) => toggleFav(open.id, e)}>
@@ -266,6 +336,38 @@ export default function Cookbook() {
               </button>
             </div>
           </div>
+
+          <div className="way-picker" role="tablist" aria-label="Cooking ways">
+            <p className="break-kicker">Pick a way for this recipe</p>
+            <div className="way-chips">
+              {open.ways.map((w) => (
+                <button
+                  key={w.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={w.id === way.id}
+                  className={`way-chip${w.id === way.id ? ' active' : ''}`}
+                  onClick={() => setWayId(w.id)}
+                >
+                  <strong>{w.label}</strong>
+                  <span>{w.blurb}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {open.youtube?.length > 0 && (
+            <div className="recipe-youtube">
+              <p className="break-kicker">Watch · then cook</p>
+              <div className="lesson-resources">
+                {open.youtube.map((v) => (
+                  <a key={v.url + v.label} className="lesson-pill" href={v.url} target="_blank" rel="noreferrer">
+                    ▶ {v.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="cook-along">
             <p className="break-kicker">Cook-along clock</p>
@@ -287,11 +389,11 @@ export default function Cookbook() {
             </div>
           </div>
 
-          <div className="recipe-columns">
+          <div className="recipe-columns recipe-columns-3">
             <div>
-              <h3>Ingredients</h3>
+              <h3>Ingredients · {way.label}</h3>
               <ul className="learn-list checkable-ing">
-                {open.ingredients.map((i) => (
+                {way.ingredients.map((i) => (
                   <li key={i}>
                     <label>
                       <input type="checkbox" /> {i}
@@ -303,7 +405,7 @@ export default function Cookbook() {
             <div>
               <h3>Steps</h3>
               <ol className="walk-steps recipe-steps">
-                {open.steps.map((s, idx) => (
+                {way.steps.map((s, idx) => (
                   <li key={s} className="walk-step">
                     <span className="lesson-num">{String(idx + 1).padStart(2, '0')}</span>
                     <div>
@@ -313,9 +415,10 @@ export default function Cookbook() {
                 ))}
               </ol>
               <p className="tip">
-                <strong>Cook tip:</strong> {open.tip}
+                <strong>Cook tip:</strong> {way.tip}
               </p>
             </div>
+            <NutritionLabel n={way.nutrition} dishName={`${open.name} (${way.label})`} />
           </div>
         </section>
       )}
@@ -323,7 +426,10 @@ export default function Cookbook() {
       <section className="cook-resources" id="cook-resources">
         <div className="section-head">
           <h2>Kitchen resources</h2>
-          <p>Sites, channels, and skills that make Pathwise recipes land better — watch one, then cook.</p>
+          <p>
+            Food Hero–style cooking: simple tools, leftovers within 1–2 hours, and labels that estimate — not
+            lecture.
+          </p>
         </div>
         <div className="media-grid">
           {cookResources.map((r) => (

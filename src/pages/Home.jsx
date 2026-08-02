@@ -35,8 +35,8 @@ export default function Home() {
           </p>
           <h1>Learn with pictures, videos, and paths you can finish.</h1>
           <p className="lede">
-            {manuals.length} crafts · {chapterCount}+ missions · clickable roadmaps · embedded watchlists · Break Room
-            for rest · Cookbook for fuel.
+            {manuals.length} crafts · {chapterCount}+ missions · Sparks for micro-drills · Break Room for rest ·
+            Cookbook for fuel.
           </p>
           <div className="hero-actions">
             {continueCh && pw ? (
@@ -54,6 +54,9 @@ export default function Home() {
             <a href="#watch" className="btn btn-ghost">
               Watch & learn
             </a>
+            <Link to="/sparks" className="btn btn-ghost">
+              Skill Sparks
+            </Link>
             <Link to="/cookbook" className="btn btn-ghost">
               Cookbook
             </Link>
@@ -125,16 +128,25 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <div className="section-head">
-            <h2>Two side doors</h2>
-            <p>Learn in manuals. Rest and fuel elsewhere — separate rooms on purpose.</p>
+            <h2>Side doors</h2>
+            <p>Learn in manuals. Spark a drill. Rest and fuel in their own rooms.</p>
           </div>
-          <div className="portal-grid">
+          <div className="portal-grid portal-grid-3">
+            <Link to="/sparks" className="portal-card">
+              <img src={asset('covers/focus-cover.png')} alt="" loading="lazy" />
+              <div>
+                <p className="break-kicker">Practice</p>
+                <h3>Skill Sparks</h3>
+                <p>5–15 minute drills across QA, code, design, soft skills, and career.</p>
+                <span className="go">Open Sparks →</span>
+              </div>
+            </Link>
             <Link to="/break" className="portal-card">
               <img src={asset('covers/break-hero.png')} alt="" loading="lazy" />
               <div>
                 <p className="break-kicker">Rest</p>
                 <h3>Break Room</h3>
-                <p>Timer ring, breath, stretches, books, films, games — mood filters reshape the room.</p>
+                <p>Chill zone, tea rituals, games, breath — mood presets and matched photos.</p>
                 <span className="go">Enter Break Room →</span>
               </div>
             </Link>
@@ -143,7 +155,7 @@ export default function Home() {
               <div>
                 <p className="break-kicker">Fuel</p>
                 <h3>Cookbook</h3>
-                <p>210 recipes across 12 cuisines with photos, favorites, and surprise picks.</p>
+                <p>Dishes with 3–4 cooking ways (healthy / oil / classic), YouTube, accurate photos.</p>
                 <span className="go">Open Cookbook →</span>
               </div>
             </Link>

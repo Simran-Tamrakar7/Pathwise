@@ -3527,3 +3527,478 @@ p {
     max-width: 200px;
   }
 }
+
+/* —— Lesson card (one step at a time) —— */
+.chapter-hero-compact {
+  margin-bottom: 0.75rem;
+}
+
+.path-progress-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.lesson-card {
+  padding: 1.25rem 1.35rem 1.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--forest)) 28%, transparent);
+  border-top: 4px solid var(--accent, var(--forest));
+  margin-bottom: 1.25rem;
+}
+
+.lesson-card-progress {
+  margin-bottom: 0.75rem;
+}
+
+.lesson-card-step-label {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent, var(--leaf));
+}
+
+.lesson-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(11, 61, 46, 0.18);
+}
+
+.lesson-dot.done {
+  background: color-mix(in srgb, var(--accent, var(--leaf)) 55%, white);
+}
+
+.lesson-dot.active {
+  background: var(--accent, var(--forest));
+  transform: scale(1.25);
+}
+
+.lesson-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+  color: var(--forest);
+  margin: 0 0 0.65rem;
+}
+
+.lesson-card-body {
+  color: var(--ink);
+  margin: 0 0 0.65rem;
+  line-height: 1.55;
+  max-width: 42rem;
+}
+
+.lesson-more-btn {
+  all: unset;
+  cursor: pointer;
+  color: var(--leaf);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.lesson-more-text {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.lesson-bullets {
+  margin: 0.5rem 0 0.85rem;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.lesson-visual {
+  margin: 0.85rem 0 1rem;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #1a2e28;
+  border: 1px solid var(--line);
+}
+
+.lesson-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lesson-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent, var(--leaf)) 14%, white);
+  border: 1px solid color-mix(in srgb, var(--accent, var(--leaf)) 35%, transparent);
+  color: var(--forest);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.lesson-interactive {
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent, var(--forest)) 7%, white);
+  border: 1px solid var(--line);
+  margin-bottom: 0.85rem;
+}
+
+.lesson-interactive-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent, var(--leaf));
+  margin: 0 0 0.4rem;
+}
+
+.lesson-quiz-q {
+  font-weight: 700;
+  color: var(--forest);
+  margin: 0 0 0.65rem;
+}
+
+.lesson-quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lesson-quiz-opt {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.lesson-quiz-opt.picked {
+  border-color: var(--accent, var(--forest));
+}
+
+.lesson-quiz-opt.correct {
+  background: color-mix(in srgb, #15803d 16%, white);
+  border-color: #15803d;
+}
+
+.lesson-quiz-opt.wrong {
+  background: color-mix(in srgb, #be123c 12%, white);
+  border-color: #be123c;
+}
+
+.lesson-quiz-feedback {
+  margin: 0.65rem 0 0;
+  font-weight: 600;
+}
+
+.lesson-quiz-feedback.ok {
+  color: #15803d;
+}
+
+.lesson-quiz-feedback.bad {
+  color: #9f1239;
+}
+
+.lesson-try-result {
+  margin-top: 0.65rem;
+}
+
+.lesson-dothis {
+  margin-top: 0.75rem;
+}
+
+.lesson-card-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1.1rem;
+}
+
+.chapter-side-details {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+}
+
+.chapter-side-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+/* —— Cookbook ways + Sparks —— */
+.way-picker {
+  margin: 1rem 0 1.25rem;
+}
+
+.way-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.way-chip {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.way-chip strong {
+  color: var(--forest);
+  font-size: 0.95rem;
+}
+
+.way-chip span {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.way-chip.active {
+  border-color: var(--accent, var(--forest));
+  background: color-mix(in srgb, var(--accent, var(--forest)) 12%, white);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent, var(--forest)) 35%, transparent);
+}
+
+.recipe-youtube {
+  margin-bottom: 1rem;
+}
+
+.mood-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.mood-chip.dark.active {
+  background: var(--mint, #7cdbb0);
+  color: var(--forest);
+}
+
+.portal-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .portal-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sparks-page .sparks-hero {
+  margin-bottom: 1.25rem;
+}
+
+.sparks-daily {
+  margin-bottom: 1.25rem;
+}
+
+.spark-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.spark-card {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 1.05rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  border-top: 3px solid var(--forest);
+}
+
+.spark-card h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.spark-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.spark-card.is-open {
+  border-color: var(--leaf);
+  background: color-mix(in srgb, var(--leaf) 10%, white);
+}
+
+.spark-card.is-done {
+  opacity: 0.72;
+}
+
+.spark-detail {
+  padding: 1.25rem 1.35rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+
+.spark-detail h2 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.spark-prompt {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40rem;
+}
+
+/* Nutrition Facts (Food Hero–style) */
+.recipe-columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(220px, 0.85fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .recipe-columns-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nutrition-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  padding: 0.55rem 0.65rem 0.75rem;
+  max-width: 280px;
+}
+
+.nf-title {
+  font-weight: 900;
+  font-size: 1.55rem;
+  line-height: 1;
+  margin: 0 0 0.2rem;
+  letter-spacing: -0.02em;
+}
+
+.nf-servings {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.nf-serving-size {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 8px solid #111;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.nf-calories {
+  border-bottom: 4px solid #111;
+  padding: 0.35rem 0;
+}
+
+.nf-calories > span {
+  font-size: 0.8rem;
+}
+
+.nf-cal-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.15rem;
+}
+
+.nf-cal-num {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.nf-dv {
+  text-align: right;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+  border-bottom: 1px solid #111;
+}
+
+.nf-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0.15rem 0;
+}
+
+.nf-row.nf-bold {
+  font-weight: 800;
+  border-bottom-color: #111;
+}
+
+.nf-micros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 4px solid #111;
+}
+
+.nf-note,
+.nf-footnote {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  margin: 0.45rem 0 0;
+  color: #333;
+}
+
+.recipe-credit {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+  font-style: italic;
+}

@@ -15,6 +15,11 @@ export const genres = [
   { id: 'soft-skills', label: 'Soft Skills', blurb: 'Communicate, lead, collaborate.', color: '#15803D' },
 ]
 
+/** Normalize a lesson-step resource pill. */
+export function stepResource(label, url, kind = 'Docs') {
+  return { label, url, kind }
+}
+
 /** Build a book-style chapter from a compact definition. */
 export function ch(def) {
   return {
@@ -24,28 +29,66 @@ export function ch(def) {
     minutes: def.minutes ?? 20,
     durationLabel: def.durationLabel ?? null,
     phase: def.phase ?? null,
-    kind: def.kind ?? 'chapter', // chapter | checkpoint | guide
+    kind: def.kind ?? 'chapter',
     overview: def.overview,
     learn: def.learn ?? [],
-    steps: (def.steps ?? []).map((s, i) =>
-      typeof s === 'string'
-        ? { title: `Step ${i + 1}`, body: s, doThis: null, tip: null, code: null, items: null }
-        : {
-            title: s.title,
-            body: s.body ?? '',
-            doThis: s.doThis ?? null,
-            tip: s.tip ?? null,
-            code: s.code ?? null,
-            items: s.items ?? null,
-          },
-    ),
+    steps: (def.steps ?? []).map((s, i) => normalizeStep(s, i)),
     checklist: def.checklist ?? [],
     practice: def.practice ?? null,
     links: def.links ?? [],
     citations: def.citations ?? [],
-    /** [{ type, name, url, lang, free }] */
     resources: def.resources ?? [],
     note: def.note ?? null,
+  }
+}
+
+function normalizeStep(s, i) {
+  if (typeof s === 'string') {
+    return {
+      title: `Step ${i + 1}`,
+      body: s,
+      learnMore: null,
+      image: null,
+      resources: [],
+      quiz: null,
+      tryIt: null,
+      doThis: null,
+      tip: null,
+      code: null,
+      items: null,
+    }
+  }
+  return {
+    title: s.title ?? `Step ${i + 1}`,
+    body: s.body ?? '',
+    learnMore: s.learnMore ?? null,
+    image: s.image
+      ? { src: s.image.src ?? s.image, alt: s.image.alt ?? s.title ?? `Step ${i + 1}` }
+      : null,
+    resources: (s.resources ?? []).map((r) =>
+      typeof r === 'string'
+        ? { label: 'Link', url: r, kind: 'Link' }
+        : { label: r.label ?? r.name ?? 'Link', url: r.url, kind: r.kind ?? r.type ?? 'Docs' },
+    ),
+    quiz: s.quiz
+      ? {
+          question: s.quiz.question,
+          options: s.quiz.options ?? [],
+          answer: s.quiz.answer ?? 0,
+          explain: s.quiz.explain ?? null,
+        }
+      : null,
+    tryIt: s.tryIt
+      ? {
+          prompt: s.tryIt.prompt ?? 'Try it',
+          code: s.tryIt.code ?? '',
+          result: s.tryIt.result ?? '',
+        }
+      : null,
+    doThis: s.doThis ?? null,
+    tip: s.tip ?? null,
+    code: s.code ?? null,
+    items: s.items ?? null,
   }
 }
 

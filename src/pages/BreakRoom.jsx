@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   breakBooks,
   breakBreaths,
+  breakChill,
   breakCreative,
   breakDoodles,
   breakEyes,
@@ -11,6 +12,7 @@ import {
   breakLinks,
   breakMicroMoves,
   breakModes,
+  breakMoods,
   breakMovies,
   breakMusic,
   breakOutdoors,
@@ -18,6 +20,7 @@ import {
   breakRituals,
   breakSocial,
   breakStretches,
+  breakTeaRituals,
   breakWalks,
 } from '../data/breakRoom'
 import { categoryCover, pickImage } from '../data/mediaImages'
@@ -77,7 +80,7 @@ function Category({ id, title, lede, pool, count, open, onToggle, children }) {
   )
 }
 
-const DEFAULT_OPEN = new Set(['timer', 'games', 'breath'])
+const DEFAULT_OPEN = new Set(['timer', 'chill', 'games', 'breath'])
 
 export default function BreakRoom() {
   const [modeId, setModeId] = useState('break5')
@@ -92,6 +95,7 @@ export default function BreakRoom() {
   const [breathOn, setBreathOn] = useState(false)
   const [doneSet, setDoneSet] = useState(() => new Set())
   const [open, setOpen] = useState(() => new Set(DEFAULT_OPEN))
+  const [mood, setMood] = useState(null)
   const endAt = useRef(null)
   const breath = breakBreaths[breathId]
 
@@ -164,6 +168,8 @@ export default function BreakRoom() {
   function expandAll() {
     setOpen(
       new Set([
+        'chill',
+        'tea',
         'breath',
         'eyes',
         'stretch',
@@ -188,38 +194,50 @@ export default function BreakRoom() {
     setOpen(new Set())
   }
 
+  function applyMood(id) {
+    const m = breakMoods.find((x) => x.id === id)
+    if (!m) return
+    setMood(id)
+    setOpen(new Set(m.cats))
+  }
+
   const categories = useMemo(
     () => [
-      { id: 'games', title: 'Games', lede: 'Play one round. Timer on.', pool: 'games', count: breakGames.length },
-      { id: 'breath', title: 'Breath', lede: 'Interactive cues for a calmer minute.', pool: 'breath', count: breakBreaths.length },
-      { id: 'eyes', title: 'Eye care', lede: 'Screens steal moisture — give eyes a holiday.', pool: 'eyes', count: breakEyes.length },
-      { id: 'stretch', title: 'Stretches', lede: 'Tap to check off. Two is enough.', pool: 'stretches', count: breakStretches.length },
-      { id: 'moves', title: 'Micro-moves', lede: 'Thirty to sixty seconds of circulation.', pool: 'walk', count: breakMicroMoves.length },
-      { id: 'walk', title: 'Walks', lede: 'Pair with Walk 20 on the timer.', pool: 'walk', count: breakWalks.length },
-      { id: 'outside', title: 'Outside / sensory', lede: 'Nature is free software for the nervous system.', pool: 'outdoors', count: breakOutdoors.length },
-      { id: 'laugh', title: 'Laughs', lede: 'One comic or clip. Then close the tab.', pool: 'laugh', count: breakLaughs.length },
-      { id: 'create', title: 'Creative', lede: 'Make something tiny. Ship nothing.', pool: 'creative', count: breakCreative.length },
-      { id: 'doodle', title: 'Doodle', lede: 'Two minutes with a pen beats doomscrolling.', pool: 'creative', count: breakDoodles.length },
-      { id: 'social', title: 'Social resets', lede: 'Humans regulate humans. Keep it light.', pool: 'social', count: breakSocial.length },
-      { id: 'books', title: 'Books', lede: 'Ideas that make the next study block land better.', pool: 'books', count: breakBooks.length },
-      { id: 'movies', title: 'Movies & docs', lede: 'Watch one. Rest means rest.', pool: 'movies', count: breakMovies.length },
-      { id: 'music', title: 'Music & ambience', lede: 'Lyrics optional. Volume low.', pool: 'music', count: breakMusic.length },
-      { id: 'podcasts', title: 'Podcasts', lede: 'One episode max while you stretch or walk.', pool: 'podcasts', count: breakPodcasts.length },
-      { id: 'links', title: 'Quick portals', lede: 'Two-minute resets.', pool: 'links', count: breakLinks.length },
+      { id: 'chill', title: 'Chill zone', lede: 'Rain, cafés, fireplaces — press play and unclench.', pool: 'chill', count: breakChill.length },
+      { id: 'tea', title: 'Tea & warm mugs', lede: 'Boil water. Hold the cup. That’s the whole quest.', pool: 'tea', count: breakTeaRituals.length },
+      { id: 'games', title: 'Games', lede: 'One round. Then we put the controller down. Maybe.', pool: 'games', count: breakGames.length },
+      { id: 'breath', title: 'Breath', lede: 'In. Out. The free version of a reset button.', pool: 'breath', count: breakBreaths.length },
+      { id: 'eyes', title: 'Eye care', lede: 'Your eyeballs called. They want a vacation.', pool: 'eyes', count: breakEyes.length },
+      { id: 'stretch', title: 'Stretches', lede: 'Two moves. Look ridiculous. Feel better.', pool: 'stretches', count: breakStretches.length },
+      { id: 'moves', title: 'Micro-moves', lede: 'Thirty seconds of “I still have a body.”', pool: 'walk', count: breakMicroMoves.length },
+      { id: 'walk', title: 'Walks', lede: 'Shoes optional. Outside preferred.', pool: 'walk', count: breakWalks.length },
+      { id: 'outside', title: 'Outside bits', lede: 'Clouds, birds, grass — free DLC.', pool: 'outdoors', count: breakOutdoors.length },
+      { id: 'laugh', title: 'Laughs', lede: 'One comic. Close the tab before the spiral.', pool: 'laugh', count: breakLaughs.length },
+      { id: 'create', title: 'Creative', lede: 'Make a tiny mess on purpose.', pool: 'creative', count: breakCreative.length },
+      { id: 'doodle', title: 'Doodle', lede: 'Pen > doomscroll. Prove it for two minutes.', pool: 'creative', count: breakDoodles.length },
+      { id: 'social', title: 'Social blips', lede: 'Text a human. Or sit in shared silence.', pool: 'social', count: breakSocial.length },
+      { id: 'books', title: 'Books', lede: 'A chapter, not a syllabus.', pool: 'books', count: breakBooks.length },
+      { id: 'movies', title: 'Movies & docs', lede: 'Watch one. Resist “just one more.”', pool: 'movies', count: breakMovies.length },
+      { id: 'music', title: 'Music', lede: 'Volume low. Lyrics optional. Vibes mandatory.', pool: 'music', count: breakMusic.length },
+      { id: 'podcasts', title: 'Podcasts', lede: 'Ears only. Max one episode while you stretch.', pool: 'podcasts', count: breakPodcasts.length },
+      { id: 'links', title: 'Quick portals', lede: 'Two-minute rabbit holes with an exit.', pool: 'links', count: breakLinks.length },
     ],
     [],
   )
+
+  const byId = useMemo(() => Object.fromEntries(categories.map((c) => [c.id, c])), [categories])
 
   return (
     <div className="wrap break-page break-page-vivid">
       <header className="break-hero-banner">
         <img src={asset('covers/break-hero.png')} alt="" className="break-hero-img" />
         <div className="break-hero-copy">
-          <p className="hero-kicker">Rest is part of the curriculum</p>
+          <p className="hero-kicker">Brain fried? Good. Come in.</p>
           <h1>Break Room</h1>
           <p>
-            Category shelves you can expand — games, breath, walks, books, and more. Each section uses
-            matching photos (no random food). Then back to <Link to="/manuals">manuals</Link>.
+            Timers, silly games, rain sounds, tea, stretches that don’t feel like homework. Tap a mood. Pictures match
+            the thing — rain looks like rain. Then bounce back to <Link to="/manuals">manuals</Link> or{' '}
+            <Link to="/sparks">Sparks</Link>.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={expandAll}>
@@ -228,6 +246,18 @@ export default function BreakRoom() {
             <button type="button" className="btn btn-ghost" onClick={collapseAll}>
               Collapse all
             </button>
+          </div>
+          <div className="mood-row" aria-label="Mood presets">
+            {breakMoods.map((m) => (
+              <button
+                key={m.id}
+                type="button"
+                className={`mood-chip dark${mood === m.id ? ' active' : ''}`}
+                onClick={() => applyMood(m.id)}
+              >
+                {m.label}
+              </button>
+            ))}
           </div>
         </div>
       </header>
@@ -321,27 +351,73 @@ export default function BreakRoom() {
 
       <div className="break-cat-jump">
         {categories.map((c) => (
-          <button key={c.id} type="button" className="mood-chip dark" onClick={() => {
-            setOpen((prev) => new Set(prev).add(c.id))
-            document.getElementById(`cat-${c.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }}>
+          <button
+            key={c.id}
+            type="button"
+            className="mood-chip dark"
+            onClick={() => {
+              setOpen((prev) => new Set(prev).add(c.id))
+              document.getElementById(`cat-${c.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }}
+          >
             {c.title}
           </button>
         ))}
       </div>
 
+      <div id="cat-chill">
+        <Category {...byId.chill} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakChill.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Chill"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('chill', g.title, g.imageHint)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
+      <div id="cat-tea">
+        <Category {...byId.tea} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakTeaRituals.map((t) => (
+              <MediaCard
+                key={t.title}
+                kicker={doneSet.has(t.title) ? 'Done' : 'Tea'}
+                title={t.title}
+                why={t.why}
+                image={t.image || pickImage('tea', t.title, t.imageHint)}
+                onClick={() => toggleDone(t.title)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
       <div id="cat-games">
-        <Category {...categories[0]} open={open} onToggle={toggleCat}>
+        <Category {...byId.games} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakGames.map((g) => (
-              <MediaCard key={g.title} href={g.url} kicker="Game" title={g.title} why={g.why} image={pickImage('games', g.title)} />
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Game"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('games', g.title, g.imageHint)}
+              />
             ))}
           </div>
         </Category>
       </div>
 
       <div id="cat-breath">
-        <Category {...categories[1]} open={open} onToggle={toggleCat}>
+        <Category {...byId.breath} open={open} onToggle={toggleCat}>
           <div className="breath-panel breath-panel-vivid">
             <div className={`breath-orb${breathOn ? ' pulse' : ''}`} aria-hidden="true" />
             <div className="filters">
@@ -377,7 +453,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-eyes">
-        <Category {...categories[2]} open={open} onToggle={toggleCat}>
+        <Category {...byId.eyes} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakEyes.map((e) => (
               <MediaCard
@@ -385,7 +461,7 @@ export default function BreakRoom() {
                 kicker={doneSet.has(e.title) ? 'Done' : 'Eyes'}
                 title={e.title}
                 why={e.why}
-                image={pickImage('eyes', e.title)}
+                image={e.image || pickImage('eyes', e.title)}
                 onClick={() => toggleDone(e.title)}
               />
             ))}
@@ -394,7 +470,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-stretch">
-        <Category {...categories[3]} open={open} onToggle={toggleCat}>
+        <Category {...byId.stretch} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakStretches.map((s) => (
               <MediaCard
@@ -403,7 +479,7 @@ export default function BreakRoom() {
                 title={s.name}
                 meta={s.reps}
                 why={s.how}
-                image={pickImage('stretches', s.name)}
+                image={s.image || pickImage('stretches', s.name, 'stretch')}
                 onClick={() => toggleDone(s.name)}
               />
             ))}
@@ -412,7 +488,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-moves">
-        <Category {...categories[4]} open={open} onToggle={toggleCat}>
+        <Category {...byId.moves} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakMicroMoves.map((m) => (
               <MediaCard
@@ -420,7 +496,7 @@ export default function BreakRoom() {
                 kicker={doneSet.has(m.title) ? 'Done' : 'Move'}
                 title={m.title}
                 why={m.why}
-                image={pickImage('walk', m.title)}
+                image={m.image || pickImage('walk', m.title)}
                 onClick={() => toggleDone(m.title)}
               />
             ))}
@@ -429,7 +505,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-walk">
-        <Category {...categories[5]} open={open} onToggle={toggleCat}>
+        <Category {...byId.walk} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakWalks.map((w) => (
               <MediaCard
@@ -437,7 +513,7 @@ export default function BreakRoom() {
                 kicker="Walk"
                 title={w.title}
                 why={w.why}
-                image={pickImage('walk', w.title)}
+                image={w.image || pickImage('walk', w.title, 'walk')}
                 onClick={() => toggleDone(w.title)}
               />
             ))}
@@ -446,7 +522,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-outside">
-        <Category {...categories[6]} open={open} onToggle={toggleCat}>
+        <Category {...byId.outside} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakOutdoors.map((o) => (
               <MediaCard
@@ -454,7 +530,7 @@ export default function BreakRoom() {
                 kicker="Outside"
                 title={o.title}
                 why={o.why}
-                image={pickImage('outdoors', o.title)}
+                image={o.image || pickImage('outdoors', o.title)}
                 onClick={() => toggleDone(o.title)}
               />
             ))}
@@ -463,27 +539,41 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-laugh">
-        <Category {...categories[7]} open={open} onToggle={toggleCat}>
+        <Category {...byId.laugh} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakLaughs.map((l) => (
-              <MediaCard key={l.title} href={l.url} kicker="Laugh" title={l.title} why={l.why} image={pickImage('laugh', l.title)} />
+              <MediaCard
+                key={l.title}
+                href={l.url}
+                kicker="Laugh"
+                title={l.title}
+                why={l.why}
+                image={l.image || pickImage('laugh', l.title, 'laugh')}
+              />
             ))}
           </div>
         </Category>
       </div>
 
       <div id="cat-create">
-        <Category {...categories[8]} open={open} onToggle={toggleCat}>
+        <Category {...byId.create} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakCreative.map((c) => (
-              <MediaCard key={c.title} href={c.url} kicker="Create" title={c.title} why={c.why} image={pickImage('creative', c.title)} />
+              <MediaCard
+                key={c.title}
+                href={c.url}
+                kicker="Create"
+                title={c.title}
+                why={c.why}
+                image={c.image || pickImage('creative', c.title, 'draw')}
+              />
             ))}
           </div>
         </Category>
       </div>
 
       <div id="cat-doodle">
-        <Category {...categories[9]} open={open} onToggle={toggleCat}>
+        <Category {...byId.doodle} open={open} onToggle={toggleCat}>
           <div className="doodle-banner doodle-banner-rich">
             <p>{doodle}</p>
             <button
@@ -498,7 +588,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-social">
-        <Category {...categories[10]} open={open} onToggle={toggleCat}>
+        <Category {...byId.social} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakSocial.map((s) => (
               <MediaCard
@@ -506,7 +596,7 @@ export default function BreakRoom() {
                 kicker="Social"
                 title={s.title}
                 why={s.why}
-                image={pickImage('social', s.title)}
+                image={s.image || pickImage('social', s.title)}
                 onClick={() => toggleDone(s.title)}
               />
             ))}
@@ -515,7 +605,7 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-books">
-        <Category {...categories[11]} open={open} onToggle={toggleCat}>
+        <Category {...byId.books} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakBooks.map((b) => (
               <MediaCard
@@ -525,7 +615,7 @@ export default function BreakRoom() {
                 title={b.title}
                 meta={b.author}
                 why={b.why}
-                image={pickImage('books', b.title)}
+                image={b.image || pickImage('books', b.title, 'book')}
               />
             ))}
           </div>
@@ -533,27 +623,41 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-movies">
-        <Category {...categories[12]} open={open} onToggle={toggleCat}>
+        <Category {...byId.movies} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakMovies.map((m) => (
-              <MediaCard key={m.title} href={m.url} kicker="Film" title={m.title} why={m.why} image={pickImage('movies', m.title)} />
+              <MediaCard
+                key={m.title}
+                href={m.url}
+                kicker="Film"
+                title={m.title}
+                why={m.why}
+                image={m.image || pickImage('movies', m.title, 'movie')}
+              />
             ))}
           </div>
         </Category>
       </div>
 
       <div id="cat-music">
-        <Category {...categories[13]} open={open} onToggle={toggleCat}>
+        <Category {...byId.music} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakMusic.map((m) => (
-              <MediaCard key={m.title} href={m.url} kicker="Music" title={m.title} why={m.why} image={pickImage('music', m.title)} />
+              <MediaCard
+                key={m.title}
+                href={m.url}
+                kicker="Music"
+                title={m.title}
+                why={m.why}
+                image={m.image || pickImage('music', m.title, 'lofi')}
+              />
             ))}
           </div>
         </Category>
       </div>
 
       <div id="cat-podcasts">
-        <Category {...categories[14]} open={open} onToggle={toggleCat}>
+        <Category {...byId.podcasts} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakPodcasts.map((p) => (
               <MediaCard
@@ -562,7 +666,7 @@ export default function BreakRoom() {
                 kicker="Podcast"
                 title={p.title}
                 why={p.why}
-                image={pickImage('podcasts', p.title)}
+                image={p.image || pickImage('podcasts', p.title)}
               />
             ))}
           </div>
@@ -570,10 +674,17 @@ export default function BreakRoom() {
       </div>
 
       <div id="cat-links" style={{ marginBottom: '3rem' }}>
-        <Category {...categories[15]} open={open} onToggle={toggleCat}>
+        <Category {...byId.links} open={open} onToggle={toggleCat}>
           <div className="media-grid">
             {breakLinks.map((l) => (
-              <MediaCard key={l.title} href={l.url} kicker="Link" title={l.title} why={l.why} image={pickImage('links', l.title)} />
+              <MediaCard
+                key={l.title}
+                href={l.url}
+                kicker="Link"
+                title={l.title}
+                why={l.why}
+                image={l.image || pickImage('links', l.title)}
+              />
             ))}
           </div>
         </Category>
