@@ -1,5 +1,7 @@
+'use client'
+
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { kitKinds, kitRecipes, kitOfTheDay, kitsByKind } from '../data/kits'
 import { getManual } from '../data/manuals'
 import DocumentHead from '../components/DocumentHead'
@@ -43,7 +45,7 @@ function RecipeCard({ r }) {
       <div className="hero-actions">
         <CopyButton text={r.recipe} />
         {manual && (
-          <Link to={`/manuals/${manual.id}`} className="btn btn-ghost">
+          <Link href={`/manuals/${manual.id}`} className="btn btn-ghost">
             Deeper: {manual.title} →
           </Link>
         )}
@@ -77,10 +79,10 @@ export default function Kits() {
             <a href={`#${daily.id}`} className="btn btn-primary">
               Recipe of the day
             </a>
-            <Link to="/cookbook" className="btn btn-ghost">
+            <Link href="/cookbook" className="btn btn-ghost">
               Food cookbook
             </Link>
-            <Link to="/manuals" className="btn btn-ghost">
+            <Link href="/manuals" className="btn btn-ghost">
               Manuals
             </Link>
           </div>

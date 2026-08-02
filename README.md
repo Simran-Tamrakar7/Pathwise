@@ -2,6 +2,8 @@
 
 Have-it-all learning manuals: covers, clickable/downloadable roadmaps, book-style chapters, resources & citations — beginner → pro.
 
+Stack: **Next.js** (static export) + **Tailwind CSS** + existing Pathwise design CSS.
+
 ## Genres
 
 Automation · Design · AI & Prompts · Foundations · Soft Skills
@@ -11,6 +13,12 @@ Automation · Design · AI & Prompts · Foundations · Soft Skills
 ```bash
 npm install
 npm run dev
+```
+
+Build for GitHub Pages (`/Pathwise` basePath → `out/`):
+
+```bash
+npm run build
 ```
 
 Live: https://simran-tamrakar7.github.io/Pathwise/

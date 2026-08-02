@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import {
   breakBooks,
   breakBreaths,
@@ -149,7 +151,7 @@ function BreakPersonality() {
           </button>
           {lucky && (
             <p style={{ marginTop: '0.75rem' }}>
-              <Link to={`/manuals/${lucky.id}`} className="go">
+              <Link href={`/manuals/${lucky.id}`} className="go">
                 {lucky.title} →
               </Link>
             </p>
@@ -169,7 +171,7 @@ function BreakPersonality() {
               <li key={s.id}>
                 <strong>{s.name}</strong>
                 <span className="break-meta">
-                  {m ? <Link to={`/manuals/${m.id}`}>{m.title}</Link> : s.manualId} · {s.at}
+                  {m ? <Link href={`/manuals/${m.id}`}>{m.title}</Link> : s.manualId} · {s.at}
                 </span>
                 <p>{s.built}</p>
               </li>
@@ -378,8 +380,8 @@ export default function BreakRoom() {
           <h1>Break Room</h1>
           <p>
             Sandboxes, Earth trackers, brain teasers, weird sites, and retro archives — open up top so you don’t scroll
-            forever. Timer still here if you need it. Then back to <Link to="/today">Today</Link>,{' '}
-            <Link to="/manuals">manuals</Link>, or <Link to="/sparks">Sparks</Link>.
+            forever. Timer still here if you need it. Then back to <Link href="/today">Today</Link>,{' '}
+            <Link href="/manuals">manuals</Link>, or <Link href="/sparks">Sparks</Link>.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={expandAll}>

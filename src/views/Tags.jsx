@@ -1,11 +1,12 @@
-import { Link, useParams } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { manuals, genres } from '../data/manuals'
 import { skillTags, getTag, manualsWithTag, tagsForManual } from '../data/tags'
 import DocumentHead from '../components/DocumentHead'
 import { countDone } from '../lib/progress'
 
-export default function Tags() {
-  const { tagId } = useParams()
+export default function Tags({ tagId } = {}) {
   const active = tagId ? getTag(tagId) : null
   const list = active ? manualsWithTag(manuals, active.id) : []
 
@@ -26,7 +27,7 @@ export default function Tags() {
         <p>{active ? active.blurb : 'Browse by how you want to learn — not just genre.'}</p>
         {active && (
           <p>
-            <Link to="/tags" className="btn btn-ghost">
+            <Link href="/tags" className="btn btn-ghost">
               ← All tags
             </Link>
           </p>
@@ -40,7 +41,7 @@ export default function Tags() {
             return (
               <Link
                 key={t.id}
-                to={`/tags/${t.id}`}
+                href={`/tags/${t.id}`}
                 className="tag-tile"
                 style={{ '--tag': t.color }}
               >
@@ -61,7 +62,7 @@ export default function Tags() {
             return (
               <Link
                 key={m.id}
-                to={`/manuals/${m.id}`}
+                href={`/manuals/${m.id}`}
                 className="manual-link cover-link vivid-card"
                 style={{ '--accent': m.accent || g?.color || '#0B3D2E' }}
               >

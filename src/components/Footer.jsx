@@ -1,29 +1,31 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 
 export default function Footer() {
   return (
     <footer className="footer footer-v2">
       <div className="footer-inner">
-        <Link to="/" className="brand">
+        <Link href="/" className="brand">
           Pathwise
         </Link>
         <p>
           Show up today —{' '}
-          <Link to="/today">Today</Link>
+          <Link href="/today">Today</Link>
           {' · '}
-          <Link to="/manuals">manuals</Link>
+          <Link href="/manuals">manuals</Link>
           {' · '}
-          <Link to="/tags">tags</Link>
+          <Link href="/tags">tags</Link>
           {' · '}
-          <Link to="/sparks">Sparks</Link>
+          <Link href="/sparks">Sparks</Link>
           {' · '}
-          <Link to="/break">Break</Link>
+          <Link href="/break">Break</Link>
           {' · '}
-          <Link to="/cookbook">Cookbook</Link>
+          <Link href="/cookbook">Cookbook</Link>
           {' · '}
-          <Link to="/kits">Kits</Link>
+          <Link href="/kits">Kits</Link>
           {' · '}
-          <Link to="/insights">Insights</Link>.
+          <Link href="/insights">Insights</Link>.
         </p>
       </div>
     </footer>

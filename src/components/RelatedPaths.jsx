@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { genres } from '../data/manuals'
 import { relatedManuals } from '../lib/related'
 
@@ -15,7 +17,7 @@ export default function RelatedPaths({ manual, all }) {
           return (
             <Link
               key={m.id}
-              to={`/manuals/${m.id}`}
+              href={`/manuals/${m.id}`}
               className="related-card"
               style={{ '--accent': m.accent || g?.color || '#0B3D2E' }}
             >

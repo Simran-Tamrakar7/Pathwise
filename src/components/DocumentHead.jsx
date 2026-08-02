@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect } from 'react'
 
 /** Client-side title + description (SPA-friendly share/tabs). */

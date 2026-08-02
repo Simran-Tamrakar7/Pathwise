@@ -1,10 +1,30 @@
-import { NavLink } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const links = [
+  { href: '/today', label: 'Today' },
+  { href: '/manuals', label: 'Manuals' },
+  { href: '/tags', label: 'Tags' },
+  { href: '/sparks', label: 'Sparks' },
+  { href: '/break', label: 'Break' },
+  { href: '/cookbook', label: 'Cook' },
+  { href: '/kits', label: 'Kits' },
+]
 
 export default function Nav() {
+  const pathname = usePathname() || '/'
+
+  function active(href) {
+    if (href === '/') return pathname === '/'
+    return pathname === href || pathname.startsWith(`${href}/`)
+  }
+
   return (
     <header className="nav nav-v2">
       <div className="nav-inner">
-        <NavLink to="/" className="brand" aria-label="Pathwise home">
+        <Link href="/" className="brand" aria-label="Pathwise home">
           <svg className="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <rect width="32" height="32" rx="8" fill="#0B3D2E" />
             <path
@@ -16,32 +36,16 @@ export default function Nav() {
             <path d="M16 14.5V26.5" stroke="#7CDBB0" strokeWidth="1.6" />
           </svg>
           Pathwise
-        </NavLink>
+        </Link>
         <nav className="nav-links" aria-label="Primary">
-          <NavLink to="/today" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Today
-          </NavLink>
-          <NavLink to="/manuals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Manuals
-          </NavLink>
-          <NavLink to="/tags" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Tags
-          </NavLink>
-          <NavLink to="/sparks" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Sparks
-          </NavLink>
-          <NavLink to="/break" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Break
-          </NavLink>
-          <NavLink to="/cookbook" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Cook
-          </NavLink>
-          <NavLink to="/kits" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-            Kits
-          </NavLink>
-          <NavLink to="/today" className="nav-cta">
+          {links.map((l) => (
+            <Link key={l.href} href={l.href} className={active(l.href) ? 'active' : undefined}>
+              {l.label}
+            </Link>
+          ))}
+          <Link href="/today" className="nav-cta">
             Check in
-          </NavLink>
+          </Link>
         </nav>
       </div>
     </header>

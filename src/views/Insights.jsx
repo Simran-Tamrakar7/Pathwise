@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import DocumentHead from '../components/DocumentHead'
 import { analyticsRollup } from '../lib/analytics'
 import { feedbackSummary } from '../lib/feedback'
@@ -69,7 +71,7 @@ export default function Insights() {
         <ul className="insights-list">
           {bookmarks.map((id) => (
             <li key={id}>
-              <Link to={`/manuals/${id}`}>{getManual(id)?.title || id}</Link>
+              <Link href={`/manuals/${id}`}>{getManual(id)?.title || id}</Link>
             </li>
           ))}
           {bookmarks.length === 0 && <li>None saved yet.</li>}
@@ -86,7 +88,7 @@ export default function Insights() {
               : `/manuals/${r.manualId}`
             return (
               <li key={`${r.manualId}-${r.chapterId}-${r.at}`}>
-                <Link to={to}>{m?.title || r.manualId}</Link>
+                <Link href={to}>{m?.title || r.manualId}</Link>
               </li>
             )
           })}

@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import Link from 'next/link'
 import { getChapter, genres, manuals } from '../data/manuals'
 import LessonCard from '../components/LessonCard'
 import VideoCard from '../components/VideoCard'
@@ -20,8 +22,7 @@ import { checkInToday } from '../lib/streak'
 import { track } from '../lib/analytics'
 import { downloadCertificate } from '../lib/certificate'
 
-export default function Chapter() {
-  const { id, chapterId } = useParams()
+export default function Chapter({ id, chapterId }) {
   const data = getChapter(id, chapterId)
   const [done, setDone] = useState(false)
   const [stepIndex, setStepIndex] = useState(0)
@@ -45,7 +46,7 @@ export default function Chapter() {
     return (
       <div className="wrap not-found">
         <h1>Chapter not found</h1>
-        <Link to={`/manuals/${id}`} className="btn btn-primary">
+        <Link href={`/manuals/${id}`} className="btn btn-primary">
           Back to manual
         </Link>
       </div>
@@ -94,9 +95,9 @@ export default function Chapter() {
       />
 
       <p className="crumb">
-        <Link to="/manuals">Manuals</Link>
+        <Link href="/manuals">Manuals</Link>
         {' / '}
-        <Link to={`/manuals/${manual.id}`}>{manual.title}</Link>
+        <Link href={`/manuals/${manual.id}`}>{manual.title}</Link>
         {' / '}
         {kindLabel} {index + 1}
       </p>
@@ -245,18 +246,18 @@ export default function Chapter() {
 
       <nav className="chapter-nav" aria-label="Chapter">
         {prev ? (
-          <Link to={`/manuals/${manual.id}/chapters/${prev.id}`} className="btn btn-ghost">
+          <Link href={`/manuals/${manual.id}/chapters/${prev.id}`} className="btn btn-ghost">
             ← {prev.title}
           </Link>
         ) : (
           <span />
         )}
-        <Link to={`/manuals/${manual.id}`} className="btn btn-ghost">
+        <Link href={`/manuals/${manual.id}`} className="btn btn-ghost">
           Manual home
         </Link>
         {next ? (
           <Link
-            to={`/manuals/${manual.id}/chapters/${next.id}`}
+            href={`/manuals/${manual.id}/chapters/${next.id}`}
             className="btn btn-primary"
             onClick={() => {
               if (!done) markDone()
@@ -265,7 +266,7 @@ export default function Chapter() {
             {next.title} →
           </Link>
         ) : (
-          <Link to="/manuals" className="btn btn-primary">
+          <Link href="/manuals" className="btn btn-primary">
             Browse more manuals
           </Link>
         )}

@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { getManual } from '../data/manuals'
 import { getRecent } from '../lib/recent'
 import { getContinueChapter, countDone } from '../lib/progress'
@@ -38,7 +40,7 @@ export default function JumpBackRow() {
               {recent.slice(0, 6).map(({ manual, chapter, href }) => {
                 const prog = countDone(manual.id, manual.chapters.length)
                 return (
-                  <Link key={`${manual.id}-${chapter?.id}`} to={href} className="jump-chip">
+                  <Link key={`${manual.id}-${chapter?.id}`} href={href} className="jump-chip">
                     <img src={manual.coverUrl} alt="" />
                     <span>
                       <strong>{manual.title}</strong>
@@ -62,7 +64,7 @@ export default function JumpBackRow() {
             </div>
             <div className="jump-row">
               {bookmarks.map((m) => (
-                <Link key={m.id} to={`/manuals/${m.id}`} className="jump-chip bookmark-chip">
+                <Link key={m.id} href={`/manuals/${m.id}`} className="jump-chip bookmark-chip">
                   <img src={m.coverUrl} alt="" />
                   <span>
                     <strong>{m.title}</strong>
