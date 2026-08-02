@@ -1,12 +1,14 @@
-/** Break Room — rest without losing the plot. */
+/** Break Room — rest without losing the plot. No cookbook here. */
 
 export const breakModes = [
   { id: 'focus25', label: 'Focus 25', seconds: 25 * 60, kind: 'focus' },
   { id: 'focus50', label: 'Deep 50', seconds: 50 * 60, kind: 'focus' },
-  { id: 'break5', label: 'Break 5', seconds: 5 * 60, kind: 'break' },
-  { id: 'break15', label: 'Break 15', seconds: 15 * 60, kind: 'break' },
-  { id: 'walk20', label: 'Walk 20', seconds: 20 * 60, kind: 'break' },
-  { id: 'stretch7', label: 'Stretch 7', seconds: 7 * 60, kind: 'break' },
+  { id: 'break5', label: 'Break 5', seconds: 5 * 60, kind: 'rest' },
+  { id: 'break15', label: 'Break 15', seconds: 15 * 60, kind: 'rest' },
+  { id: 'walk20', label: 'Walk 20', seconds: 20 * 60, kind: 'rest' },
+  { id: 'stretch7', label: 'Stretch 7', seconds: 7 * 60, kind: 'rest' },
+  { id: 'eyes3', label: 'Eyes 3', seconds: 3 * 60, kind: 'rest' },
+  { id: 'nap20', label: 'Power nap 20', seconds: 20 * 60, kind: 'rest' },
 ]
 
 export const breakBooks = [
@@ -58,6 +60,18 @@ export const breakBooks = [
     why: 'CBT tools when your brain catastrophizes a failing test.',
     url: 'https://feelinggood.com/books/',
   },
+  {
+    title: 'Four Thousand Weeks',
+    author: 'Oliver Burkeman',
+    why: 'Time scarcity with kindness — not another productivity guilt trip.',
+    url: 'https://www.oliverburkeman.com/books',
+  },
+  {
+    title: 'The Art of Rest',
+    author: 'Claudia Hammond',
+    why: 'Rest is a skill. This helps you practice it without shame.',
+    url: 'https://www.claudiahammond.com/',
+  },
 ]
 
 export const breakMovies = [
@@ -92,19 +106,24 @@ export const breakMovies = [
     url: 'https://www.imdb.com/title/tt11464826/',
   },
   {
-    title: 'Chef',
-    why: 'Cooking as reset. Comfort food for a tired brain.',
-    url: 'https://www.imdb.com/title/tt2883512/',
-  },
-  {
-    title: 'Julie & Julia',
-    why: 'Recipes, persistence, and learning in public.',
-    url: 'https://www.imdb.com/title/tt1135503/',
-  },
-  {
     title: 'Soul',
     why: 'Purpose without hustle cosplay. Soft landing film.',
     url: 'https://www.imdb.com/title/tt2948372/',
+  },
+  {
+    title: 'Wall-E',
+    why: 'Quiet, beautiful, and a reminder to stand up from the chair.',
+    url: 'https://www.imdb.com/title/tt0910970/',
+  },
+  {
+    title: 'My Neighbor Totoro',
+    why: 'Gentle world-building. Zero plot anxiety.',
+    url: 'https://www.imdb.com/title/tt0096283/',
+  },
+  {
+    title: 'Free Solo (doc)',
+    why: 'Focus porn — then stretch your wrists and stay on the ground.',
+    url: 'https://www.imdb.com/title/tt7775622/',
   },
 ]
 
@@ -149,6 +168,56 @@ export const breakGames = [
     why: 'Recursive puzzles. Weirdly calming.',
     url: 'https://store.steampowered.com/app/1260520/Patricks_Parabox/',
   },
+  {
+    title: 'Grid Garden',
+    why: 'CSS Grid with vegetables that aren’t dinner plans — just puzzles.',
+    url: 'https://cssgridgarden.com/',
+  },
+  {
+    title: 'Screeps World (peek)',
+    why: 'If you want code-as-game — cap the time hard.',
+    url: 'https://screeps.com/',
+  },
+  {
+    title: '2048',
+    why: 'Classic number slide. One round, then close the tab.',
+    url: 'https://play2048.co/',
+  },
+  {
+    title: 'Little Alchemy 2',
+    why: 'Combine ideas. Soft creativity without a deadline.',
+    url: 'https://littlealchemy2.com/',
+  },
+  {
+    title: 'Neal.fun',
+    why: 'A shelf of tiny delightful toys. Pick one, not twelve.',
+    url: 'https://neal.fun/',
+  },
+  {
+    title: 'GeoGuessr (free modes)',
+    why: 'Travel with your eyes. Great for a stuck brain.',
+    url: 'https://www.geoguessr.com/',
+  },
+  {
+    title: 'Chess.com puzzles',
+    why: 'One puzzle = enough. Don’t start a ranked spiral.',
+    url: 'https://www.chess.com/puzzles',
+  },
+  {
+    title: 'Sudoku.com',
+    why: 'Quiet logic. Paper optional.',
+    url: 'https://sudoku.com/',
+  },
+  {
+    title: 'Orisinal — Winterbells',
+    why: 'Old-school browser calm. Jump a rabbit, smile, leave.',
+    url: 'https://www.ferryhalim.com/orisinal/',
+  },
+  {
+    title: 'A Dark Room',
+    why: 'Minimal story game. Atmospheric and short sessions.',
+    url: 'https://adarkroom.doublespeakgames.com/',
+  },
 ]
 
 export const breakLinks = [
@@ -192,6 +261,16 @@ export const breakLinks = [
     why: 'Write one 2-minute habit. Then do it.',
     url: 'https://tinyhabits.com/',
   },
+  {
+    title: 'Virtual commute (train views)',
+    why: 'Fake a train window when you can’t leave the room.',
+    url: 'https://www.youtube.com/results?search_query=train+window+view+4k',
+  },
+  {
+    title: 'NASA image of the day',
+    why: 'Perspective check from orbit.',
+    url: 'https://apod.nasa.gov/apod/astropix.html',
+  },
 ]
 
 export const breakPodcasts = [
@@ -202,7 +281,7 @@ export const breakPodcasts = [
   },
   {
     title: 'Design Details',
-    why: 'Product/design chats when your eyes need a break from screens… ironically.',
+    why: 'Product/design chats for ear-only rest.',
     url: 'https://designdetails.fm/',
   },
   {
@@ -211,9 +290,19 @@ export const breakPodcasts = [
     url: 'https://www.happinesslab.fm/',
   },
   {
-    title: 'Syntax / similar tech shows',
-    why: 'Passive learning while you stretch or walk.',
+    title: 'Syntax',
+    why: 'Passive tech chat while you stretch or walk.',
     url: 'https://syntax.fm/',
+  },
+  {
+    title: 'Hidden Brain',
+    why: 'Human quirks explained — good walking companion.',
+    url: 'https://hiddenbrain.org/',
+  },
+  {
+    title: 'Maintenance Phase',
+    why: 'Sharp, funny, anti-junk wellness myths.',
+    url: 'https://www.maintenancephase.com/',
   },
 ]
 
@@ -224,12 +313,15 @@ export const breakStretches = [
   { name: 'Hip flexor lunge', reps: '30 sec/side', how: 'Kneeling lunge, tuck pelvis, tall spine.' },
   { name: 'Figure-4 sit', reps: '30 sec/side', how: 'Ankle on opposite knee, hinge forward lightly.' },
   { name: 'Stand & shake', reps: '20 sec', how: 'Shake arms and legs like a ridiculous wet dog.' },
+  { name: 'Shoulder rolls', reps: '10 each way', how: 'Slow circles. Drop the jaw. Soften the brow.' },
+  { name: 'Calf raises', reps: '15', how: 'At the desk edge. Wake up circulation.' },
 ]
 
 export const breakBreaths = [
   { name: 'Box 4-4-4-4', steps: ['Inhale 4', 'Hold 4', 'Exhale 4', 'Hold 4'], rounds: 4 },
   { name: 'Physiological sigh', steps: ['Inhale', 'Short top-up inhale', 'Long exhale'], rounds: 3 },
   { name: 'Long exhale', steps: ['Inhale 4', 'Exhale 6–8'], rounds: 6 },
+  { name: 'Counting breath', steps: ['Inhale', 'Exhale — count 1', 'Next exhale — count 2', 'Up to 10, restart if lost'], rounds: 2 },
 ]
 
 export const breakMusic = [
@@ -245,12 +337,22 @@ export const breakMusic = [
   },
   {
     title: 'Jazz cafe ambience',
-    why: 'Cooking + soft saxophone energy.',
+    why: 'Soft saxophone energy without a plot.',
     url: 'https://www.youtube.com/results?search_query=jazz+cafe+ambience',
   },
   {
+    title: 'Forest / nature sounds',
+    why: 'Birds > group chats.',
+    url: 'https://www.youtube.com/results?search_query=forest+sounds+birds+relaxing',
+  },
+  {
+    title: 'Brown noise',
+    why: 'Deep hush for noisy brains.',
+    url: 'https://www.youtube.com/results?search_query=brown+noise+10+hours',
+  },
+  {
     title: 'Nepali / South Asian chill',
-    why: 'Homey reset while you simmer dal.',
+    why: 'Homey reset playlist energy.',
     url: 'https://www.youtube.com/results?search_query=nepali+lofi+chill',
   },
 ]
@@ -260,16 +362,149 @@ export const breakDoodles = [
   'Sketch the UI you’re stuck on with only 3 boxes.',
   'Write a haiku about your failing test.',
   'Map tomorrow’s one mission as a treasure map.',
-  'Doodle a plate of food you’ll cook tonight.',
   'Draw five icons for “focus” without using a brain.',
+  'Doodle your ideal desk from a bird’s-eye view.',
+  'Invent a logo for “Break Room Inc.” in 60 seconds.',
 ]
 
-export const breakSnacks = [
-  { title: 'Fruit + nuts', why: 'Fast glucose without a crash if you stop at a handful.' },
-  { title: 'Yogurt + honey', why: 'Protein + calm. Eat away from the keyboard.' },
-  { title: 'Toast + egg', why: 'Real food > doom-scrolling delivery apps.' },
-  { title: 'Tea, then water', why: 'Hydration first; caffeine second.' },
-  { title: 'Walk to the kitchen', why: 'Stand up, fill a glass, look out a window before you sit.' },
+export const breakEyes = [
+  {
+    title: '20-20-20 rule',
+    why: 'Every 20 minutes: look 20 feet away for 20 seconds.',
+  },
+  {
+    title: 'Palm cupping',
+    why: 'Warm palms over closed eyes for 30 seconds. No pressure.',
+  },
+  {
+    title: 'Blink set',
+    why: 'Close eyes gently 10 times. Screens dry you out.',
+  },
+  {
+    title: 'Horizon stare',
+    why: 'Find a far window point. Soften focus. Count to 30.',
+  },
+]
+
+export const breakWalks = [
+  {
+    title: 'Block loop',
+    why: 'One city block. No podcast for the first half — just footsteps.',
+  },
+  {
+    title: 'Stair climber',
+    why: 'Up and down one flight twice. Heart rate nudge without a gym.',
+  },
+  {
+    title: 'Errand walk',
+    why: 'Mail, water refill, plant check — anything that needs standing.',
+  },
+  {
+    title: 'Sunlight dose',
+    why: 'Two minutes outside if you can. Morning light resets mood.',
+  },
+]
+
+export const breakOutdoors = [
+  {
+    title: 'Cloud watch',
+    why: 'Lie or sit. Name three cloud shapes. Leave the laptop inside.',
+  },
+  {
+    title: 'Barefoot grass (if safe)',
+    why: 'Sensory reset. Thirty seconds counts.',
+  },
+  {
+    title: 'Bird count',
+    why: 'How many birds in two minutes? Attention without screens.',
+  },
+  {
+    title: 'Photo one color',
+    why: 'Phone camera: find five greens (or blues). Then pocket it.',
+  },
+]
+
+export const breakCreative = [
+  {
+    title: 'Quick collage',
+    why: 'Tear magazine scraps or screenshot shapes into a moodboard.',
+    url: 'https://www.canva.com/',
+  },
+  {
+    title: 'One-line comic',
+    why: 'Three panels. Your day as a stick-figure saga.',
+    url: 'https://excalidraw.com/',
+  },
+  {
+    title: 'Instrument toy',
+    why: 'Play a free web synth for two minutes. No recording needed.',
+    url: 'https://experiments.withgoogle.com/collection/chrome',
+  },
+  {
+    title: 'Poem dump',
+    why: 'Write six bad lines. Delete them. Weirdly cleansing.',
+  },
+]
+
+export const breakMicroMoves = [
+  {
+    title: 'Wall push-ups',
+    why: '10 slow ones. Shoulders awake, ego optional.',
+  },
+  {
+    title: 'Desk squat',
+    why: '8 sit-to-stands. Hold the chair if needed.',
+  },
+  {
+    title: 'Jaw release',
+    why: 'Tongue on roof of mouth, unclench teeth, sigh once.',
+  },
+  {
+    title: 'Hand shake-out',
+    why: 'Shake typing tension down into the floor.',
+  },
+]
+
+export const breakSocial = [
+  {
+    title: 'Voice note a friend',
+    why: '30 seconds: “thinking of you / tiny win today.”',
+  },
+  {
+    title: 'Compliment IRL',
+    why: 'If someone’s nearby — one specific, non-awkward kindness.',
+  },
+  {
+    title: 'Async check-in',
+    why: 'Message a study buddy: “shipping one chapter, you?”',
+  },
+  {
+    title: 'Silence date',
+    why: 'Sit with someone and don’t talk for two minutes. Shared calm.',
+  },
+]
+
+export const breakLaughs = [
+  {
+    title: 'xkcd',
+    why: 'One comic. Then close. Seriously.',
+    url: 'https://xkcd.com/',
+  },
+  {
+    title: 'The Oatmeal',
+    why: 'Chaotic humor when your brain is mush.',
+    url: 'https://theoatmeal.com/',
+  },
+  {
+    title: 'FailArmy? Skip. Try Stand-up short',
+    why: 'One clean 3-minute clip, then stop the autoplay.',
+    url: 'https://www.youtube.com/results?search_query=clean+standup+3+minutes',
+  },
+  {
+    title: 'False Knees',
+    why: 'Gentle bird comics. Soft smile energy.',
+    url: 'https://falseknees.com/',
+  },
 ]
 
 export const breakRituals = [
@@ -281,4 +516,6 @@ export const breakRituals = [
   'Put the phone in another room for the next focus block.',
   'One stretch from the deck. Then breathe once.',
   'Shuffle a doodle prompt and actually draw it.',
+  '20-20-20: look far away, blink, come back.',
+  'Step outside for sunlight — even 90 seconds.',
 ]

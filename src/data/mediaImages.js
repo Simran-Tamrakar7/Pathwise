@@ -1,89 +1,86 @@
-/** Shared Unsplash thumbs for Break Room cards. */
+/** Break Room thumbs — nature, books, games, cinema, movement (not food). */
+
+const u = (id) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=800&h=600&q=70`
+
+const books = [
+  '1495446815901-a7297e633e8d',
+  '1519682337058-a94d519337bc',
+  '1524995997946-a1c2e315a42f',
+  '1541781774459-bb2af2f05b55',
+].map(u)
+
+const nature = [
+  '1501854140801-50d01698950b',
+  '1470071459604-3b5ec3a7fe05',
+  '1469474968028-56623f02e42e',
+  '1506905925346-21bda4d32df4',
+  '1464822759023-fed622ff2c3b',
+  '1504280390367-361c6d9f38f4',
+].map(u)
+
+const games = [
+  '1511512578047-dfb367046420',
+  '1542751371-adc38448a05e',
+  '1493711662062-fa541adb3fc8',
+  '1552820728-8b83bb6b773f',
+].map(u)
+
+const movies = [
+  '1594909122845-11baa439b7bf',
+  '1440404653325-ab127d49abc1',
+  '1536440136628-849c177e76a1',
+  '1513364776144-60967b0f800f',
+].map(u)
+
+const move = [
+  '1544367567-0f2fcb009e0b',
+  '1518611012118-696072aa579a',
+  '1571019613454-1cb2f99b2d8b',
+  '1517836357463-d25dfeac3438',
+  '1476480862126-209bfaa8edc8',
+  '1551632811-561732d1e306',
+].map(u)
+
+const music = [
+  '1511379938547-c1f69419868d',
+  '1514320291840-2e0a9bf2a9ae',
+  '1470225620780-dba8ba36b745',
+  '1487180144351-b8472da7d491',
+].map(u)
+
+const podcasts = [
+  '1590602847861-f357a9332bbc',
+  '1598488035139-bdbb2231ce04',
+  '1589903308904-1010c2294adc',
+  '1556761175-5973dc0f32e7',
+].map(u)
+
+const creative = [
+  '1513364776144-60967b0f800f',
+  '1452860606245-08befc0ff44b',
+  '1460661419201-fd4cecdf8a8b',
+  '1524995997946-a1c2e315a42f',
+].map(u)
+
 export const breakImagePools = {
-  "books": [
-    "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "movies": [
-    "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "games": [
-    "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "music": [
-    "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "podcasts": [
-    "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "links": [
-    "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "snacks": [
-    "https://images.unsplash.com/photo-1626804475297-41608ea09aeb?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&h=600&q=70"
-  ],
-  "stretches": [
-    "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&h=600&q=70",
-    "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&h=600&q=70"
-  ]
+  books,
+  movies,
+  games,
+  music,
+  podcasts,
+  links: nature,
+  stretches: move,
+  nature,
+  walk: move,
+  eyes: nature,
+  creative,
+  outdoors: nature,
+  calm: nature,
 }
 
 export function pickImage(pool, key) {
-  const list = breakImagePools[pool] || breakImagePools.links
+  const list = breakImagePools[pool] || breakImagePools.nature
   let h = 0
   const s = String(key)
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0
