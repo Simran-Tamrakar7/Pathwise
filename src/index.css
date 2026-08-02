@@ -2457,3 +2457,143 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* —— Break Room extras + Cookbook —— */
+.break-spotlight,
+.daily-recipe {
+  margin: 1.5rem 0 2rem;
+  padding: 1.35rem 1.4rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent, var(--clay)) 35%, transparent);
+  border-left: 5px solid var(--accent, var(--clay));
+  background: color-mix(in srgb, var(--accent, var(--clay)) 8%, rgba(255, 255, 255, 0.7));
+}
+
+.break-spotlight h2,
+.daily-recipe h2 {
+  color: var(--forest);
+  margin: 0.2rem 0 0.35rem;
+}
+
+.breath-panel {
+  padding: 1.25rem 1.35rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--line);
+}
+
+.breath-cue {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--forest);
+  margin: 1rem 0 0.35rem;
+  min-height: 2.6rem;
+}
+
+.doodle-banner {
+  padding: 1.25rem 1.4rem;
+  border-radius: 14px;
+  background: linear-gradient(110deg, rgba(15, 118, 110, 0.12), rgba(180, 83, 9, 0.12));
+  border: 1px dashed rgba(11, 61, 46, 0.25);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.cookbook-subfilters {
+  margin-top: 0.5rem;
+}
+
+.cookbook-count {
+  color: var(--ink-soft);
+  margin: 0.75rem 0 1rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.recipe-card {
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 1.05rem;
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  background: rgba(255, 255, 255, 0.62);
+  border-top: 3px solid var(--accent);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.recipe-card:hover,
+.recipe-card.is-open {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.recipe-cuisine {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.recipe-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--forest);
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
+}
+
+.recipe-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.recipe-detail {
+  margin: 1.75rem 0 1rem;
+  padding: 1.35rem 1.4rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  background: rgba(255, 255, 255, 0.72);
+  scroll-margin-top: 5rem;
+}
+
+.recipe-detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+}
+
+.recipe-columns h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  margin-bottom: 0.65rem;
+}
+
+.recipe-steps .walk-step {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 720px) {
+  .recipe-columns {
+    grid-template-columns: 1fr;
+  }
+}

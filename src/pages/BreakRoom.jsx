@@ -1,12 +1,20 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   breakBooks,
+  breakBreaths,
+  breakDoodles,
   breakGames,
   breakLinks,
   breakModes,
   breakMovies,
+  breakMusic,
+  breakPodcasts,
   breakRituals,
+  breakSnacks,
+  breakStretches,
 } from '../data/breakRoom'
+import { recipeOfTheDay, recipes, recipeCuisines } from '../data/recipes'
 
 function formatTime(total) {
   const m = Math.floor(total / 60)
@@ -21,7 +29,13 @@ export default function BreakRoom() {
   const [running, setRunning] = useState(false)
   const [doneFlash, setDoneFlash] = useState(false)
   const [ritual] = useState(() => breakRituals[Math.floor(Math.random() * breakRituals.length)])
+  const [doodle] = useState(() => breakDoodles[Math.floor(Math.random() * breakDoodles.length)])
+  const [breathId, setBreathId] = useState(0)
+  const [breathStep, setBreathStep] = useState(0)
+  const [breathOn, setBreathOn] = useState(false)
   const endAt = useRef(null)
+  const daily = useMemo(() => recipeOfTheDay(), [])
+  const breath = breakBreaths[breathId]
 
   useEffect(() => {
     if (!running) return undefined
@@ -48,6 +62,14 @@ export default function BreakRoom() {
     }, 250)
     return () => clearInterval(id)
   }, [running])
+
+  useEffect(() => {
+    if (!breathOn) return undefined
+    const id = setInterval(() => {
+      setBreathStep((s) => (s + 1) % breath.steps.length)
+    }, 4000)
+    return () => clearInterval(id)
+  }, [breathOn, breath.steps.length])
 
   function pickMode(id) {
     const next = breakModes.find((m) => m.id === id)
@@ -78,11 +100,12 @@ export default function BreakRoom() {
 
   return (
     <div className="wrap break-page">
-      <header className="page-hero">
+      <header className="page-hero colorful-page-hero">
         <h1>Break Room</h1>
         <p>
-          Learning hard is a skill. Resting on purpose is too. Timer, books, films, games, and little
-          portals — then come back sharper.
+          Rest on purpose: timer, breath, stretches, books, films, games, music, doodles — plus a{' '}
+          <Link to="/cookbook">Cookbook</Link> with {recipes.length} recipes across {recipeCuisines.length}{' '}
+          cuisines.
         </p>
       </header>
 
@@ -102,7 +125,9 @@ export default function BreakRoom() {
         <p className={`timer-display${doneFlash ? ' done' : ''}`} aria-live="polite">
           {formatTime(remaining)}
         </p>
-        <p className="timer-kind">{mode.kind === 'focus' ? 'Focus block' : 'Rest block'} · {mode.label}</p>
+        <p className="timer-kind">
+          {mode.kind === 'focus' ? 'Focus block' : 'Rest block'} · {mode.label}
+        </p>
         <div className="hero-actions timer-actions">
           {!running ? (
             <button type="button" className="btn btn-primary" onClick={start}>
@@ -116,13 +141,119 @@ export default function BreakRoom() {
           <button type="button" className="btn btn-ghost" onClick={reset}>
             Reset
           </button>
+          <Link to="/cookbook" className="btn btn-ghost">
+            Open Cookbook
+          </Link>
         </div>
         {doneFlash && (
           <p className="timer-done-msg">
-            Time’s up. {mode.kind === 'focus' ? 'Take a real break.' : 'Pick a chapter and ship one small step.'}
+            Time’s up.{' '}
+            {mode.kind === 'focus'
+              ? 'Take a real break — cook, stretch, or breathe.'
+              : 'Pick a chapter and ship one small step.'}
           </p>
         )}
         <p className="ritual">Today’s micro-ritual: {ritual}</p>
+      </section>
+
+      <section className="break-spotlight" style={{ '--accent': daily.color }}>
+        <div>
+          <p className="break-kicker">Tonight’s plate · Cookbook</p>
+          <h2>{daily.name}</h2>
+          <p className="break-meta">
+            {daily.cuisineLabel} · {daily.minutes} min · {daily.difficulty}
+          </p>
+          <p>{daily.why}</p>
+          <div className="hero-actions">
+            <Link to="/cookbook" className="btn btn-primary">
+              Browse {recipes.length} recipes
+            </Link>
+            <Link to={`/cookbook?open=${daily.id}`} className="btn btn-ghost">
+              Open today’s recipe
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Breathe for a minute</h2>
+          <p>Interactive cue — follow the prompt, then return to the timer.</p>
+        </div>
+        <div className="breath-panel">
+          <div className="filters">
+            {breakBreaths.map((b, i) => (
+              <button
+                key={b.name}
+                type="button"
+                className={`filter-btn${breathId === i ? ' active' : ''}`}
+                onClick={() => {
+                  setBreathId(i)
+                  setBreathStep(0)
+                }}
+              >
+                {b.name}
+              </button>
+            ))}
+          </div>
+          <p className="breath-cue" aria-live="polite">
+            {breathOn ? breath.steps[breathStep] : 'Press start when ready'}
+          </p>
+          <p className="break-meta">~{breath.rounds} rounds · 4s per cue</p>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => {
+              setBreathOn((v) => !v)
+              setBreathStep(0)
+            }}
+          >
+            {breathOn ? 'Stop breath' : 'Start breath'}
+          </button>
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Desk stretch deck</h2>
+          <p>Pick two. Timer on Stretch 7 if you want structure.</p>
+        </div>
+        <div className="break-cards">
+          {breakStretches.map((s) => (
+            <article key={s.name} className="break-card">
+              <p className="break-kicker">Stretch</p>
+              <h3>{s.name}</h3>
+              <p className="break-meta">{s.reps}</p>
+              <p>{s.how}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Snack smarter</h2>
+          <p>Fuel without melting into the couch forever.</p>
+        </div>
+        <div className="break-cards">
+          {breakSnacks.map((s) => (
+            <article key={s.title} className="break-card">
+              <p className="break-kicker">Snack</p>
+              <h3>{s.title}</h3>
+              <p>{s.why}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Doodle prompt</h2>
+          <p>Two minutes with a pen beats doomscrolling.</p>
+        </div>
+        <div className="doodle-banner">
+          <p>{doodle}</p>
+        </div>
       </section>
 
       <section className="break-grid-section">
@@ -169,6 +300,38 @@ export default function BreakRoom() {
               <p className="break-kicker">Game</p>
               <h3>{g.title}</h3>
               <p>{g.why}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Music & ambience</h2>
+          <p>Background for focus or cooking — keep lyrics optional.</p>
+        </div>
+        <div className="break-cards">
+          {breakMusic.map((m) => (
+            <a key={m.title} className="break-card" href={m.url} target="_blank" rel="noreferrer">
+              <p className="break-kicker">Music</p>
+              <h3>{m.title}</h3>
+              <p>{m.why}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="break-grid-section">
+        <div className="section-head">
+          <h2>Podcasts (one episode max)</h2>
+          <p>Ears-only rest while you stretch or cook.</p>
+        </div>
+        <div className="break-cards">
+          {breakPodcasts.map((p) => (
+            <a key={p.title} className="break-card" href={p.url} target="_blank" rel="noreferrer">
+              <p className="break-kicker">Podcast</p>
+              <h3>{p.title}</h3>
+              <p>{p.why}</p>
             </a>
           ))}
         </div>

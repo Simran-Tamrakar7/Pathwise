@@ -19,6 +19,9 @@ export default function Nav() {
           <NavLink to="/break" className={({ isActive }) => (isActive ? 'active' : undefined)}>
             Break Room
           </NavLink>
+          <NavLink to="/cookbook" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+            Cookbook
+          </NavLink>
           <NavLink to="/break" className="nav-cta">
             Take a break
           </NavLink>
