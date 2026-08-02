@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom'
 import {
   breakBooks,
   breakBreaths,
+  breakCreative,
   breakDoodles,
+  breakEyes,
   breakGames,
+  breakLaughs,
   breakLinks,
+  breakMicroMoves,
   breakModes,
   breakMovies,
   breakMusic,
+  breakOutdoors,
   breakPodcasts,
   breakRituals,
-  breakSnacks,
+  breakSocial,
   breakStretches,
+  breakWalks,
 } from '../data/breakRoom'
 import { pickImage } from '../data/mediaImages'
 import { asset } from '../data/helpers'
@@ -51,6 +57,18 @@ function MediaCard({ href, kicker, title, meta, why, image, onClick }) {
   )
 }
 
+function Section({ title, lede, children }) {
+  return (
+    <section className="break-grid-section">
+      <div className="section-head">
+        <h2>{title}</h2>
+        <p>{lede}</p>
+      </div>
+      {children}
+    </section>
+  )
+}
+
 export default function BreakRoom() {
   const [modeId, setModeId] = useState('break5')
   const mode = breakModes.find((m) => m.id === modeId) || breakModes[2]
@@ -63,13 +81,13 @@ export default function BreakRoom() {
   const [breathStep, setBreathStep] = useState(0)
   const [breathOn, setBreathOn] = useState(false)
   const [mood, setMood] = useState('all')
-  const [stretchDone, setStretchDone] = useState(() => new Set())
+  const [doneSet, setDoneSet] = useState(() => new Set())
   const endAt = useRef(null)
   const breath = breakBreaths[breathId]
 
   const pct = mode.seconds ? Math.round(((mode.seconds - remaining) / mode.seconds) * 100) : 0
-  const r = 54
-  const circ = 2 * Math.PI * r
+  const ringR = 54
+  const circ = 2 * Math.PI * ringR
   const dash = circ - (pct / 100) * circ
 
   useEffect(() => {
@@ -115,22 +133,13 @@ export default function BreakRoom() {
     endAt.current = null
   }
 
-  function start() {
-    endAt.current = Date.now() + remaining * 1000
-    setDoneFlash(false)
-    setRunning(true)
-  }
-
-  function pause() {
-    setRunning(false)
-    endAt.current = null
-  }
-
-  function reset() {
-    setRunning(false)
-    setDoneFlash(false)
-    setRemaining(mode.seconds)
-    endAt.current = null
+  function toggleDone(key) {
+    setDoneSet((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
   }
 
   const show = useMemo(
@@ -139,6 +148,8 @@ export default function BreakRoom() {
       move: mood === 'all' || mood === 'move',
       watch: mood === 'all' || mood === 'watch',
       play: mood === 'all' || mood === 'play',
+      create: mood === 'all' || mood === 'create',
+      outside: mood === 'all' || mood === 'outside',
     }),
     [mood],
   )
@@ -151,17 +162,19 @@ export default function BreakRoom() {
           <p className="hero-kicker">Rest is part of the curriculum</p>
           <h1>Break Room</h1>
           <p>
-            Timer ring, breath cues, stretch checkoffs, books, films, games, music — tap a mood and
-            the room reshapes. Then go back to{' '}
-            <Link to="/manuals">manuals</Link> sharper.
+            Games, walks, eyes, breath, books, films, laughs, doodles, music — a full rest toolkit.
+            No kitchen here. Tap a mood to reshape the room, then return to{' '}
+            <Link to="/manuals">manuals</Link>.
           </p>
           <div className="mood-row" role="tablist" aria-label="Mood">
             {[
               { id: 'all', label: 'Everything' },
               { id: 'calm', label: 'Calm' },
               { id: 'move', label: 'Move' },
-              { id: 'watch', label: 'Watch' },
+              { id: 'outside', label: 'Outside' },
               { id: 'play', label: 'Play' },
+              { id: 'watch', label: 'Watch' },
+              { id: 'create', label: 'Create' },
             ].map((m) => (
               <button
                 key={m.id}
@@ -193,11 +206,11 @@ export default function BreakRoom() {
         </div>
         <div className="timer-ring-wrap">
           <svg className="timer-ring" viewBox="0 0 120 120" aria-hidden="true">
-            <circle cx="60" cy="60" r={r} className="timer-ring-track" />
+            <circle cx="60" cy="60" r={ringR} className="timer-ring-track" />
             <circle
               cx="60"
               cy="60"
-              r={r}
+              r={ringR}
               className={`timer-ring-progress${running ? ' running' : ''}`}
               style={{ strokeDasharray: `${circ}`, strokeDashoffset: dash }}
             />
@@ -211,15 +224,31 @@ export default function BreakRoom() {
         </p>
         <div className="hero-actions timer-actions">
           {!running ? (
-            <button type="button" className="btn btn-primary" onClick={start}>
+            <button type="button" className="btn btn-primary" onClick={() => {
+              endAt.current = Date.now() + remaining * 1000
+              setDoneFlash(false)
+              setRunning(true)
+            }}>
               Start
             </button>
           ) : (
-            <button type="button" className="btn btn-primary" onClick={pause}>
+            <button type="button" className="btn btn-primary" onClick={() => {
+              setRunning(false)
+              endAt.current = null
+            }}>
               Pause
             </button>
           )}
-          <button type="button" className="btn btn-ghost" onClick={reset}>
+          <button
+            type="button"
+            className="btn btn-ghost"
+            onClick={() => {
+              setRunning(false)
+              setDoneFlash(false)
+              setRemaining(mode.seconds)
+              endAt.current = null
+            }}
+          >
             Reset
           </button>
           <button
@@ -234,7 +263,7 @@ export default function BreakRoom() {
           <p className="timer-done-msg">
             Time’s up.{' '}
             {mode.kind === 'focus'
-              ? 'Take a real break — stretch, breathe, or watch something calm.'
+              ? 'Take a real break — stretch, walk, play one game, or breathe.'
               : 'Pick a chapter and ship one small step.'}
           </p>
         )}
@@ -242,11 +271,7 @@ export default function BreakRoom() {
       </section>
 
       {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Breathe for a minute</h2>
-            <p>Interactive cue — follow the prompt, then return to the timer.</p>
-          </div>
+        <Section title="Breathe for a minute" lede="Interactive cue — follow the prompt, then return to the timer.">
           <div className="breath-panel breath-panel-vivid">
             <div className={`breath-orb${breathOn ? ' pulse' : ''}`} aria-hidden="true" />
             <div className="filters">
@@ -279,70 +304,97 @@ export default function BreakRoom() {
               {breathOn ? 'Stop breath' : 'Start breath'}
             </button>
           </div>
-        </section>
+        </Section>
+      )}
+
+      {show.calm && (
+        <Section title="Eye care desk" lede="Screens steal moisture. Give your eyes a tiny holiday.">
+          <div className="media-grid">
+            {breakEyes.map((e) => (
+              <MediaCard
+                key={e.title}
+                kicker={doneSet.has(e.title) ? 'Done' : 'Eyes'}
+                title={e.title}
+                why={e.why}
+                image={pickImage('eyes', e.title)}
+                onClick={() => toggleDone(e.title)}
+              />
+            ))}
+          </div>
+        </Section>
       )}
 
       {show.move && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Desk stretch deck</h2>
-            <p>Tap to check off. Two is enough. Use Stretch 7 on the timer if you want structure.</p>
-          </div>
+        <Section title="Desk stretch deck" lede="Tap to check off. Two is enough. Use Stretch 7 on the timer if you want structure.">
           <div className="media-grid">
-            {breakStretches.map((s) => {
-              const done = stretchDone.has(s.name)
-              return (
-                <MediaCard
-                  key={s.name}
-                  kicker={done ? 'Done' : 'Stretch'}
-                  title={s.name}
-                  meta={s.reps}
-                  why={s.how}
-                  image={pickImage('stretches', s.name)}
-                  onClick={() => {
-                    setStretchDone((prev) => {
-                      const next = new Set(prev)
-                      if (next.has(s.name)) next.delete(s.name)
-                      else next.add(s.name)
-                      return next
-                    })
-                  }}
-                />
-              )
-            })}
-          </div>
-        </section>
-      )}
-
-      {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Snack smarter</h2>
-            <p>Fuel without melting into the couch forever.</p>
-          </div>
-          <div className="media-grid">
-            {breakSnacks.map((s) => (
-              <article key={s.title} className="media-card">
-                <div className="media-thumb">
-                  <img src={pickImage('snacks', s.title)} alt="" loading="lazy" />
-                  <span className="media-kicker">Snack</span>
-                </div>
-                <div className="media-body">
-                  <h3>{s.title}</h3>
-                  <p>{s.why}</p>
-                </div>
-              </article>
+            {breakStretches.map((s) => (
+              <MediaCard
+                key={s.name}
+                kicker={doneSet.has(s.name) ? 'Done' : 'Stretch'}
+                title={s.name}
+                meta={s.reps}
+                why={s.how}
+                image={pickImage('stretches', s.name)}
+                onClick={() => toggleDone(s.name)}
+              />
             ))}
           </div>
-        </section>
+        </Section>
       )}
 
-      {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Doodle prompt</h2>
-            <p>Two minutes with a pen beats doomscrolling.</p>
+      {show.move && (
+        <Section title="Micro-moves" lede="Thirty to sixty seconds. Circulation beats another scroll.">
+          <div className="media-grid">
+            {breakMicroMoves.map((m) => (
+              <MediaCard
+                key={m.title}
+                kicker={doneSet.has(m.title) ? 'Done' : 'Move'}
+                title={m.title}
+                why={m.why}
+                image={pickImage('walk', m.title)}
+                onClick={() => toggleDone(m.title)}
+              />
+            ))}
           </div>
+        </Section>
+      )}
+
+      {show.move && (
+        <Section title="Walk ideas" lede="Pair with Walk 20 on the timer. Leave the phone in your pocket.">
+          <div className="media-grid">
+            {breakWalks.map((w) => (
+              <MediaCard
+                key={w.title}
+                kicker="Walk"
+                title={w.title}
+                why={w.why}
+                image={pickImage('walk', w.title)}
+                onClick={() => toggleDone(w.title)}
+              />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {show.outside && (
+        <Section title="Outside / sensory" lede="If you can leave the chair — do. Nature is free software for the nervous system.">
+          <div className="media-grid">
+            {breakOutdoors.map((o) => (
+              <MediaCard
+                key={o.title}
+                kicker="Outside"
+                title={o.title}
+                why={o.why}
+                image={pickImage('outdoors', o.title)}
+                onClick={() => toggleDone(o.title)}
+              />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {show.create && (
+        <Section title="Doodle prompt" lede="Two minutes with a pen beats doomscrolling.">
           <div className="doodle-banner doodle-banner-rich">
             <p>{doodle}</p>
             <button
@@ -353,15 +405,79 @@ export default function BreakRoom() {
               Shuffle prompt
             </button>
           </div>
-        </section>
+        </Section>
+      )}
+
+      {show.create && (
+        <Section title="Creative micro-breaks" lede="Make something tiny. Ship nothing. Feel better.">
+          <div className="media-grid">
+            {breakCreative.map((c) => (
+              <MediaCard
+                key={c.title}
+                href={c.url}
+                kicker="Create"
+                title={c.title}
+                why={c.why}
+                image={pickImage('creative', c.title)}
+              />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {show.play && (
+        <Section title="Games that stretch thinking" lede={`${breakGames.length} picks. Cap it. Timer on. Fun is allowed — rabbit holes are optional.`}>
+          <div className="media-grid">
+            {breakGames.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Game"
+                title={g.title}
+                why={g.why}
+                image={pickImage('games', g.title)}
+              />
+            ))}
+          </div>
+        </Section>
       )}
 
       {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Books for a softer brain</h2>
-            <p>Not textbooks — ideas that make the next study block land better.</p>
+        <Section title="Laugh shelf" lede="One comic or clip. Close the tab after. Autoplay is the enemy.">
+          <div className="media-grid">
+            {breakLaughs.map((l) => (
+              <MediaCard
+                key={l.title}
+                href={l.url}
+                kicker="Laugh"
+                title={l.title}
+                why={l.why}
+                image={pickImage('creative', l.title)}
+              />
+            ))}
           </div>
+        </Section>
+      )}
+
+      {show.calm && (
+        <Section title="Social soft resets" lede="Humans regulate humans. Keep it light.">
+          <div className="media-grid">
+            {breakSocial.map((s) => (
+              <MediaCard
+                key={s.title}
+                kicker="Social"
+                title={s.title}
+                why={s.why}
+                image={pickImage('calm', s.title)}
+                onClick={() => toggleDone(s.title)}
+              />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {show.calm && (
+        <Section title="Books for a softer brain" lede="Not textbooks — ideas that make the next study block land better.">
           <div className="media-grid">
             {breakBooks.map((b) => (
               <MediaCard
@@ -375,15 +491,11 @@ export default function BreakRoom() {
               />
             ))}
           </div>
-        </section>
+        </Section>
       )}
 
       {show.watch && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Movies & docs</h2>
-            <p>Watch one. Rest means rest — not dual-monitor Netflix.</p>
-          </div>
+        <Section title="Movies & docs" lede="Watch one. Rest means rest — not dual-monitor binge.">
           <div className="media-grid">
             {breakMovies.map((m) => (
               <MediaCard
@@ -396,36 +508,11 @@ export default function BreakRoom() {
               />
             ))}
           </div>
-        </section>
-      )}
-
-      {show.play && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Games that stretch thinking</h2>
-            <p>Cap it. Timer on. Fun is allowed — rabbit holes are optional.</p>
-          </div>
-          <div className="media-grid">
-            {breakGames.map((g) => (
-              <MediaCard
-                key={g.title}
-                href={g.url}
-                kicker="Game"
-                title={g.title}
-                why={g.why}
-                image={pickImage('games', g.title)}
-              />
-            ))}
-          </div>
-        </section>
+        </Section>
       )}
 
       {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Music & ambience</h2>
-            <p>Background for focus — keep lyrics optional.</p>
-          </div>
+        <Section title="Music & ambience" lede="Background for focus — keep lyrics optional.">
           <div className="media-grid">
             {breakMusic.map((m) => (
               <MediaCard
@@ -438,15 +525,11 @@ export default function BreakRoom() {
               />
             ))}
           </div>
-        </section>
+        </Section>
       )}
 
       {show.calm && (
-        <section className="break-grid-section">
-          <div className="section-head">
-            <h2>Podcasts (one episode max)</h2>
-            <p>Ears-only rest while you stretch.</p>
-          </div>
+        <Section title="Podcasts (one episode max)" lede="Ears-only rest while you stretch or walk.">
           <div className="media-grid">
             {breakPodcasts.map((p) => (
               <MediaCard
@@ -459,15 +542,11 @@ export default function BreakRoom() {
               />
             ))}
           </div>
-        </section>
+        </Section>
       )}
 
-      <section className="break-grid-section" style={{ marginBottom: '4rem' }}>
-        <div className="section-head">
-          <h2>Quick portals</h2>
-          <p>Two-minute resets when you can’t do a full break.</p>
-        </div>
-        <div className="media-grid">
+      <Section title="Quick portals" lede="Two-minute resets when you can’t do a full break.">
+        <div className="media-grid" style={{ marginBottom: '3rem' }}>
           {breakLinks.map((l) => (
             <MediaCard
               key={l.title}
@@ -479,7 +558,7 @@ export default function BreakRoom() {
             />
           ))}
         </div>
-      </section>
+      </Section>
     </div>
   )
 }
