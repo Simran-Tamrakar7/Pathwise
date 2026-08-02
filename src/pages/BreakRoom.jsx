@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import {
   breakBooks,
   breakBreaths,
+  breakBizarre,
   breakChill,
   breakCreative,
   breakDoodles,
+  breakExplore,
   breakEyes,
   breakGames,
   breakLaughs,
@@ -17,10 +19,13 @@ import {
   breakMusic,
   breakOutdoors,
   breakPodcasts,
+  breakRetro,
   breakRituals,
   breakSocial,
   breakStretches,
   breakTeaRituals,
+  breakTeasers,
+  breakToys,
   breakWalks,
 } from '../data/breakRoom'
 import { categoryCover, pickImage } from '../data/mediaImages'
@@ -80,7 +85,7 @@ function Category({ id, title, lede, pool, count, open, onToggle, children }) {
   )
 }
 
-const DEFAULT_OPEN = new Set(['timer', 'chill', 'games', 'breath'])
+const DEFAULT_OPEN = new Set(['toys', 'explore', 'teasers', 'bizarre', 'retro'])
 
 export default function BreakRoom() {
   const [modeId, setModeId] = useState('break5')
@@ -168,6 +173,11 @@ export default function BreakRoom() {
   function expandAll() {
     setOpen(
       new Set([
+        'toys',
+        'explore',
+        'teasers',
+        'bizarre',
+        'retro',
         'chill',
         'tea',
         'breath',
@@ -203,9 +213,14 @@ export default function BreakRoom() {
 
   const categories = useMemo(
     () => [
+      { id: 'toys', title: 'Creative sandboxes', lede: 'Digital toys. Click, drag, mash keys. No homework.', pool: 'toys', count: breakToys.length },
+      { id: 'explore', title: 'Earth & trackers', lede: 'Globes, flights, radio, night sky — wander without leaving.', pool: 'explore', count: breakExplore.length },
+      { id: 'teasers', title: 'Quick games & teasers', lede: 'One round brain candy. Then close the tab.', pool: 'teasers', count: breakTeasers.length },
+      { id: 'bizarre', title: 'Weird & chill sites', lede: 'Useless, hilarious, oddly soothing.', pool: 'bizarre', count: breakBizarre.length },
+      { id: 'retro', title: 'Retro & archives', lede: 'Wayback machines and old-school browser games.', pool: 'retro', count: breakRetro.length },
       { id: 'chill', title: 'Chill zone', lede: 'Rain, cafés, fireplaces — press play and unclench.', pool: 'chill', count: breakChill.length },
       { id: 'tea', title: 'Tea & warm mugs', lede: 'Boil water. Hold the cup. That’s the whole quest.', pool: 'tea', count: breakTeaRituals.length },
-      { id: 'games', title: 'Games', lede: 'One round. Then we put the controller down. Maybe.', pool: 'games', count: breakGames.length },
+      { id: 'games', title: 'More games', lede: 'Extra rounds if you’re still wired.', pool: 'games', count: breakGames.length },
       { id: 'breath', title: 'Breath', lede: 'In. Out. The free version of a reset button.', pool: 'breath', count: breakBreaths.length },
       { id: 'eyes', title: 'Eye care', lede: 'Your eyeballs called. They want a vacation.', pool: 'eyes', count: breakEyes.length },
       { id: 'stretch', title: 'Stretches', lede: 'Two moves. Look ridiculous. Feel better.', pool: 'stretches', count: breakStretches.length },
@@ -235,8 +250,8 @@ export default function BreakRoom() {
           <p className="hero-kicker">Brain fried? Good. Come in.</p>
           <h1>Break Room</h1>
           <p>
-            Timers, silly games, rain sounds, tea, stretches that don’t feel like homework. Tap a mood. Pictures match
-            the thing — rain looks like rain. Then bounce back to <Link to="/manuals">manuals</Link> or{' '}
+            Sandboxes, Earth trackers, brain teasers, weird sites, and retro archives — open up top so you don’t scroll
+            forever. Timer still here if you need it. Then back to <Link to="/manuals">manuals</Link> or{' '}
             <Link to="/sparks">Sparks</Link>.
           </p>
           <div className="hero-actions">
@@ -363,6 +378,91 @@ export default function BreakRoom() {
             {c.title}
           </button>
         ))}
+      </div>
+
+      <div id="cat-toys">
+        <Category {...byId.toys} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakToys.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Toy"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('creative', g.title)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
+      <div id="cat-explore">
+        <Category {...byId.explore} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakExplore.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Explore"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('outdoors', g.title)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
+      <div id="cat-teasers">
+        <Category {...byId.teasers} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakTeasers.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Play"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('games', g.title)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
+      <div id="cat-bizarre">
+        <Category {...byId.bizarre} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakBizarre.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Weird"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('laugh', g.title)}
+              />
+            ))}
+          </div>
+        </Category>
+      </div>
+
+      <div id="cat-retro">
+        <Category {...byId.retro} open={open} onToggle={toggleCat}>
+          <div className="media-grid">
+            {breakRetro.map((g) => (
+              <MediaCard
+                key={g.title}
+                href={g.url}
+                kicker="Retro"
+                title={g.title}
+                why={g.why}
+                image={g.image || pickImage('games', g.title)}
+              />
+            ))}
+          </div>
+        </Category>
       </div>
 
       <div id="cat-chill">
