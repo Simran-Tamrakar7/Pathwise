@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getChapter } from '../data/manuals'
+import { getChapter, genres } from '../data/manuals'
+import VideoCard from '../components/VideoCard'
+import { videosForChapter } from '../data/learnMedia'
 import {
   isChapterDone,
   isChecklistChecked,
@@ -17,6 +19,13 @@ export default function Chapter() {
   useEffect(() => {
     setDone(isChapterDone(id, chapterId))
   }, [id, chapterId])
+
+  const chapterVideos = useMemo(() => {
+    if (!data) return []
+    const accent =
+      data.manual.accent || genres.find((g) => g.id === data.manual.category)?.color || '#0F766E'
+    return videosForChapter(data.chapter, accent)
+  }, [data])
 
   if (!data) {
     return (
@@ -84,6 +93,20 @@ export default function Chapter() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {chapterVideos.length > 0 && (
+        <section className="chapter-block chapter-watch">
+          <h2>Watch this first</h2>
+          <p className="lede" style={{ marginTop: 0 }}>
+            Short visual warm-up — then do the walkthrough with your hands.
+          </p>
+          <div className="video-grid compact-grid">
+            {chapterVideos.map((v) => (
+              <VideoCard key={v.youtubeId} {...v} compact />
+            ))}
+          </div>
         </section>
       )}
 
