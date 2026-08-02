@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { asset } from '../data/helpers'
+import StickyScene, { defaultStickies, playwrightCoverStickies } from './StickyScene'
 
 /**
  * One self-contained lesson step card.
@@ -15,6 +16,11 @@ export default function LessonCard({
   onPrev,
   onNext,
   onJump,
+  note = '',
+  onNoteChange,
+  feedback = null,
+  onFeedback,
+  sceneKey,
 }) {
   const [more, setMore] = useState(false)
   const [picked, setPicked] = useState(null)
@@ -26,12 +32,15 @@ export default function LessonCard({
     setShowResult(false)
   }, [stepIndex, step?.title])
 
-  const imgSrc = step.image?.src
-    ? step.image.src.startsWith('http')
-      ? step.image.src
-      : asset(step.image.src)
-    : asset(fallbackImage)
+  const imgPath = step.image?.src || fallbackImage
+  const imgSrc = imgPath.startsWith('http') ? imgPath : asset(imgPath)
   const imgAlt = step.image?.alt || step.title
+
+  const stickies = useMemo(() => {
+    if (step.image?.stickies?.length) return step.image.stickies
+    if (String(imgPath).includes('playwright-cover')) return playwrightCoverStickies
+    return defaultStickies(step)
+  }, [step, imgPath])
 
   const quizOk = step.quiz && picked !== null ? picked === step.quiz.answer : null
 
@@ -81,8 +90,8 @@ export default function LessonCard({
         </ul>
       )}
 
-      <div className="lesson-visual">
-        <img src={imgSrc} alt={imgAlt} loading="lazy" />
+      <div className="lesson-visual lesson-visual-sticky">
+        <StickyScene src={imgSrc} alt={imgAlt} stickies={stickies} sceneKey={sceneKey || `${imgPath}:${stepIndex}`} />
       </div>
 
       {step.resources?.length > 0 && (
@@ -167,6 +176,40 @@ export default function LessonCard({
         <p className="tip">
           <strong>Pro tip:</strong> {step.tip}
         </p>
+      )}
+
+      {onNoteChange && (
+        <label className="lesson-note">
+          <span className="lesson-note-label">Your note</span>
+          <textarea
+            value={note}
+            onChange={(e) => onNoteChange(e.target.value)}
+            rows={3}
+            placeholder="Jot something for future-you…"
+          />
+        </label>
+      )}
+
+      {onFeedback && (
+        <div className="lesson-feedback" role="group" aria-label="Was this step clear?">
+          <span>Was this step clear?</span>
+          <button
+            type="button"
+            className={`fb-btn${feedback === 'up' ? ' active' : ''}`}
+            onClick={() => onFeedback('up')}
+            aria-pressed={feedback === 'up'}
+          >
+            Yes
+          </button>
+          <button
+            type="button"
+            className={`fb-btn${feedback === 'down' ? ' active' : ''}`}
+            onClick={() => onFeedback('down')}
+            aria-pressed={feedback === 'down'}
+          >
+            Needs work
+          </button>
+        </div>
       )}
 
       <nav className="lesson-card-nav" aria-label="Lesson step">

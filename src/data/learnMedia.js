@@ -11,6 +11,15 @@ export const featuredVideos = [
     why: 'Official vibe check before you drown in docs.',
   },
   {
+    id: 'pw-codegen',
+    title: 'Playwright codegen & locators',
+    channel: 'Microsoft Playwright',
+    youtubeId: '4-LwodVujhQ',
+    topic: 'Automation',
+    color: '#0F766E',
+    why: 'Record once, then harden the selectors.',
+  },
+  {
     id: 'pytest-intro',
     title: 'pytest in 30 minutes (or less)',
     channel: 'Python Software Foundation / community classics',
@@ -18,6 +27,15 @@ export const featuredVideos = [
     topic: 'Python',
     color: '#A16207',
     why: 'Fixtures & asserts — the spine of Playwright Python.',
+  },
+  {
+    id: 'python-crash',
+    title: 'Python for beginners',
+    channel: 'freeCodeCamp',
+    youtubeId: 'rfscVS0vtbw',
+    topic: 'Python',
+    color: '#A16207',
+    why: 'Enough Python to read test code without panic.',
   },
   {
     id: 'git-crash',
@@ -29,6 +47,15 @@ export const featuredVideos = [
     why: 'Commit something tonight. Progress = history.',
   },
   {
+    id: 'git-branch',
+    title: 'Git branches & merge in practice',
+    channel: 'The Net Ninja',
+    youtubeId: 'QV0k6iLAdCM',
+    topic: 'Foundations',
+    color: '#15803D',
+    why: 'Branch fear drops after one visual walkthrough.',
+  },
+  {
     id: 'figma-start',
     title: 'Figma for beginners',
     channel: 'Figma',
@@ -36,6 +63,15 @@ export const featuredVideos = [
     topic: 'Design',
     color: '#B45309',
     why: 'Auto Layout clicks faster when you watch once.',
+  },
+  {
+    id: 'figma-auto',
+    title: 'Figma Auto Layout deep dive',
+    channel: 'Figma',
+    youtubeId: '1Y0f0X8qQZQ',
+    topic: 'Design',
+    color: '#B45309',
+    why: 'Spacing systems click after you see constraints.',
   },
   {
     id: 'agile-plain',
@@ -47,6 +83,15 @@ export const featuredVideos = [
     why: 'Ceremonies without cargo cult.',
   },
   {
+    id: 'scrum-vs',
+    title: 'Scrum vs Kanban (quick)',
+    channel: 'Development That Pays',
+    youtubeId: 'YdqhIScuY94',
+    topic: 'Delivery',
+    color: '#C2410C',
+    why: 'Pick a board style that matches your team’s chaos level.',
+  },
+  {
     id: 'a11y-intro',
     title: 'Web accessibility intro',
     channel: 'Google Chrome Developers',
@@ -54,6 +99,123 @@ export const featuredVideos = [
     topic: 'Quality',
     color: '#0369A1',
     why: 'Keyboard + contrast — QA wins friends here.',
+  },
+  {
+    id: 'a11y-devtools',
+    title: 'Accessibility in Chrome DevTools',
+    channel: 'Google Chrome Developers',
+    youtubeId: 'b0Q5Zp_EPs8',
+    topic: 'Quality',
+    color: '#0369A1',
+    why: 'Find issues before users file tickets.',
+  },
+  {
+    id: 'api-http',
+    title: 'HTTP Crash Course',
+    channel: 'Traversy Media',
+    youtubeId: 'iYM2zFP3Zn0',
+    topic: 'Foundations',
+    color: '#0F766E',
+    why: 'Status codes & methods for non-devs and testers.',
+  },
+  {
+    id: 'postman-start',
+    title: 'Postman beginners',
+    channel: 'Postman',
+    youtubeId: 'VywxIQ2ZXw4',
+    topic: 'Automation',
+    color: '#FF6C37',
+    why: 'Hit an API before you automate it.',
+  },
+  {
+    id: 'sql-basics',
+    title: 'SQL Tutorial — Full Database Course',
+    channel: 'freeCodeCamp',
+    youtubeId: 'HXV3zeQfcGE',
+    topic: 'Foundations',
+    color: '#A16207',
+    why: 'SELECT your way into data confidence.',
+  },
+  {
+    id: 'js-crash',
+    title: 'JavaScript crash course',
+    channel: 'Traversy Media',
+    youtubeId: 'hdI2bqOjy3c',
+    topic: 'Foundations',
+    color: '#F0DB4F',
+    why: 'Enough JS to read the web and write small scripts.',
+  },
+  {
+    id: 'react-intro',
+    title: 'React in 100 seconds',
+    channel: 'Fireship',
+    youtubeId: 'Tn6-PIqc4UM',
+    topic: 'Foundations',
+    color: '#0EA5E9',
+    why: 'Mental model before the long tutorial.',
+  },
+  {
+    id: 'css-grid',
+    title: 'CSS Grid in 100 seconds',
+    channel: 'Fireship',
+    youtubeId: '0YNjU_8qYeQ',
+    topic: 'Design',
+    color: '#B45309',
+    why: 'Layout vocabulary in one short hit.',
+  },
+  {
+    id: 'prompt-eng',
+    title: 'Prompt engineering intro',
+    channel: 'Google Cloud Tech',
+    youtubeId: '_Zvon4IqyPw',
+    topic: 'Foundations',
+    color: '#0D9488',
+    why: 'Clear asks beat mystical prompting.',
+  },
+  {
+    id: 'ci-cd',
+    title: 'CI/CD explained',
+    channel: 'IBM Technology',
+    youtubeId: 'scEDHsr3APg',
+    topic: 'Automation',
+    color: '#1D4ED8',
+    why: 'Why pipelines exist before you write YAML.',
+  },
+  {
+    id: 'docker-100',
+    title: 'Docker in 100 seconds',
+    channel: 'Fireship',
+    youtubeId: 'Gjnup-PuquQ',
+    topic: 'Foundations',
+    color: '#1D4ED8',
+    why: 'Containers without the enterprise fog.',
+  },
+  {
+    id: 'ux-research',
+    title: 'Usability testing basics',
+    channel: 'NN/g Nielsen Norman Group',
+    youtubeId: 'VzKUIXjlE3E',
+    topic: 'Design',
+    color: '#B45309',
+    why: 'Five users, real tasks, less guessing.',
+  },
+  {
+    id: 'writing-docs',
+    title: 'Write the docs people finish',
+    channel: 'Google Tech Writing',
+    youtubeId: 'AeumkP7rKAI',
+    topic: 'Delivery',
+    color: '#1D4ED8',
+    why: 'Docs are a product — watch once, write clearer.',
+  },
+  {
+    id: 'soft-feedback',
+    title: 'How to give feedback',
+    channel: 'Harvard Business Review',
+    youtubeId: 'wyt7vmkQcM0',
+    topic: 'Delivery',
+    color: '#15803D',
+    why: 'Soft skills that unstick hard projects.',
   },
 ]
 
@@ -88,10 +250,8 @@ export function extractYoutubeIds(source) {
     if (typeof u === 'string') urls.push(u)
     else if (u?.url) urls.push(u.url)
   }
-  // chapter-shaped
   source?.resources?.forEach?.(push)
   source?.links?.forEach?.(push)
-  // manual-shaped
   if (Array.isArray(source?.resources?.videos)) source.resources.videos.forEach(push)
   if (Array.isArray(source?.resources?.docs)) source.resources.docs.forEach(push)
   source?.chapters?.forEach((c) => {
@@ -153,3 +313,4 @@ export function videosForChapter(chapter, accent = '#0F766E') {
     )
   })
 }
+

@@ -30,6 +30,14 @@ import {
 } from '../data/breakRoom'
 import { categoryCover, pickImage } from '../data/mediaImages'
 import { asset } from '../data/helpers'
+import { manuals } from '../data/manuals'
+import {
+  quoteOfTheDay,
+  randomManual,
+  showcaseSeed,
+  triviaOfTheDay,
+} from '../data/breakPersonality'
+import { addShowcase, getShowcaseLocal } from '../lib/community'
 
 function formatTime(total) {
   const m = Math.floor(total / 60)
@@ -81,6 +89,125 @@ function Category({ id, title, lede, pool, count, open, onToggle, children }) {
         </span>
       </button>
       {expanded && <div className="break-cat-body">{children}</div>}
+    </section>
+  )
+}
+
+function BreakPersonality() {
+  const trivia = useMemo(() => triviaOfTheDay(), [])
+  const quote = useMemo(() => quoteOfTheDay(), [])
+  const [showAnswer, setShowAnswer] = useState(false)
+  const [local, setLocal] = useState(() => getShowcaseLocal())
+  const [name, setName] = useState('')
+  const [built, setBuilt] = useState('')
+  const [manualId, setManualId] = useState('playwright')
+  const [lucky, setLucky] = useState(null)
+
+  const showcase = useMemo(() => [...local, ...showcaseSeed].slice(0, 12), [local])
+
+  function onShowcase(e) {
+    e.preventDefault()
+    if (!built.trim()) return
+    addShowcase({ name, manualId, built })
+    setLocal(getShowcaseLocal())
+    setBuilt('')
+  }
+
+  function rollRandom() {
+    setLucky(randomManual(manuals))
+  }
+
+  return (
+    <section className="break-personality">
+      <div className="break-pers-grid">
+        <article className="break-pers-card">
+          <p className="break-kicker">Did you know?</p>
+          <h2>Tech trivia</h2>
+          <p className="break-pers-q">{trivia.q}</p>
+          {showAnswer ? (
+            <p className="break-pers-a">{trivia.a}</p>
+          ) : (
+            <button type="button" className="btn btn-ghost" onClick={() => setShowAnswer(true)}>
+              Reveal
+            </button>
+          )}
+        </article>
+
+        <article className="break-pers-card">
+          <p className="break-kicker">Quote of the day</p>
+          <h2>Learning fuel</h2>
+          <blockquote className="break-quote">“{quote.text}”</blockquote>
+          <p className="break-meta">— {quote.by}</p>
+        </article>
+
+        <article className="break-pers-card">
+          <p className="break-kicker">Feeling lucky?</p>
+          <h2>Random path</h2>
+          <p>Don’t decide — explore.</p>
+          <button type="button" className="btn btn-primary" onClick={rollRandom}>
+            Surprise me
+          </button>
+          {lucky && (
+            <p style={{ marginTop: '0.75rem' }}>
+              <Link to={`/manuals/${lucky.id}`} className="go">
+                {lucky.title} →
+              </Link>
+            </p>
+          )}
+        </article>
+      </div>
+
+      <div className="break-showcase">
+        <div className="section-head">
+          <h2>Community showcase</h2>
+          <p>What people built with a Pathwise manual — seeded examples plus your local notes.</p>
+        </div>
+        <ul className="showcase-list">
+          {showcase.map((s) => {
+            const m = manuals.find((x) => x.id === s.manualId)
+            return (
+              <li key={s.id}>
+                <strong>{s.name}</strong>
+                <span className="break-meta">
+                  {m ? <Link to={`/manuals/${m.id}`}>{m.title}</Link> : s.manualId} · {s.at}
+                </span>
+                <p>{s.built}</p>
+              </li>
+            )
+          })}
+        </ul>
+        <form className="showcase-form" onSubmit={onShowcase}>
+          <p className="break-kicker">Add yours (saved in this browser)</p>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            aria-label="Name"
+          />
+          <select value={manualId} onChange={(e) => setManualId(e.target.value)} aria-label="Manual">
+            {manuals
+              .slice()
+              .sort((a, b) => a.title.localeCompare(b.title))
+              .map((m) => (
+                <option key={m.id} value={m.id}>
+                  {m.title}
+                </option>
+              ))}
+          </select>
+          <textarea
+            required
+            rows={2}
+            placeholder="What you built…"
+            value={built}
+            onChange={(e) => setBuilt(e.target.value)}
+            aria-label="What you built"
+          />
+          <button type="submit" className="btn btn-primary">
+            Share locally
+          </button>
+        </form>
+      </div>
     </section>
   )
 }
@@ -363,6 +490,8 @@ export default function BreakRoom() {
         )}
         <p className="ritual">Today’s micro-ritual: {ritual}</p>
       </section>
+
+      <BreakPersonality />
 
       <div className="break-cat-jump">
         {categories.map((c) => (

@@ -1,11 +1,20 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getManual, genres } from '../data/manuals'
+import { getManual, genres, manuals } from '../data/manuals'
 import Roadmap from '../components/Roadmap'
 import VideoCard from '../components/VideoCard'
+import DocumentHead from '../components/DocumentHead'
+import RelatedPaths from '../components/RelatedPaths'
+import ManualComments from '../components/ManualComments'
 import { videosForManual } from '../data/learnMedia'
 import { countDone, getContinueChapter, isChapterDone } from '../lib/progress'
 import { groupPhases, phaseDetail } from '../lib/manualPhases'
+import { trackView } from '../lib/recent'
+import { isBookmarked, toggleBookmark } from '../lib/bookmarks'
+import { hasBadge } from '../lib/badges'
+import { downloadCertificate } from '../lib/certificate'
+import { tagsForManual, getTag } from '../data/tags'
+import { track } from '../lib/analytics'
 
 const TABS = [
   { id: 'path', label: 'Path' },
@@ -44,6 +53,15 @@ export default function Manual() {
   const [rev, setRev] = useState(0)
   const [tab, setTab] = useState('path')
   const [phaseIdx, setPhaseIdx] = useState(0)
+  const [bookmarked, setBookmarked] = useState(false)
+
+  useEffect(() => {
+    if (id) {
+      trackView(id)
+      setBookmarked(isBookmarked(id))
+      track('manual_view', { manualId: id })
+    }
+  }, [id])
 
   const progress = useMemo(() => {
     if (!manual) return null
@@ -80,12 +98,18 @@ export default function Manual() {
     setTab('phase')
   }
 
+  const tags = tagsForManual(manual)
+  const earned = hasBadge(manual.id)
+  const complete = (progress?.pct || 0) >= 100
+
   return (
     <div
       className="wrap manual-studio"
       style={{ '--accent': accent }}
       onFocus={() => setRev((n) => n + 1)}
     >
+      <DocumentHead title={manual.title} description={manual.tagline} />
+
       <p className="crumb">
         <Link to="/manuals">Manuals</Link>
         {' / '}
@@ -99,6 +123,35 @@ export default function Manual() {
           <p className="studio-sub">
             Interactive path — click phases, expand checkpoints, mark chapters done. {manual.tagline}
           </p>
+          <div className="manual-tag-row">
+            {tags.map((tid) => {
+              const t = getTag(tid)
+              return t ? (
+                <Link key={tid} to={`/tags/${tid}`} className="manual-tag" style={{ '--tag': t.color }}>
+                  {t.label}
+                </Link>
+              ) : null
+            })}
+          </div>
+          <div className="hero-actions">
+            <button
+              type="button"
+              className={`btn ${bookmarked ? 'btn-primary' : 'btn-ghost'}`}
+              onClick={() => setBookmarked(toggleBookmark(manual.id))}
+            >
+              {bookmarked ? 'Bookmarked ★' : 'Bookmark'}
+            </button>
+            {(complete || earned) && (
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => downloadCertificate({ title: manual.title, accent, learner: 'You' })}
+              >
+                Certificate PNG
+              </button>
+            )}
+            {earned && <span className="badge-pill">Path badge ✓</span>}
+          </div>
         </div>
         <img className="studio-cover" src={manual.coverUrl} alt="" />
       </header>
@@ -442,6 +495,9 @@ export default function Manual() {
           </div>
         </section>
       )}
+
+      <RelatedPaths manual={manual} all={manuals} />
+      <ManualComments manualId={manual.id} />
     </div>
   )
 }

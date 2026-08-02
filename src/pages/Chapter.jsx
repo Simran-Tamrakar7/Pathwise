@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getChapter, genres } from '../data/manuals'
+import { getChapter, genres, manuals } from '../data/manuals'
 import LessonCard from '../components/LessonCard'
 import VideoCard from '../components/VideoCard'
+import DocumentHead from '../components/DocumentHead'
+import RelatedPaths from '../components/RelatedPaths'
 import { videosForChapter } from '../data/learnMedia'
 import {
   isChapterDone,
@@ -10,6 +12,13 @@ import {
   setChapterDone,
   toggleChecklistItem,
 } from '../lib/progress'
+import { trackView } from '../lib/recent'
+import { getStepNote, setStepNote } from '../lib/notes'
+import { getStepFeedback, setStepFeedback } from '../lib/feedback'
+import { maybeUnlockPathBadge } from '../lib/badges'
+import { checkInToday } from '../lib/streak'
+import { track } from '../lib/analytics'
+import { downloadCertificate } from '../lib/certificate'
 
 export default function Chapter() {
   const { id, chapterId } = useParams()
@@ -17,10 +26,12 @@ export default function Chapter() {
   const [done, setDone] = useState(false)
   const [stepIndex, setStepIndex] = useState(0)
   const [, setTick] = useState(0)
+  const [badgeFlash, setBadgeFlash] = useState(null)
 
   useEffect(() => {
     setDone(isChapterDone(id, chapterId))
     setStepIndex(0)
+    if (id) trackView(id, chapterId)
   }, [id, chapterId])
 
   const chapterVideos = useMemo(() => {
@@ -49,10 +60,20 @@ export default function Chapter() {
   const safeIndex = Math.min(stepIndex, steps.length - 1)
   const step = steps[safeIndex]
   const pathPct = Math.round(((index + (safeIndex + 1) / steps.length) / manual.chapters.length) * 100)
+  const note = getStepNote(manual.id, chapter.id, safeIndex)
+  const feedback = getStepFeedback(manual.id, chapter.id, safeIndex)
+
+  function afterComplete() {
+    checkInToday()
+    track('chapter_complete', { manualId: manual.id, chapterId: chapter.id })
+    const badge = maybeUnlockPathBadge(manual)
+    if (badge) setBadgeFlash(badge)
+  }
 
   function markDone() {
     setChapterDone(manual.id, chapter.id, true)
     setDone(true)
+    afterComplete()
   }
 
   function markUndone() {
@@ -67,6 +88,11 @@ export default function Chapter() {
 
   return (
     <article className="wrap chapter-page chapter-card-mode">
+      <DocumentHead
+        title={`${chapter.title} — ${manual.title}`}
+        description={chapter.overview || manual.tagline}
+      />
+
       <p className="crumb">
         <Link to="/manuals">Manuals</Link>
         {' / '}
@@ -103,9 +129,20 @@ export default function Chapter() {
         pathPct={pathPct}
         accent={accent}
         fallbackImage={manual.cover || 'covers/playwright-cover.png'}
+        sceneKey={`${manual.id}:${chapter.id}:${safeIndex}`}
         onPrev={() => setStepIndex((i) => Math.max(0, i - 1))}
         onNext={goNextStep}
         onJump={setStepIndex}
+        note={note}
+        onNoteChange={(text) => {
+          setStepNote(manual.id, chapter.id, safeIndex, text)
+          setTick((t) => t + 1)
+        }}
+        feedback={feedback}
+        onFeedback={(value) => {
+          setStepFeedback(manual.id, chapter.id, safeIndex, value)
+          setTick((t) => t + 1)
+        }}
       />
 
       {chapter.learn?.length > 0 && (
@@ -168,13 +205,43 @@ export default function Chapter() {
           </button>
         ) : (
           <div className="complete-banner">
-            <p>Chapter locked in. Nice.</p>
+            <p>Chapter locked in. Nice. Streak checked in for today.</p>
             <button type="button" className="btn btn-ghost" onClick={markUndone}>
               Undo
             </button>
           </div>
         )}
       </section>
+
+      {badgeFlash && (
+        <div className="badge-toast">
+          <p>
+            <strong>Path badge unlocked:</strong> {badgeFlash.title}
+          </p>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() =>
+              downloadCertificate({ title: manual.title, accent, learner: 'You' })
+            }
+          >
+            Download certificate
+          </button>
+        </div>
+      )}
+
+      {!next && done && (
+        <div className="badge-toast">
+          <p>Last chapter — grab a shareable certificate if you finished the path.</p>
+          <button
+            type="button"
+            className="btn btn-ghost"
+            onClick={() => downloadCertificate({ title: manual.title, accent, learner: 'You' })}
+          >
+            Certificate PNG
+          </button>
+        </div>
+      )}
 
       <nav className="chapter-nav" aria-label="Chapter">
         {prev ? (
@@ -203,6 +270,8 @@ export default function Chapter() {
           </Link>
         )}
       </nav>
+
+      {!next && <RelatedPaths manual={manual} all={manuals} />}
     </article>
   )
 }

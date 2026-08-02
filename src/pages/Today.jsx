@@ -1,21 +1,37 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { manuals } from '../data/manuals'
+import { manuals, getManual } from '../data/manuals'
 import { countDone, getContinueChapter } from '../lib/progress'
 import { checkInToday, getStreak, sparkDoneCount } from '../lib/streak'
 import { sparkOfTheDay } from '../data/sparks'
 import { recipeOfTheDay } from '../data/recipes'
 import { asset } from '../data/helpers'
+import DocumentHead from '../components/DocumentHead'
+import { listBadges } from '../lib/badges'
+import { getRecent } from '../lib/recent'
+import { getBookmarks } from '../lib/bookmarks'
 
 export default function Today() {
   const [streak, setStreak] = useState(() => getStreak())
   const spark = useMemo(() => sparkOfTheDay(), [])
   const recipe = useMemo(() => recipeOfTheDay(), [])
+  const badges = listBadges()
+  const bookmarks = [...getBookmarks()].length
+
+  const recent = getRecent()[0]
+  const recentManual = recent ? getManual(recent.manualId) : null
+  const continueFromRecent =
+    recentManual && recent?.chapterId
+      ? recentManual.chapters.find((c) => c.id === recent.chapterId)
+      : recentManual
+        ? getContinueChapter(recentManual)
+        : null
+
   const pw = manuals.find((m) => m.id === 'playwright')
-  const continueCh = pw ? getContinueChapter(pw) : null
+  const continueCh = continueFromRecent || (pw ? getContinueChapter(pw) : null)
+  const continueManual = recentManual || pw
   const pwProg = pw ? countDone(pw.id, pw.chapters.length) : null
   const sparksDone = sparkDoneCount()
-
   const started = manuals.filter((m) => countDone(m.id, m.chapters.length).done > 0).length
 
   function onCheckIn() {
@@ -28,30 +44,38 @@ export default function Today() {
     day: 'numeric',
   })
 
+  const streakLabel =
+    streak.count === 0
+      ? 'days in a row'
+      : streak.count === 1
+        ? 'day in a row'
+        : 'days in a row'
+
   return (
     <div className="wrap today-page">
+      <DocumentHead title="Today" description="Your Pathwise daily hub — streak, continue, spark, cook, break." />
+
       <header className="today-hero">
         <div className="today-hero-copy">
           <p className="hero-kicker">{dateLabel}</p>
           <h1>Today</h1>
           <p className="lede">
-            One place to continue learning, spark a drill, take a break, or cook — and keep a streak without the guilt
-            trip.
+            Show up once. Finish a chapter and the streak checks itself. Miss a day? Start again — no guilt trip.
           </p>
         </div>
         <div className="streak-card">
-          <p className="break-kicker">Streak</p>
+          <p className="break-kicker">In a row</p>
           <p className="streak-count">{streak.count}</p>
-          <p className="streak-label">{streak.count === 1 ? 'day' : 'days'}</p>
+          <p className="streak-label">{streakLabel}</p>
           <button
             type="button"
             className={`btn ${streak.checkedToday ? 'btn-ghost' : 'btn-primary'}`}
             onClick={onCheckIn}
             disabled={streak.checkedToday}
           >
-            {streak.checkedToday ? 'Checked in ✓' : 'Check in for today'}
+            {streak.checkedToday ? 'Already counted today ✓' : 'Check in for today'}
           </button>
-          <p className="streak-hint">Show up once a day. Miss a day? Streak resets — start again.</p>
+          <p className="streak-hint">Completing a chapter also checks you in.</p>
         </div>
       </header>
 
@@ -61,8 +85,12 @@ export default function Today() {
           <span>manuals started</span>
         </div>
         <div className="today-stat">
-          <strong>{pwProg?.pct ?? 0}%</strong>
-          <span>Playwright done</span>
+          <strong>{badges.length}</strong>
+          <span>path badges</span>
+        </div>
+        <div className="today-stat">
+          <strong>{bookmarks}</strong>
+          <span>bookmarks</span>
         </div>
         <div className="today-stat">
           <strong>{sparksDone}</strong>
@@ -72,12 +100,20 @@ export default function Today() {
 
       <div className="today-grid">
         <Link
-          to={continueCh && pw ? `/manuals/playwright/chapters/${continueCh.id}` : '/manuals/playwright'}
+          to={
+            continueCh && continueManual
+              ? `/manuals/${continueManual.id}/chapters/${continueCh.id}`
+              : '/manuals/playwright'
+          }
           className="today-tile today-tile-learn"
         >
-          <p className="break-kicker">Continue</p>
+          <p className="break-kicker">Jump back in</p>
           <h2>{continueCh ? continueCh.title : 'Playwright with Python'}</h2>
-          <p>{continueCh?.overview || 'Start the flagship path.'}</p>
+          <p>
+            {continueManual && continueCh
+              ? `${continueManual.title} · ${continueCh.overview || 'Pick up the next chapter.'}`
+              : 'Start the flagship path.'}
+          </p>
           <span className="go">Open chapter →</span>
         </Link>
 
@@ -111,16 +147,37 @@ export default function Today() {
         </Link>
       </div>
 
+      {badges.length > 0 && (
+        <section className="today-mix">
+          <h2>Badges</h2>
+          <div className="badge-row">
+            {badges.slice(0, 6).map((b) => (
+              <Link key={b.manualId} to={`/manuals/${b.manualId}`} className="badge-card">
+                <strong>{b.title}</strong>
+                <small>Completed</small>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="today-mix">
         <h2>Room doors</h2>
         <div className="today-doors">
           <Link to="/manuals">Manuals</Link>
+          <Link to="/tags">Tags</Link>
           <Link to="/sparks">Sparks</Link>
           <Link to="/break">Break</Link>
           <Link to="/cookbook">Cookbook</Link>
-          <Link to="/">Home</Link>
+          <Link to="/insights">Insights</Link>
         </div>
       </section>
+
+      {pwProg && pwProg.done > 0 && (
+        <p className="streak-hint" style={{ marginTop: '1rem' }}>
+          Playwright progress: {pwProg.pct}%
+        </p>
+      )}
     </div>
   )
 }
