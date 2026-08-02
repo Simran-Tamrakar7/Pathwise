@@ -25,6 +25,54 @@ function dishImage(recipe, way) {
   return way?.image || recipe.image || imageForRecipe(recipe)
 }
 
+function NutritionLabel({ n, dishName }) {
+  if (!n) return null
+  const row = (label, value, bold) => (
+    <div className={`nf-row${bold ? ' nf-bold' : ''}`}>
+      <span>{label}</span>
+      <span>{value}</span>
+    </div>
+  )
+  return (
+    <aside className="nutrition-label" aria-label={`Nutrition facts for ${dishName}`}>
+      <p className="nf-title">Nutrition Facts</p>
+      <p className="nf-servings">{n.servingsPerContainer} servings per container</p>
+      <div className="nf-serving-size">
+        <strong>Serving size</strong>
+        <strong>{n.servingSize}</strong>
+      </div>
+      <div className="nf-calories">
+        <span>Amount per serving</span>
+        <div className="nf-cal-line">
+          <strong>Calories</strong>
+          <strong className="nf-cal-num">{n.calories}</strong>
+        </div>
+      </div>
+      <p className="nf-dv">% Daily Value*</p>
+      {row('Total Fat', `${n.totalFat}g`, true)}
+      {row('  Saturated Fat', `${n.saturatedFat}g`)}
+      {row('  Trans Fat', `${n.transFat}g`)}
+      {row('Cholesterol', `${n.cholesterol}mg`, true)}
+      {row('Sodium', `${n.sodium}mg`, true)}
+      {row('Total Carbohydrate', `${n.totalCarbohydrate}g`, true)}
+      {row('  Dietary Fiber', `${n.dietaryFiber}g`)}
+      {row('  Total Sugars', `${n.totalSugars}g`)}
+      {row('    Includes Added Sugars', `${n.addedSugars}g`)}
+      {row('Protein', `${n.protein}g`, true)}
+      {(n.calcium != null || n.iron != null || n.potassium != null || n.vitaminC != null) && (
+        <div className="nf-micros">
+          {n.calcium != null && <span>Calcium {n.calcium}mg</span>}
+          {n.iron != null && <span>Iron {n.iron}mg</span>}
+          {n.potassium != null && <span>Potassium {n.potassium}mg</span>}
+          {n.vitaminC != null && <span>Vitamin C {n.vitaminC}mg</span>}
+        </div>
+      )}
+      <p className="nf-note">{n.note}</p>
+      <p className="nf-footnote">*2,000 calories a day is used for general nutrition advice.</p>
+    </aside>
+  )
+}
+
 export default function Cookbook() {
   const [params] = useSearchParams()
   const [cuisine, setCuisine] = useState('all')
@@ -122,8 +170,8 @@ export default function Cookbook() {
           <p className="hero-kicker">Cook · eat · learn again</p>
           <h1>Pathwise Cookbook</h1>
           <p>
-            {recipes.length} dishes · {wayCount} cooking ways · dish-matched photos · YouTube ideas per plate. Same
-            recipe, different moods — healthy, with oil, classic, busy-day.
+            {recipes.length} dishes · {wayCount} cooking ways · Nutrition Facts on every way · YouTube ideas. Same
+            plate, different moods (healthy / oil / classic). Food Hero kitchen shelf included.
           </p>
           <div className="hero-actions">
             <button type="button" className="btn btn-primary" onClick={surprise}>
@@ -277,6 +325,7 @@ export default function Cookbook() {
                 {way.minutes} min · {way.difficulty} · serves {open.servings} · {open.meal}
               </p>
               <p>{open.why}</p>
+              {open.credit && <p className="recipe-credit">{open.credit}</p>}
             </div>
             <div className="hero-actions">
               <button type="button" className="btn btn-ghost" onClick={(e) => toggleFav(open.id, e)}>
@@ -340,7 +389,7 @@ export default function Cookbook() {
             </div>
           </div>
 
-          <div className="recipe-columns">
+          <div className="recipe-columns recipe-columns-3">
             <div>
               <h3>Ingredients · {way.label}</h3>
               <ul className="learn-list checkable-ing">
@@ -369,6 +418,7 @@ export default function Cookbook() {
                 <strong>Cook tip:</strong> {way.tip}
               </p>
             </div>
+            <NutritionLabel n={way.nutrition} dishName={`${open.name} (${way.label})`} />
           </div>
         </section>
       )}
@@ -376,7 +426,10 @@ export default function Cookbook() {
       <section className="cook-resources" id="cook-resources">
         <div className="section-head">
           <h2>Kitchen resources</h2>
-          <p>Sites and channels that make Pathwise recipes land better — watch one, then cook.</p>
+          <p>
+            Food Hero–style cooking: simple tools, leftovers within 1–2 hours, and labels that estimate — not
+            lecture.
+          </p>
         </div>
         <div className="media-grid">
           {cookResources.map((r) => (

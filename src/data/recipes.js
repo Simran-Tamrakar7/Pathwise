@@ -3,6 +3,11 @@ export { imageForRecipe, cookResources, cookTips } from './foodImages.js'
 
 export const recipeCuisines = [
   {
+    "id": "food-hero",
+    "label": "Food Hero kitchen",
+    "color": "#15803D"
+  },
+  {
     "id": "italian",
     "label": "Italian",
     "color": "#C2410C"
@@ -66,6 +71,887 @@ export const recipeCuisines = [
 
 export const recipes = [
   {
+    "id": "fh-apple-spice-oatmeal",
+    "name": "Apple Spice Oatmeal",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "breakfast",
+    "servings": 2,
+    "tags": [
+      "oatmeal",
+      "apple",
+      "breakfast",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero (Oregon State University Extension) — foodhero.org",
+    "why": "Warm oats + apple chunks. Pantry spices. Make it yours with raisins or nuts on top.",
+    "image": "https://images.unsplash.com/photo-1495214783159-31855f5e1f79?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Oatmeal walkthrough",
+        "url": "https://www.youtube.com/results?search_query=apple%20cinnamon%20oatmeal%20stove"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Stovetop classic",
+        "blurb": "Milk or water, apple in the pot, cinnamon finish.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "2 cups nonfat or 1% milk (or water)",
+          "1 cup quick or old-fashioned oats",
+          "⅛ tsp salt",
+          "1 apple, cored and chopped",
+          "⅛ tsp cinnamon",
+          "1 Tbsp brown sugar",
+          "Pinch nutmeg (optional)"
+        ],
+        "steps": [
+          "Bring milk or water to a boil.",
+          "Add oats, salt, and apple. Cook 1 min (quick) or 7–10 min (old-fashioned), stirring.",
+          "Off heat, stir in cinnamon, brown sugar, and nutmeg.",
+          "Split into two bowls. Add dried fruit or nuts if you want."
+        ],
+        "tip": "Leftovers: chill within 1–2 hours; reheat with a splash of milk.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 cup (392g)",
+          "calories": 360,
+          "totalFat": 6,
+          "saturatedFat": 2,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 280,
+          "totalCarbohydrate": 61,
+          "dietaryFiber": 7,
+          "totalSugars": 29,
+          "addedSugars": 7,
+          "protein": 16,
+          "potassium": 107,
+          "vitaminC": 5,
+          "calcium": null,
+          "iron": null,
+          "note": "Adapted from Food Hero nutrition estimates. Optional toppings not included."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "Water + less sugar",
+        "blurb": "Use water, skip most sugar, load cinnamon.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "2 cups water",
+          "1 cup oats",
+          "1 apple",
+          "Cinnamon",
+          "1 tsp honey or none"
+        ],
+        "steps": [
+          "Boil water",
+          "Cook oats + apple",
+          "Cinnamon finish",
+          "Optional tiny honey"
+        ],
+        "tip": "Ripe apple = less need for sugar.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 cup",
+          "calories": 220,
+          "totalFat": 3,
+          "saturatedFat": 0.5,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 80,
+          "totalCarbohydrate": 44,
+          "dietaryFiber": 7,
+          "totalSugars": 12,
+          "addedSugars": 0,
+          "protein": 7,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "rich",
+        "label": "With nuts + milk",
+        "blurb": "Whole milk vibe + chopped walnuts.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Milk",
+          "Oats",
+          "Apple",
+          "2 Tbsp walnuts",
+          "Brown sugar"
+        ],
+        "steps": [
+          "Cook classic",
+          "Top with walnuts"
+        ],
+        "tip": "Toast nuts 2 minutes in a dry pan for crunch.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 cup",
+          "calories": 420,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 20,
+          "sodium": 290,
+          "totalCarbohydrate": 62,
+          "dietaryFiber": 8,
+          "totalSugars": 30,
+          "addedSugars": 7,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 15,
+    "difficulty": "easy"
+  },
+  {
+    "id": "fh-any-berry-smoothie",
+    "name": "Berry Spinach Smoothie",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "breakfast",
+    "servings": 4,
+    "tags": [
+      "smoothie",
+      "berry",
+      "spinach",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero smoothie patterns — foodhero.org",
+    "why": "Fruit + yogurt + greens. Blender does the work. Ice optional.",
+    "image": "https://images.unsplash.com/photo-1505253216199-d4e4c2a4bcd0?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Smoothie",
+        "url": "https://www.youtube.com/results?search_query=spinach%20berry%20smoothie%20recipe"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Orange–pineapple–spinach",
+        "blurb": "Bright juice base with banana and spinach.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "1 cup orange juice",
+          "½ cup pineapple juice",
+          "½ cup low-fat yogurt",
+          "1 banana",
+          "2 cups spinach",
+          "Ice optional"
+        ],
+        "steps": [
+          "Dump in blender",
+          "Blend until smooth",
+          "Pour 4 cups"
+        ],
+        "tip": "Freeze banana chunks ahead for thicker texture.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "1 cup (241g)",
+          "calories": 90,
+          "totalFat": 0.5,
+          "saturatedFat": 0,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 35,
+          "totalCarbohydrate": 20,
+          "dietaryFiber": 1,
+          "totalSugars": 15,
+          "addedSugars": 0,
+          "protein": 3,
+          "potassium": null,
+          "vitaminC": 42,
+          "calcium": 77,
+          "iron": null,
+          "note": "Food Hero–style estimate for a similar smoothie cup."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "Yogurt-heavy · less juice",
+        "blurb": "More yogurt, water to thin, berries instead of juice.",
+        "minutes": 10,
+        "difficulty": "easy",
+        "ingredients": [
+          "1 cup yogurt",
+          "1 cup berries",
+          "Spinach",
+          "Water",
+          "Banana half"
+        ],
+        "steps": [
+          "Blend",
+          "Thin with water"
+        ],
+        "tip": "Frozen berries = no ice needed.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 cup",
+          "calories": 140,
+          "totalFat": 2,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 70,
+          "totalCarbohydrate": 24,
+          "dietaryFiber": 4,
+          "totalSugars": 16,
+          "addedSugars": 0,
+          "protein": 9,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "pumpkin",
+        "label": "Idea · pumpkin spice sip",
+        "blurb": "Yogurt + canned pumpkin + cinnamon (Food Hero dip energy, drinkable).",
+        "minutes": 5,
+        "difficulty": "easy",
+        "ingredients": [
+          "Yogurt",
+          "Canned pumpkin",
+          "Brown sugar tsp",
+          "Cinnamon"
+        ],
+        "steps": [
+          "Stir or blend",
+          "Serve cold"
+        ],
+        "tip": "Great with apple slices as a dip too.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "½ cup",
+          "calories": 70,
+          "totalFat": 1,
+          "saturatedFat": 0.5,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 40,
+          "totalCarbohydrate": 12,
+          "dietaryFiber": 1,
+          "totalSugars": 9,
+          "addedSugars": 3,
+          "protein": 3,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 10,
+    "difficulty": "easy"
+  },
+  {
+    "id": "fh-cowboy-salad",
+    "name": "Cowboy Salad",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "lunch",
+    "servings": 6,
+    "tags": [
+      "beans",
+      "salad",
+      "no-cook",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero Cowboy Salad — foodhero.org",
+    "why": "Beans, corn, veggies, lime. No stove. Packs for campus days.",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Bean salad",
+        "url": "https://www.youtube.com/results?search_query=cowboy%20caviar%20bean%20salad"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Classic bean salad",
+        "blurb": "Rinse canned beans well; lime + oil dressing.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "2 cans beans (black/pinto), rinsed",
+          "1 cup corn (canned/frozen/thawed)",
+          "Tomato, onion, cilantro",
+          "Lime juice",
+          "1–2 Tbsp oil",
+          "Salt, chili powder"
+        ],
+        "steps": [
+          "Drain/rinse beans",
+          "Chop veg",
+          "Toss with lime, oil, spices",
+          "Chill 15 min"
+        ],
+        "tip": "Drain beans in a strainer — less sodium mush.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 cup",
+          "calories": 210,
+          "totalFat": 5,
+          "saturatedFat": 0.5,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 280,
+          "totalCarbohydrate": 32,
+          "dietaryFiber": 9,
+          "totalSugars": 4,
+          "addedSugars": 0,
+          "protein": 10,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "No-oil lime toss",
+        "blurb": "Skip oil; extra lime, cumin, salsa splash.",
+        "minutes": 15,
+        "difficulty": "easy",
+        "ingredients": [
+          "Beans",
+          "Corn",
+          "Veg",
+          "Lime",
+          "Salsa"
+        ],
+        "steps": [
+          "Mix",
+          "Taste salt last"
+        ],
+        "tip": "Still tastes bright — acid does the heavy lifting.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 cup",
+          "calories": 170,
+          "totalFat": 1,
+          "saturatedFat": 0,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 260,
+          "totalCarbohydrate": 31,
+          "dietaryFiber": 9,
+          "totalSugars": 4,
+          "addedSugars": 0,
+          "protein": 10,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "avocado",
+        "label": "With avocado",
+        "blurb": "Cube avocado right before serving.",
+        "minutes": 20,
+        "difficulty": "easy",
+        "ingredients": [
+          "Cowboy base",
+          "1 avocado"
+        ],
+        "steps": [
+          "Make classic",
+          "Fold avocado gently"
+        ],
+        "tip": "Lime on avocado slows browning.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 cup",
+          "calories": 260,
+          "totalFat": 11,
+          "saturatedFat": 1.5,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 280,
+          "totalCarbohydrate": 34,
+          "dietaryFiber": 11,
+          "totalSugars": 4,
+          "addedSugars": 0,
+          "protein": 10,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 20,
+    "difficulty": "easy"
+  },
+  {
+    "id": "fh-white-chicken-chili",
+    "name": "White Chicken Chili",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "dinner",
+    "servings": 8,
+    "tags": [
+      "chili",
+      "chicken",
+      "beans",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero White Chicken Chili — foodhero.org",
+    "why": "One pot, beans + chicken, mild spices. Freezes well for study weeks.",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "White chili",
+        "url": "https://www.youtube.com/results?search_query=white%20chicken%20chili%20easy"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Stovetop pot",
+        "blurb": "Sauté onion, simmer beans and chicken.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "Onion, garlic",
+          "Cooked shredded chicken (or canned)",
+          "2 cans white beans",
+          "Broth",
+          "Cumin, chili powder",
+          "1 Tbsp oil"
+        ],
+        "steps": [
+          "Sauté onion in oil",
+          "Add spices",
+          "Beans + broth + chicken",
+          "Simmer 20 min",
+          "Mash a few beans to thicken"
+        ],
+        "tip": "Broth or bouillon both work — watch salt.",
+        "nutrition": {
+          "servingsPerContainer": 8,
+          "servingSize": "1 cup",
+          "calories": 220,
+          "totalFat": 5,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 480,
+          "totalCarbohydrate": 24,
+          "dietaryFiber": 6,
+          "totalSugars": 2,
+          "addedSugars": 0,
+          "protein": 20,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "Extra veg · less oil",
+        "blurb": "Zucchini/peppers, spray oil, low-sodium broth.",
+        "minutes": 40,
+        "difficulty": "easy",
+        "ingredients": [
+          "Chili base",
+          "Extra veg",
+          "Low-sodium broth"
+        ],
+        "steps": [
+          "Same method",
+          "Load veg"
+        ],
+        "tip": "Greek yogurt dollop instead of sour cream.",
+        "nutrition": {
+          "servingsPerContainer": 8,
+          "servingSize": "1 cup",
+          "calories": 190,
+          "totalFat": 3,
+          "saturatedFat": 0.5,
+          "transFat": 0,
+          "cholesterol": 30,
+          "sodium": 320,
+          "totalCarbohydrate": 22,
+          "dietaryFiber": 7,
+          "totalSugars": 0,
+          "addedSugars": 0,
+          "protein": 19,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "loaded",
+        "label": "With cheese + tortilla strips",
+        "blurb": "Bake tortilla strips; cheese on top.",
+        "minutes": 45,
+        "difficulty": "easy",
+        "ingredients": [
+          "Chili",
+          "Cheese",
+          "Corn tortillas"
+        ],
+        "steps": [
+          "Make chili",
+          "Bake strips",
+          "Top bowls"
+        ],
+        "tip": "Cut tortillas, mist oil, 350°F until crisp.",
+        "nutrition": {
+          "servingsPerContainer": 8,
+          "servingSize": "1 cup + toppings",
+          "calories": 310,
+          "totalFat": 12,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 45,
+          "sodium": 620,
+          "totalCarbohydrate": 30,
+          "dietaryFiber": 6,
+          "totalSugars": 0,
+          "addedSugars": 0,
+          "protein": 24,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 40,
+    "difficulty": "easy"
+  },
+  {
+    "id": "fh-favorite-pancakes",
+    "name": "Favorite Pancakes",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "breakfast",
+    "servings": 4,
+    "tags": [
+      "pancakes",
+      "breakfast",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero Favorite Pancakes — foodhero.org",
+    "why": "Basic batter, freezer-friendly. Berry sauce on the side if you want fancy.",
+    "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Pancakes",
+        "url": "https://www.youtube.com/results?search_query=homemade%20pancakes%20fluffy"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Skillet classic",
+        "blurb": "Mix dry, mix wet, don’t over-stir.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Flour",
+          "Baking powder",
+          "Milk",
+          "Egg",
+          "Oil",
+          "Salt",
+          "Sugar"
+        ],
+        "steps": [
+          "Whisk dry",
+          "Whisk wet",
+          "Combine gently",
+          "Cook medium heat",
+          "Flip once bubbly"
+        ],
+        "tip": "Make ahead: cool, freeze between parchment.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "2 (4-in) pancakes (134g)",
+          "calories": 270,
+          "totalFat": 9,
+          "saturatedFat": 1.5,
+          "transFat": 0,
+          "cholesterol": 50,
+          "sodium": 560,
+          "totalCarbohydrate": 37,
+          "dietaryFiber": 1,
+          "totalSugars": 7,
+          "addedSugars": 3,
+          "protein": 8,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": 301,
+          "iron": 2,
+          "note": "Aligned with Food Hero–style pancake label estimates."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "Whole-wheat · less oil",
+        "blurb": "Half whole wheat; nonstick spray.",
+        "minutes": 25,
+        "difficulty": "easy",
+        "ingredients": [
+          "Half WW flour",
+          "Milk",
+          "Egg",
+          "Banana mash optional"
+        ],
+        "steps": [
+          "Same method",
+          "Cook gently — WW browns faster"
+        ],
+        "tip": "Rest batter 5 minutes for fluff.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "2 pancakes",
+          "calories": 220,
+          "totalFat": 4,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 45,
+          "sodium": 480,
+          "totalCarbohydrate": 36,
+          "dietaryFiber": 4,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 9,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "berry",
+        "label": "With any-berry sauce",
+        "blurb": "Quick cornstarch berry sauce on top.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Pancakes",
+          "Berries",
+          "Sugar",
+          "Cornstarch",
+          "Water"
+        ],
+        "steps": [
+          "Cook pancakes",
+          "Simmer berry sauce 10–15 min",
+          "Spoon over"
+        ],
+        "tip": "Sauce alone is ~60 cal per ¼ cup in Food Hero estimates.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "2 pancakes + ¼ cup sauce",
+          "calories": 330,
+          "totalFat": 9,
+          "saturatedFat": 1.5,
+          "transFat": 0,
+          "cholesterol": 50,
+          "sodium": 560,
+          "totalCarbohydrate": 53,
+          "dietaryFiber": 3,
+          "totalSugars": 19,
+          "addedSugars": 10,
+          "protein": 8,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 25,
+    "difficulty": "easy"
+  },
+  {
+    "id": "fh-roasted-vegetables",
+    "name": "Roasted Vegetables",
+    "cuisine": "food-hero",
+    "cuisineLabel": "Food Hero kitchen",
+    "color": "#15803D",
+    "meal": "side",
+    "servings": 4,
+    "tags": [
+      "vegetables",
+      "sheet-pan",
+      "food-hero"
+    ],
+    "credit": "Inspired by Food Hero roasted veg patterns — foodhero.org",
+    "why": "Hot oven, one sheet, dinner sides while you study.",
+    "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&h=675&q=75",
+    "youtube": [
+      {
+        "label": "Roasted veg",
+        "url": "https://www.youtube.com/results?search_query=roasted%20vegetables%20olive%20oil"
+      }
+    ],
+    "ways": [
+      {
+        "id": "classic",
+        "label": "Oil roast",
+        "blurb": "Toss, spread out, roast until edged brown.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Mixed veg",
+          "1–2 Tbsp oil",
+          "Salt",
+          "Pepper",
+          "Garlic powder"
+        ],
+        "steps": [
+          "Heat oven 425°F / 220°C",
+          "Toss",
+          "Single layer",
+          "Roast 25–30 min",
+          "Flip once"
+        ],
+        "tip": "Crowding = steam. Two pans beat one crowded pan.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "1 cup",
+          "calories": 120,
+          "totalFat": 7,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 180,
+          "totalCarbohydrate": 14,
+          "dietaryFiber": 4,
+          "totalSugars": 5,
+          "addedSugars": 0,
+          "protein": 2,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "healthy",
+        "label": "Parchment · spray oil",
+        "blurb": "Minimal fat, lemon at the end.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Veg",
+          "Spray oil",
+          "Lemon",
+          "Herbs"
+        ],
+        "steps": [
+          "Roast",
+          "Lemon finish"
+        ],
+        "tip": "Salt after roasting if watching sodium.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "1 cup",
+          "calories": 70,
+          "totalFat": 2,
+          "saturatedFat": 0,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 90,
+          "totalCarbohydrate": 13,
+          "dietaryFiber": 4,
+          "totalSugars": 5,
+          "addedSugars": 0,
+          "protein": 2,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      },
+      {
+        "id": "parmesan",
+        "label": "With cheese finish",
+        "blurb": "Dust parmesan last 5 minutes.",
+        "minutes": 35,
+        "difficulty": "easy",
+        "ingredients": [
+          "Roasted veg",
+          "Parmesan"
+        ],
+        "steps": [
+          "Roast almost done",
+          "Cheese",
+          "Finish"
+        ],
+        "tip": "Broccoli and cauliflower love this.",
+        "nutrition": {
+          "servingsPerContainer": 4,
+          "servingSize": "1 cup",
+          "calories": 160,
+          "totalFat": 10,
+          "saturatedFat": 3,
+          "transFat": 0,
+          "cholesterol": 0,
+          "sodium": 280,
+          "totalCarbohydrate": 14,
+          "dietaryFiber": 4,
+          "totalSugars": 0,
+          "addedSugars": 0,
+          "protein": 6,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
+      }
+    ],
+    "minutes": 35,
+    "difficulty": "easy"
+  },
+  {
     "id": "nepali-dal-bhat",
     "name": "Dal Bhat Tarkari",
     "cuisine": "nepali",
@@ -119,7 +1005,27 @@ export const recipes = [
           "For tadka: heat ghee, crackle cumin (+ dried chili), pour over dal.",
           "Plate rice, ladle dal, add tarkari + pickle/achar if you have it."
         ],
-        "tip": "Dal thickens as it sits — keep a kettle of hot water to loosen."
+        "tip": "Dal thickens as it sits — keep a kettle of hot water to loosen.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -141,7 +1047,27 @@ export const recipes = [
           "Tiny tadka: 1 tsp oil, cumin, garlic — pour over dal.",
           "Serve with extra salad/cucumber for volume without oil."
         ],
-        "tip": "Flavor comes from spice bloom + acid (lemon), not extra fat."
+        "tip": "Flavor comes from spice bloom + acid (lemon), not extra fat.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -163,7 +1089,27 @@ export const recipes = [
           "Pour sizzling tadka over dal; cover 1 minute to trap aroma.",
           "Serve with richer tarkari (potato + more oil) and rice."
         ],
-        "tip": "Oil must be hot enough to crackle spices, not smoke-bitter."
+        "tip": "Oil must be hot enough to crackle spices, not smoke-bitter.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "one-pot",
@@ -184,7 +1130,27 @@ export const recipes = [
           "Quick tadka in a spoon of fat; pour on top.",
           "Eat as a thick khichdi-style bowl — still counts as dal-bhat energy."
         ],
-        "tip": "Ratio ~1 grain:2.5 water; adjust for your cooker."
+        "tip": "Ratio ~1 grain:2.5 water; adjust for your cooker.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 45,
@@ -235,7 +1201,27 @@ export const recipes = [
           "Steam 12–15 min until wrappers turn translucent.",
           "Serve hot with spicy achar."
         ],
-        "tip": "Don’t overfill — leaks ruin the steam batch."
+        "tip": "Don’t overfill — leaks ruin the steam batch.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "veg",
@@ -255,7 +1241,27 @@ export const recipes = [
           "Mix aromatics + soy; wrap and steam.",
           "Serve with sesame-tomato achar."
         ],
-        "tip": "Dry filling = no soggy bottoms."
+        "tip": "Dry filling = no soggy bottoms.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -273,7 +1279,27 @@ export const recipes = [
           "Blend roasted tomato dip — skip frying spices in oil.",
           "Plate with cucumber salad."
         ],
-        "tip": "Batch-freeze uncooked momo on a tray, then bag."
+        "tip": "Batch-freeze uncooked momo on a tray, then bag.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 70,
@@ -319,7 +1345,27 @@ export const recipes = [
           "Flip once golden",
           "Drain on rack"
         ],
-        "tip": "Oil temp steady — too hot burns sugar."
+        "tip": "Oil temp steady — too hot burns sugar.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "lighter",
@@ -337,7 +1383,27 @@ export const recipes = [
           "Fry quickly",
           "Double-drain"
         ],
-        "tip": "Share the batch — sel roti is rich by design."
+        "tip": "Share the batch — sel roti is rich by design.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "airfry",
@@ -354,7 +1420,27 @@ export const recipes = [
           "Air-fry with mist of oil until edged",
           "Accept it’s a remix"
         ],
-        "tip": "Call it “sel-inspired” so grandma doesn’t riot."
+        "tip": "Call it “sel-inspired” so grandma doesn’t riot.",
+        "nutrition": {
+          "servingsPerContainer": 6,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 90,
@@ -405,7 +1491,27 @@ export const recipes = [
           "Pour over",
           "Rest 2 minutes"
         ],
-        "tip": "Whisk dal for creamy body without cream."
+        "tip": "Whisk dal for creamy body without cream.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -426,7 +1532,27 @@ export const recipes = [
           "Micro tadka",
           "Lemon finish"
         ],
-        "tip": "Add hing for “fried” aroma with less fat."
+        "tip": "Add hing for “fried” aroma with less fat.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "butter",
@@ -445,7 +1571,27 @@ export const recipes = [
           "Butter tadka",
           "Crush methi on top"
         ],
-        "tip": "Serve with jeera rice or roti — not both if watching portions."
+        "tip": "Serve with jeera rice or roti — not both if watching portions.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 35,
@@ -492,7 +1638,27 @@ export const recipes = [
           "Simmer",
           "Cilantro"
         ],
-        "tip": "Mash a few chickpeas to thicken naturally."
+        "tip": "Mash a few chickpeas to thicken naturally.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -512,7 +1678,27 @@ export const recipes = [
           "Toss chana",
           "Lemon + onion garnish"
         ],
-        "tip": "Great wrap filling with salad."
+        "tip": "Great wrap filling with salad.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -531,7 +1717,27 @@ export const recipes = [
           "Remove bag",
           "Finish with hot oil tadka"
         ],
-        "tip": "Don’t leave tea too long — bitterness creeps in."
+        "tip": "Don’t leave tea too long — bitterness creeps in.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 40,
@@ -576,7 +1782,27 @@ export const recipes = [
           "Tadka ghee-cumin",
           "Serve with yogurt"
         ],
-        "tip": "Loosen with hot water at the table."
+        "tip": "Loosen with hot water at the table.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -594,7 +1820,27 @@ export const recipes = [
           "Fold veg",
           "Tiny tadka"
         ],
-        "tip": "Use frozen veg — still counts."
+        "tip": "Use frozen veg — still counts.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -612,7 +1858,27 @@ export const recipes = [
           "Extra ghee swirl",
           "Crush papad on top"
         ],
-        "tip": "Pair with mango pickle carefully — salty."
+        "tip": "Pair with mango pickle carefully — salty.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 30,
@@ -663,7 +1929,27 @@ export const recipes = [
           "Bake very hot",
           "Basil after"
         ],
-        "tip": "Less sauce = crispier crust."
+        "tip": "Less sauce = crispier crust.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -682,7 +1968,27 @@ export const recipes = [
           "Top",
           "Finish with arugula"
         ],
-        "tip": "Pat mozzarella dry to avoid sogginess."
+        "tip": "Pat mozzarella dry to avoid sogginess.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "skillet",
@@ -701,7 +2007,27 @@ export const recipes = [
           "Press dough",
           "Stovetop then broil top"
         ],
-        "tip": "Preheat skillet for blistered bottom."
+        "tip": "Preheat skillet for blistered bottom.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 25,
@@ -748,7 +2074,27 @@ export const recipes = [
           "Emulsify with pasta water",
           "Parsley"
         ],
-        "tip": "Garlic should be blonde, not brown-bitter."
+        "tip": "Garlic should be blonde, not brown-bitter.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -768,7 +2114,27 @@ export const recipes = [
           "More pasta water",
           "Lemon zest"
         ],
-        "tip": "Whole-wheat pasta works if you cook it properly."
+        "tip": "Whole-wheat pasta works if you cook it properly.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "anchovy",
@@ -787,7 +2153,27 @@ export const recipes = [
           "Garlic",
           "Toss pasta"
         ],
-        "tip": "They dissolve — not “fishy chunks.”"
+        "tip": "They dissolve — not “fishy chunks.”",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 20,
@@ -833,7 +2219,27 @@ export const recipes = [
           "Simmer tomato",
           "Toss pasta"
         ],
-        "tip": "Pinch of sugar only if tomatoes are sharp."
+        "tip": "Pinch of sugar only if tomatoes are sharp.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -852,7 +2258,27 @@ export const recipes = [
           "Warm",
           "Toss"
         ],
-        "tip": "Finish with nutritional yeast if you miss cheese."
+        "tip": "Finish with nutritional yeast if you miss cheese.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -870,7 +2296,27 @@ export const recipes = [
           "Mount butter off heat",
           "Cheese"
         ],
-        "tip": "Save pasta water — sauce cling depends on it."
+        "tip": "Save pasta water — sauce cling depends on it.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 25,
@@ -918,7 +2364,27 @@ export const recipes = [
           "Warm tortillas",
           "Assemble"
         ],
-        "tip": "Char tortillas on open flame carefully for flavor."
+        "tip": "Char tortillas on open flame carefully for flavor.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -938,7 +2404,27 @@ export const recipes = [
           "Load greens or tortillas",
           "Lime"
         ],
-        "tip": "Greek yogurt > sour cream for protein."
+        "tip": "Greek yogurt > sour cream for protein.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "cheesy",
@@ -958,7 +2444,27 @@ export const recipes = [
           "Fill",
           "Fold"
         ],
-        "tip": "Medium heat — burned cheese is bitter."
+        "tip": "Medium heat — burned cheese is bitter.",
+        "nutrition": {
+          "servingsPerContainer": 3,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 25,
@@ -1005,7 +2511,27 @@ export const recipes = [
           "Fold mix-ins",
           "Pile on toast"
         ],
-        "tip": "Salt early; lime late to keep green."
+        "tip": "Salt early; lime late to keep green.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1024,7 +2550,27 @@ export const recipes = [
           "Add crunch veg",
           "Toast"
         ],
-        "tip": "Everything bagel seasoning is free flavor."
+        "tip": "Everything bagel seasoning is free flavor.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -1041,7 +2587,27 @@ export const recipes = [
           "Classic guac",
           "Oil + chili"
         ],
-        "tip": "Good sourdough changes everything."
+        "tip": "Good sourdough changes everything.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 10,
@@ -1087,7 +2653,27 @@ export const recipes = [
           "Fry/soft boil egg",
           "Soy-butter drizzle"
         ],
-        "tip": "Furikake if you have it."
+        "tip": "Furikake if you have it.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1107,7 +2693,27 @@ export const recipes = [
           "Steam greens",
           "Assemble"
         ],
-        "tip": "Press tofu 5 minutes for better browning."
+        "tip": "Press tofu 5 minutes for better browning.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -1127,7 +2733,27 @@ export const recipes = [
           "Sauces",
           "Egg"
         ],
-        "tip": "A little sesame oil goes far."
+        "tip": "A little sesame oil goes far.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 15,
@@ -1172,7 +2798,27 @@ export const recipes = [
           "Add tofu/wakame",
           "Dissolve miso off boil"
         ],
-        "tip": "Never hard-boil miso — kills aroma."
+        "tip": "Never hard-boil miso — kills aroma.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1190,7 +2836,27 @@ export const recipes = [
           "Simmer veg",
           "Miso finish"
         ],
-        "tip": "White miso is milder for beginners."
+        "tip": "White miso is milder for beginners.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -1207,7 +2873,27 @@ export const recipes = [
           "Classic soup",
           "Finish aromatics"
         ],
-        "tip": "Pair with rice for a mini meal."
+        "tip": "Pair with rice for a mini meal.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 10,
@@ -1255,7 +2941,27 @@ export const recipes = [
           "Season",
           "Lime"
         ],
-        "tip": "Spread rice — don’t steam-clump."
+        "tip": "Spread rice — don’t steam-clump.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1275,7 +2981,27 @@ export const recipes = [
           "Rice",
           "Light sauce"
         ],
-        "tip": "Cauliflower rice mix stretches volume."
+        "tip": "Cauliflower rice mix stretches volume.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "spicy",
@@ -1293,7 +3019,27 @@ export const recipes = [
           "Chili oil",
           "Cool cucumber side"
         ],
-        "tip": "Cucumber resets the heat."
+        "tip": "Cucumber resets the heat.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 20,
@@ -1340,7 +3086,27 @@ export const recipes = [
           "Toss",
           "Rest 5 min"
         ],
-        "tip": "Salt cucumbers briefly if watery."
+        "tip": "Salt cucumbers briefly if watery.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1358,7 +3124,27 @@ export const recipes = [
           "Toss bright dressing",
           "Serve cold"
         ],
-        "tip": "Herbs (mint/cilantro) add sweetness perception."
+        "tip": "Herbs (mint/cilantro) add sweetness perception.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "peanut",
@@ -1375,7 +3161,27 @@ export const recipes = [
           "Classic salad",
           "Peanut finish"
         ],
-        "tip": "Great next to grilled anything."
+        "tip": "Great next to grilled anything.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 10,
@@ -1421,7 +3227,27 @@ export const recipes = [
           "Season",
           "Scallion"
         ],
-        "tip": "Wet rice = glue. Use day-old."
+        "tip": "Wet rice = glue. Use day-old.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1441,7 +3267,27 @@ export const recipes = [
           "Rice",
           "Soy"
         ],
-        "tip": "Msg-free mushroom powder adds savor."
+        "tip": "Msg-free mushroom powder adds savor.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -1458,7 +3304,27 @@ export const recipes = [
           "Classic",
           "Finish aromatics"
         ],
-        "tip": "Add off heat so sesame stays fragrant."
+        "tip": "Add off heat so sesame stays fragrant.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 15,
@@ -1504,7 +3370,27 @@ export const recipes = [
           "Splash water",
           "Soy"
         ],
-        "tip": "Stems first, leaves last."
+        "tip": "Stems first, leaves last.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1523,7 +3409,27 @@ export const recipes = [
           "Steam-lid",
           "Salt"
         ],
-        "tip": "Still delicious with chili crisp on the side."
+        "tip": "Still delicious with chili crisp on the side.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "oyster",
@@ -1541,7 +3447,27 @@ export const recipes = [
           "Classic stir",
           "Oyster sauce glaze"
         ],
-        "tip": "Vegetarian oyster sauce exists."
+        "tip": "Vegetarian oyster sauce exists.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 12,
@@ -1587,7 +3513,27 @@ export const recipes = [
           "Dress",
           "Feta last"
         ],
-        "tip": "No lettuce in classic Greek — optional."
+        "tip": "No lettuce in classic Greek — optional.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1607,7 +3553,27 @@ export const recipes = [
           "Lemon-herb",
           "Crumbled feta"
         ],
-        "tip": "Chickpeas make it a full meal."
+        "tip": "Chickpeas make it a full meal.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "grain",
@@ -1623,7 +3589,27 @@ export const recipes = [
           "Cook grain",
           "Top with salad"
         ],
-        "tip": "Packs well for campus days."
+        "tip": "Packs well for campus days.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 15,
@@ -1672,7 +3658,27 @@ export const recipes = [
           "Nest eggs",
           "Cover"
         ],
-        "tip": "Sauce must be thick enough to hold eggs."
+        "tip": "Sauce must be thick enough to hold eggs.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1692,7 +3698,27 @@ export const recipes = [
           "Greens",
           "Eggs"
         ],
-        "tip": "Egg whites + one yolk still feels rich."
+        "tip": "Egg whites + one yolk still feels rich.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -1710,7 +3736,27 @@ export const recipes = [
           "Feta",
           "Oil"
         ],
-        "tip": "Labneh on the side is elite."
+        "tip": "Labneh on the side is elite.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 30,
@@ -1755,7 +3801,27 @@ export const recipes = [
           "Adjust lemon/salt",
           "Oil swirl + paprika"
         ],
-        "tip": "Peel chickpeas for ultra-smooth (optional)."
+        "tip": "Peel chickpeas for ultra-smooth (optional).",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1773,7 +3839,27 @@ export const recipes = [
           "Blend",
           "Serve with veg sticks"
         ],
-        "tip": "Aquafaba helps creaminess without oil."
+        "tip": "Aquafaba helps creaminess without oil.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "spiced",
@@ -1791,7 +3877,27 @@ export const recipes = [
           "Warm spices in oil",
           "Pour"
         ],
-        "tip": "Pita chips optional — cucumbers first."
+        "tip": "Pita chips optional — cucumbers first.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 15,
@@ -1841,7 +3947,27 @@ export const recipes = [
           "Sauce",
           "Mix"
         ],
-        "tip": "Season each veg lightly — bowl shouldn’t be bland."
+        "tip": "Season each veg lightly — bowl shouldn’t be bland.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1860,7 +3986,27 @@ export const recipes = [
           "Assemble",
           "Mix"
         ],
-        "tip": "Brown rice works if cooked ahead."
+        "tip": "Brown rice works if cooked ahead.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "dol",
@@ -1879,7 +4025,27 @@ export const recipes = [
           "Toppings",
           "Crust forms"
         ],
-        "tip": "Don’t scrape too early."
+        "tip": "Don’t scrape too early.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 400,
+          "totalFat": 14,
+          "saturatedFat": 4,
+          "transFat": 0,
+          "cholesterol": 35,
+          "sodium": 520,
+          "totalCarbohydrate": 48,
+          "dietaryFiber": 6,
+          "totalSugars": 8,
+          "addedSugars": 2,
+          "protein": 17,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 40,
@@ -1926,7 +4092,27 @@ export const recipes = [
           "Sauce",
           "Egg"
         ],
-        "tip": "Older kimchi = better fry."
+        "tip": "Older kimchi = better fry.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -1945,7 +4131,27 @@ export const recipes = [
           "Rice",
           "Egg"
         ],
-        "tip": "Rinse kimchi lightly if too salty."
+        "tip": "Rinse kimchi lightly if too salty.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "butter",
@@ -1963,7 +4169,27 @@ export const recipes = [
           "Butter melt",
           "Cheese broil optional"
         ],
-        "tip": "Spam is traditional-ish — your call."
+        "tip": "Spam is traditional-ish — your call.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 20,
@@ -2009,7 +4235,27 @@ export const recipes = [
           "Stir rapidly",
           "Roll"
         ],
-        "tip": "Medium-low heat; patience > browning."
+        "tip": "Medium-low heat; patience > browning.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -2026,7 +4272,27 @@ export const recipes = [
           "Same technique",
           "Fold greens"
         ],
-        "tip": "Nonstick is your friend."
+        "tip": "Nonstick is your friend.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "cheese",
@@ -2043,7 +4309,27 @@ export const recipes = [
           "Cook",
           "Cheese before roll"
         ],
-        "tip": "Still keep the outside pale."
+        "tip": "Still keep the outside pale.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 10,
@@ -2090,7 +4376,27 @@ export const recipes = [
           "Roast",
           "Rest"
         ],
-        "tip": "Crowding steams — use two pans if needed."
+        "tip": "Crowding steams — use two pans if needed.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -2109,7 +4415,27 @@ export const recipes = [
           "Roast",
           "Lemon"
         ],
-        "tip": "Add delicate greens after roasting."
+        "tip": "Add delicate greens after roasting.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "bbq",
@@ -2126,7 +4452,27 @@ export const recipes = [
           "Glaze",
           "Finish"
         ],
-        "tip": "Sugar burns — glaze late."
+        "tip": "Sugar burns — glaze late.",
+        "nutrition": {
+          "servingsPerContainer": 2,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 35,
@@ -2146,6 +4492,7 @@ export const recipes = [
       "meal-prep"
     ],
     "why": "Set at night, study in the morning.",
+    "image": "https://images.unsplash.com/photo-1517676204124-4c6bf5cffccd?auto=format&fit=crop&w=900&h=675&q=75",
     "youtube": [
       {
         "label": "Overnight oats",
@@ -2171,7 +4518,27 @@ export const recipes = [
           "Fridge overnight",
           "Stir"
         ],
-        "tip": "Ratio ~1:1 oats to liquid; adjust."
+        "tip": "Ratio ~1:1 oats to liquid; adjust.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -2190,7 +4557,27 @@ export const recipes = [
           "Fridge",
           "Berries AM"
         ],
-        "tip": "Cinnamon tricks sweetness perception."
+        "tip": "Cinnamon tricks sweetness perception.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -2208,7 +4595,27 @@ export const recipes = [
           "Mix",
           "Top rich"
         ],
-        "tip": "Still oats — still breakfast."
+        "tip": "Still oats — still breakfast.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 5,
@@ -2255,7 +4662,27 @@ export const recipes = [
           "Tomato",
           "Oil"
         ],
-        "tip": "Flaky salt matters."
+        "tip": "Flaky salt matters.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "healthy",
@@ -2274,7 +4701,27 @@ export const recipes = [
           "Spread",
           "Tomato"
         ],
-        "tip": "Whole-grain bread keeps you fuller."
+        "tip": "Whole-grain bread keeps you fuller.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 290,
+          "totalFat": 6,
+          "saturatedFat": 1,
+          "transFat": 0,
+          "cholesterol": 15,
+          "sodium": 320,
+          "totalCarbohydrate": 42,
+          "dietaryFiber": 8,
+          "totalSugars": 6,
+          "addedSugars": 0,
+          "protein": 16,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       },
       {
         "id": "rich",
@@ -2293,7 +4740,27 @@ export const recipes = [
           "Tomato",
           "Anchovy"
         ],
-        "tip": "Cornichons on the side slap."
+        "tip": "Cornichons on the side slap.",
+        "nutrition": {
+          "servingsPerContainer": 1,
+          "servingSize": "1 serving",
+          "calories": 540,
+          "totalFat": 24,
+          "saturatedFat": 8,
+          "transFat": 0,
+          "cholesterol": 55,
+          "sodium": 780,
+          "totalCarbohydrate": 58,
+          "dietaryFiber": 4,
+          "totalSugars": 10,
+          "addedSugars": 4,
+          "protein": 18,
+          "potassium": null,
+          "vitaminC": null,
+          "calcium": null,
+          "iron": null,
+          "note": "Estimates based on typical ingredients (USDA-style). Optional toppings not included. Your recipe may vary."
+        }
       }
     ],
     "minutes": 10,

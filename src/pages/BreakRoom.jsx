@@ -203,24 +203,24 @@ export default function BreakRoom() {
 
   const categories = useMemo(
     () => [
-      { id: 'chill', title: 'Chill zone', lede: 'Ambience, cozy audio, soft landings.', pool: 'chill', count: breakChill.length },
-      { id: 'tea', title: 'Tea & warm resets', lede: 'Mug rituals that slow the nervous system.', pool: 'tea', count: breakTeaRituals.length },
-      { id: 'games', title: 'Games', lede: 'Play one round. Timer on.', pool: 'games', count: breakGames.length },
-      { id: 'breath', title: 'Breath', lede: 'Interactive cues for a calmer minute.', pool: 'breath', count: breakBreaths.length },
-      { id: 'eyes', title: 'Eye care', lede: 'Screens steal moisture — give eyes a holiday.', pool: 'eyes', count: breakEyes.length },
-      { id: 'stretch', title: 'Stretches', lede: 'Tap to check off. Two is enough.', pool: 'stretches', count: breakStretches.length },
-      { id: 'moves', title: 'Micro-moves', lede: 'Thirty to sixty seconds of circulation.', pool: 'walk', count: breakMicroMoves.length },
-      { id: 'walk', title: 'Walks', lede: 'Pair with Walk 20 on the timer.', pool: 'walk', count: breakWalks.length },
-      { id: 'outside', title: 'Outside / sensory', lede: 'Nature is free software for the nervous system.', pool: 'outdoors', count: breakOutdoors.length },
-      { id: 'laugh', title: 'Laughs', lede: 'One comic or clip. Then close the tab.', pool: 'laugh', count: breakLaughs.length },
-      { id: 'create', title: 'Creative', lede: 'Make something tiny. Ship nothing.', pool: 'creative', count: breakCreative.length },
-      { id: 'doodle', title: 'Doodle', lede: 'Two minutes with a pen beats doomscrolling.', pool: 'creative', count: breakDoodles.length },
-      { id: 'social', title: 'Social resets', lede: 'Humans regulate humans. Keep it light.', pool: 'social', count: breakSocial.length },
-      { id: 'books', title: 'Books', lede: 'Ideas that make the next study block land better.', pool: 'books', count: breakBooks.length },
-      { id: 'movies', title: 'Movies & docs', lede: 'Watch one. Rest means rest.', pool: 'movies', count: breakMovies.length },
-      { id: 'music', title: 'Music & ambience', lede: 'Lyrics optional. Volume low.', pool: 'music', count: breakMusic.length },
-      { id: 'podcasts', title: 'Podcasts', lede: 'One episode max while you stretch or walk.', pool: 'podcasts', count: breakPodcasts.length },
-      { id: 'links', title: 'Quick portals', lede: 'Two-minute resets.', pool: 'links', count: breakLinks.length },
+      { id: 'chill', title: 'Chill zone', lede: 'Rain, cafés, fireplaces — press play and unclench.', pool: 'chill', count: breakChill.length },
+      { id: 'tea', title: 'Tea & warm mugs', lede: 'Boil water. Hold the cup. That’s the whole quest.', pool: 'tea', count: breakTeaRituals.length },
+      { id: 'games', title: 'Games', lede: 'One round. Then we put the controller down. Maybe.', pool: 'games', count: breakGames.length },
+      { id: 'breath', title: 'Breath', lede: 'In. Out. The free version of a reset button.', pool: 'breath', count: breakBreaths.length },
+      { id: 'eyes', title: 'Eye care', lede: 'Your eyeballs called. They want a vacation.', pool: 'eyes', count: breakEyes.length },
+      { id: 'stretch', title: 'Stretches', lede: 'Two moves. Look ridiculous. Feel better.', pool: 'stretches', count: breakStretches.length },
+      { id: 'moves', title: 'Micro-moves', lede: 'Thirty seconds of “I still have a body.”', pool: 'walk', count: breakMicroMoves.length },
+      { id: 'walk', title: 'Walks', lede: 'Shoes optional. Outside preferred.', pool: 'walk', count: breakWalks.length },
+      { id: 'outside', title: 'Outside bits', lede: 'Clouds, birds, grass — free DLC.', pool: 'outdoors', count: breakOutdoors.length },
+      { id: 'laugh', title: 'Laughs', lede: 'One comic. Close the tab before the spiral.', pool: 'laugh', count: breakLaughs.length },
+      { id: 'create', title: 'Creative', lede: 'Make a tiny mess on purpose.', pool: 'creative', count: breakCreative.length },
+      { id: 'doodle', title: 'Doodle', lede: 'Pen > doomscroll. Prove it for two minutes.', pool: 'creative', count: breakDoodles.length },
+      { id: 'social', title: 'Social blips', lede: 'Text a human. Or sit in shared silence.', pool: 'social', count: breakSocial.length },
+      { id: 'books', title: 'Books', lede: 'A chapter, not a syllabus.', pool: 'books', count: breakBooks.length },
+      { id: 'movies', title: 'Movies & docs', lede: 'Watch one. Resist “just one more.”', pool: 'movies', count: breakMovies.length },
+      { id: 'music', title: 'Music', lede: 'Volume low. Lyrics optional. Vibes mandatory.', pool: 'music', count: breakMusic.length },
+      { id: 'podcasts', title: 'Podcasts', lede: 'Ears only. Max one episode while you stretch.', pool: 'podcasts', count: breakPodcasts.length },
+      { id: 'links', title: 'Quick portals', lede: 'Two-minute rabbit holes with an exit.', pool: 'links', count: breakLinks.length },
     ],
     [],
   )
@@ -232,11 +232,11 @@ export default function BreakRoom() {
       <header className="break-hero-banner">
         <img src={asset('covers/break-hero.png')} alt="" className="break-hero-img" />
         <div className="break-hero-copy">
-          <p className="hero-kicker">Rest is part of the curriculum</p>
+          <p className="hero-kicker">Brain fried? Good. Come in.</p>
           <h1>Break Room</h1>
           <p>
-            Chill zone, tea rituals, games, breath, walks — pick a mood and open matching shelves. Photos track the
-            activity (rain for rain, stretch for stretch). Then back to <Link to="/manuals">manuals</Link> or{' '}
+            Timers, silly games, rain sounds, tea, stretches that don’t feel like homework. Tap a mood. Pictures match
+            the thing — rain looks like rain. Then bounce back to <Link to="/manuals">manuals</Link> or{' '}
             <Link to="/sparks">Sparks</Link>.
           </p>
           <div className="hero-actions">
@@ -375,7 +375,7 @@ export default function BreakRoom() {
                 kicker="Chill"
                 title={g.title}
                 why={g.why}
-                image={pickImage('chill', g.title, g.imageHint)}
+                image={g.image || pickImage('chill', g.title, g.imageHint)}
               />
             ))}
           </div>
@@ -391,7 +391,7 @@ export default function BreakRoom() {
                 kicker={doneSet.has(t.title) ? 'Done' : 'Tea'}
                 title={t.title}
                 why={t.why}
-                image={pickImage('tea', t.title, t.imageHint)}
+                image={t.image || pickImage('tea', t.title, t.imageHint)}
                 onClick={() => toggleDone(t.title)}
               />
             ))}
@@ -409,7 +409,7 @@ export default function BreakRoom() {
                 kicker="Game"
                 title={g.title}
                 why={g.why}
-                image={pickImage('games', g.title, g.imageHint)}
+                image={g.image || pickImage('games', g.title, g.imageHint)}
               />
             ))}
           </div>
@@ -461,7 +461,7 @@ export default function BreakRoom() {
                 kicker={doneSet.has(e.title) ? 'Done' : 'Eyes'}
                 title={e.title}
                 why={e.why}
-                image={pickImage('eyes', e.title)}
+                image={e.image || pickImage('eyes', e.title)}
                 onClick={() => toggleDone(e.title)}
               />
             ))}
@@ -479,7 +479,7 @@ export default function BreakRoom() {
                 title={s.name}
                 meta={s.reps}
                 why={s.how}
-                image={pickImage('stretches', s.name, 'stretch')}
+                image={s.image || pickImage('stretches', s.name, 'stretch')}
                 onClick={() => toggleDone(s.name)}
               />
             ))}
@@ -496,7 +496,7 @@ export default function BreakRoom() {
                 kicker={doneSet.has(m.title) ? 'Done' : 'Move'}
                 title={m.title}
                 why={m.why}
-                image={pickImage('walk', m.title)}
+                image={m.image || pickImage('walk', m.title)}
                 onClick={() => toggleDone(m.title)}
               />
             ))}
@@ -513,7 +513,7 @@ export default function BreakRoom() {
                 kicker="Walk"
                 title={w.title}
                 why={w.why}
-                image={pickImage('walk', w.title, 'walk')}
+                image={w.image || pickImage('walk', w.title, 'walk')}
                 onClick={() => toggleDone(w.title)}
               />
             ))}
@@ -530,7 +530,7 @@ export default function BreakRoom() {
                 kicker="Outside"
                 title={o.title}
                 why={o.why}
-                image={pickImage('outdoors', o.title)}
+                image={o.image || pickImage('outdoors', o.title)}
                 onClick={() => toggleDone(o.title)}
               />
             ))}
@@ -548,7 +548,7 @@ export default function BreakRoom() {
                 kicker="Laugh"
                 title={l.title}
                 why={l.why}
-                image={pickImage('laugh', l.title, 'laugh')}
+                image={l.image || pickImage('laugh', l.title, 'laugh')}
               />
             ))}
           </div>
@@ -565,7 +565,7 @@ export default function BreakRoom() {
                 kicker="Create"
                 title={c.title}
                 why={c.why}
-                image={pickImage('creative', c.title, 'draw')}
+                image={c.image || pickImage('creative', c.title, 'draw')}
               />
             ))}
           </div>
@@ -596,7 +596,7 @@ export default function BreakRoom() {
                 kicker="Social"
                 title={s.title}
                 why={s.why}
-                image={pickImage('social', s.title)}
+                image={s.image || pickImage('social', s.title)}
                 onClick={() => toggleDone(s.title)}
               />
             ))}
@@ -615,7 +615,7 @@ export default function BreakRoom() {
                 title={b.title}
                 meta={b.author}
                 why={b.why}
-                image={pickImage('books', b.title, 'book')}
+                image={b.image || pickImage('books', b.title, 'book')}
               />
             ))}
           </div>
@@ -632,7 +632,7 @@ export default function BreakRoom() {
                 kicker="Film"
                 title={m.title}
                 why={m.why}
-                image={pickImage('movies', m.title, 'movie')}
+                image={m.image || pickImage('movies', m.title, 'movie')}
               />
             ))}
           </div>
@@ -649,7 +649,7 @@ export default function BreakRoom() {
                 kicker="Music"
                 title={m.title}
                 why={m.why}
-                image={pickImage('music', m.title, 'lofi')}
+                image={m.image || pickImage('music', m.title, 'lofi')}
               />
             ))}
           </div>
@@ -666,7 +666,7 @@ export default function BreakRoom() {
                 kicker="Podcast"
                 title={p.title}
                 why={p.why}
-                image={pickImage('podcasts', p.title)}
+                image={p.image || pickImage('podcasts', p.title)}
               />
             ))}
           </div>
@@ -683,7 +683,7 @@ export default function BreakRoom() {
                 kicker="Link"
                 title={l.title}
                 why={l.why}
-                image={pickImage('links', l.title)}
+                image={l.image || pickImage('links', l.title)}
               />
             ))}
           </div>

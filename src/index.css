@@ -3890,3 +3890,115 @@ p {
   line-height: 1.5;
   max-width: 40rem;
 }
+
+/* Nutrition Facts (Food Hero–style) */
+.recipe-columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(220px, 0.85fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .recipe-columns-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nutrition-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  padding: 0.55rem 0.65rem 0.75rem;
+  max-width: 280px;
+}
+
+.nf-title {
+  font-weight: 900;
+  font-size: 1.55rem;
+  line-height: 1;
+  margin: 0 0 0.2rem;
+  letter-spacing: -0.02em;
+}
+
+.nf-servings {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.nf-serving-size {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 8px solid #111;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+}
+
+.nf-calories {
+  border-bottom: 4px solid #111;
+  padding: 0.35rem 0;
+}
+
+.nf-calories > span {
+  font-size: 0.8rem;
+}
+
+.nf-cal-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.15rem;
+}
+
+.nf-cal-num {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.nf-dv {
+  text-align: right;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+  border-bottom: 1px solid #111;
+}
+
+.nf-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0.15rem 0;
+}
+
+.nf-row.nf-bold {
+  font-weight: 800;
+  border-bottom-color: #111;
+}
+
+.nf-micros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 4px solid #111;
+}
+
+.nf-note,
+.nf-footnote {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  margin: 0.45rem 0 0;
+  color: #333;
+}
+
+.recipe-credit {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+  font-style: italic;
+}

@@ -87,6 +87,18 @@ export function imageForRecipe(recipe) {
 
 export const cookResources = [
   {
+    title: 'Food Hero Cookbook (PDF)',
+    why: 'Simple tools, variations, real Nutrition Facts labels — free from OSU Extension.',
+    url: 'https://foodhero.org/sites/foodhero-prod/files/health-tools/cookbook.pdf',
+    kind: 'PDF',
+  },
+  {
+    title: 'Food Hero recipes',
+    why: 'Search and share more Food Hero plates online.',
+    url: 'https://foodhero.org/',
+    kind: 'Site',
+  },
+  {
     title: 'Serious Eats',
     why: 'Technique-first recipes and “why it works” science.',
     url: 'https://www.seriouseats.com/',
