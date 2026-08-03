@@ -25,3 +25,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 .vercel
+
+# Playwright manual PDF extract scratch
+.venv-pdf/
+.tmp-pw-manual.txt
+.tmp-pw-clean.txt
+.tmp-pw-corpus.txt
+.tmp-pw-normalized.txt
+__pycache__/
+_gen_pw_*.py
