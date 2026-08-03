@@ -1,13 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { addComment, getComments } from '../lib/community'
 
 /** Local-only comments per manual — not a hosted forum. */
 export default function ManualComments({ manualId }) {
-  const [items, setItems] = useState(() => getComments(manualId))
+  const [items, setItems] = useState([])
   const [name, setName] = useState('')
   const [body, setBody] = useState('')
+
+  useEffect(() => {
+    setItems(getComments(manualId))
+  }, [manualId])
 
   function submit(e) {
     e.preventDefault()

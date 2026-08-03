@@ -3724,26 +3724,15 @@ p {
   color: var(--forest);
 }
 
-.fun-board-rotate {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.fun-board-rotate .btn {
-  min-width: 2.5rem;
-  padding-inline: 0.65rem;
+.fun-board-hint {
+  font-size: 0.8rem;
+  color: var(--muted, #3a453c);
+  opacity: 0.85;
 }
 
 .fun-board-stage {
   padding: 0.75rem;
   overflow: hidden;
-  perspective: 900px;
-}
-
-.fun-board-spin {
-  transform-origin: center center;
-  transition: transform 0.35s var(--ease);
-  will-change: transform;
 }
 
 .fun-board-svg {
@@ -3751,6 +3740,18 @@ p {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  touch-action: none;
+  user-select: none;
+}
+
+.fun-sticky {
+  cursor: grab;
+  touch-action: none;
+}
+
+.fun-sticky.is-dragging {
+  cursor: grabbing;
+  filter: brightness(1.03);
 }
 
 .fun-sticky.is-open rect {

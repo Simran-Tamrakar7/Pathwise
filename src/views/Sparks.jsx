@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { sparkOfTheDay, sparkTracks, sparks } from '../data/sparks'
@@ -9,6 +9,7 @@ import { asset } from '../data/helpers'
 const DONE_KEY = 'pathwise-sparks-done'
 
 function loadDone() {
+  if (typeof window === 'undefined') return new Set()
   try {
     return new Set(JSON.parse(localStorage.getItem(DONE_KEY) || '[]'))
   } catch {
@@ -17,14 +18,19 @@ function loadDone() {
 }
 
 export default function Sparks() {
-  const [params] = useSearchParams()
+  // ponytail: useSearchParams returns URLSearchParams, not a tuple — [params] made params an entry array and crashed .get
+  const params = useSearchParams()
   const openFromNav = params.get('open')
   const [track, setTrack] = useState('all')
-  const [done, setDone] = useState(loadDone)
+  const [done, setDone] = useState(() => new Set())
   const [activeId, setActiveId] = useState(() =>
     openFromNav && sparks.some((s) => s.id === openFromNav) ? openFromNav : null,
   )
   const daily = useMemo(() => sparkOfTheDay(), [])
+
+  useEffect(() => {
+    setDone(loadDone())
+  }, [])
 
   const list = useMemo(
     () => sparks.filter((s) => track === 'all' || s.track === track),

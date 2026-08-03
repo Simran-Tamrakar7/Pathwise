@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { manuals, genres } from '../data/manuals'
@@ -18,19 +18,30 @@ import { changelog } from '../data/changelog'
 import { skillTags } from '../data/tags'
 import { randomManual } from '../data/breakPersonality'
 
+const emptyStreak = { count: 0, lastDate: null, checkedToday: false }
+
 export default function Home() {
-  const [onboardOpen, setOnboardOpen] = useState(() => !isOnboardingDone())
+  const [onboardOpen, setOnboardOpen] = useState(false)
   const [, setTick] = useState(0)
+  const [streak, setStreak] = useState(emptyStreak)
+  const [badges, setBadges] = useState([])
+  const [continueCh, setContinueCh] = useState(null)
+  const [pwProg, setPwProg] = useState(null)
   const router = useRouter()
+
+  useEffect(() => {
+    setOnboardOpen(!isOnboardingDone())
+    setStreak(getStreak())
+    setBadges(listBadges())
+    const pw = manuals.find((m) => m.id === 'playwright')
+    setContinueCh(pw ? getContinueChapter(pw) : null)
+    setPwProg(pw ? countDone(pw.id, pw.chapters.length) : null)
+  }, [])
 
   const featured = useMemo(() => recommendManuals(manuals, 6), [onboardOpen])
 
   const chapterCount = manuals.reduce((n, m) => n + m.chapters.length, 0)
   const pw = manuals.find((m) => m.id === 'playwright')
-  const continueCh = pw ? getContinueChapter(pw) : null
-  const pwProg = pw ? countDone(pw.id, pw.chapters.length) : null
-  const streak = getStreak()
-  const badges = listBadges()
   const genreChips = genres.filter((g) => g.id !== 'all').slice(0, 6)
 
   return (

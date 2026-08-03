@@ -1,6 +1,7 @@
-/** Tiny localStorage JSON helpers. */
+/** Tiny localStorage JSON helpers — safe on SSR. */
 
 export function readJson(key, fallback) {
+  if (typeof window === 'undefined') return fallback
   try {
     const raw = localStorage.getItem(key)
     if (raw == null) return fallback
@@ -11,5 +12,10 @@ export function readJson(key, fallback) {
 }
 
 export function writeJson(key, value) {
-  localStorage.setItem(key, JSON.stringify(value))
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(key, JSON.stringify(value))
+  } catch {
+    /* private mode / quota */
+  }
 }

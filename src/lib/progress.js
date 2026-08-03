@@ -1,15 +1,13 @@
+import { readJson, writeJson } from './storage'
+
 const KEY = 'pathwise-progress-v1'
 
 function readAll() {
-  try {
-    return JSON.parse(localStorage.getItem(KEY) || '{}')
-  } catch {
-    return {}
-  }
+  return readJson(KEY, {})
 }
 
 function writeAll(data) {
-  localStorage.setItem(KEY, JSON.stringify(data))
+  writeJson(KEY, data)
 }
 
 export function getManualProgress(manualId) {

@@ -99,11 +99,15 @@ function BreakPersonality() {
   const trivia = useMemo(() => triviaOfTheDay(), [])
   const quote = useMemo(() => quoteOfTheDay(), [])
   const [showAnswer, setShowAnswer] = useState(false)
-  const [local, setLocal] = useState(() => getShowcaseLocal())
+  const [local, setLocal] = useState([])
   const [name, setName] = useState('')
   const [built, setBuilt] = useState('')
   const [manualId, setManualId] = useState('playwright')
   const [lucky, setLucky] = useState(null)
+
+  useEffect(() => {
+    setLocal(getShowcaseLocal())
+  }, [])
 
   const showcase = useMemo(() => [...local, ...showcaseSeed].slice(0, 12), [local])
 
