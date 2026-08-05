@@ -2,6 +2,11 @@
 
 export const changelog = [
   {
+    date: '2026-08-05',
+    title: 'CV Maker in AI',
+    body: 'Oh My CV–style resume builder on /ai: six templates, live preview, local save, Print/PDF.',
+  },
+  {
     date: '2026-08-02',
     title: 'Practical paths + tool kits + Break Room personality',
     body: 'Ten new manuals, prompt/automation/design/snippet cookbooks, trivia, quotes, showcase, random path, and local discussion notes.',
